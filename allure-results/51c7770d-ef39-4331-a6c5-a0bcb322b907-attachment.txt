@@ -1,0 +1,36 @@
+[ReportManager] Setting discrete logging to: "false" @28-09-2022 19:00:17.0285 PM
+
+################################################################################################################################################
+Starting Execution:	"10 out of 10" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Case.Valid_Token_RQ_TC"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @28-09-2022 19:00:17.0285 PM
+[ReportManager] Setting discrete logging to: "true" @28-09-2022 19:00:17.0722 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @28-09-2022 19:00:17.0722 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-09-2022 19:00:17.0722 PM
+[ReportManager] Setting discrete logging to: "false" @28-09-2022 19:00:17.0722 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 435ms". @28-09-2022 19:00:17.0734 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-09-2022 19:00:17.0735 PM
+[ReportManager] Successfully created attachment "API Request - Body" @28-09-2022 19:00:17.0735 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-09-2022 19:00:17.0736 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @28-09-2022 19:00:17.0736 PM
+[ReportManager] Verification Passed: "435" is greater than or equal to "1.1". @28-09-2022 19:00:17.0736 PM
+[ReportManager] Verification Passed: "435" is less than or equal to "10000". @28-09-2022 19:00:17.0736 PM
+[ReportManager] Assertion Passed: "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NjQzODQ3MTcsImlhdCI6MTY2NDM4NDQxNywianRpIjoiMjMwNDMwMzMtYjA2YS00YzUxLWFlNDMtNzRmMTQyZGNiMDNiIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6Ijc0ZTU3YWVhLTJkNDItNDNlYS1hY2JlLWI3MjQ5N2FmOTAyYyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijc0ZTU3YWVhLTJkNDItNDNlYS1hY2JlLWI3MjQ5N2FmOTAyYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.Pur7XYuJNBJJSK6sKU0jqK67P8snYxwfHMe2V6tjGYMIVTOI9pEh1U29nstyZF5djCN3y1K2oPljymGzr_zAkRyrjlfjS7cF_wj0qEBnEnWlQiZgp1DBudn60Aj4UMA_m1PVrfiPejBgCuImzPb3RynuoMv3-jitMHcVOwzjHUb9ljSqXerLB33X4WyAzg96zhPs6bpkWd40cI12HNtQaF-pHeXaIrQ9BCAa-yMnKDYBDwtglOrpJy0RpKAcLbePDTA4eVbJ_rPRyvhtfKPYxNiFSQ--G7Cxp5QQHyAMGaYjytyTaPR1wx9RjAvRvrIM4wrQpXMooRWeXJZmnnc7UA","expires_in":300,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NjQzODYyMTcsImlhdCI6MTY2NDM4NDQxNywianRpIjoiYWI0ODRkNzAtYmVjZi00NTAxLWE5YjktNTMzZDlmOWNhZDQ4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI3NGU1N2FlYS0yZDQyLTQzZWEtYWNiZS1iNzI0OTdhZjkwMmMiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3NGU1N2FlYS0yZDQyLTQzZWEtYWNiZS1iNzI0OTdhZjkwMmMifQ.fgTdO7xzg6GmlgJ109Xi-j_9Y3LnFuBp33yXpB39Fkk","token_type":"Bearer","not-before-policy":0,"session_state":"74e57aea-2d42-43ea-acbe-b72497af902c","scope":"email profile"}" contains "access_token". @28-09-2022 19:00:17.0736 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @28-09-2022 19:00:17.0737 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @28-09-2022 19:00:17.0738 PM
+[ReportManager] Get response jsonvalue "access_token". @28-09-2022 19:00:17.0738 PM
+[ReportManager] Assertion Passed: Check that Access token is not null. @28-09-2022 19:00:17.0738 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @28-09-2022 19:00:17.0739 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @28-09-2022 19:00:17.0739 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @28-09-2022 19:00:17.0739 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @28-09-2022 19:00:17.0739 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @28-09-2022 19:00:17.0739 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @28-09-2022 19:00:17.0743 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @28-09-2022 19:00:17.0743 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @28-09-2022 19:00:17.0743 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Token_schema.json". @28-09-2022 19:00:17.0743 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @28-09-2022 19:00:17.0744 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @28-09-2022 19:00:17.0745 PM
+[ReportManager] Verification Passed: "435" is greater than or equal to "1.1". @28-09-2022 19:00:17.0752 PM
+[ReportManager] Verification Passed: "435" is less than or equal to "10000". @28-09-2022 19:00:17.0752 PM

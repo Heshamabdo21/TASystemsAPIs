@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: SteeringCompanyAPI_TestCases.Test_Case
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.828 s - in SteeringCompanyAPI_TestCases.Test_Case
