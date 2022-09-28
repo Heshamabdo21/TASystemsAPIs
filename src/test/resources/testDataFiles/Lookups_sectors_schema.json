@@ -1,0 +1,84 @@
+
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "totalPages": {
+      "type": "integer"
+    },
+    "totalElements": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "nameArabic": {
+              "type": "string"
+            },
+            "nameEnglish": {
+              "type": "string"
+            },
+            "isActive": {
+              "type": "boolean"
+            },
+            "lastUpdated": {
+              "type": "null"
+            },
+            "descriptionEnglish": {
+              "type": "string"
+            },
+            "descriptionArabic": {
+              "type": "string"
+            },
+            "fromCityId": {
+              "type": "integer"
+            },
+            "toCityId": {
+              "type": "integer"
+            },
+            "operationMode": {
+              "type": "string"
+            },
+            "sectors": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "id",
+            "nameArabic",
+            "nameEnglish",
+            "isActive",
+            "lastUpdated",
+            "descriptionEnglish",
+            "descriptionArabic",
+            "fromCityId",
+            "toCityId",
+            "operationMode",
+            "sectors"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "page",
+    "size",
+    "totalPages",
+    "totalElements",
+    "content"
+  ]
+}
+

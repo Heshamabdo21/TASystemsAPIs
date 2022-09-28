@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome10",
+  "definitions": {
+    "Content": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Content",
+      "properties": {
+        "lastUpdated": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sectors": {
+          "type": "null"
+        },
+        "code": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "portId": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "isActive",
+        "lastUpdated",
+        "nameArabic",
+        "nameEnglish",
+        "portId",
+        "sectors"
+      ]
+    },
+    "Welcome10": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome10",
+      "properties": {
+        "size": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Content"
+          }
+        },
+        "totalElements": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "content",
+        "page",
+        "size",
+        "totalElements",
+        "totalPages"
+      ]
+    }
+  }
+}
