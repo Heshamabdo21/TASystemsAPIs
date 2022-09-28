@@ -1,0 +1,40 @@
+{
+  "size": 2147483647,
+  "totalPages": 1,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2019-12-15T12:21:55Z",
+      "nameArabic": "????? ?????",
+      "nameEnglish": "Sedan Car",
+      "id": 1,
+      "maximumCapacity": 4,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-01-21T07:57:12Z",
+      "nameArabic": "???",
+      "nameEnglish": "Van",
+      "id": 4,
+      "maximumCapacity": 15,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2019-12-15T12:22:01Z",
+      "nameArabic": "????? ???",
+      "nameEnglish": "SUV Car",
+      "id": 2,
+      "maximumCapacity": 7,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-01-05T18:27:40Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Bus",
+      "id": 3,
+      "maximumCapacity": 55,
+      "isActive": true
+    }
+  ],
+  "totalElements": 4
+}

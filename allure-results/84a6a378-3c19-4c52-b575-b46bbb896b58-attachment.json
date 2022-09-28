@@ -1,0 +1,32 @@
+{
+  "size": 3,
+  "totalPages": 10,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ??? ",
+      "nameEnglish": "Alab Port",
+      "id": 59,
+      "cityId": 656,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "????? ???? ???????",
+      "nameEnglish": "Yanbu Commercial Port",
+      "id": 53,
+      "cityId": 646,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? ????",
+      "nameEnglish": "Jadedat Arar Port",
+      "id": 49,
+      "cityId": 612,
+      "isActive": true
+    }
+  ],
+  "totalElements": 29
+}
