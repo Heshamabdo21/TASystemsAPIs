@@ -17,14 +17,13 @@ public class Token_API {
    
     public String POST_TOKEN_Rq() {
     	SHAFT.API token_api = new SHAFT.API(KEYCLOAK_HOST);
-      /*  HashMap<Object, Object> body = new HashMap<Object, Object>();
-        body.put("username", "tokhi");
-        body.put("password", "123");
-        body.put("grant_type", "password");
-        body.put("client_id", "tic-api");*/
 
-        String TokenRequestBody="username=tokhi"+"&"+"password=123"+"&"+"grant_type=password"+"&"+"client_id=tic-api";
-        token_api.post(Token_Path).setRequestBody(TokenRequestBody).setTargetStatusCode(200).setContentType(ContentType.URLENC).perform();
+        String TokenRequestBody="username=tokhi"+"&"+"password=123"+"&"
+        +"grant_type=password"+"&"+"client_id=tic-api";
+        token_api.post(Token_Path).
+        setRequestBody(TokenRequestBody).
+        setTargetStatusCode(200).
+        setContentType(ContentType.URLENC).perform();
 
         
         Response token_Response = token_api.getResponse();
