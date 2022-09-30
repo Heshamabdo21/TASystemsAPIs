@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome6",
+  "definitions": {
+    "Welcome6": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome6",
+      "properties": {
+        "endDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "periodProgramTemplates": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "startDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "endDate",
+        "id",
+        "periodProgramTemplates",
+        "startDate",
+        "status"
+      ]
+    }
+  }
+}

@@ -46,7 +46,7 @@ public class Policies_API {
         SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
    
-    public void GET_all_Lookups_Lookups_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        
+    public void GET_all_Lookups_policies_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        
         String Lookup_policies_Path = "/policies";
     	SHAFT.API Lookups_policies_api = new SHAFT.API(BaseURL);
 

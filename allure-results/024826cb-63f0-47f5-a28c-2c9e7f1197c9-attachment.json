@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome1",
+  "definitions": {
+    "Welcome1": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome1",
+      "properties": {
+        "size": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Content"
+          }
+        },
+        "totalElements": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "page",
+        "size",
+        "totalPages",
+        "totalElements",
+        "content"
+      ]
+    },
+    "Content": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Content",
+      "properties": {
+        "endDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "periodProgramTemplates": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "startDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "endDate",
+        "id",
+        "periodProgramTemplates",
+        "startDate",
+        "status"
+      ]
+    }
+  }
+}
