@@ -1,0 +1,88 @@
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:18.0873 PM
+
+################################################################################################################################################
+Starting Execution:	"1 out of 13" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Case.Valid_GET_all_CreationalPeriods_Rq_TC"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:18.0873 PM
+[ReportManager] Setting discrete logging to: "true" @02-10-2022 20:52:21.0878 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @02-10-2022 20:52:21.0878 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-10-2022 20:52:21.0896 PM
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:21.0904 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1455ms". @02-10-2022 20:52:23.0055 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-10-2022 20:52:23.0057 PM
+[ReportManager] Successfully created attachment "API Request - Body" @02-10-2022 20:52:23.0060 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-10-2022 20:52:23.0349 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @02-10-2022 20:52:23.0352 PM
+[ReportManager] Verification Passed: "1455" is greater than or equal to "1.1". @02-10-2022 20:52:23.0353 PM
+[ReportManager] Verification Passed: "1455" is less than or equal to "10000". @02-10-2022 20:52:23.0353 PM
+[ReportManager] Assertion Passed: "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NjQ3MzcwNDEsImlhdCI6MTY2NDczNjc0MSwianRpIjoiZjA0MjBkMGUtYTE1MC00OTVmLTg1NTUtYzcxYTdjZjE4MjFhIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjEyZWQ5NTQ4LWEyOWMtNDNmNS05ZDliLTcxNjUwZWJmYzNlYiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjEyZWQ5NTQ4LWEyOWMtNDNmNS05ZDliLTcxNjUwZWJmYzNlYiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.XkrX3IO5EfTfQIS2TxScewMlmHBk2X0aFYBRLwt4-kITcZn6TvLG7DVkpvfAEKH6LarCNxWxI9XPd3YZg76lRcy59uBNfw96l4mHnJN-YwF_bS0hLv975ZzHIF_BSMSJmGHHOwcho9ezK55lmOrA0GMb6oHI5NrGbVW7EWW02m7NM8vkQPzDzdGm0g9khnVPYbNVP9hxZVrxJcpPbeN4hd32628ITxBiNqUnX62c-qkCUQ6JzbbziLZYlrKRmx4yR_ZtwOT_nqxNhNWBfdVYCb_Y5pPuGK5QrHifnzqW5cpYjXt70PvQ_KiQ4byu8kgqdnGqdw_KKuXwzZgILfPhsA","expires_in":300,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NjQ3Mzg1NDEsImlhdCI6MTY2NDczNjc0MSwianRpIjoiMGY0OWY4ZWEtY2FhMi00ZjhkLTllN2MtNTY4MzRmZDBhZThlIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiIxMmVkOTU0OC1hMjljLTQzZjUtOWQ5Yi03MTY1MGViZmMzZWIiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIxMmVkOTU0OC1hMjljLTQzZjUtOWQ5Yi03MTY1MGViZmMzZWIifQ.MNwDVjsAlMALoHDjWeacWln-80z_6yLKy0J4nqPi0zw","token_type":"Bearer","not-before-policy":0,"session_state":"12ed9548-a29c-43f5-9d9b-71650ebfc3eb","scope":"email profile"}" contains "access_token". @02-10-2022 20:52:23.0361 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-10-2022 20:52:23.0363 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-10-2022 20:52:23.0364 PM
+[ReportManager] Get response jsonvalue "access_token". @02-10-2022 20:52:23.0506 PM
+[ReportManager] Assertion Passed: Check that Access token is not null. @02-10-2022 20:52:23.0506 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-10-2022 20:52:23.0508 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-10-2022 20:52:23.0509 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @02-10-2022 20:52:23.0510 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @02-10-2022 20:52:23.0511 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @02-10-2022 20:52:23.0511 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @02-10-2022 20:52:24.0403 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @02-10-2022 20:52:24.0404 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @02-10-2022 20:52:24.0404 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Token_schema.json". @02-10-2022 20:52:24.0409 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @02-10-2022 20:52:24.0410 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @02-10-2022 20:52:24.0412 PM
+[ReportManager] Verification Passed: "1455" is greater than or equal to "1.1". @02-10-2022 20:52:24.0433 PM
+[ReportManager] Verification Passed: "1455" is less than or equal to "10000". @02-10-2022 20:52:24.0434 PM
+[ReportManager] Setting discrete logging to: "true" @02-10-2022 20:52:25.0756 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @02-10-2022 20:52:25.0756 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-10-2022 20:52:25.0757 PM
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:25.0759 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/creationalPeriods | Content Type: */* | Response Time: 1222ms". @02-10-2022 20:52:25.0783 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-10-2022 20:52:25.0784 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-10-2022 20:52:25.0786 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @02-10-2022 20:52:25.0787 PM
+[ReportManager] Verification Passed: "1222" is greater than or equal to "1.1". @02-10-2022 20:52:25.0787 PM
+[ReportManager] Verification Passed: "1222" is less than or equal to "10000". @02-10-2022 20:52:25.0787 PM
+[ReportManager] Assertion Passed: "{"page":0,"size":5,"totalPages":1,"totalElements":5,"content":[{"id":140,"startDate":"2022-09-13T09:00:00Z","endDate":"2022-09-16T20:00:00Z","status":"Active","periodProgramTemplates":[243,244,245,246,247,248,249,250,251]},{"id":150,"startDate":"2022-09-20T13:50:00Z","endDate":"2022-10-25T13:50:00Z","status":"New","periodProgramTemplates":[243,245,246,247,249,251]},{"id":142,"startDate":"2022-09-16T21:00:00Z","endDate":"2022-09-21T20:59:00Z","status":"Active","periodProgramTemplates":[252,253,254]},{"id":152,"startDate":"2022-09-21T21:00:00Z","endDate":"2022-09-24T20:59:00Z","status":"New","periodProgramTemplates":[252,253,254]},{"id":157,"startDate":"2022-09-28T11:33:00Z","endDate":"2022-09-29T14:55:00Z","status":"Active","periodProgramTemplates":[271]}]}" contains "content". @02-10-2022 20:52:25.0788 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-10-2022 20:52:25.0789 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-10-2022 20:52:25.0790 PM
+[ReportManager] Get response jsonvalue "content". @02-10-2022 20:52:25.0792 PM
+[ReportManager] Assertion Passed: Check that cancellationPolicies object is not null. @02-10-2022 20:52:25.0792 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-10-2022 20:52:25.0793 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-10-2022 20:52:25.0795 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "CreationalPeriods_schema.json"". @02-10-2022 20:52:25.0796 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/CreationalPeriods_schema.json"". @02-10-2022 20:52:25.0796 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/CreationalPeriods_schema.json"". @02-10-2022 20:52:25.0796 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\CreationalPeriods_schema.json"". @02-10-2022 20:52:25.0881 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\CreationalPeriods_schema.json"". @02-10-2022 20:52:25.0881 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\CreationalPeriods_schema.json"". @02-10-2022 20:52:25.0882 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/CreationalPeriods_schema.json". @02-10-2022 20:52:25.0883 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @02-10-2022 20:52:25.0885 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @02-10-2022 20:52:25.0887 PM
+[ReportManager] Verification Passed: "1222" is greater than or equal to "1.1". @02-10-2022 20:52:25.0888 PM
+[ReportManager] Verification Passed: "1222" is less than or equal to "10000". @02-10-2022 20:52:25.0888 PM
+[ReportManager] Setting discrete logging to: "true" @02-10-2022 20:52:26.0262 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @02-10-2022 20:52:26.0262 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-10-2022 20:52:26.0263 PM
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:26.0263 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/creationalPeriods/150 | Content Type: */* | Response Time: 367ms". @02-10-2022 20:52:26.0275 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-10-2022 20:52:26.0276 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-10-2022 20:52:26.0277 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @02-10-2022 20:52:26.0278 PM
+[ReportManager] Verification Passed: "367" is greater than or equal to "1.1". @02-10-2022 20:52:26.0278 PM
+[ReportManager] Verification Passed: "367" is less than or equal to "10000". @02-10-2022 20:52:26.0278 PM
+[ReportManager] Assertion Passed: "{"id":150,"startDate":"2022-09-20T13:50:00Z","endDate":"2022-10-25T13:50:00Z","status":"New","periodProgramTemplates":[243,245,246,247,249,251]}" contains "periodProgramTemplates". @02-10-2022 20:52:26.0278 PM
+[ReportManager] Get response jsonvalue "periodProgramTemplates". @02-10-2022 20:52:26.0279 PM
+[ReportManager] Assertion Passed: Check that cancellationPolicies object is not null. @02-10-2022 20:52:26.0279 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "CreationalPeriodsByID_schema.json"". @02-10-2022 20:52:26.0279 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/CreationalPeriodsByID_schema.json"". @02-10-2022 20:52:26.0280 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/CreationalPeriodsByID_schema.json"". @02-10-2022 20:52:26.0280 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\CreationalPeriodsByID_schema.json"". @02-10-2022 20:52:26.0284 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\CreationalPeriodsByID_schema.json"". @02-10-2022 20:52:26.0284 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\CreationalPeriodsByID_schema.json"". @02-10-2022 20:52:26.0284 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/CreationalPeriodsByID_schema.json". @02-10-2022 20:52:26.0285 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @02-10-2022 20:52:26.0286 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @02-10-2022 20:52:26.0287 PM
+[ReportManager] Verification Passed: "367" is greater than or equal to "1.1". @02-10-2022 20:52:26.0288 PM
+[ReportManager] Verification Passed: "367" is less than or equal to "10000". @02-10-2022 20:52:26.0289 PM

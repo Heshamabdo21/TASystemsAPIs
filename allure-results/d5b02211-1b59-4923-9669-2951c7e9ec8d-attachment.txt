@@ -1,0 +1,84 @@
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:43.0331 PM
+
+################################################################################################################################################
+Starting Execution:	"11 out of 13" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Case.Valid_GET_all_vehicleCategories_Lookups_Rq_TC"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:43.0331 PM
+[ReportManager] Setting discrete logging to: "true" @02-10-2022 20:52:43.0786 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @02-10-2022 20:52:43.0786 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-10-2022 20:52:43.0786 PM
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:43.0786 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 455ms". @02-10-2022 20:52:43.0819 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-10-2022 20:52:43.0821 PM
+[ReportManager] Successfully created attachment "API Request - Body" @02-10-2022 20:52:43.0822 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-10-2022 20:52:43.0824 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @02-10-2022 20:52:43.0824 PM
+[ReportManager] Verification Passed: "455" is greater than or equal to "1.1". @02-10-2022 20:52:43.0824 PM
+[ReportManager] Verification Passed: "455" is less than or equal to "10000". @02-10-2022 20:52:43.0824 PM
+[ReportManager] Assertion Passed: "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NjQ3MzcwNjMsImlhdCI6MTY2NDczNjc2MywianRpIjoiNzZlYjczZjEtNDgxZS00N2NlLThlNjctYTBjNTcyMTZlMGNjIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6ImIwMDlkMWU2LTExMmEtNGI0MC1hNjA1LTQ2NWE4ZmVlNWVjYiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImIwMDlkMWU2LTExMmEtNGI0MC1hNjA1LTQ2NWE4ZmVlNWVjYiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.E9HkX6IDjGDAc7Zdk_mY7iA_nLfzluRerz-6SLva1Kxu7YvRejaMs8Y8GH0V1lm56TPvqFDo7yTTWSZsDK0sEHGzYw6rZlc4JCO9za6wqR1ngZBkYw_wI6Zes61pP8c0zbnxK_Kabxu8WUNVuJFBqhfy4HnnwM6JCGn3Es4c3qnSFNnxaZ6jfPVf0XXluD6c1NEiILwCaYVcf4Px4dOpnfqNTYIyGNMhX7AxnlSSj5ugkSIgcKrQrl3D2nVSM66H2bfzExHh-sK-p7fk5Fi1g3jFd5lAzAqbiiIPUjWOEvfk4giF2T16oOUCi1xNP35Q0QkMAV_4DzIFIuzxiIAPMg","expires_in":300,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NjQ3Mzg1NjMsImlhdCI6MTY2NDczNjc2MywianRpIjoiNzNiNDliY2YtZTRiOC00YWE4LTg1NzMtYTYzY2EwMDdhZTY0IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiJiMDA5ZDFlNi0xMTJhLTRiNDAtYTYwNS00NjVhOGZlZTVlY2IiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJiMDA5ZDFlNi0xMTJhLTRiNDAtYTYwNS00NjVhOGZlZTVlY2IifQ.HHcFiKMKwTVZ11HXbbiuNbAoTSDvdXqAIlTUDWDK35Q","token_type":"Bearer","not-before-policy":0,"session_state":"b009d1e6-112a-4b40-a605-465a8fee5ecb","scope":"email profile"}" contains "access_token". @02-10-2022 20:52:43.0824 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-10-2022 20:52:43.0824 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-10-2022 20:52:43.0830 PM
+[ReportManager] Get response jsonvalue "access_token". @02-10-2022 20:52:43.0830 PM
+[ReportManager] Assertion Passed: Check that Access token is not null. @02-10-2022 20:52:43.0830 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-10-2022 20:52:43.0832 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-10-2022 20:52:43.0833 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @02-10-2022 20:52:43.0833 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @02-10-2022 20:52:43.0833 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @02-10-2022 20:52:43.0833 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @02-10-2022 20:52:43.0833 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @02-10-2022 20:52:43.0833 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @02-10-2022 20:52:43.0833 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Token_schema.json". @02-10-2022 20:52:43.0833 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @02-10-2022 20:52:43.0843 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @02-10-2022 20:52:43.0844 PM
+[ReportManager] Verification Passed: "455" is greater than or equal to "1.1". @02-10-2022 20:52:43.0864 PM
+[ReportManager] Verification Passed: "455" is less than or equal to "10000". @02-10-2022 20:52:43.0864 PM
+[ReportManager] Setting discrete logging to: "true" @02-10-2022 20:52:44.0233 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @02-10-2022 20:52:44.0233 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-10-2022 20:52:44.0233 PM
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:44.0233 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/lookups/vehicleCategories | Content Type: */* | Response Time: 331ms". @02-10-2022 20:52:44.0256 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-10-2022 20:52:44.0257 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-10-2022 20:52:44.0259 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @02-10-2022 20:52:44.0259 PM
+[ReportManager] Verification Passed: "331" is greater than or equal to "1.1". @02-10-2022 20:52:44.0259 PM
+[ReportManager] Verification Passed: "331" is less than or equal to "10000". @02-10-2022 20:52:44.0259 PM
+[ReportManager] Assertion Passed: "{"page":0,"size":2147483647,"totalPages":1,"totalElements":3,"content":[{"id":1,"nameArabic":"????","nameEnglish":"VIP","isActive":true,"lastUpdated":null,"sectors":null},{"id":2,"nameArabic":"?????","nameEnglish":"Premium","isActive":true,"lastUpdated":null,"sectors":null},{"id":3,"nameArabic":"????","nameEnglish":"Normal","isActive":true,"lastUpdated":null,"sectors":null}]}" contains "content". @02-10-2022 20:52:44.0259 PM
+[ReportManager] Get response jsonvalue "content". @02-10-2022 20:52:44.0259 PM
+[ReportManager] Assertion Passed: Check that content object is not null. @02-10-2022 20:52:44.0259 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0259 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0259 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0259 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0259 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0259 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0259 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Lookups_vehicleCategories_schema.json". @02-10-2022 20:52:44.0274 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @02-10-2022 20:52:44.0278 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @02-10-2022 20:52:44.0280 PM
+[ReportManager] Verification Passed: "331" is greater than or equal to "1.1". @02-10-2022 20:52:44.0280 PM
+[ReportManager] Verification Passed: "331" is less than or equal to "10000". @02-10-2022 20:52:44.0280 PM
+[ReportManager] Setting discrete logging to: "true" @02-10-2022 20:52:44.0605 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @02-10-2022 20:52:44.0605 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-10-2022 20:52:44.0620 PM
+[ReportManager] Setting discrete logging to: "false" @02-10-2022 20:52:44.0620 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/lookups/vehicleCategories | Content Type: */* | Response Time: 320ms". @02-10-2022 20:52:44.0636 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-10-2022 20:52:44.0644 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-10-2022 20:52:44.0645 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Verification Passed: "320" is greater than or equal to "1.1". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Verification Passed: "320" is less than or equal to "10000". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Assertion Passed: "{"page":0,"size":3,"totalPages":1,"totalElements":3,"content":[{"id":1,"nameArabic":"????","nameEnglish":"VIP","isActive":true,"lastUpdated":null,"sectors":null},{"id":2,"nameArabic":"?????","nameEnglish":"Premium","isActive":true,"lastUpdated":null,"sectors":null},{"id":3,"nameArabic":"????","nameEnglish":"Normal","isActive":true,"lastUpdated":null,"sectors":null}]}" contains "content". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Get response jsonvalue "content". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Assertion Passed: Check that content object is not null. @02-10-2022 20:52:44.0645 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0645 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0645 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0645 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0645 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0645 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_vehicleCategories_schema.json"". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Lookups_vehicleCategories_schema.json". @02-10-2022 20:52:44.0645 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @02-10-2022 20:52:44.0663 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @02-10-2022 20:52:44.0665 PM
+[ReportManager] Verification Passed: "320" is greater than or equal to "1.1". @02-10-2022 20:52:44.0666 PM
+[ReportManager] Verification Passed: "320" is less than or equal to "10000". @02-10-2022 20:52:44.0666 PM
