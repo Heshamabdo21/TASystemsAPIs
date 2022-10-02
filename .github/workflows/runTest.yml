@@ -27,3 +27,17 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+    - name: Upload Allure Report as Pipeline Artifact
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+          name: ${{ runner.os }} - Desktop Browsers Tests Allure Report
+          path: "generatedReport_*.zip"
+
+    - name: Upload Extent Report as Pipeline Artifact
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+          name: ${{ runner.os }} - Desktop Browsers Tests Extent Report
+          path: "extent-reports/ExtentReports_*.html"
