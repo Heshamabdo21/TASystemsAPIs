@@ -1,0 +1,26 @@
+{
+  "size": 3,
+  "totalPages": 1,
+  "page": 0,
+  "content": [
+    {
+      "nameArabic": "????",
+      "nameEnglish": "VIP",
+      "id": 1,
+      "isActive": true
+    },
+    {
+      "nameArabic": "?????",
+      "nameEnglish": "Premium",
+      "id": 2,
+      "isActive": true
+    },
+    {
+      "nameArabic": "????",
+      "nameEnglish": "Normal",
+      "id": 3,
+      "isActive": true
+    }
+  ],
+  "totalElements": 3
+}

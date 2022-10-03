@@ -1,0 +1,235 @@
+{
+  "size": 2147483647,
+  "totalPages": 1,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ??? ",
+      "nameEnglish": "Alab Port",
+      "id": 59,
+      "cityId": 656,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "????? ???? ???????",
+      "nameEnglish": "Yanbu Commercial Port",
+      "id": 53,
+      "cityId": 646,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? ????",
+      "nameEnglish": "Jadedat Arar Port",
+      "id": 49,
+      "cityId": 612,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ???????",
+      "nameEnglish": "Alwadeah Port",
+      "id": 65,
+      "cityId": 664,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? ???? ??????",
+      "nameEnglish": "King Khalid International Airport",
+      "id": 41,
+      "cityId": 601,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? 5 - ???? ????? ???",
+      "nameEnglish": "???? ????? 5 - ???? ????? ???",
+      "id": 71,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ???? ????",
+      "nameEnglish": "Halat Amar Port",
+      "id": 48,
+      "cityId": 606,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ???????",
+      "nameEnglish": "Alkhadra Port",
+      "id": 54,
+      "cityId": 664,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? ???",
+      "nameEnglish": "King Fahad Airport",
+      "id": 58,
+      "cityId": 607,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ?????-1???? ????? ????? ",
+      "nameEnglish": "???? ?????-1???? ????? ????? ",
+      "id": 66,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-29T08:08:58Z",
+      "nameArabic": "???? ????? ?????? - ?? ??????",
+      "nameEnglish": "Empty quarter Port",
+      "id": 72,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? ??? ?????? ??????",
+      "nameEnglish": "KING ABDUL AZIZ INTERNATIONAL AIRPORT",
+      "id": 50,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????",
+      "nameEnglish": "Salwa Port",
+      "id": 45,
+      "cityId": 672,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ??????",
+      "nameEnglish": "Altaif Airport",
+      "id": 63,
+      "cityId": 604,
+      "isActive": true
+    },
+    {
+      "nameArabic": "?????",
+      "nameEnglish": "albalad",
+      "id": 4,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ??????",
+      "nameEnglish": "Altowal Port",
+      "id": 55,
+      "cityId": 607,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? 2-???? ??????",
+      "nameEnglish": "???? ????? 2-???? ??????",
+      "id": 5,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? 4-???? ????",
+      "nameEnglish": "???? ????? 4-???? ????",
+      "id": 70,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? 3-???????",
+      "nameEnglish": "???? ????? 3-???????",
+      "id": 69,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????? 6 - ???? ???",
+      "nameEnglish": "???? ????? 6 - ???? ???",
+      "id": 68,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ??????",
+      "nameEnglish": "Alkhafji Port",
+      "id": 43,
+      "cityId": 631,
+      "isActive": true
+    },
+    {
+      "nameArabic": "??????????????????? ?????",
+      "nameEnglish": "Prince AbdulMohsen Bin Abdulaziz Airport",
+      "id": 67,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ???????",
+      "nameEnglish": "Albatha Port",
+      "id": 47,
+      "cityId": 672,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "????? ??? ????????",
+      "nameEnglish": "JEDDAH ISLAMIC PORT",
+      "id": 52,
+      "cityId": 602,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ???????",
+      "nameEnglish": "Alhadithah Port",
+      "id": 56,
+      "cityId": 641,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "??? ????? ???",
+      "nameEnglish": "King Fahad Bridge",
+      "id": 46,
+      "cityId": 608,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ?????? ????",
+      "nameEnglish": "PRINCE MOHAMMAD INTERNATIONAL AIRPORT",
+      "id": 51,
+      "cityId": 605,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ??????",
+      "nameEnglish": "Alraqai Port",
+      "id": 44,
+      "cityId": 630,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2020-10-22T18:41:32Z",
+      "nameArabic": "???? ????",
+      "nameEnglish": "Abha Airport",
+      "id": 64,
+      "cityId": 613,
+      "isActive": true
+    }
+  ],
+  "totalElements": 29
+}

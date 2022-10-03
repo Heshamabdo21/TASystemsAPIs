@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome5",
+  "definitions": {
+    "Policy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Policy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "cancellationPolicyId": {
+          "type": "integer"
+        },
+        "chargeType": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "chargeValue": {
+          "type": "number"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "isRefundable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "CancellationPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "CancellationPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "chargeType": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "chargeValue": {
+          "type": "number"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "chargeUnit": {
+          "type": "string"
+        },
+        "cancellationDeadline": {
+          "format": "integer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cancellationDeadline",
+        "chargeType",
+        "chargeUnit",
+        "chargeValue",
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "Welcome5": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome5",
+      "properties": {
+        "generalPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "taxesPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "usagePolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "cancellationPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CancellationPolicy"
+          }
+        },
+        "paymentPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        }
+      },
+      "required": [
+        "cancellationPolicies",
+        "generalPolicies",
+        "paymentPolicies",
+        "taxesPolicies",
+        "usagePolicies"
+      ]
+    }
+  }
+}

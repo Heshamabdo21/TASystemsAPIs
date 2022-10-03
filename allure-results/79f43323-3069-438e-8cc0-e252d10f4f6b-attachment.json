@@ -1,0 +1,81 @@
+{
+  "generalPolicies": [
+    {
+      "descriptionArabic": "?????? ? ??????? 11",
+      "nameArabic": "????? ???? 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????? 11",
+      "nameArabic": "????? ????? 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": 1,
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "??? ????? ??????? 111",
+      "nameArabic": "????? ???????11",
+      "nameEnglish": "usage policy11",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "usage policy eng 123"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????",
+      "nameArabic": "????? ?????11",
+      "nameEnglish": "cancel policy11",
+      "chargeType": 1,
+      "id": 159,
+      "isActive": true,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "Days",
+      "cancellationDeadline": "4"
+    },
+    {
+      "descriptionArabic": "???? ???",
+      "nameArabic": "???? ???",
+      "nameEnglish": "Amr Test",
+      "chargeType": 1,
+      "id": 156,
+      "isActive": true,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "Days",
+      "cancellationDeadline": "100"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "??? ????? ??? 1",
+      "nameArabic": "????? ??? 11",
+      "nameEnglish": "Pay policy 1",
+      "cancellationPolicyId": 159,
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "pay policy desctiption",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "??? ????? ??? 112",
+      "nameArabic": "????? ??? 112",
+      "nameEnglish": "Pay policy 112",
+      "id": 130,
+      "isActive": true,
+      "descriptionEnglish": "pay policy desctiption112",
+      "isRefundable": true
+    }
+  ]
+}

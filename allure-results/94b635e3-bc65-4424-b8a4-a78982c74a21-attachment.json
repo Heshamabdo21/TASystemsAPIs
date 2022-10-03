@@ -1,0 +1,34 @@
+{
+  "size": 3,
+  "totalPages": 5,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2021-04-11T21:05:44Z",
+      "nameArabic": "???? ????????",
+      "nameEnglish": "Departure Terminal",
+      "id": 20,
+      "isActive": false,
+      "portId": 51
+    },
+    {
+      "lastUpdated": "2021-04-11T21:05:58Z",
+      "code": "",
+      "nameArabic": "??????? - ???? ?????? ???? ???",
+      "nameEnglish": "",
+      "id": 12,
+      "isActive": false,
+      "portId": 51
+    },
+    {
+      "lastUpdated": "2021-04-11T21:06:12Z",
+      "code": "",
+      "nameArabic": "??????? ?????? ??????",
+      "nameEnglish": "Madinah Fast Track Terminal",
+      "id": 7,
+      "isActive": false,
+      "portId": 51
+    }
+  ],
+  "totalElements": 13
+}
