@@ -38,12 +38,7 @@ public class Policies_API {
         Lookups_policies_api.assertThatResponse().extractedJsonValue("cancellationPolicies").isNotNull().withCustomReportMessage("Check that cancellationPolicies object is not null.").perform();
         
         Lookups_policies_api.assertThatResponse().matchesSchema("Lookups_policies_schema.json").perform();
-        
-        System.out.println("Lookups policies Response Body  : - "+Lookups_policies_ResponseBody+"   -E");
-
-        long responseTime = Lookups_policies_api.getResponse().getTime();
-        SHAFT.Validations.verifyThat().number(responseTime).isGreaterThanOrEquals(1.1).perform();
-        SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
+     
     }
    
     public void GET_all_Lookups_policies_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        

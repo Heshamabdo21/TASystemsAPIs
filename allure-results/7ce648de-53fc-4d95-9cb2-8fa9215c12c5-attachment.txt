@@ -1,0 +1,88 @@
+[ReportManager] Setting discrete logging to: "false" @04-10-2022 15:16:11.0289 PM
+
+################################################################################################################################################
+Starting Execution:	"6 out of 13" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Case.Valid_GET_all_policies_Lookups_Rq_TC"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @04-10-2022 15:16:11.0289 PM
+[ReportManager] Setting discrete logging to: "true" @04-10-2022 15:16:11.0996 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @04-10-2022 15:16:11.0996 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @04-10-2022 15:16:11.0996 PM
+[ReportManager] Setting discrete logging to: "false" @04-10-2022 15:16:11.0996 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 705ms". @04-10-2022 15:16:12.0007 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @04-10-2022 15:16:12.0008 PM
+[ReportManager] Successfully created attachment "API Request - Body" @04-10-2022 15:16:12.0008 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @04-10-2022 15:16:12.0009 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @04-10-2022 15:16:12.0009 PM
+[ReportManager] Verification Passed: "705" is greater than or equal to "1.1". @04-10-2022 15:16:12.0010 PM
+[ReportManager] Verification Passed: "705" is less than or equal to "10000". @04-10-2022 15:16:12.0011 PM
+[ReportManager] Assertion Passed: "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NjQ4ODk2NzEsImlhdCI6MTY2NDg4OTM3MSwianRpIjoiMTY2NWFhMzYtOWU5MC00OTAzLTkwZjItMWI2ZDViNTdkMmM4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjY3MDQzYTU3LWNkYTQtNDRhZC04NzZhLTg3MzU1NmZiYjgxYyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjY3MDQzYTU3LWNkYTQtNDRhZC04NzZhLTg3MzU1NmZiYjgxYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.TZXe2xmLAk3pdxQjMHdb2dub3_JtEMo0ENeZFKDgM8BXeJhGwyUWm--GVbEwRuXvEwfuhozbVaN1Q9wmmR8Sc3B352N3GSz1Jr3iyP6qlFWj6UnT7YZAyxf6pBovm5sZW7T_RMMS-1UyvnHW2akW-sMIvT4h_WSDRh6h7N_sqBxs1gAAceRzUgnAbRbdonxOsWDd0R4SimyNTeRR34iulmuSx7JN9EQXIOh7rVzqHM1mUIJO0Q-Uk1vnr4mR-j_bMZQXvyuyEaMX5RrvNHkq4_ia4qHcbTOhxXQqPp9QJlgaNmLfv1pG4zmaS58zrL8TjSOkNQKRL0oqqSz0c8A5rg","expires_in":300,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NjQ4OTExNzEsImlhdCI6MTY2NDg4OTM3MSwianRpIjoiYTAxYmY0MjgtMTk3Zi00MzI4LTg3MjUtMGNmOWJmNzAyNTYzIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI2NzA0M2E1Ny1jZGE0LTQ0YWQtODc2YS04NzM1NTZmYmI4MWMiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2NzA0M2E1Ny1jZGE0LTQ0YWQtODc2YS04NzM1NTZmYmI4MWMifQ.yHFGUVVHM8vInQiENOB1qZ1XITv3tAPxJbKRVsK6Cuw","token_type":"Bearer","not-before-policy":0,"session_state":"67043a57-cda4-44ad-876a-873556fbb81c","scope":"email profile"}" contains "access_token". @04-10-2022 15:16:12.0011 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @04-10-2022 15:16:12.0012 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @04-10-2022 15:16:12.0012 PM
+[ReportManager] Get response jsonvalue "access_token". @04-10-2022 15:16:12.0013 PM
+[ReportManager] Assertion Passed: Check that Access token is not null. @04-10-2022 15:16:12.0013 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @04-10-2022 15:16:12.0013 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @04-10-2022 15:16:12.0014 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @04-10-2022 15:16:12.0014 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @04-10-2022 15:16:12.0014 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @04-10-2022 15:16:12.0014 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @04-10-2022 15:16:12.0017 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @04-10-2022 15:16:12.0017 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @04-10-2022 15:16:12.0017 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Token_schema.json". @04-10-2022 15:16:12.0017 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @04-10-2022 15:16:12.0019 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @04-10-2022 15:16:12.0020 PM
+[ReportManager] Verification Passed: "705" is greater than or equal to "1.1". @04-10-2022 15:16:12.0028 PM
+[ReportManager] Verification Passed: "705" is less than or equal to "10000". @04-10-2022 15:16:12.0028 PM
+[ReportManager] Setting discrete logging to: "true" @04-10-2022 15:16:12.0603 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @04-10-2022 15:16:12.0603 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @04-10-2022 15:16:12.0604 PM
+[ReportManager] Setting discrete logging to: "false" @04-10-2022 15:16:12.0604 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies | Content Type: */* | Response Time: 560ms". @04-10-2022 15:16:12.0616 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @04-10-2022 15:16:12.0617 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @04-10-2022 15:16:12.0618 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @04-10-2022 15:16:12.0618 PM
+[ReportManager] Verification Passed: "560" is greater than or equal to "1.1". @04-10-2022 15:16:12.0618 PM
+[ReportManager] Verification Passed: "560" is less than or equal to "10000". @04-10-2022 15:16:12.0618 PM
+[ReportManager] Assertion Passed: "{"cancellationPolicies":[{"id":159,"nameArabic":"????? ?????11","nameEnglish":"cancel policy11","descriptionArabic":"??? ????? ????","descriptionEnglish":"policy description eng","isActive":true,"chargeUnit":"Days","chargeType":1,"chargeValue":10.00,"cancellationDeadline":"4"},{"id":156,"nameArabic":"???? ???","nameEnglish":"Amr Test","descriptionArabic":"???? ???","descriptionEnglish":"Amr Test","isActive":true,"chargeUnit":"Days","chargeType":1,"chargeValue":10.00,"cancellationDeadline":"100"}],"paymentPolicies":[{"id":129,"nameArabic":"????? ??? 11","nameEnglish":"Pay policy 1","descriptionArabic":"??? ????? ??? 1","descriptionEnglish":"pay policy desctiption","isActive":true,"isRefundable":true,"cancellationPolicyId":159},{"id":130,"nameArabic":"????? ??? 112","nameEnglish":"Pay policy 112","descriptionArabic":"??? ????? ??? 112","descriptionEnglish":"pay policy desctiption112","isActive":true,"isRefundable":true}],"usagePolicies":[{"id":121,"nameArabic":"????? ???????11","nameEnglish":"usage policy11","descriptionArabic":"??? ????? ??????? 111","descriptionEnglish":"usage policy eng 123","isActive":true}],"taxesPolicies":[{"id":121,"nameArabic":"????? ????? 11","nameEnglish":"tax policy 11","descriptionArabic":"??? ????? ????? 11","descriptionEnglish":"tax policy description 11","isActive":true,"chargeType":1,"chargeValue":15.00}],"generalPolicies":[{"id":120,"nameArabic":"????? ???? 11","nameEnglish":"general policy 11","descriptionArabic":"?????? ? ??????? 11","descriptionEnglish":"terms and conditions","isActive":true}]}" contains "cancellationPolicies". @04-10-2022 15:16:12.0619 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @04-10-2022 15:16:12.0619 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @04-10-2022 15:16:12.0619 PM
+[ReportManager] Get response jsonvalue "cancellationPolicies". @04-10-2022 15:16:12.0620 PM
+[ReportManager] Assertion Passed: Check that cancellationPolicies object is not null. @04-10-2022 15:16:12.0621 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Lookups_policies_schema.json"". @04-10-2022 15:16:12.0621 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Lookups_policies_schema.json"". @04-10-2022 15:16:12.0621 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Lookups_policies_schema.json"". @04-10-2022 15:16:12.0621 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_policies_schema.json"". @04-10-2022 15:16:12.0629 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_policies_schema.json"". @04-10-2022 15:16:12.0629 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_policies_schema.json"". @04-10-2022 15:16:12.0629 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Lookups_policies_schema.json". @04-10-2022 15:16:12.0630 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @04-10-2022 15:16:12.0631 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @04-10-2022 15:16:12.0632 PM
+[ReportManager] Verification Passed: "560" is greater than or equal to "1.1". @04-10-2022 15:16:12.0633 PM
+[ReportManager] Verification Passed: "560" is less than or equal to "10000". @04-10-2022 15:16:12.0634 PM
+[ReportManager] Setting discrete logging to: "true" @04-10-2022 15:16:13.0186 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @04-10-2022 15:16:13.0186 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @04-10-2022 15:16:13.0186 PM
+[ReportManager] Setting discrete logging to: "false" @04-10-2022 15:16:13.0187 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies | Content Type: */* | Response Time: 550ms". @04-10-2022 15:16:13.0202 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @04-10-2022 15:16:13.0203 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @04-10-2022 15:16:13.0203 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @04-10-2022 15:16:13.0203 PM
+[ReportManager] Verification Passed: "550" is greater than or equal to "1.1". @04-10-2022 15:16:13.0204 PM
+[ReportManager] Verification Passed: "550" is less than or equal to "10000". @04-10-2022 15:16:13.0204 PM
+[ReportManager] Assertion Passed: "{"cancellationPolicies":[{"id":159,"nameArabic":"????? ?????11","nameEnglish":"cancel policy11","descriptionArabic":"??? ????? ????","descriptionEnglish":"policy description eng","isActive":true,"chargeUnit":"Days","chargeType":1,"chargeValue":10.00,"cancellationDeadline":"4"},{"id":156,"nameArabic":"???? ???","nameEnglish":"Amr Test","descriptionArabic":"???? ???","descriptionEnglish":"Amr Test","isActive":true,"chargeUnit":"Days","chargeType":1,"chargeValue":10.00,"cancellationDeadline":"100"}],"paymentPolicies":[{"id":129,"nameArabic":"????? ??? 11","nameEnglish":"Pay policy 1","descriptionArabic":"??? ????? ??? 1","descriptionEnglish":"pay policy desctiption","isActive":true,"isRefundable":true,"cancellationPolicyId":159},{"id":130,"nameArabic":"????? ??? 112","nameEnglish":"Pay policy 112","descriptionArabic":"??? ????? ??? 112","descriptionEnglish":"pay policy desctiption112","isActive":true,"isRefundable":true}],"usagePolicies":[{"id":121,"nameArabic":"????? ???????11","nameEnglish":"usage policy11","descriptionArabic":"??? ????? ??????? 111","descriptionEnglish":"usage policy eng 123","isActive":true}],"taxesPolicies":[{"id":121,"nameArabic":"????? ????? 11","nameEnglish":"tax policy 11","descriptionArabic":"??? ????? ????? 11","descriptionEnglish":"tax policy description 11","isActive":true,"chargeType":1,"chargeValue":15.00}],"generalPolicies":[{"id":120,"nameArabic":"????? ???? 11","nameEnglish":"general policy 11","descriptionArabic":"?????? ? ??????? 11","descriptionEnglish":"terms and conditions","isActive":true}]}" contains "cancellationPolicies". @04-10-2022 15:16:13.0204 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @04-10-2022 15:16:13.0204 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @04-10-2022 15:16:13.0205 PM
+[ReportManager] Get response jsonvalue "cancellationPolicies". @04-10-2022 15:16:13.0206 PM
+[ReportManager] Assertion Passed: Check that cancellationPolicies object is not null. @04-10-2022 15:16:13.0206 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Lookups_policies_schema.json"". @04-10-2022 15:16:13.0206 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Lookups_policies_schema.json"". @04-10-2022 15:16:13.0206 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Lookups_policies_schema.json"". @04-10-2022 15:16:13.0206 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_policies_schema.json"". @04-10-2022 15:16:13.0213 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_policies_schema.json"". @04-10-2022 15:16:13.0216 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Lookups_policies_schema.json"". @04-10-2022 15:16:13.0216 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Lookups_policies_schema.json". @04-10-2022 15:16:13.0217 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @04-10-2022 15:16:13.0218 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @04-10-2022 15:16:13.0219 PM
+[ReportManager] Verification Passed: "550" is greater than or equal to "1.1". @04-10-2022 15:16:13.0219 PM
+[ReportManager] Verification Passed: "550" is less than or equal to "10000". @04-10-2022 15:16:13.0221 PM
