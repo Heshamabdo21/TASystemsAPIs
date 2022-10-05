@@ -1,0 +1,51 @@
+################################################################################################################################################
+Detected SHAFT Engine Version: "SHAFT Engine v6.4.20220906-BETA"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @05-10-2022 17:37:27.0700 PM
+
+################################################################################################################################################
+Starting Execution:	"1 out of 1" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Case.Valid_Token_RQ_TC"
+Test Description:	"TC001 - Peform Post Token API with valid user name and password and retun with token"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @05-10-2022 17:37:27.0700 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @05-10-2022 17:37:27.0711 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @05-10-2022 17:37:27.0748 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @05-10-2022 17:37:27.0757 PM
+[ReportManager] Setting discrete logging to: "true" @05-10-2022 17:37:30.0722 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @05-10-2022 17:37:30.0722 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @05-10-2022 17:37:30.0731 PM
+[ReportManager] Setting discrete logging to: "false" @05-10-2022 17:37:30.0731 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1550ms". @05-10-2022 17:37:31.0754 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @05-10-2022 17:37:31.0755 PM
+[ReportManager] Successfully created attachment "API Request - Body" @05-10-2022 17:37:31.0756 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @05-10-2022 17:37:31.0998 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @05-10-2022 17:37:32.0000 PM
+[ReportManager] Assertion Passed: Check Access Token is existed. @05-10-2022 17:37:32.0005 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @05-10-2022 17:37:32.0007 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @05-10-2022 17:37:32.0046 PM
+[ReportManager] Get response jsonvalue "access_token". @05-10-2022 17:37:32.0170 PM
+[ReportManager] Assertion Passed: Check Access token is not null. @05-10-2022 17:37:32.0171 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @05-10-2022 17:37:32.0171 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @05-10-2022 17:37:32.0172 PM
+[ReportManager] Verification Passed: "1550" is greater than or equal to "1.1". @05-10-2022 17:37:32.0174 PM
+[ReportManager] Verification Passed: "1550" is less than or equal to "10000". @05-10-2022 17:37:32.0174 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @05-10-2022 17:37:32.0174 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @05-10-2022 17:37:32.0175 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @05-10-2022 17:37:32.0175 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @05-10-2022 17:37:33.0079 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @05-10-2022 17:37:33.0080 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @05-10-2022 17:37:33.0081 PM
+[ReportManager] Assertion Passed: Token Schema is matched with valid schema. @05-10-2022 17:37:33.0083 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @05-10-2022 17:37:33.0084 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @05-10-2022 17:37:33.0086 PM
+[ReportManager] Verification Passed: Expiration Date Token is Valid @05-10-2022 17:37:33.0165 PM
+[ReportManager] Verification Passed: ISS is Valid @05-10-2022 17:37:33.0174 PM
+[ReportManager] Verification Passed: tcId is Valid @05-10-2022 17:37:33.0176 PM
+[ReportManager] Verification Passed: preferred_username is Valid @05-10-2022 17:37:33.0178 PM
+[ReportManager] Successfully created attachment "SHAFT Engine Logs - Execution log" @05-10-2022 17:37:33.0288 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine Version: "SHAFT Engine v6.4.20220906-BETA"
+SHAFT Engine is licensed under the MIT License: [https://github.com/ShaftHQ/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################
