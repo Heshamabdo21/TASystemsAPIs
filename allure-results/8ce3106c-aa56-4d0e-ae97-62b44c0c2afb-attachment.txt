@@ -1,0 +1,38 @@
+[ReportManager] Setting discrete logging to: "false" @05-10-2022 12:53:59.0416 PM
+
+################################################################################################################################################
+Starting Execution:	"1 out of 1" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Case.Valid_Token_RQ_TC"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @05-10-2022 12:53:59.0416 PM
+[ReportManager] Setting discrete logging to: "true" @05-10-2022 12:54:04.0471 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @05-10-2022 12:54:04.0471 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @05-10-2022 12:54:04.0487 PM
+[ReportManager] Setting discrete logging to: "false" @05-10-2022 12:54:04.0501 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 2059ms". @05-10-2022 12:54:06.0244 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @05-10-2022 12:54:06.0246 PM
+[ReportManager] Successfully created attachment "API Request - Body" @05-10-2022 12:54:06.0249 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @05-10-2022 12:54:06.0696 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @05-10-2022 12:54:06.0702 PM
+[ReportManager] Assertion Passed: "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NjQ5Njc1NDIsImlhdCI6MTY2NDk2NzI0MiwianRpIjoiOGE5YTQ1ZWYtMmUxZC00OGI5LWE4ZDUtZDVkMzMwZWVkNjgyIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6Ijc5OTlhODAwLTE5MDctNGRkMS05YTE0LWNjMWYyMGE0OTViNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijc5OTlhODAwLTE5MDctNGRkMS05YTE0LWNjMWYyMGE0OTViNCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.fbzNsKYZ0Vyv2Dw_NxZcwZZFpsXxtE_GZq0khjAhno_aaYFRWqfIXZoniN1QMtuwKfI38sGDUqE6-dGQUnTJkAu_vh2yzx00iSnSTIHZwNkkeyBWdVgclS8tKncBXyPG7sB_uS_xZ7qs_9nnMmg2ksuB98af_Kgpb5Ge6sRRl514IM-Li2hCLAy4gMh0NkaWYhvkl4cyRQKczlK7dSvQ0L71o2JPWd9sRO1jWLpIFjsOgHSzsuinD3cxjdNVY3oKV4NZOxBsqfiUotQsmXBzcIJV8VBm2MbBX2qh0u5lAgqyXMljV0Ob_FfPFnSRuLB7lO8-zvxm-BTiqt5vyTjL_A","expires_in":300,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NjQ5NjkwNDIsImlhdCI6MTY2NDk2NzI0MiwianRpIjoiZDM2YWQ5OWQtYzZlOC00NWYwLTg0NGItYTY5NTc2OGY2ZTU5IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI3OTk5YTgwMC0xOTA3LTRkZDEtOWExNC1jYzFmMjBhNDk1YjQiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3OTk5YTgwMC0xOTA3LTRkZDEtOWExNC1jYzFmMjBhNDk1YjQifQ.FSlElUA5x5XSow_2VHtEySzb4VsnzdXznjlD9rUn0Wg","token_type":"Bearer","not-before-policy":0,"session_state":"7999a800-1907-4dd1-9a14-cc1f20a495b4","scope":"email profile"}" contains "access_token". @05-10-2022 12:54:06.0710 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @05-10-2022 12:54:06.0713 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @05-10-2022 12:54:06.0714 PM
+[ReportManager] Get response jsonvalue "access_token". @05-10-2022 12:54:07.0000 PM
+[ReportManager] Assertion Passed: Check that Access token is not null. @05-10-2022 12:54:07.0002 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @05-10-2022 12:54:07.0005 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @05-10-2022 12:54:07.0008 PM
+[ReportManager] Verification Passed: "2059" is greater than or equal to "1.1". @05-10-2022 12:54:07.0011 PM
+[ReportManager] Verification Passed: "2059" is less than or equal to "10000". @05-10-2022 12:54:07.0017 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @05-10-2022 12:54:07.0020 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @05-10-2022 12:54:07.0025 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @05-10-2022 12:54:07.0025 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @05-10-2022 12:54:09.0178 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @05-10-2022 12:54:09.0179 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_schema.json"". @05-10-2022 12:54:09.0180 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Token_schema.json". @05-10-2022 12:54:09.0195 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @05-10-2022 12:54:09.0201 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @05-10-2022 12:54:09.0207 PM
+[ReportManager] Verification Passed: Token is Valid @05-10-2022 12:54:09.0455 PM
+[ReportManager] Verification Passed: ISS is Valid @05-10-2022 12:54:09.0492 PM
+[ReportManager] Verification Passed: ISS is Valid @05-10-2022 12:54:09.0501 PM
+[ReportManager] Verification Passed: ISS is Valid @05-10-2022 12:54:09.0507 PM

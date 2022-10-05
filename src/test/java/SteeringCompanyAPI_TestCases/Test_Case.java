@@ -16,8 +16,13 @@ public class Test_Case {
        
     	Token_API Token_TC=new Token_API();
     	String Token =Token_TC.POST_TOKEN_Rq();
+    	Token_TC.CheckTokenExpiration(Token);
+    	Token_TC.CheckTokenISS(Token);
+        Token_TC.CheckTokentcId(Token);
+        Token_TC.CheckTokenpreferred_username(Token);
+
     }
-    
+    /*
     @Test
     public void Valid_GET_all_cities_Lookups_Rq_TC() {
     	Token_API Token_TC=new Token_API();
@@ -124,5 +129,5 @@ public class Test_Case {
     	Reservations_API Reservations_TC=new Reservations_API();
     	Reservations_TC.GET_Reservations_by_Reservations_id_Rq(Token,"6106938");
     }
-	
+	*/
 }
