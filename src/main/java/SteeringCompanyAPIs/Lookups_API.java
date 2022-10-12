@@ -2,6 +2,7 @@ package SteeringCompanyAPIs;
 
 import com.shaft.driver.SHAFT;
 import com.shaft.driver.SHAFT.API;
+import com.shaft.tools.io.ExcelFileManager;
 import com.shaft.api.*;
 import com.shaft.api.RequestBuilder.AuthenticationType;
 
@@ -15,69 +16,66 @@ import java.util.List;
 
 public class Lookups_API {
 
-    String BaseURL = "https://api-demo.np.transporticonline.com/steeringcompanies/v1" ;
-   
-    public void GET_all_cities_Lookups_Rq(String TokenValue) {
+    ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+
+  //  String BaseURL = "https://api-demo.np.transporticonline.com/steeringcompanies/v1" ;
+    String BaseURL = testDataReader.getCellData("API_Data","Steering_Base_URL","Data1");
+    
+    //////////////////////1////////////////////////////////////////////////
+    Response Lookups_cities_Response;
+    SHAFT.API Lookups_cities_api;
+    
+    public void GET_Valid_all_cities_Lookups_Rq(String TokenValue) {
         String Lookup_cities_Path = "/lookups/cities";
 
-    	SHAFT.API Lookups_cities_api = new SHAFT.API(BaseURL);
+    	Lookups_cities_api = new SHAFT.API(BaseURL);
     
     	Lookups_cities_api.get(Lookup_cities_Path).
     	setAuthentication("","", AuthenticationType.NONE).
+        setTargetStatusCode(200).
     	addHeader("Authorization", "Bearer " + TokenValue).perform();
-
-        
-        Response Lookups_cities_Response = Lookups_cities_api.getResponse();
-        
+	
+        Lookups_cities_Response = Lookups_cities_api.getResponse();
+    }
+    
+    public void Check_Valid_cities_Lookups_status_Code_Response() {
         SHAFT.Validations.assertThat().number(Lookups_cities_Response.getStatusCode()).isEqualTo(200).perform();
+    }
+    
+    public void Check_Valid_cities_Lookups_Response_Time() {
         SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isLessThanOrEquals(10000).perform();
+    }
+    
+    public void Check_cities_Lookups_Valid_Content() {
         String Lookups_cities_ResponseBody = Lookups_cities_Response.getBody().asString();
         SHAFT.Validations.assertThat().object(Lookups_cities_ResponseBody).contains("content").perform();
        
         Lookups_cities_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
-        
-        Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_schema.json").perform();
-        
-        System.out.println("Lookups Cities Response Body  : - "+Lookups_cities_ResponseBody+"   -E");
-
-        long responseTime = Lookups_cities_api.getResponse().getTime();
-        SHAFT.Validations.verifyThat().number(responseTime).isGreaterThanOrEquals(1.1).perform();
-        SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
-   
-    public void GET_all_cities_Lookups_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        
+    
+    public void Check_cities_Lookups_Response_Valid_Schema() {
+        Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_schema.json").perform();
+    }
+  
+    public void GET_Valid_all_cities_Lookups_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        
         String Lookup_cities_Path = "/lookups/cities";
-    	SHAFT.API Lookups_cities_api = new SHAFT.API(BaseURL);
+    	Lookups_cities_api = new SHAFT.API(BaseURL);
 
     	List<List<Object>> parameters = Arrays.asList(Arrays.asList("size", PageSize), 
     			Arrays.asList("page",PageNumber));
 
     	Lookups_cities_api.get(Lookup_cities_Path).
     	setAuthentication("", "", AuthenticationType.NONE).
+    	setTargetStatusCode(200).
     	setParameters(parameters, RestActions.ParametersType.QUERY).
     	addHeader("Authorization", "Bearer " + TokenValue).perform();
 
         
-        Response Lookups_cities_Response = Lookups_cities_api.getResponse();
-        
-        SHAFT.Validations.assertThat().number(Lookups_cities_Response.getStatusCode()).isEqualTo(200).perform();
-        SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
-        SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isLessThanOrEquals(10000).perform();
-        String Lookups_cities_ResponseBody = Lookups_cities_Response.getBody().asString();
-        SHAFT.Validations.assertThat().object(Lookups_cities_ResponseBody).contains("content").perform();
-       
-        Lookups_cities_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
-        
-        Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_schema.json").perform();
-        
-        System.out.println("Lookups Cities Response Body  : - "+Lookups_cities_ResponseBody+"   -E");
-
-        long responseTime = Lookups_cities_api.getResponse().getTime();
-        SHAFT.Validations.verifyThat().number(responseTime).isGreaterThanOrEquals(1.1).perform();
-        SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
+         Lookups_cities_Response = Lookups_cities_api.getResponse();
     }
-
+  
+///////////////////2/////////////////////////
     public void GET_all_hotels_Lookups_Rq(String TokenValue) {
         String Lookup_hotels_Path = "/lookups/hotels";
 
@@ -138,6 +136,7 @@ public class Lookups_API {
          SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
 
+    /////////////////////3//////////////////////////////
     public void GET_all_sectors_Lookups_Rq(String TokenValue) {
         String Lookup_sectors_Path = "/lookups/sectors";
 
@@ -198,6 +197,7 @@ public class Lookups_API {
          SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
 
+///////////////////////////////4//////////////////////////    
     public void GET_all_ports_Lookups_Rq(String TokenValue) {
         String Lookup_ports_Path = "/lookups/ports";
 
@@ -258,6 +258,7 @@ public class Lookups_API {
          SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
 
+    //////////////////////////////5///////////////////////////////
     public void GET_all_terminals_Lookups_Rq(String TokenValue) {
         String Lookup_terminals_Path = "/lookups/terminals";
 
@@ -318,6 +319,7 @@ public class Lookups_API {
          SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
 
+    /////////////////////6///////////////////////////////
     public void GET_all_routes_Lookups_Rq(String TokenValue) {
         String Lookup_routes_Path = "/lookups/routes";
 
@@ -378,6 +380,7 @@ public class Lookups_API {
          SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
 
+    //////////////////////////7///////////////////////////
     public void GET_all_vehicleTypes_Lookups_Rq(String TokenValue) {
         String Lookup_vehicleTypes_Path = "/lookups/vehicleTypes";
 
@@ -438,6 +441,7 @@ public class Lookups_API {
          SHAFT.Validations.verifyThat().number(responseTime).isLessThanOrEquals(10000).perform(); 
     }
 
+    //////////////////////8///////////////////////////////
     public void GET_all_vehicleCategories_Lookups_Rq(String TokenValue) {
         String Lookup_vehicleCategories_Path = "/lookups/vehicleCategories";
 

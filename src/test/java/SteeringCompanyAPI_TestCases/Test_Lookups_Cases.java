@@ -1,6 +1,6 @@
 package SteeringCompanyAPI_TestCases;
 
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.shaft.tools.io.ExcelFileManager;
@@ -12,50 +12,57 @@ import SteeringCompanyAPIs.Token_API;
 import SteeringCompanyAPIs.Policies_API;
 import SteeringCompanyAPIs.Reservations_API;
 
-public class Test_Case {
+public class Test_Lookups_Cases {
     
-    @DataProvider(name = "Accounts")
+    ExcelFileManager testDataReader ;
+    String KEYCLOAK_HOST,UserName,Password,InValidUserName,InValidPassword;
+   //     String EmptyUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data3");
+  //      String EmptyPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data3");
+@BeforeClass
+public void perparedata() {
+     testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+     KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
+     UserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data1");
+     Password=testDataReader.getCellData("TokenAPI_TestData","Password","Data1");
+     InValidUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data2");
+     InValidPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data2");  
+}
     
-    public Object[][] Users() {
-
-        ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
-       // String KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
-        String UserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data1");
-        String Password=testDataReader.getCellData("TokenAPI_TestData","Password","Data1");
-      /*  String InValidUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data2");
-        String InValidPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data2");
-        String EmptyUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data3");
-        String EmptyPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data3");
-*/
-    String[][] Data = { 
-            {UserName,Password}
- //   ,{InValidUserName,InValidPassword}
-//    ,{EmptyUserName,EmptyPassword}
-    };
-    return Data;
-    }
+   
     
-    @Test(dataProvider = "Accounts",description = "TC001 - Peform Post Token API with valid user name and password and retun with token")
-    public void Valid_Token_RQ_TC(String UserName,String Password) {
-       
-    	Token_API Token_TC=new Token_API();
-    	String Token =Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-    	Token_TC.CheckTokenExpiration(Token);
-    	Token_TC.CheckTokenISS(Token,"\"https://auth-demo.np.transporticonline.com/auth/realms/tic\"");
-        Token_TC.CheckTokentcId(Token,"\"319957\"");
-        Token_TC.CheckTokenpreferred_username(Token,"\"tokhi\"");
-    }
-    
-    /*
-    @Test
+   
+@Test(description = "TC001 - Peform Get all cities API with valid user name and password")
     public void Valid_GET_all_cities_Lookups_Rq_TC() {
     	Token_API Token_TC=new Token_API();
-    	String Token =Token_TC.POST_Valid_TOKEN_Rq("tokhi","123");
+    	Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+    	String Token =Token_TC.Get_Valid_Access_Token();
+    	
     	Lookups_API Lookups_TC=new Lookups_API();
-    	Lookups_TC.GET_all_cities_Lookups_Rq(Token);
-    	Lookups_TC.GET_all_cities_Lookups_by_parameter_Query_Rq(Token,"3","0");
-    }
-   
+    	Lookups_TC.GET_Valid_all_cities_Lookups_Rq(Token);
+    	Lookups_TC.Check_Valid_cities_Lookups_status_Code_Response();
+    	Lookups_TC.Check_Valid_cities_Lookups_Response_Time();
+    	Lookups_TC.Check_cities_Lookups_Valid_Content();
+    	Lookups_TC.Check_cities_Lookups_Response_Valid_Schema();
+    	    }
+
+@Test(description = "TC002 - Peform Get all cities API by parameters Qry with valid user name and password and retun with token")
+public void Valid_GET_all_cities_Lookups_by_Qry_Rq_TC() {
+    Token_API Token_TC=new Token_API();
+    Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+    Token_TC.Check_Token_Valid_status_Code_Response();
+    String Token =Token_TC.Get_Valid_Access_Token();
+    
+    Lookups_API Lookups_TC=new Lookups_API();
+    Lookups_TC.GET_Valid_all_cities_Lookups_by_parameter_Query_Rq(Token,"3","0");
+    Lookups_TC.Check_Valid_cities_Lookups_status_Code_Response();
+    Lookups_TC.Check_Valid_cities_Lookups_Response_Time();
+    Lookups_TC.Check_cities_Lookups_Valid_Content();
+    Lookups_TC.Check_cities_Lookups_Response_Valid_Schema();
+    
+}
+
+   /*
     @Test
     public void Valid_GET_all_hotels_Lookups_Rq_TC() {
     	Token_API Token_TC=new Token_API();
