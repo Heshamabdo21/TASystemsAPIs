@@ -38,10 +38,26 @@ public class Lookups_API {
         Lookups_cities_Response = Lookups_cities_api.getResponse();
     }
     
+    public void GET_all_cities_Lookups_With_Missing_Token_Rq() {
+        String Lookup_cities_Path = "/lookups/cities";
+
+        Lookups_cities_api = new SHAFT.API(BaseURL);
+    
+        Lookups_cities_api.get(Lookup_cities_Path).
+        setAuthentication("","", AuthenticationType.NONE).
+        setTargetStatusCode(401).
+        addHeader("Authorization", "Bearer " ).perform();
+    
+        Lookups_cities_Response = Lookups_cities_api.getResponse();
+    }
+    
     public void Check_Valid_cities_Lookups_status_Code_Response() {
         SHAFT.Validations.assertThat().number(Lookups_cities_Response.getStatusCode()).isEqualTo(200).perform();
     }
     
+    public void Check_cities_Lookups_status_Code_Unauthorized_Response() {
+        SHAFT.Validations.assertThat().number(Lookups_cities_Response.getStatusCode()).isEqualTo(401).perform();
+    }
     public void Check_Valid_cities_Lookups_Response_Time() {
         SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isLessThanOrEquals(10000).perform();
