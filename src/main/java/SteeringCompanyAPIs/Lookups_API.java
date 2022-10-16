@@ -51,6 +51,19 @@ public class Lookups_API {
         Lookups_cities_Response = Lookups_cities_api.getResponse();
     }
     
+    public void GET_all_cities_Lookups_With_InValid_Token_Rq(String TokenValue) {
+        String Lookup_cities_Path = "/lookups/cities";
+
+        Lookups_cities_api = new SHAFT.API(BaseURL);
+    
+        Lookups_cities_api.get(Lookup_cities_Path).
+        setAuthentication("","", AuthenticationType.NONE).
+        setTargetStatusCode(401).
+        addHeader("Authorization", "Bearer "+ TokenValue ).perform();
+    
+        Lookups_cities_Response = Lookups_cities_api.getResponse();
+    }
+    
     public void Check_Valid_cities_Lookups_status_Code_Response() {
         SHAFT.Validations.assertThat().number(Lookups_cities_Response.getStatusCode()).isEqualTo(200).perform();
     }
@@ -58,9 +71,17 @@ public class Lookups_API {
     public void Check_cities_Lookups_status_Code_Unauthorized_Response() {
         SHAFT.Validations.assertThat().number(Lookups_cities_Response.getStatusCode()).isEqualTo(401).perform();
     }
+    
     public void Check_Valid_cities_Lookups_Response_Time() {
         SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(Lookups_cities_Response.getTime()).isLessThanOrEquals(10000).perform();
+    }
+    
+    public void Check_cities_Lookups_Unauthorized_Content() {
+        String Lookups_cities_ResponseBody = Lookups_cities_Response.getBody().asString();
+        SHAFT.Validations.assertThat().object(Lookups_cities_ResponseBody).contains("content").perform();
+       
+        Lookups_cities_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
     
     public void Check_cities_Lookups_Valid_Content() {
@@ -70,8 +91,13 @@ public class Lookups_API {
         Lookups_cities_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
     
+
     public void Check_cities_Lookups_Response_Valid_Schema() {
         Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_schema.json").perform();
+    }
+    
+    public void Check_cities_Lookups_Response_Unauthorized_Schema() {
+        Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_Unauthorized_schema.json").perform();
     }
   
     public void GET_Valid_all_cities_Lookups_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        
