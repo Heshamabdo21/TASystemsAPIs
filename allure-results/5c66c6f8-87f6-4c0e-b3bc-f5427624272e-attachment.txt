@@ -1,0 +1,34 @@
+[ReportManager] Setting discrete logging to: "false" @17-10-2022 15:19:50.0604 PM
+
+################################################################################################################################################
+Starting Execution:	"4 out of 5" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.InValid_Token_RQ_TC"
+Test Description:	"TC002 - Peform Post Token API with Invalid user name and password"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @17-10-2022 15:19:50.0604 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @17-10-2022 15:19:50.0604 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @17-10-2022 15:19:50.0639 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @17-10-2022 15:19:50.0641 PM
+[ReportManager] Setting discrete logging to: "true" @17-10-2022 15:19:51.0344 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 Unauthorized" @17-10-2022 15:19:51.0344 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @17-10-2022 15:19:51.0345 PM
+[ReportManager] Setting discrete logging to: "false" @17-10-2022 15:19:51.0345 PM
+[ReportManager] Perform request "POST | Target Status Code: 401 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 690ms". @17-10-2022 15:19:51.0371 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @17-10-2022 15:19:51.0372 PM
+[ReportManager] Successfully created attachment "API Request - Body" @17-10-2022 15:19:51.0373 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @17-10-2022 15:19:51.0375 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 401 and it is Unauthorized. @17-10-2022 15:19:51.0376 PM
+[ReportManager] Assertion Passed: Check error_description is existed. @17-10-2022 15:19:51.0376 PM
+[ReportManager] Get response jsonvalue "error_description". @17-10-2022 15:19:51.0377 PM
+[ReportManager] Assertion Passed: Check error_description is not null. @17-10-2022 15:19:51.0378 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_Unauthorized_schema.json"". @17-10-2022 15:19:51.0379 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_Unauthorized_schema.json"". @17-10-2022 15:19:51.0379 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_Unauthorized_schema.json"". @17-10-2022 15:19:51.0380 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_Unauthorized_schema.json"". @17-10-2022 15:19:51.0386 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_Unauthorized_schema.json"". @17-10-2022 15:19:51.0386 PM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_Unauthorized_schema.json"". @17-10-2022 15:19:51.0387 PM
+[ReportManager] Assertion Passed: Unauthorized Token Schema is matched with Unauthorized schema. @17-10-2022 15:19:51.0389 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @17-10-2022 15:19:51.0391 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @17-10-2022 15:19:51.0393 PM
+[ReportManager] Verification Passed: "690" is greater than or equal to "1.1". @17-10-2022 15:19:51.0394 PM
+[ReportManager] Verification Passed: "690" is less than or equal to "10000". @17-10-2022 15:19:51.0395 PM
