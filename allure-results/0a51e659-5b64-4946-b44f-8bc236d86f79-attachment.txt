@@ -1,0 +1,14 @@
+[ReportManager] Setting discrete logging to: "false" @17-10-2022 15:33:17.0772 PM
+
+################################################################################################################################################
+Starting Execution:	"6 out of 5" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.Bad_Token_RQ_TC"
+Test Description:	"TC003 - Peform Post Token API with empty request body"
+################################################################################################################################################
+[ReportManager] Setting discrete logging to: "false" @17-10-2022 15:33:17.0772 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @17-10-2022 15:33:17.0772 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @17-10-2022 15:33:17.0786 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @17-10-2022 15:33:17.0787 PM
+[ReportManager] An Exception Occured with this Message: Read timed out. @17-10-2022 15:33:48.0325 PM
+[ReportManager] Successfully created attachment "Exception Stack Trace - java.net.SocketTimeoutException" @17-10-2022 15:33:48.0325 PM
+[ReportManager] Perform request failed "https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token". @17-10-2022 15:33:48.0326 PM
