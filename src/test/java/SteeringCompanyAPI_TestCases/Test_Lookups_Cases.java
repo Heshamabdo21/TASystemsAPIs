@@ -5,23 +5,19 @@ import org.testng.annotations.Test;
 
 import com.shaft.tools.io.ExcelFileManager;
 
-import SteeringCompanyAPIs.CreationalPeriods_API;
 import SteeringCompanyAPIs.Lookups_API;
-import SteeringCompanyAPIs.PeriodProgramTemplates_API;
 import SteeringCompanyAPIs.Token_API;
-import SteeringCompanyAPIs.Policies_API;
-import SteeringCompanyAPIs.Reservations_API;
+
 
 public class Test_Lookups_Cases {
     
     ExcelFileManager testDataReader ;
-    String KEYCLOAK_HOST,UserName,Password,InValidUserName,InValidPassword;
+    String UserName,Password,InValidUserName,InValidPassword;
    //     String EmptyUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data3");
   //      String EmptyPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data3");
      @BeforeClass
      public void Setup_data() {
      testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
-     //KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
      UserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data1");
      Password=testDataReader.getCellData("TokenAPI_TestData","Password","Data1");
      InValidUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data2");
@@ -31,7 +27,7 @@ public class Test_Lookups_Cases {
    
     
    
-@Test(description = "TC001 - Peform Get all cities API with valid user name and password")
+@Test(description = "TC001 - Perform Get all cities API with valid user name and password")
     public void Valid_GET_all_cities_Lookups_Rq_TC() {
     	Token_API Token_TC=new Token_API();
     	Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
@@ -46,7 +42,7 @@ public class Test_Lookups_Cases {
     	Lookups_TC.Check_cities_Lookups_Response_Valid_Schema();
     	    }
 
-    @Test(description = "TC002 - Peform Get all cities API by parameters Qry with valid user name and password and retun with token")
+    @Test(description = "TC002 - Perform Get all cities API by parameters Qry with valid user name and password and return with token")
     public void Valid_GET_all_cities_Lookups_by_Qry_Rq_TC() {
     Token_API Token_TC=new Token_API();
     Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
