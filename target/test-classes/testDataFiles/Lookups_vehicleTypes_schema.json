@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome1",
+  "definitions": {
+      "Welcome1": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "page": {
+                  "type": "integer"
+              },
+              "size": {
+                  "type": "integer"
+              },
+              "totalPages": {
+                  "type": "integer"
+              },
+              "totalElements": {
+                  "type": "integer"
+              },
+              "content": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/Content"
+                  }
+              }
+          },
+          "required": [
+              "content",
+              "page",
+              "size",
+              "totalElements",
+              "totalPages"
+          ],
+          "title": "Welcome1"
+      },
+      "Content": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "id": {
+                  "type": "integer"
+              },
+              "nameArabic": {
+                  "type": "string"
+              },
+              "nameEnglish": {
+                  "type": "string"
+              },
+              "isActive": {
+                  "type": "boolean"
+              },
+              "lastUpdated": {
+                  "type": "string",
+                  "format": "date-time"
+              },
+              "maximumCapacity": {
+                  "type": "integer"
+              },
+              "sectors": {
+                  "type": "null"
+              }
+          },
+          "required": [
+              "id",
+              "isActive",
+              "lastUpdated",
+              "maximumCapacity",
+              "nameArabic",
+              "nameEnglish",
+              "sectors"
+          ],
+          "title": "Content"
+      }
+  }
+}

@@ -1,0 +1,121 @@
+
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "totalPages": {
+      "type": "integer"
+    },
+    "totalElements": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "nameArabic": {
+              "type": "string"
+            },
+            "nameEnglish": {
+              "type": "string"
+            },
+            "isActive": {
+              "type": "boolean"
+            },
+            "lastUpdated": {
+              "type": "string"
+            },
+            "descriptionEnglish": {
+              "type": "string"
+            },
+            "descriptionArabic": {
+              "type": "string"
+            },
+            "sectors": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "nameArabic": {
+                      "type": "string"
+                    },
+                    "nameEnglish": {
+                      "type": "string"
+                    },
+                    "descArabic": {
+                      "type": "null"
+                    },
+                    "descriptionEnglish": {
+                      "type": "string"
+                    },
+                    "fromCityId": {
+                      "type": "integer"
+                    },
+                    "toCityId": {
+                      "type": "integer"
+                    },
+                    "operationMode": {
+                      "type": "string"
+                    },
+                    "lastUpdated": {
+                      "type": "string"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "nameArabic",
+                    "nameEnglish",
+                    "descArabic",
+                    "descriptionEnglish",
+                    "fromCityId",
+                    "toCityId",
+                    "operationMode",
+                    "lastUpdated",
+                    "isActive"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "nameArabic",
+            "nameEnglish",
+            "isActive",
+            "lastUpdated",
+            "descriptionEnglish",
+            "descriptionArabic",
+            "sectors"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "page",
+    "size",
+    "totalPages",
+    "totalElements",
+    "content"
+  ]
+}
+
