@@ -18,15 +18,15 @@ public class Test_Lookups_Cases {
     String KEYCLOAK_HOST,UserName,Password,InValidUserName,InValidPassword;
    //     String EmptyUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data3");
   //      String EmptyPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data3");
-@BeforeClass
-public void perparedata() {
+     @BeforeClass
+     public void Setup_data() {
      testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
-     KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
+     //KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
      UserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data1");
      Password=testDataReader.getCellData("TokenAPI_TestData","Password","Data1");
      InValidUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data2");
      InValidPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data2");  
-}
+     }
     
    
     
@@ -46,8 +46,8 @@ public void perparedata() {
     	Lookups_TC.Check_cities_Lookups_Response_Valid_Schema();
     	    }
 
-@Test(description = "TC002 - Peform Get all cities API by parameters Qry with valid user name and password and retun with token")
-public void Valid_GET_all_cities_Lookups_by_Qry_Rq_TC() {
+    @Test(description = "TC002 - Peform Get all cities API by parameters Qry with valid user name and password and retun with token")
+    public void Valid_GET_all_cities_Lookups_by_Qry_Rq_TC() {
     Token_API Token_TC=new Token_API();
     Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
     Token_TC.Check_Token_Valid_status_Code_Response();

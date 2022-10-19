@@ -22,7 +22,7 @@
   </parameter>
   <parameter>
     <key>sun.java.command</key>
-    <value>C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\surefire295776502017967757\surefirebooter-20221017152856326_3.jar C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\surefire295776502017967757 2022-10-17T15-28-55_887-jvmRun1 surefire-20221017152856326_1tmp surefire_0-20221017152856326_2tmp</value>
+    <value>C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\surefire4112296982630419454\surefirebooter-20221018151027866_3.jar C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\surefire4112296982630419454 2022-10-18T15-10-27_293-jvmRun1 surefire-20221018151027866_1tmp surefire_0-20221018151027866_2tmp</value>
   </parameter>
   <parameter>
     <key>jdk.debug</key>
@@ -34,7 +34,7 @@
   </parameter>
   <parameter>
     <key>attemptClearBeforeTypingUsingBackspace</key>
-    <value>true</value>
+    <value>false</value>
   </parameter>
   <parameter>
     <key>basedir</key>
@@ -58,7 +58,7 @@
   </parameter>
   <parameter>
     <key>videoParams_recordVideo</key>
-    <value>true</value>
+    <value>false</value>
   </parameter>
   <parameter>
     <key>rootLogger</key>
@@ -145,10 +145,6 @@
     <value>true</value>
   </parameter>
   <parameter>
-    <key>https.proxyPort</key>
-    <value>80</value>
-  </parameter>
-  <parameter>
     <key>user.timezone</key>
     <value>Africa/Cairo</value>
   </parameter>
@@ -170,7 +166,7 @@
   </parameter>
   <parameter>
     <key>mobile_automationName</key>
-    <value>UiAutomator2</value>
+    <value>UIAutomator2</value>
   </parameter>
   <parameter>
     <key>serverHost</key>
@@ -178,7 +174,7 @@
   </parameter>
   <parameter>
     <key>retryMaximumNumberOfAttempts</key>
-    <value>1</value>
+    <value>0</value>
   </parameter>
   <parameter>
     <key>appender.console.layout.disableAnsi</key>
@@ -237,20 +233,12 @@
     <value>allure-results/videos</value>
   </parameter>
   <parameter>
-    <key>http.proxyPort</key>
-    <value>80</value>
-  </parameter>
-  <parameter>
     <key>setPreserveOrder</key>
     <value>true</value>
   </parameter>
   <parameter>
     <key>skipTestsWithLinkedIssues</key>
     <value>false</value>
-  </parameter>
-  <parameter>
-    <key>com.SHAFT.proxySettings</key>
-    <value>41.32.12.190:80</value>
   </parameter>
   <parameter>
     <key>browserStack.seleniumVersion</key>
@@ -294,7 +282,7 @@
   </parameter>
   <parameter>
     <key>screenshotParams_watermark</key>
-    <value>false</value>
+    <value>true</value>
   </parameter>
   <parameter>
     <key>serverPort</key>
@@ -305,16 +293,12 @@
     <value>60</value>
   </parameter>
   <parameter>
-    <key>http.proxyHost</key>
-    <value>41.32.12.190</value>
-  </parameter>
-  <parameter>
     <key>allureVersion</key>
     <value>2.19.0</value>
   </parameter>
   <parameter>
     <key>videoParams_scope</key>
-    <value>TestMethod</value>
+    <value>DriverSession</value>
   </parameter>
   <parameter>
     <key>user.country</key>
@@ -333,12 +317,8 @@
     <value>30</value>
   </parameter>
   <parameter>
-    <key>https.proxyHost</key>
-    <value>41.32.12.190</value>
-  </parameter>
-  <parameter>
     <key>createAnimatedGif</key>
-    <value>true</value>
+    <value>false</value>
   </parameter>
   <parameter>
     <key>mobileEmulation.isCustomDevice</key>
@@ -378,7 +358,7 @@
   </parameter>
   <parameter>
     <key>captureWebDriverLogs</key>
-    <value>true</value>
+    <value>false</value>
   </parameter>
   <parameter>
     <key>setDataProviderThreadCount</key>
@@ -433,10 +413,6 @@
     <value>0</value>
   </parameter>
   <parameter>
-    <key>ftp.proxyHost</key>
-    <value>41.32.12.190</value>
-  </parameter>
-  <parameter>
     <key>java.specification.vendor</key>
     <value>Oracle Corporation</value>
   </parameter>
@@ -459,10 +435,6 @@
   <parameter>
     <key>video.save.mode</key>
     <value>ALL</value>
-  </parameter>
-  <parameter>
-    <key>waitImplicitly</key>
-    <value>false</value>
   </parameter>
   <parameter>
     <key>appender.file.layout.type</key>
@@ -493,14 +465,6 @@
     <value>30</value>
   </parameter>
   <parameter>
-    <key>org.slf4j.simpleLogger.defaultLogLevel</key>
-    <value>trace</value>
-  </parameter>
-  <parameter>
-    <key>implicitWaitTimeout</key>
-    <value>30</value>
-  </parameter>
-  <parameter>
     <key>cucumber.execution.strict</key>
     <value>true</value>
   </parameter>
@@ -511,10 +475,6 @@
   <parameter>
     <key>executionAddress</key>
     <value>local</value>
-  </parameter>
-  <parameter>
-    <key>browserObjectSingleton</key>
-    <value>false</value>
   </parameter>
   <parameter>
     <key>appender.console.filter.threshold.level</key>
@@ -562,7 +522,7 @@
   </parameter>
   <parameter>
     <key>debugMode</key>
-    <value>true</value>
+    <value>false</value>
   </parameter>
   <parameter>
     <key>cucumber.plugin</key>
@@ -603,10 +563,6 @@
   <parameter>
     <key>targetBrowserName</key>
     <value>GoogleChrome</value>
-  </parameter>
-  <parameter>
-    <key>ftp.proxyPort</key>
-    <value>80</value>
   </parameter>
   <parameter>
     <key>file.separator</key>
@@ -650,7 +606,7 @@
   </parameter>
   <parameter>
     <key>waitForLazyLoading</key>
-    <value>true</value>
+    <value>false</value>
   </parameter>
   <parameter>
     <key>java.class.path</key>
@@ -702,7 +658,7 @@
   </parameter>
   <parameter>
     <key>surefire.real.class.path</key>
-    <value>C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\surefire295776502017967757\surefirebooter-20221017152856326_3.jar</value>
+    <value>C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\surefire4112296982630419454\surefirebooter-20221018151027866_3.jar</value>
   </parameter>
   <parameter>
     <key>shellSessionTimeout</key>

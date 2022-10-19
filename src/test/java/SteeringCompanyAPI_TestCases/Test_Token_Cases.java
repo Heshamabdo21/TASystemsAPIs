@@ -18,15 +18,15 @@ public class Test_Token_Cases {
     String KEYCLOAK_HOST,UserName,Password,InValidUserName,InValidPassword;
    //     String EmptyUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data3");
   //      String EmptyPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data3");
-@BeforeClass
-public void perparedata() {
+     @BeforeClass
+     public void Setup_data() {
      testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
-     KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
+    // KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
      UserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data1");
      Password=testDataReader.getCellData("TokenAPI_TestData","Password","Data1");
      InValidUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data2");
      InValidPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data2");  
-}
+     }
     
     @Test(description = "TC001 - Peform Post Token API with valid user name and password and retun with token")
     public void Valid_Token_RQ_TC() {  
