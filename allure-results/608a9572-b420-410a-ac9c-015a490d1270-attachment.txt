@@ -1,0 +1,29 @@
+
+################################################################################################################################################
+Starting Execution:	"3 out of 5" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.Bad_Token_RQ_TC"
+Test Description:	"TC003 - Peform Post Token API with empty request body"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @24-10-2022 10:21:29.0000 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @24-10-2022 10:21:29.0025 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @24-10-2022 10:21:29.0026 AM
+[ReportManager] Response status code: "400", status line: "HTTP/1.1 400 Bad Request" @24-10-2022 10:21:29.0522 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @24-10-2022 10:21:29.0523 AM
+[ReportManager] Perform request "POST | Target Status Code: 400 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 490ms". @24-10-2022 10:21:29.0540 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @24-10-2022 10:21:29.0543 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @24-10-2022 10:21:29.0545 AM
+[ReportManager] Assertion Passed: Check Response Status Code is 400 and it is Bad RQ. @24-10-2022 10:21:29.0546 AM
+[ReportManager] Assertion Passed: Check error_description is existed. @24-10-2022 10:21:29.0546 AM
+[ReportManager] Get response jsonvalue "error_description". @24-10-2022 10:21:29.0547 AM
+[ReportManager] Assertion Passed: Check error_description is not null. @24-10-2022 10:21:29.0548 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_Unauthorized_schema.json"". @24-10-2022 10:21:29.0548 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_Unauthorized_schema.json"". @24-10-2022 10:21:29.0549 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_Unauthorized_schema.json"". @24-10-2022 10:21:29.0549 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_Unauthorized_schema.json"". @24-10-2022 10:21:29.0560 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_Unauthorized_schema.json"". @24-10-2022 10:21:29.0560 AM
+[ReportManager] File Action "ReadFromFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Token_Unauthorized_schema.json"". @24-10-2022 10:21:29.0560 AM
+[ReportManager] Assertion Passed: Unauthorized Token Schema is matched with Unauthorized schema. @24-10-2022 10:21:29.0562 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @24-10-2022 10:21:29.0563 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @24-10-2022 10:21:29.0565 AM
+[ReportManager] Verification Passed: "490" is greater than or equal to "1.1". @24-10-2022 10:21:29.0566 AM
+[ReportManager] Verification Passed: "490" is less than or equal to "10000". @24-10-2022 10:21:29.0567 AM

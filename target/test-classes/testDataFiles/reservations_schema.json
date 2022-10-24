@@ -1,0 +1,269 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome3",
+    "definitions": {
+        "Welcome3": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bookingStatus": {
+                    "type": "string"
+                },
+                "bookingReferenceNo": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "bookingDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "companyCode": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "companyName": {
+                    "type": "string"
+                },
+                "companyNameAR": {
+                    "type": "string"
+                },
+                "routeCode": {
+                    "type": "integer"
+                },
+                "routeName": {
+                    "type": "string"
+                },
+                "routeNameAR": {
+                    "type": "string"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "otaNameArabic": {
+                    "type": "string"
+                },
+                "otaNameEnglish": {
+                    "type": "string"
+                },
+                "otaCode": {
+                    "type": "string"
+                },
+                "totalCommission": {
+                    "type": "number"
+                },
+                "vehicleTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/VehicleType"
+                    }
+                },
+                "travellerDetails": {
+                    "$ref": "#/definitions/TravellerDetails"
+                }
+            },
+            "required": [
+                "bookingDate",
+                "bookingReferenceNo",
+                "bookingStatus",
+                "companyCode",
+                "companyName",
+                "companyNameAR",
+                "otaCode",
+                "otaNameArabic",
+                "otaNameEnglish",
+                "routeCode",
+                "routeName",
+                "routeNameAR",
+                "startDate",
+                "totalCommission",
+                "travellerDetails",
+                "vehicleTypes"
+            ],
+            "title": "Welcome3"
+        },
+        "TravellerDetails": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "details": {
+                    "$ref": "#/definitions/Details"
+                }
+            },
+            "required": [
+                "details"
+            ],
+            "title": "TravellerDetails"
+        },
+        "Details": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "passportNo": {
+                    "type": "string"
+                },
+                "nationalityCode": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "null"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "gender": {
+                    "type": "string"
+                },
+                "birthDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "phoneNumberCountryCode": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "birthDate",
+                "email",
+                "firstName",
+                "gender",
+                "lastName",
+                "middleName",
+                "nationalityCode",
+                "passportNo",
+                "phoneNumber",
+                "phoneNumberCountryCode"
+            ],
+            "title": "Details"
+        },
+        "VehicleType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "vehicleTypeCode": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "vehicleType": {
+                    "type": "string"
+                },
+                "vehicleTypeAR": {
+                    "type": "string"
+                },
+                "categories": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Category"
+                    }
+                }
+            },
+            "required": [
+                "categories",
+                "vehicleType",
+                "vehicleTypeAR",
+                "vehicleTypeCode"
+            ],
+            "title": "VehicleType"
+        },
+        "Category": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "categoryCode": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "categoryName": {
+                    "type": "string"
+                },
+                "categoryNameAR": {
+                    "type": "string"
+                },
+                "model": {
+                    "$ref": "#/definitions/Model"
+                },
+                "quantity": {
+                    "type": "integer"
+                },
+                "noOfPax": {
+                    "type": "integer"
+                },
+                "displayRateInfo": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DisplayRateInfo"
+                    }
+                },
+                "termsAndConditions": {
+                    "type": "null"
+                }
+            },
+            "required": [
+                "categoryCode",
+                "categoryName",
+                "categoryNameAR",
+                "displayRateInfo",
+                "model",
+                "noOfPax",
+                "quantity",
+                "termsAndConditions"
+            ],
+            "title": "Category"
+        },
+        "DisplayRateInfo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "amount": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "currencyCode": {
+                    "type": "string"
+                },
+                "purpose": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "amount",
+                "currencyCode",
+                "description",
+                "purpose"
+            ],
+            "title": "DisplayRateInfo"
+        },
+        "Model": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "from": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "to": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "from",
+                "to"
+            ],
+            "title": "Model"
+        }
+    }
+}

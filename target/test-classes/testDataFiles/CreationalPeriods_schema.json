@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome1",
+    "definitions": {
+        "Welcome1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "page": {
+                    "type": "integer"
+                },
+                "size": {
+                    "type": "integer"
+                },
+                "totalPages": {
+                    "type": "integer"
+                },
+                "totalElements": {
+                    "type": "integer"
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Content"
+                    }
+                }
+            },
+            "required": [
+                "page",
+                "size",
+                "totalPages",
+                "totalElements",
+                "content"
+            ],
+            "title": "Welcome1"
+        },
+        "Content": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "startDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "endDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "periodProgramTemplates": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "endDate",
+                "id",
+                "periodProgramTemplates",
+                "startDate",
+                "status"
+            ],
+            "title": "Content"
+        }
+    }
+}
