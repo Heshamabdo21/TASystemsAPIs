@@ -1,0 +1,10 @@
+SteeringCompanyAPIs\Policies_API.class
+SteeringCompanyAPIs\Token_API.class
+SteeringCompanyAPIs\Lookups_API.class
+META-INF\MANIFEST.MF
+SteeringCompanyAPIs\PeriodProgramTemplates_API.class
+SteeringCompanyAPIs\CreationalPeriods_API.class
+META-INF\maven\TASystemsAPIs\TASystemsAPIs\pom.xml
+SteeringCompanyAPIs\PeriodProgram_API.class
+SteeringCompanyAPIs\Reservations_API.class
+META-INF\maven\TASystemsAPIs\TASystemsAPIs\pom.properties
