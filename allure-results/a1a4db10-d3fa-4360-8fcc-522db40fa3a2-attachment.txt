@@ -1,3 +1,0 @@
-[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @18-12-2022 18:22:29.0449 PM
-[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @18-12-2022 18:22:30.0552 PM
-[ReportManager] Successfully created attachment "Test Data - Excel" @18-12-2022 18:22:30.0555 PM
