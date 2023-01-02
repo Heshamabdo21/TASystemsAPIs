@@ -1,0 +1,26 @@
+
+################################################################################################################################################
+Starting Execution:	"6 out of 6" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.Valid_Token_RQ_TC"
+Test Description:	"TC001 - Peform Post Token API with valid user name and password and retun with token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @02-01-2023 23:05:27.0320 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @02-01-2023 23:05:27.0344 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @02-01-2023 23:05:27.0345 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @02-01-2023 23:05:29.0227 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @02-01-2023 23:05:29.0228 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1875ms". @02-01-2023 23:05:29.0248 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @02-01-2023 23:05:29.0249 PM
+[ReportManager] Successfully created attachment "API Request - Body" @02-01-2023 23:05:29.0251 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @02-01-2023 23:05:29.0255 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @02-01-2023 23:05:29.0256 PM
+[ReportManager] Assertion Passed: Check Access Token is existed. @02-01-2023 23:05:29.0257 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-01-2023 23:05:29.0259 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-01-2023 23:05:29.0261 PM
+[ReportManager] Get response jsonvalue "access_token". @02-01-2023 23:05:29.0264 PM
+[ReportManager] Assertion Passed: Check Access token is not null. @02-01-2023 23:05:29.0264 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @02-01-2023 23:05:29.0266 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @02-01-2023 23:05:29.0266 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Token_schema.json"". @02-01-2023 23:05:29.0267 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Token_schema.json"". @02-01-2023 23:05:29.0267 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Token_schema.json"". @02-01-2023 23:05:29.0267 PM
