@@ -18,7 +18,6 @@ public class Policies_API {
     ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
     String BaseURL = testDataReader.getCellData("API_Data","Steering_Base_URL","Data1");
 
-
     //String BaseURL = "https://api-demo.np.transporticonline.com/steeringcompanies/v1" ;
    
     Response All_Policies_Response;

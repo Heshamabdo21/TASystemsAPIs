@@ -72,15 +72,15 @@ public class Token_API {
     }
     
     public void Check_Token_Response_Valid_Schema() {     
-        token_api.assertThatResponse().matchesSchema("Token_schema.json").withCustomReportMessage("Token Schema is matched with valid schema.").perform();         
+        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","Data2")).withCustomReportMessage("Token Schema is matched with valid schema.").perform();
     }
 
     public void Check_Token_Response_Unauthorized_Schema() {     
-        token_api.assertThatResponse().matchesSchema("Token_Unauthorized_schema.json").withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();         
+        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","Data3")).withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();
     }
    
     public void Check_Token_Response_Bad_Schema() {     
-        token_api.assertThatResponse().matchesSchema("Token_Unauthorized_schema.json").withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();         
+        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","Data3")).withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();
     }
     
     public void Check_Token_Response_Valid_content() {

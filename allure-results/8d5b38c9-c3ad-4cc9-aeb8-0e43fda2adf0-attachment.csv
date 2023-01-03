@@ -1,6 +1,0 @@
-1, Test Method "SteeringCompanyAPI_TestCases.Test_Lookups_Cases.Valid_GET_all_cities_Lookups_Rq_TC" failed. Please investigate and open a new Issue if needed.
-2, Test Method "SteeringCompanyAPI_TestCases.Test_Lookups_Cases.Valid_GET_all_cities_Lookups_by_Qry_Rq_TC" failed. Please investigate and open a new Issue if needed.
-3, Test Method "SteeringCompanyAPI_TestCases.Test_Policies_Cases.Valid_GET_all_cities_Lookups_Rq_TC" failed. Please investigate and open a new Issue if needed.
-4, Test Method "SteeringCompanyAPI_TestCases.Test_Token_Cases.Bad_Token_RQ_TC" failed. Please investigate and open a new Issue if needed.
-5, Test Method "SteeringCompanyAPI_TestCases.Test_Token_Cases.InValid_Token_RQ_TC" failed. Please investigate and open a new Issue if needed.
-6, Test Method "SteeringCompanyAPI_TestCases.Test_Token_Cases.Valid_Token_RQ_TC" failed. Please investigate and open a new Issue if needed.

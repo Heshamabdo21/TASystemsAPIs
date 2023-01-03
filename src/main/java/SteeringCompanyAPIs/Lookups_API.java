@@ -20,13 +20,13 @@ public class Lookups_API {
 
   //  String BaseURL = "https://api-demo.np.transporticonline.com/steeringcompanies/v1" ;
     String BaseURL = testDataReader.getCellData("API_Data","Steering_Base_URL","Data1");
-    
+    String Lookup_cities_Path = testDataReader.getCellData("API_Data","cities","Data1");
+
     //////////////////////1////////////////////////////////////////////////
     Response Lookups_cities_Response;
     SHAFT.API Lookups_cities_api;
     
     public void GET_Valid_all_cities_Lookups_Rq(String TokenValue) {
-        String Lookup_cities_Path = "/lookups/cities";
 
     	Lookups_cities_api = new SHAFT.API(BaseURL);
     
@@ -39,7 +39,7 @@ public class Lookups_API {
     }
     
     public void GET_all_cities_Lookups_With_Missing_Token_Rq() {
-        String Lookup_cities_Path = "/lookups/cities";
+       // String Lookup_cities_Path = "/lookups/cities";
 
         Lookups_cities_api = new SHAFT.API(BaseURL);
     
@@ -52,7 +52,7 @@ public class Lookups_API {
     }
     
     public void GET_all_cities_Lookups_With_InValid_Token_Rq(String TokenValue) {
-        String Lookup_cities_Path = "/lookups/cities";
+       // String Lookup_cities_Path = "/lookups/cities";
 
         Lookups_cities_api = new SHAFT.API(BaseURL);
     
@@ -93,11 +93,11 @@ public class Lookups_API {
     
 
     public void Check_cities_Lookups_Response_Valid_Schema() {
-        Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_schema.json").perform();
+        Lookups_cities_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","cities","Data2")).perform();
     }
     
     public void Check_cities_Lookups_Response_Unauthorized_Schema() {
-        Lookups_cities_api.assertThatResponse().matchesSchema("Lookups_cities_Unauthorized_schema.json").perform();
+        Lookups_cities_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","UnAuthorized","Data1")).perform();
     }
   
     public void GET_Valid_all_cities_Lookups_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {        
