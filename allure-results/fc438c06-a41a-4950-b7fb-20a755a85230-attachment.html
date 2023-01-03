@@ -1,0 +1,3683 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Reports</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Extent Reports - Powered by SHAFT_Engine</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 3, 2023 04:07:16 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 3, 2023 04:07:16 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 3, 2023 04:07:34 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>7</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>7</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='6%'><b>7</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>106</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"TC001 - Perform Get all cities API with valid user name and password":5.665,"TC002 - Perform Get all cities API by parameters Qry with valid user name and password and return with token":1.885,"TC001 - Perform Get all Policies API with valid user name and password":2.001,"TC002 - Perform Get all Policies API with pagination with valid user name and password":1.653,"TC003 - Peform Post Token API with empty request body":0.734,"TC002 - Peform Post Token API with Invalid user name and password":0.978,"TC001 - Peform Post Token API with valid user name and password and retun with token":1.474
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 7,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 7,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 106
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC001 - Perform Get all cities API with valid user name and password</p>
+            <p class="text-sm">
+              <span>4:07:19 PM</span> / <span>00:00:05:665</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC001 - Perform Get all cities API with valid user name and password</h5>
+<span class='badge badge-success'>01.03.2023 4:07:19 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:25 PM</span>
+<span class='badge badge-default'>00:00:05:665</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:19 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:22 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:23 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1553ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:23 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-0'></div>
+ <script>
+  function jsonTreeCreate0() { 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI3NzY0MzksImlhdCI6MTY3Mjc1NDgzOSwianRpIjoiYWRjMmJlYmYtOWVkNi00MjNiLWIyOTgtYWM0ZWQwY2VjYWM4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjcxZjE4MDFlLTQ3YmYtNDNhNC1hNjRhLTlhYzAzYjQzMTgxNyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjcxZjE4MDFlLTQ3YmYtNDNhNC1hNjRhLTlhYzAzYjQzMTgxNyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.CIf8yLCLEXaUSWSc89AzfE16_Iv0sWZmvU1bYHHZsZ_W5LjLN-kE0jvcE2ykP4AN5me7aOrgJwfTAZ8h0NCiU_ZRTQqQX5xnTw3ZnCpT7opmaZ-OFhhMaSK31TUIAHdF_PdpezYnohi-vjgwNde9TVx3ZXdjy_99grj8q76WSSpsQhA5aMsbiZ1ZbJqYzjud4LCn_6LjvaE0BqEl-PbVyvxT_V1CrIzghwnzfvBNsj-_1z8hJTgRmnW2iZMDk_dGhQ1Zzvfi7F5Eghaa-gfZBR9Tc4ouWkmrdxfYYzoW1CoKEmZ-LhkvAsjpFZ05puavfpnbVYreNvCNHSKW7hp0zw",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI3NTY2MzksImlhdCI6MTY3Mjc1NDgzOSwianRpIjoiMDFmYjI1MTktNDQwZC00ZmMyLTlkZDctYTdlNzE3MDQ5YjEzIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI3MWYxODAxZS00N2JmLTQzYTQtYTY0YS05YWMwM2I0MzE4MTciLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3MWYxODAxZS00N2JmLTQzYTQtYTY0YS05YWMwM2I0MzE4MTcifQ.4l__ssL4kR9Q5l3qR-6_6i3gd7uBPcX94X7fkfA4Plc",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "71f1801e-47bf-43a4-a64a-9ac03b431817",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate0();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:23 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:23 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/lookups/cities | Content Type: */* | Response Time: 665ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-1'></div>
+ <script>
+  function jsonTreeCreate1() { 
+   document.getElementById('code-block-json-1').innerHTML = JSONTree.create({
+  "size": 20,
+  "totalPages": 36,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2022-06-02T01:21:49Z",
+      "nameArabic": "??????????",
+      "nameEnglish": "Kuala Lumpur",
+      "id": 36,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:37:02Z",
+      "nameArabic": "???????",
+      "nameEnglish": "Solngen",
+      "id": 849,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:20:05Z",
+      "nameArabic": "??????",
+      "nameEnglish": "FRUNZE",
+      "id": 1006,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:25:20Z",
+      "nameArabic": "??????",
+      "nameEnglish": "KANDAHAR",
+      "id": 985,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:16:50Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Tabrka",
+      "id": 736,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:25:24Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Sohag",
+      "id": 953,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:06:13Z",
+      "nameArabic": "??????",
+      "nameEnglish": "Cochin",
+      "id": 816,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:12Z",
+      "nameArabic": "???? ????",
+      "nameEnglish": "Faisalabad",
+      "id": 789,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:37:19Z",
+      "nameArabic": "?????",
+      "nameEnglish": "KAZAN",
+      "id": 1013,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:21:58Z",
+      "nameArabic": "???????",
+      "nameEnglish": "KAYSERI",
+      "id": 794,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:13Z",
+      "nameArabic": "????",
+      "nameEnglish": "Tangier",
+      "id": 764,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:37:28Z",
+      "nameArabic": "??????",
+      "nameEnglish": "Shahyraz",
+      "id": 780,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:13Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Tashkent",
+      "id": 712,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:37:28Z",
+      "nameArabic": "??????",
+      "nameEnglish": "Samarqand",
+      "id": 824,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:22:03Z",
+      "nameArabic": "?????",
+      "nameEnglish": "KRBI",
+      "id": 993,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:21Z",
+      "nameArabic": "???????",
+      "nameEnglish": "CALICUT",
+      "id": 820,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:22:03Z",
+      "nameArabic": "????",
+      "nameEnglish": "KANO",
+      "id": 91,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:42:58Z",
+      "nameArabic": "????",
+      "nameEnglish": "Kabul",
+      "id": 125,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:42:59Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Vienna",
+      "id": 34,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:55:27Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Sanaa",
+      "id": 67,
+      "isActive": true
+    }
+  ],
+  "totalElements": 709
+}); 
+  }
+  jsonTreeCreate1();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Assertion Passed: "200" is equal to "200".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Verification Passed: "665" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Verification Passed: "665" is less than or equal to "10000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Assertion Passed: "{"page":0,"size":20,"totalPages":36,"totalElements":709,"content":[{"id":36,"nameArabic":"??????????","nameEnglish":"Kuala Lumpur","isActive":true,"lastUpdated":"2022-06-02T01:21:49Z","sectors":null},{"id":849,"nameArabic":"???????","nameEnglish":"Solngen","isActive":true,"lastUpdated":"2022-06-02T01:37:02Z","sectors":null},{"id":1006,"nameArabic":"??????","nameEnglish":"FRUNZE","isActive":true,"lastUpdated":"2022-06-02T00:20:05Z","sectors":null},{"id":985,"nameArabic":"??????","nameEnglish":"KANDAHAR","isActive":true,"lastUpdated":"2022-06-02T00:25:20Z","sectors":null},{"id":736,"nameArabic":"?????","nameEnglish":"Tabrka","isActive":true,"lastUpdated":"2022-06-02T01:16:50Z","sectors":null},{"id":953,"nameArabic":"?????","nameEnglish":"Sohag","isActive":true,"lastUpdated":"2022-06-02T00:25:24Z","sectors":null},{"id":816,"nameArabic":"??????","nameEnglish":"Cochin","isActive":true,"lastUpdated":"2022-06-02T01:06:13Z","sectors":null},{"id":789,"nameArabic":"???? ????","nameEnglish":"Faisalabad","isActive":true,"lastUpdated":"2022-06-02T01:27:12Z","sectors":null},{"id":1013,"nameArabic":"?????","nameEnglish":"KAZAN","isActive":true,"lastUpdated":"2022-06-02T00:37:19Z","sectors":null},{"id":794,"nameArabic":"???????","nameEnglish":"KAYSERI","isActive":true,"lastUpdated":"2022-06-02T01:21:58Z","sectors":null},{"id":764,"nameArabic":"????","nameEnglish":"Tangier","isActive":true,"lastUpdated":"2022-06-02T01:27:13Z","sectors":null},{"id":780,"nameArabic":"??????","nameEnglish":"Shahyraz","isActive":true,"lastUpdated":"2022-06-02T00:37:28Z","sectors":null},{"id":712,"nameArabic":"?????","nameEnglish":"Tashkent","isActive":true,"lastUpdated":"2022-06-02T01:27:13Z","sectors":null},{"id":824,"nameArabic":"??????","nameEnglish":"Samarqand","isActive":true,"lastUpdated":"2022-06-02T00:37:28Z","sectors":null},{"id":993,"nameArabic":"?????","nameEnglish":"KRBI","isActive":true,"lastUpdated":"2022-06-02T01:22:03Z","sectors":null},{"id":820,"nameArabic":"???????","nameEnglish":"CALICUT","isActive":true,"lastUpdated":"2022-06-02T01:27:21Z","sectors":null},{"id":91,"nameArabic":"????","nameEnglish":"KANO","isActive":true,"lastUpdated":"2022-06-02T01:22:03Z","sectors":null},{"id":125,"nameArabic":"????","nameEnglish":"Kabul","isActive":true,"lastUpdated":"2022-06-02T00:42:58Z","sectors":null},{"id":34,"nameArabic":"?????","nameEnglish":"Vienna","isActive":true,"lastUpdated":"2022-06-02T00:42:59Z","sectors":null},{"id":67,"nameArabic":"?????","nameEnglish":"Sanaa","isActive":true,"lastUpdated":"2022-06-02T00:55:27Z","sectors":null}]}" contains "content".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:24 PM</td>
+        <td>
+          Assertion Passed: Check that content object is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:25 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/Lookups_cities_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:25 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-2'></div>
+ <script>
+  function jsonTreeCreate2() { 
+   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome5",
+  "definitions": {
+    "Content": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Content",
+      "properties": {
+        "lastUpdated": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sectors": {
+          "type": "null"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "isActive",
+        "lastUpdated",
+        "nameArabic",
+        "nameEnglish",
+        "sectors"
+      ]
+    },
+    "Welcome5": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome5",
+      "properties": {
+        "size": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Content"
+          }
+        },
+        "totalElements": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "content",
+        "page",
+        "size",
+        "totalElements",
+        "totalPages"
+      ]
+    }
+  }
+}); 
+  }
+  jsonTreeCreate2();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:25 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-3'></div>
+ <script>
+  function jsonTreeCreate3() { 
+   document.getElementById('code-block-json-3').innerHTML = JSONTree.create({
+  "size": 20,
+  "totalPages": 36,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2022-06-02T01:21:49Z",
+      "nameArabic": "??????????",
+      "nameEnglish": "Kuala Lumpur",
+      "id": 36,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:37:02Z",
+      "nameArabic": "???????",
+      "nameEnglish": "Solngen",
+      "id": 849,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:20:05Z",
+      "nameArabic": "??????",
+      "nameEnglish": "FRUNZE",
+      "id": 1006,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:25:20Z",
+      "nameArabic": "??????",
+      "nameEnglish": "KANDAHAR",
+      "id": 985,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:16:50Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Tabrka",
+      "id": 736,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:25:24Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Sohag",
+      "id": 953,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:06:13Z",
+      "nameArabic": "??????",
+      "nameEnglish": "Cochin",
+      "id": 816,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:12Z",
+      "nameArabic": "???? ????",
+      "nameEnglish": "Faisalabad",
+      "id": 789,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:37:19Z",
+      "nameArabic": "?????",
+      "nameEnglish": "KAZAN",
+      "id": 1013,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:21:58Z",
+      "nameArabic": "???????",
+      "nameEnglish": "KAYSERI",
+      "id": 794,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:13Z",
+      "nameArabic": "????",
+      "nameEnglish": "Tangier",
+      "id": 764,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:37:28Z",
+      "nameArabic": "??????",
+      "nameEnglish": "Shahyraz",
+      "id": 780,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:13Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Tashkent",
+      "id": 712,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:37:28Z",
+      "nameArabic": "??????",
+      "nameEnglish": "Samarqand",
+      "id": 824,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:22:03Z",
+      "nameArabic": "?????",
+      "nameEnglish": "KRBI",
+      "id": 993,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:27:21Z",
+      "nameArabic": "???????",
+      "nameEnglish": "CALICUT",
+      "id": 820,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:22:03Z",
+      "nameArabic": "????",
+      "nameEnglish": "KANO",
+      "id": 91,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:42:58Z",
+      "nameArabic": "????",
+      "nameEnglish": "Kabul",
+      "id": 125,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:42:59Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Vienna",
+      "id": 34,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:55:27Z",
+      "nameArabic": "?????",
+      "nameEnglish": "Sanaa",
+      "id": 67,
+      "isActive": true
+    }
+  ],
+  "totalElements": 709
+}); 
+  }
+  jsonTreeCreate3();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:25 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC002 - Perform Get all cities API by parameters Qry with valid user name and password and return with token</p>
+            <p class="text-sm">
+              <span>4:07:25 PM</span> / <span>00:00:01:885</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC002 - Perform Get all cities API by parameters Qry with valid user name and password and return with token</h5>
+<span class='badge badge-success'>01.03.2023 4:07:25 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:27 PM</span>
+<span class='badge badge-default'>00:00:01:885</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:25 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:26 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:26 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 869ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:26 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-4'></div>
+ <script>
+  function jsonTreeCreate4() { 
+   document.getElementById('code-block-json-4').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI3NzY0NDMsImlhdCI6MTY3Mjc1NDg0MywianRpIjoiYzA2ODU2MTgtNzMyNS00ODM1LTlmNzYtOTgzYjIxY2FhZjY3IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjFkNDljZjFjLTQ1OWItNGU3Yy1iMTY5LWExYWI1ODIzZDkwZSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjFkNDljZjFjLTQ1OWItNGU3Yy1iMTY5LWExYWI1ODIzZDkwZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.XDHvVZUJMjMpcXYYoY7iHmy42jO0Yos-RJ2CQbNEDI2uN7jOArJC0GRT0bNeCZ8n832Enj-e_jvAHpkIc5MJBTkc27TluUzFTzVnN6gX0IrdA0wViQ3CLVvSMtzDDYH21f_l0y0ZHBn0urQ3FINq7Lv6biuzKlYsPDlHL4W_y52A5e6m_EKM-HE_nb9qhEorDwgw1Cvc6MpW0eNsw_dlyERO3RXb87F-R3KP0T3qY-ee4wO-VMEIz34Q6OoknIXoz3fKzT-BPvMfvTCm-p3K7_LTpizjYp8k7df6ie3CyUzFqRi_GI2FVpn6b4pBaNTNc2sFVJJLFImONkAAFRJAgg",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI3NTY2NDMsImlhdCI6MTY3Mjc1NDg0MywianRpIjoiNGM0MThmYzQtMGM4Ni00ZGViLWJlZGQtYTE0NTVhZTQ3MDFiIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiIxZDQ5Y2YxYy00NTliLTRlN2MtYjE2OS1hMWFiNTgyM2Q5MGUiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIxZDQ5Y2YxYy00NTliLTRlN2MtYjE2OS1hMWFiNTgyM2Q5MGUifQ.3g1xIZCbaWybNq6dZVnfS-H2n-SHcWIV6H5kRjBbUuY",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "1d49cf1c-459b-4e7c-b169-a1ab5823d90e",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate4();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:26 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:26 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/lookups/cities | Content Type: */* | Response Time: 817ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-5'></div>
+ <script>
+  function jsonTreeCreate5() { 
+   document.getElementById('code-block-json-5').innerHTML = JSONTree.create({
+  "size": 3,
+  "totalPages": 237,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2022-06-02T01:21:49Z",
+      "nameArabic": "??????????",
+      "nameEnglish": "Kuala Lumpur",
+      "id": 36,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:37:02Z",
+      "nameArabic": "???????",
+      "nameEnglish": "Solngen",
+      "id": 849,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:20:05Z",
+      "nameArabic": "??????",
+      "nameEnglish": "FRUNZE",
+      "id": 1006,
+      "isActive": true
+    }
+  ],
+  "totalElements": 709
+}); 
+  }
+  jsonTreeCreate5();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Assertion Passed: "200" is equal to "200".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Verification Passed: "817" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Verification Passed: "817" is less than or equal to "10000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Assertion Passed: "{"page":0,"size":3,"totalPages":237,"totalElements":709,"content":[{"id":36,"nameArabic":"??????????","nameEnglish":"Kuala Lumpur","isActive":true,"lastUpdated":"2022-06-02T01:21:49Z","sectors":null},{"id":849,"nameArabic":"???????","nameEnglish":"Solngen","isActive":true,"lastUpdated":"2022-06-02T01:37:02Z","sectors":null},{"id":1006,"nameArabic":"??????","nameEnglish":"FRUNZE","isActive":true,"lastUpdated":"2022-06-02T00:20:05Z","sectors":null}]}" contains "content".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Assertion Passed: Check that content object is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/Lookups_cities_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-6'></div>
+ <script>
+  function jsonTreeCreate6() { 
+   document.getElementById('code-block-json-6').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome5",
+  "definitions": {
+    "Content": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Content",
+      "properties": {
+        "lastUpdated": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sectors": {
+          "type": "null"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "isActive",
+        "lastUpdated",
+        "nameArabic",
+        "nameEnglish",
+        "sectors"
+      ]
+    },
+    "Welcome5": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome5",
+      "properties": {
+        "size": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Content"
+          }
+        },
+        "totalElements": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "content",
+        "page",
+        "size",
+        "totalElements",
+        "totalPages"
+      ]
+    }
+  }
+}); 
+  }
+  jsonTreeCreate6();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-7'></div>
+ <script>
+  function jsonTreeCreate7() { 
+   document.getElementById('code-block-json-7').innerHTML = JSONTree.create({
+  "size": 3,
+  "totalPages": 237,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2022-06-02T01:21:49Z",
+      "nameArabic": "??????????",
+      "nameEnglish": "Kuala Lumpur",
+      "id": 36,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T01:37:02Z",
+      "nameArabic": "???????",
+      "nameEnglish": "Solngen",
+      "id": 849,
+      "isActive": true
+    },
+    {
+      "lastUpdated": "2022-06-02T00:20:05Z",
+      "nameArabic": "??????",
+      "nameEnglish": "FRUNZE",
+      "id": 1006,
+      "isActive": true
+    }
+  ],
+  "totalElements": 709
+}); 
+  }
+  jsonTreeCreate7();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC001 - Perform Get all Policies API with valid user name and password</p>
+            <p class="text-sm">
+              <span>4:07:27 PM</span> / <span>00:00:02:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC001 - Perform Get all Policies API with valid user name and password</h5>
+<span class='badge badge-success'>01.03.2023 4:07:27 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:29 PM</span>
+<span class='badge badge-default'>00:00:02:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:27 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:28 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:28 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 830ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:28 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-8'></div>
+ <script>
+  function jsonTreeCreate8() { 
+   document.getElementById('code-block-json-8').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI3NzY0NDUsImlhdCI6MTY3Mjc1NDg0NSwianRpIjoiMjk1OTlhOWEtOWE3OC00NDlkLTliZTUtNTI2OTgyZGRmMTVhIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6ImFmZTQ2NTAxLTNmNjMtNGUwYy05MjVjLWFjMjQ2NDk5ZTAyZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImFmZTQ2NTAxLTNmNjMtNGUwYy05MjVjLWFjMjQ2NDk5ZTAyZiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.PTirj9BdKhGnFQR0nHKdosLYaIW-b18JSERpNZ5MjfDr3xDMmS0oNiKElYfWWgGCIIK0oINDtOLx18WOWGwlJ6P3KCwZ8yC_47tFKLNB5jImg_-fp_vy_oszRorotLsrv3IhJKeuXAhTDlMhgwteQ2ujvdTho4fiGjklH5vLV3qlY4RcaSeQiqrcwG-1Qh2Cs2R800-rkO8MRNtpjXrT5ozx6CM_v3QyFS5fDMD5Lcy0KRlp54jl2EWpSCNHYgGnDG7fsvoGfsBPWEQ4XjbwgLV8JM9g6XOAVjVPyVfzz84sZoyNGwP0V_9N8gW-9V_4qnIUVnTUTKkmZwvHj76bcQ",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI3NTY2NDUsImlhdCI6MTY3Mjc1NDg0NSwianRpIjoiMmQ0MDA1Y2EtNjNiMC00Nzc0LTgzZDAtZTM4MWY3YzkyMjA4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiJhZmU0NjUwMS0zZjYzLTRlMGMtOTI1Yy1hYzI0NjQ5OWUwMmYiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJhZmU0NjUwMS0zZjYzLTRlMGMtOTI1Yy1hYzI0NjQ5OWUwMmYifQ.RsP3CxcJkVMCLHZKilDu4ZbyqLmfllULGHgeHJ3fgsA",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "afe46501-3f63-4e0c-925c-ac246499e02f",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate8();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:28 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:28 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies | Content Type: */* | Response Time: 760ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-9'></div>
+ <script>
+  function jsonTreeCreate9() { 
+   document.getElementById('code-block-json-9').innerHTML = JSONTree.create({
+  "generalPolicies": [
+    {
+      "descriptionArabic": "?????? ? ??????? 11",
+      "nameArabic": "????? ???? 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "3????? ????",
+      "nameEnglish": "general policy3",
+      "id": 171,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "2????? ????",
+      "nameEnglish": "general policy2",
+      "id": 175,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "12345678912345678912345678912345678912345678912345",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "12345678912345678912345678912345678912345678912345"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????? 11",
+      "nameArabic": "????? ????? 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": "percentage",
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "tokhi Tax policy",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tokhi Tax policy descr"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "????? ?????22",
+      "nameEnglish": "Tax Policy22",
+      "chargeType": "percentage",
+      "id": 190,
+      "isActive": true,
+      "chargeValue": 11.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "2????? ?????",
+      "nameEnglish": "Tax Policy2",
+      "chargeType": "percentage",
+      "id": 191,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "33????? ?????",
+      "nameEnglish": "Tax Policy33",
+      "chargeType": "percentage",
+      "id": 193,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "????? ?? ?????????",
+      "nameArabic": "??",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "2????? ???????",
+      "nameEnglish": "Usage Policy2",
+      "id": 173,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "22????? ???????",
+      "nameEnglish": "Usage Policy22",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "????? ???????",
+      "nameEnglish": "Usage Policy",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "3?????",
+      "nameEnglish": "Policy3",
+      "chargeType": "percentage",
+      "id": 302,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "2????? ????? ????",
+      "nameEnglish": "policy",
+      "chargeType": "percentage",
+      "id": 299,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "32??? ????",
+      "nameEnglish": "Test English23",
+      "chargeType": "percentage",
+      "id": 295,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 1.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "4 ??? ????",
+      "nameEnglish": "Test English 4",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "chargeType": "percentage",
+      "id": 298,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "test",
+      "chargeType": "percentage",
+      "id": 161,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 20.0,
+      "descriptionEnglish": "tokhi cancel policy DESCR",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ?????",
+      "nameEnglish": "Policy2",
+      "chargeType": "percentage",
+      "id": 301,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ???? ?????",
+      "nameEnglish": "Policy1",
+      "chargeType": "percentage",
+      "id": 300,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "cancel policy",
+      "chargeType": "percentage",
+      "id": 159,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "???? ???",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "Amr Test",
+      "chargeType": "percentage",
+      "id": 156,
+      "isActive": true,
+      "deadline": 100,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "days"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 2 ????? ???",
+      "nameEnglish": "payment policy 2",
+      "cancellationPolicyId": 296,
+      "id": 195,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 3 ????? ???",
+      "nameEnglish": "payment policy 3",
+      "cancellationPolicyId": 296,
+      "id": 194,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " ????? ???",
+      "nameEnglish": "payment policy",
+      "cancellationPolicyId": 296,
+      "id": 197,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "cancellationPolicyId": 296,
+      "id": 198,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 22 ????? ???",
+      "nameEnglish": "payment policy2",
+      "cancellationPolicyId": 296,
+      "id": 200,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "??",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  ]
+}); 
+  }
+  jsonTreeCreate9();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Assertion Passed: "200" is equal to "200".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Assertion Passed: "{"cancellationPolicies":[{"id":302,"nameArabic":"3?????","nameEnglish":"Policy3","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10.00},{"id":299,"nameArabic":"2????? ????? ????","nameEnglish":"policy","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":0,"chargeType":"percentage","chargeValue":0.00},{"id":295,"nameArabic":"32??? ????","nameEnglish":"Test English23","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":1.00},{"id":296,"nameArabic":"4 ??? ????","nameEnglish":"Test English 4","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10.00},{"id":298,"nameArabic":"12345678912345678912345678912345678912345678912345","nameEnglish":"12345678912345678912345678912345678912345678912345","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10.00},{"id":161,"nameArabic":"????? ????? ????","nameEnglish":"test","descriptionArabic":"??? ????? ????? ????","descriptionEnglish":"tokhi cancel policy DESCR","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":20.00},{"id":301,"nameArabic":"???? ?????","nameEnglish":"Policy2","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":0.00},{"id":300,"nameArabic":"???? ???? ?????","nameEnglish":"Policy1","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":0,"chargeType":"percentage","chargeValue":0.00},{"id":159,"nameArabic":"????? ????? ??????","nameEnglish":"cancel policy","descriptionArabic":"??? ????? ????","descriptionEnglish":"policy description eng","isActive":true,"chargeUnit":"days","deadline":5,"chargeType":"percentage","chargeValue":10.00},{"id":156,"nameArabic":"????? ????? ??????","nameEnglish":"Amr Test","descriptionArabic":"???? ???","descriptionEnglish":"Amr Test","isActive":true,"chargeUnit":"days","deadline":100,"chargeType":"percentage","chargeValue":10.00}],"paymentPolicies":[{"id":195,"nameArabic":" 2 ????? ???","nameEnglish":"payment policy 2","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":194,"nameArabic":" 3 ????? ???","nameEnglish":"payment policy 3","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":197,"nameArabic":" ????? ???","nameEnglish":"payment policy","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":198,"nameArabic":"12345678912345678912345678912345678912345678912345","nameEnglish":"12345678912345678912345678912345678912345678912345","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":200,"nameArabic":" 22 ????? ???","nameEnglish":"payment policy2","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":129,"nameArabic":"??","nameEnglish":"TEST","descriptionArabic":"name","descriptionEnglish":"description English","isActive":true,"refundType":"full_refundable","isRefundable":true,"cancellationPolicyId":null}],"usagePolicies":[{"id":121,"nameArabic":"??","nameEnglish":"edit api","descriptionArabic":"????? ?? ?????????","descriptionEnglish":"edit api","isActive":true},{"id":173,"nameArabic":"2????? ???????","nameEnglish":"Usage Policy2","descriptionArabic":"????? ???????","descriptionEnglish":"Usage Policy","isActive":true},{"id":172,"nameArabic":"22????? ???????","nameEnglish":"Usage Policy22","descriptionArabic":"????? ???????","descriptionEnglish":"Usage Policy","isActive":true},{"id":178,"nameArabic":"????? ???????","nameEnglish":"Usage Policy","descriptionArabic":"????? ???????","descriptionEnglish":"Usage Policy","isActive":true}],"taxesPolicies":[{"id":121,"nameArabic":"????? ????? 11","nameEnglish":"tax policy 11","descriptionArabic":"??? ????? ????? 11","descriptionEnglish":"tax policy description 11","isActive":true,"chargeType":"percentage","chargeValue":15.00},{"id":122,"nameArabic":"????? ????? ????","nameEnglish":"tokhi Tax policy","descriptionArabic":"??? ????? ????? ????","descriptionEnglish":"tokhi Tax policy descr","isActive":true,"chargeType":"percentage","chargeValue":15.00},{"id":190,"nameArabic":"????? ?????22","nameEnglish":"Tax Policy22","descriptionArabic":"??? ????? ?????","descriptionEnglish":"Tax Descr test","isActive":true,"chargeType":"percentage","chargeValue":11.00},{"id":191,"nameArabic":"2????? ?????","nameEnglish":"Tax Policy2","descriptionArabic":"??? ????? ?????","descriptionEnglish":"Tax Descr test","isActive":true,"chargeType":"percentage","chargeValue":0.00},{"id":193,"nameArabic":"33????? ?????","nameEnglish":"Tax Policy33","descriptionArabic":"??? ????? ?????","descriptionEnglish":"Tax Descr test","isActive":true,"chargeType":"percentage","chargeValue":0.00}],"generalPolicies":[{"id":120,"nameArabic":"????? ???? 11","nameEnglish":"general policy 11","descriptionArabic":"?????? ? ??????? 11","descriptionEnglish":"terms and conditions","isActive":true},{"id":171,"nameArabic":"3????? ????","nameEnglish":"general policy3","descriptionArabic":"????? ????","descriptionEnglish":"general policy descr","isActive":true},{"id":175,"nameArabic":"2????? ????","nameEnglish":"general policy2","descriptionArabic":"????? ????","descriptionEnglish":"general policy descr","isActive":true},{"id":172,"nameArabic":"12345678912345678912345678912345678912345678912345","nameEnglish":"12345678912345678912345678912345678912345678912345","descriptionArabic":"12345678912345678912345678912345678912345678912345","descriptionEnglish":"12345678912345678912345678912345678912345678912345","isActive":true}]}" contains "cancellationPolicies".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Assertion Passed: Check that cancellationPolicies object is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/GetAllPolicies_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-10'></div>
+ <script>
+  function jsonTreeCreate10() { 
+   document.getElementById('code-block-json-10').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome2",
+  "definitions": {
+    "Policy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Policy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "chargeType": {
+          "$ref": "#/definitions/ChargeType"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "deadline": {
+          "type": "integer"
+        },
+        "chargeValue": {
+          "type": "number"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "chargeUnit": {
+          "$ref": "#/definitions/ChargeUnit"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "GeneralPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "GeneralPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "ChargeUnit": {
+      "type": "string",
+      "title": "ChargeUnit",
+      "enum": [
+        "days"
+      ]
+    },
+    "ChargeType": {
+      "type": "string",
+      "title": "ChargeType",
+      "enum": [
+        "percentage"
+      ]
+    },
+    "PaymentPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "PaymentPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "refundType": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "cancellationPolicyId": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "isRefundable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cancellationPolicyId",
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "isRefundable",
+        "nameArabic",
+        "nameEnglish",
+        "refundType"
+      ]
+    },
+    "Welcome2": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome2",
+      "properties": {
+        "generalPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GeneralPolicy"
+          }
+        },
+        "taxesPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "usagePolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "cancellationPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "paymentPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentPolicy"
+          }
+        }
+      },
+      "required": [
+        "cancellationPolicies",
+        "generalPolicies",
+        "paymentPolicies",
+        "taxesPolicies",
+        "usagePolicies"
+      ]
+    }
+  }
+}); 
+  }
+  jsonTreeCreate10();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-11'></div>
+ <script>
+  function jsonTreeCreate11() { 
+   document.getElementById('code-block-json-11').innerHTML = JSONTree.create({
+  "generalPolicies": [
+    {
+      "descriptionArabic": "?????? ? ??????? 11",
+      "nameArabic": "????? ???? 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "3????? ????",
+      "nameEnglish": "general policy3",
+      "id": 171,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "2????? ????",
+      "nameEnglish": "general policy2",
+      "id": 175,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "12345678912345678912345678912345678912345678912345",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "12345678912345678912345678912345678912345678912345"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????? 11",
+      "nameArabic": "????? ????? 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": "percentage",
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "tokhi Tax policy",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tokhi Tax policy descr"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "????? ?????22",
+      "nameEnglish": "Tax Policy22",
+      "chargeType": "percentage",
+      "id": 190,
+      "isActive": true,
+      "chargeValue": 11.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "2????? ?????",
+      "nameEnglish": "Tax Policy2",
+      "chargeType": "percentage",
+      "id": 191,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "33????? ?????",
+      "nameEnglish": "Tax Policy33",
+      "chargeType": "percentage",
+      "id": 193,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "????? ?? ?????????",
+      "nameArabic": "??",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "2????? ???????",
+      "nameEnglish": "Usage Policy2",
+      "id": 173,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "22????? ???????",
+      "nameEnglish": "Usage Policy22",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "????? ???????",
+      "nameEnglish": "Usage Policy",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "3?????",
+      "nameEnglish": "Policy3",
+      "chargeType": "percentage",
+      "id": 302,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "2????? ????? ????",
+      "nameEnglish": "policy",
+      "chargeType": "percentage",
+      "id": 299,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "32??? ????",
+      "nameEnglish": "Test English23",
+      "chargeType": "percentage",
+      "id": 295,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 1.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "4 ??? ????",
+      "nameEnglish": "Test English 4",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "chargeType": "percentage",
+      "id": 298,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "test",
+      "chargeType": "percentage",
+      "id": 161,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 20.0,
+      "descriptionEnglish": "tokhi cancel policy DESCR",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ?????",
+      "nameEnglish": "Policy2",
+      "chargeType": "percentage",
+      "id": 301,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ???? ?????",
+      "nameEnglish": "Policy1",
+      "chargeType": "percentage",
+      "id": 300,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "cancel policy",
+      "chargeType": "percentage",
+      "id": 159,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "???? ???",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "Amr Test",
+      "chargeType": "percentage",
+      "id": 156,
+      "isActive": true,
+      "deadline": 100,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "days"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 2 ????? ???",
+      "nameEnglish": "payment policy 2",
+      "cancellationPolicyId": 296,
+      "id": 195,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 3 ????? ???",
+      "nameEnglish": "payment policy 3",
+      "cancellationPolicyId": 296,
+      "id": 194,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " ????? ???",
+      "nameEnglish": "payment policy",
+      "cancellationPolicyId": 296,
+      "id": 197,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "cancellationPolicyId": 296,
+      "id": 198,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 22 ????? ???",
+      "nameEnglish": "payment policy2",
+      "cancellationPolicyId": 296,
+      "id": 200,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "??",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  ]
+}); 
+  }
+  jsonTreeCreate11();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC002 - Perform Get all Policies API with pagination with valid user name and password</p>
+            <p class="text-sm">
+              <span>4:07:29 PM</span> / <span>00:00:01:653</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC002 - Perform Get all Policies API with pagination with valid user name and password</h5>
+<span class='badge badge-success'>01.03.2023 4:07:29 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:31 PM</span>
+<span class='badge badge-default'>00:00:01:653</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:29 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:30 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:30 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 777ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:30 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-12'></div>
+ <script>
+  function jsonTreeCreate12() { 
+   document.getElementById('code-block-json-12').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI3NzY0NDYsImlhdCI6MTY3Mjc1NDg0NiwianRpIjoiYjlhZDA5MzktZDE4OS00ZDljLTkxYzItNTM1YmI1MWU5ZTBmIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6ImI3MmQ2YWI0LTg1MzUtNGEwNy04YzY1LTQ2OTNjZmI4NzVhZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImI3MmQ2YWI0LTg1MzUtNGEwNy04YzY1LTQ2OTNjZmI4NzVhZiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.JS3_-i2NfTSRy4ZVPSHOGwObFnfWQ0po9-uY3RWO33G1OpJoTuXyxbuFCbWYC8zhuIMgMuL3q9VY_S8doFpLUyR3idKZ_WJL20axSSTmp2u80nNWLOZtZLXZdkVSfeLTgcFXeL32QG_-6VUr7GpCzMoRLoe7tl7Ap4H6iwm5NgTUwujRJY7QjMjqhopGO1NdaNam_SULyQW13TxFWM41wsWVf2BcRKl-5zkPqh9I1xTBlIj8aAW6-Q0-IxTL6TBVSKiv8_D2eZxtxdZhukSScL2vvdlvGnyXGDeAFIe8TAsD8bbv4mc7W_pEGO-7s_rj4PP6QBiBif4TvvJMmPNyHw",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI3NTY2NDYsImlhdCI6MTY3Mjc1NDg0NiwianRpIjoiMDUwZmI4OTEtMzM0ZS00NTViLWE2YWYtOGI3YWI3OWE0NmQwIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiJiNzJkNmFiNC04NTM1LTRhMDctOGM2NS00NjkzY2ZiODc1YWYiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJiNzJkNmFiNC04NTM1LTRhMDctOGM2NS00NjkzY2ZiODc1YWYifQ.82IR26h7ez43AEtPXtbqqtnt8mRGwwQXNdUOmXsq8RA",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "b72d6ab4-8535-4a07-8c65-4693cfb875af",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate12();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:30 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:30 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies | Content Type: */* | Response Time: 649ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-13'></div>
+ <script>
+  function jsonTreeCreate13() { 
+   document.getElementById('code-block-json-13').innerHTML = JSONTree.create({
+  "generalPolicies": [
+    {
+      "descriptionArabic": "?????? ? ??????? 11",
+      "nameArabic": "????? ???? 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "3????? ????",
+      "nameEnglish": "general policy3",
+      "id": 171,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "2????? ????",
+      "nameEnglish": "general policy2",
+      "id": 175,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "12345678912345678912345678912345678912345678912345",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "12345678912345678912345678912345678912345678912345"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????? 11",
+      "nameArabic": "????? ????? 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": "percentage",
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "tokhi Tax policy",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tokhi Tax policy descr"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "????? ?????22",
+      "nameEnglish": "Tax Policy22",
+      "chargeType": "percentage",
+      "id": 190,
+      "isActive": true,
+      "chargeValue": 11.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "2????? ?????",
+      "nameEnglish": "Tax Policy2",
+      "chargeType": "percentage",
+      "id": 191,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "33????? ?????",
+      "nameEnglish": "Tax Policy33",
+      "chargeType": "percentage",
+      "id": 193,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "????? ?? ?????????",
+      "nameArabic": "??",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "2????? ???????",
+      "nameEnglish": "Usage Policy2",
+      "id": 173,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "22????? ???????",
+      "nameEnglish": "Usage Policy22",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "????? ???????",
+      "nameEnglish": "Usage Policy",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "3?????",
+      "nameEnglish": "Policy3",
+      "chargeType": "percentage",
+      "id": 302,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "2????? ????? ????",
+      "nameEnglish": "policy",
+      "chargeType": "percentage",
+      "id": 299,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "32??? ????",
+      "nameEnglish": "Test English23",
+      "chargeType": "percentage",
+      "id": 295,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 1.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "4 ??? ????",
+      "nameEnglish": "Test English 4",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "chargeType": "percentage",
+      "id": 298,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "test",
+      "chargeType": "percentage",
+      "id": 161,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 20.0,
+      "descriptionEnglish": "tokhi cancel policy DESCR",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ?????",
+      "nameEnglish": "Policy2",
+      "chargeType": "percentage",
+      "id": 301,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ???? ?????",
+      "nameEnglish": "Policy1",
+      "chargeType": "percentage",
+      "id": 300,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "cancel policy",
+      "chargeType": "percentage",
+      "id": 159,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "???? ???",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "Amr Test",
+      "chargeType": "percentage",
+      "id": 156,
+      "isActive": true,
+      "deadline": 100,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "days"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 2 ????? ???",
+      "nameEnglish": "payment policy 2",
+      "cancellationPolicyId": 296,
+      "id": 195,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 3 ????? ???",
+      "nameEnglish": "payment policy 3",
+      "cancellationPolicyId": 296,
+      "id": 194,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " ????? ???",
+      "nameEnglish": "payment policy",
+      "cancellationPolicyId": 296,
+      "id": 197,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "cancellationPolicyId": 296,
+      "id": 198,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 22 ????? ???",
+      "nameEnglish": "payment policy2",
+      "cancellationPolicyId": 296,
+      "id": 200,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "??",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  ]
+}); 
+  }
+  jsonTreeCreate13();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: "200" is equal to "200".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Verification Passed: "649" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Verification Passed: "649" is less than or equal to "10000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: "{"cancellationPolicies":[{"id":302,"nameArabic":"3?????","nameEnglish":"Policy3","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10.00},{"id":299,"nameArabic":"2????? ????? ????","nameEnglish":"policy","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":0,"chargeType":"percentage","chargeValue":0.00},{"id":295,"nameArabic":"32??? ????","nameEnglish":"Test English23","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":1.00},{"id":296,"nameArabic":"4 ??? ????","nameEnglish":"Test English 4","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10.00},{"id":298,"nameArabic":"12345678912345678912345678912345678912345678912345","nameEnglish":"12345678912345678912345678912345678912345678912345","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10.00},{"id":161,"nameArabic":"????? ????? ????","nameEnglish":"test","descriptionArabic":"??? ????? ????? ????","descriptionEnglish":"tokhi cancel policy DESCR","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":20.00},{"id":301,"nameArabic":"???? ?????","nameEnglish":"Policy2","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":0.00},{"id":300,"nameArabic":"???? ???? ?????","nameEnglish":"Policy1","descriptionArabic":"??? ???????","descriptionEnglish":"English Desc test","isActive":true,"chargeUnit":"days","deadline":0,"chargeType":"percentage","chargeValue":0.00},{"id":159,"nameArabic":"????? ????? ??????","nameEnglish":"cancel policy","descriptionArabic":"??? ????? ????","descriptionEnglish":"policy description eng","isActive":true,"chargeUnit":"days","deadline":5,"chargeType":"percentage","chargeValue":10.00},{"id":156,"nameArabic":"????? ????? ??????","nameEnglish":"Amr Test","descriptionArabic":"???? ???","descriptionEnglish":"Amr Test","isActive":true,"chargeUnit":"days","deadline":100,"chargeType":"percentage","chargeValue":10.00}],"paymentPolicies":[{"id":195,"nameArabic":" 2 ????? ???","nameEnglish":"payment policy 2","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":194,"nameArabic":" 3 ????? ???","nameEnglish":"payment policy 3","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":197,"nameArabic":" ????? ???","nameEnglish":"payment policy","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":198,"nameArabic":"12345678912345678912345678912345678912345678912345","nameEnglish":"12345678912345678912345678912345678912345678912345","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":200,"nameArabic":" 22 ????? ???","nameEnglish":"payment policy2","descriptionArabic":"????? ???","descriptionEnglish":"payment policy","isActive":true,"refundType":"apply_cancellation_policy","isRefundable":true,"cancellationPolicyId":296},{"id":129,"nameArabic":"??","nameEnglish":"TEST","descriptionArabic":"name","descriptionEnglish":"description English","isActive":true,"refundType":"full_refundable","isRefundable":true,"cancellationPolicyId":null}],"usagePolicies":[{"id":121,"nameArabic":"??","nameEnglish":"edit api","descriptionArabic":"????? ?? ?????????","descriptionEnglish":"edit api","isActive":true},{"id":173,"nameArabic":"2????? ???????","nameEnglish":"Usage Policy2","descriptionArabic":"????? ???????","descriptionEnglish":"Usage Policy","isActive":true},{"id":172,"nameArabic":"22????? ???????","nameEnglish":"Usage Policy22","descriptionArabic":"????? ???????","descriptionEnglish":"Usage Policy","isActive":true},{"id":178,"nameArabic":"????? ???????","nameEnglish":"Usage Policy","descriptionArabic":"????? ???????","descriptionEnglish":"Usage Policy","isActive":true}],"taxesPolicies":[{"id":121,"nameArabic":"????? ????? 11","nameEnglish":"tax policy 11","descriptionArabic":"??? ????? ????? 11","descriptionEnglish":"tax policy description 11","isActive":true,"chargeType":"percentage","chargeValue":15.00},{"id":122,"nameArabic":"????? ????? ????","nameEnglish":"tokhi Tax policy","descriptionArabic":"??? ????? ????? ????","descriptionEnglish":"tokhi Tax policy descr","isActive":true,"chargeType":"percentage","chargeValue":15.00},{"id":190,"nameArabic":"????? ?????22","nameEnglish":"Tax Policy22","descriptionArabic":"??? ????? ?????","descriptionEnglish":"Tax Descr test","isActive":true,"chargeType":"percentage","chargeValue":11.00},{"id":191,"nameArabic":"2????? ?????","nameEnglish":"Tax Policy2","descriptionArabic":"??? ????? ?????","descriptionEnglish":"Tax Descr test","isActive":true,"chargeType":"percentage","chargeValue":0.00},{"id":193,"nameArabic":"33????? ?????","nameEnglish":"Tax Policy33","descriptionArabic":"??? ????? ?????","descriptionEnglish":"Tax Descr test","isActive":true,"chargeType":"percentage","chargeValue":0.00}],"generalPolicies":[{"id":120,"nameArabic":"????? ???? 11","nameEnglish":"general policy 11","descriptionArabic":"?????? ? ??????? 11","descriptionEnglish":"terms and conditions","isActive":true},{"id":171,"nameArabic":"3????? ????","nameEnglish":"general policy3","descriptionArabic":"????? ????","descriptionEnglish":"general policy descr","isActive":true},{"id":175,"nameArabic":"2????? ????","nameEnglish":"general policy2","descriptionArabic":"????? ????","descriptionEnglish":"general policy descr","isActive":true},{"id":172,"nameArabic":"12345678912345678912345678912345678912345678912345","nameEnglish":"12345678912345678912345678912345678912345678912345","descriptionArabic":"12345678912345678912345678912345678912345678912345","descriptionEnglish":"12345678912345678912345678912345678912345678912345","isActive":true}]}" contains "cancellationPolicies".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Check that cancellationPolicies object is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/GetAllPolicies_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-14'></div>
+ <script>
+  function jsonTreeCreate14() { 
+   document.getElementById('code-block-json-14').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome2",
+  "definitions": {
+    "Policy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Policy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "chargeType": {
+          "$ref": "#/definitions/ChargeType"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "deadline": {
+          "type": "integer"
+        },
+        "chargeValue": {
+          "type": "number"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "chargeUnit": {
+          "$ref": "#/definitions/ChargeUnit"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "GeneralPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "GeneralPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "ChargeUnit": {
+      "type": "string",
+      "title": "ChargeUnit",
+      "enum": [
+        "days"
+      ]
+    },
+    "ChargeType": {
+      "type": "string",
+      "title": "ChargeType",
+      "enum": [
+        "percentage"
+      ]
+    },
+    "PaymentPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "PaymentPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "refundType": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "cancellationPolicyId": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "isRefundable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cancellationPolicyId",
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "isRefundable",
+        "nameArabic",
+        "nameEnglish",
+        "refundType"
+      ]
+    },
+    "Welcome2": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome2",
+      "properties": {
+        "generalPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GeneralPolicy"
+          }
+        },
+        "taxesPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "usagePolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "cancellationPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Policy"
+          }
+        },
+        "paymentPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentPolicy"
+          }
+        }
+      },
+      "required": [
+        "cancellationPolicies",
+        "generalPolicies",
+        "paymentPolicies",
+        "taxesPolicies",
+        "usagePolicies"
+      ]
+    }
+  }
+}); 
+  }
+  jsonTreeCreate14();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-15'></div>
+ <script>
+  function jsonTreeCreate15() { 
+   document.getElementById('code-block-json-15').innerHTML = JSONTree.create({
+  "generalPolicies": [
+    {
+      "descriptionArabic": "?????? ? ??????? 11",
+      "nameArabic": "????? ???? 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "3????? ????",
+      "nameEnglish": "general policy3",
+      "id": 171,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "2????? ????",
+      "nameEnglish": "general policy2",
+      "id": 175,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "12345678912345678912345678912345678912345678912345",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "12345678912345678912345678912345678912345678912345"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????? 11",
+      "nameArabic": "????? ????? 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": "percentage",
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "tokhi Tax policy",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tokhi Tax policy descr"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "????? ?????22",
+      "nameEnglish": "Tax Policy22",
+      "chargeType": "percentage",
+      "id": 190,
+      "isActive": true,
+      "chargeValue": 11.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "2????? ?????",
+      "nameEnglish": "Tax Policy2",
+      "chargeType": "percentage",
+      "id": 191,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "33????? ?????",
+      "nameEnglish": "Tax Policy33",
+      "chargeType": "percentage",
+      "id": 193,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "????? ?? ?????????",
+      "nameArabic": "??",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "2????? ???????",
+      "nameEnglish": "Usage Policy2",
+      "id": 173,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "22????? ???????",
+      "nameEnglish": "Usage Policy22",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "????? ???????",
+      "nameEnglish": "Usage Policy",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "3?????",
+      "nameEnglish": "Policy3",
+      "chargeType": "percentage",
+      "id": 302,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "2????? ????? ????",
+      "nameEnglish": "policy",
+      "chargeType": "percentage",
+      "id": 299,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "32??? ????",
+      "nameEnglish": "Test English23",
+      "chargeType": "percentage",
+      "id": 295,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 1.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "4 ??? ????",
+      "nameEnglish": "Test English 4",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "chargeType": "percentage",
+      "id": 298,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "test",
+      "chargeType": "percentage",
+      "id": 161,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 20.0,
+      "descriptionEnglish": "tokhi cancel policy DESCR",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ?????",
+      "nameEnglish": "Policy2",
+      "chargeType": "percentage",
+      "id": 301,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ???? ?????",
+      "nameEnglish": "Policy1",
+      "chargeType": "percentage",
+      "id": 300,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "cancel policy",
+      "chargeType": "percentage",
+      "id": 159,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "???? ???",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "Amr Test",
+      "chargeType": "percentage",
+      "id": 156,
+      "isActive": true,
+      "deadline": 100,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "days"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 2 ????? ???",
+      "nameEnglish": "payment policy 2",
+      "cancellationPolicyId": 296,
+      "id": 195,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 3 ????? ???",
+      "nameEnglish": "payment policy 3",
+      "cancellationPolicyId": 296,
+      "id": 194,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " ????? ???",
+      "nameEnglish": "payment policy",
+      "cancellationPolicyId": 296,
+      "id": 197,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "cancellationPolicyId": 296,
+      "id": 198,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 22 ????? ???",
+      "nameEnglish": "payment policy2",
+      "cancellationPolicyId": 296,
+      "id": 200,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "??",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  ]
+}); 
+  }
+  jsonTreeCreate15();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC003 - Peform Post Token API with empty request body</p>
+            <p class="text-sm">
+              <span>4:07:31 PM</span> / <span>00:00:00:734</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC003 - Peform Post Token API with empty request body</h5>
+<span class='badge badge-success'>01.03.2023 4:07:31 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:32 PM</span>
+<span class='badge badge-default'>00:00:00:734</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 400 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 622ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-16'></div>
+ <script>
+  function jsonTreeCreate16() { 
+   document.getElementById('code-block-json-16').innerHTML = JSONTree.create({
+  "error_description": "Missing form parameter: grant_type",
+  "error": "invalid_request"
+}); 
+  }
+  jsonTreeCreate16();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 400 and it is Bad RQ.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Check error_description is existed.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Check error_description is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:31 PM</td>
+        <td>
+          Assertion Passed: Unauthorized Token Schema is matched with Unauthorized schema.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-17'></div>
+ <script>
+  function jsonTreeCreate17() { 
+   document.getElementById('code-block-json-17').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome10",
+  "definitions": {
+    "Welcome10": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome10",
+      "properties": {
+        "error_description": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "error",
+        "error_description"
+      ]
+    }
+  }
+}); 
+  }
+  jsonTreeCreate17();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-18'></div>
+ <script>
+  function jsonTreeCreate18() { 
+   document.getElementById('code-block-json-18').innerHTML = JSONTree.create({
+  "error_description": "Missing form parameter: grant_type",
+  "error": "invalid_request"
+}); 
+  }
+  jsonTreeCreate18();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Verification Passed: "622" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Verification Passed: "622" is less than or equal to "10000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC002 - Peform Post Token API with Invalid user name and password</p>
+            <p class="text-sm">
+              <span>4:07:32 PM</span> / <span>00:00:00:978</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC002 - Peform Post Token API with Invalid user name and password</h5>
+<span class='badge badge-success'>01.03.2023 4:07:32 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:32 PM</span>
+<span class='badge badge-default'>00:00:00:978</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 401 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 911ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-19'></div>
+ <script>
+  function jsonTreeCreate19() { 
+   document.getElementById('code-block-json-19').innerHTML = JSONTree.create({
+  "error_description": "Invalid user credentials",
+  "error": "invalid_grant"
+}); 
+  }
+  jsonTreeCreate19();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 401 and it is Unauthorized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Assertion Passed: Check error_description is existed.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Assertion Passed: Check error_description is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Assertion Passed: Unauthorized Token Schema is matched with Unauthorized schema.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-20'></div>
+ <script>
+  function jsonTreeCreate20() { 
+   document.getElementById('code-block-json-20').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome10",
+  "definitions": {
+    "Welcome10": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome10",
+      "properties": {
+        "error_description": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "error",
+        "error_description"
+      ]
+    }
+  }
+}); 
+  }
+  jsonTreeCreate20();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-21'></div>
+ <script>
+  function jsonTreeCreate21() { 
+   document.getElementById('code-block-json-21').innerHTML = JSONTree.create({
+  "error_description": "Invalid user credentials",
+  "error": "invalid_grant"
+}); 
+  }
+  jsonTreeCreate21();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Verification Passed: "911" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Verification Passed: "911" is less than or equal to "10000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:32 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC001 - Peform Post Token API with valid user name and password and retun with token</p>
+            <p class="text-sm">
+              <span>4:07:32 PM</span> / <span>00:00:01:474</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC001 - Peform Post Token API with valid user name and password and retun with token</h5>
+<span class='badge badge-success'>01.03.2023 4:07:32 PM</span>
+<span class='badge badge-danger'>01.03.2023 4:07:34 PM</span>
+<span class='badge badge-default'>00:00:01:474</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:33 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1302ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-22'></div>
+ <script>
+  function jsonTreeCreate22() { 
+   document.getElementById('code-block-json-22').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI3NzY0NTAsImlhdCI6MTY3Mjc1NDg1MCwianRpIjoiMjM5ZjkwNDMtYjc5Mi00ZDlmLWI4NDEtMDY5YmRmN2MxYmY4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjdmYzI0ZWJjLWJjZDUtNDdmNS05NTg4LWRmYTI0YmJiZGFkNiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjdmYzI0ZWJjLWJjZDUtNDdmNS05NTg4LWRmYTI0YmJiZGFkNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.NLj2D4ZMiVavNyzndVWgWNarR7_xK2BhmnijhCcOa81EnukcFKVfoJA901lUHWqJmJcYUy0sjhbRh8XenRZYnF_hi1huZUJOArkhuJBRfZaaZ4Rx8kRTiG03IUAaJUoo_lgi2eqLfzUpRylEaGpffjYlid_eVLhJ0Mfqoak1oHFj_CynVhNhJlNqjkQNPHyOXHlTp9b_61Dhg58xkjK947UADfhzvupXJxwi34-G5cJl3pNsFj4SiC9-_qrkKBB73i_HDsI6h4v2luGdqysNyQBBUqe13qudY4JwDzmeLmPYInqU24hFNbcKv8qgoLZ7gQtO-ezQniIctzHDKWnt9g",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI3NTY2NTAsImlhdCI6MTY3Mjc1NDg1MCwianRpIjoiZWMzMjI2NjYtNDI1Ny00ZWI5LWI4NzktM2NmZTkyMzEzNTk0IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI3ZmMyNGViYy1iY2Q1LTQ3ZjUtOTU4OC1kZmEyNGJiYmRhZDYiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3ZmMyNGViYy1iY2Q1LTQ3ZjUtOTU4OC1kZmEyNGJiYmRhZDYifQ.daVpNqze9Y7aK36YuJImZWKS7ovF1X5oez-Gi18H-S8",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "7fc24ebc-bcd5-47f5-9588-dfa24bbbdad6",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate22();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Assertion Passed: Check Access Token is existed.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Assertion Passed: Check Access token is not null.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Assertion Passed: Token Schema is matched with valid schema.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-23'></div>
+ <script>
+  function jsonTreeCreate23() { 
+   document.getElementById('code-block-json-23').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "access_token": {
+      "type": "string"
+    },
+    "refresh_token": {
+      "type": "string"
+    },
+    "refresh_expires_in": {
+      "type": "integer"
+    },
+    "not-before-policy": {
+      "type": "integer"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "token_type": {
+      "type": "string"
+    },
+    "session_state": {
+      "type": "string"
+    },
+    "expires_in": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "access_token",
+    "expires_in",
+    "refresh_expires_in",
+    "refresh_token",
+    "token_type",
+    "not-before-policy",
+    "session_state",
+    "scope"
+  ]
+}); 
+  }
+  jsonTreeCreate23();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-24'></div>
+ <script>
+  function jsonTreeCreate24() { 
+   document.getElementById('code-block-json-24').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI3NzY0NTAsImlhdCI6MTY3Mjc1NDg1MCwianRpIjoiMjM5ZjkwNDMtYjc5Mi00ZDlmLWI4NDEtMDY5YmRmN2MxYmY4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjdmYzI0ZWJjLWJjZDUtNDdmNS05NTg4LWRmYTI0YmJiZGFkNiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjdmYzI0ZWJjLWJjZDUtNDdmNS05NTg4LWRmYTI0YmJiZGFkNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.NLj2D4ZMiVavNyzndVWgWNarR7_xK2BhmnijhCcOa81EnukcFKVfoJA901lUHWqJmJcYUy0sjhbRh8XenRZYnF_hi1huZUJOArkhuJBRfZaaZ4Rx8kRTiG03IUAaJUoo_lgi2eqLfzUpRylEaGpffjYlid_eVLhJ0Mfqoak1oHFj_CynVhNhJlNqjkQNPHyOXHlTp9b_61Dhg58xkjK947UADfhzvupXJxwi34-G5cJl3pNsFj4SiC9-_qrkKBB73i_HDsI6h4v2luGdqysNyQBBUqe13qudY4JwDzmeLmPYInqU24hFNbcKv8qgoLZ7gQtO-ezQniIctzHDKWnt9g",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI3NTY2NTAsImlhdCI6MTY3Mjc1NDg1MCwianRpIjoiZWMzMjI2NjYtNDI1Ny00ZWI5LWI4NzktM2NmZTkyMzEzNTk0IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI3ZmMyNGViYy1iY2Q1LTQ3ZjUtOTU4OC1kZmEyNGJiYmRhZDYiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3ZmMyNGViYy1iY2Q1LTQ3ZjUtOTU4OC1kZmEyNGJiYmRhZDYifQ.daVpNqze9Y7aK36YuJImZWKS7ovF1X5oez-Gi18H-S8",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "7fc24ebc-bcd5-47f5-9588-dfa24bbbdad6",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate24();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Verification Passed: "1302" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Verification Passed: "1302" is less than or equal to "10000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Verification Passed: Expiration Date Token is Valid
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Verification Passed: ISS is Valid
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Verification Passed: tcId is Valid
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Verification Passed: preferred_username is Valid
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:07:34 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

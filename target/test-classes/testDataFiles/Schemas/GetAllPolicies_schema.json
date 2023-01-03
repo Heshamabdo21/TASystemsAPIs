@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome9",
+    "$ref": "#/definitions/Welcome2",
     "definitions": {
-        "Welcome9": {
+        "Welcome2": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -44,7 +44,7 @@
                 "taxesPolicies",
                 "usagePolicies"
             ],
-            "title": "Welcome9"
+            "title": "Welcome2"
         },
         "Policy": {
             "type": "object",
@@ -69,7 +69,7 @@
                     "type": "boolean"
                 },
                 "chargeUnit": {
-                    "type": "string"
+                    "$ref": "#/definitions/ChargeUnit"
                 },
                 "deadline": {
                     "type": "integer"
@@ -182,6 +182,13 @@
                 "percentage"
             ],
             "title": "ChargeType"
+        },
+        "ChargeUnit": {
+            "type": "string",
+            "enum": [
+                "days"
+            ],
+            "title": "ChargeUnit"
         }
     }
 }
