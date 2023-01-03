@@ -1,0 +1,43 @@
+
+################################################################################################################################################
+Starting Execution:	"1 out of 6" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Lookups_Cases.Valid_GET_all_cities_Lookups_Rq_TC"
+Test Description:	"TC001 - Perform Get all cities API with valid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @03-01-2023 09:22:26.0562 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @03-01-2023 09:22:26.0599 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @03-01-2023 09:22:26.0604 AM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @03-01-2023 09:22:29.0277 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @03-01-2023 09:22:29.0283 AM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1576ms". @03-01-2023 09:22:30.0114 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @03-01-2023 09:22:30.0116 AM
+[ReportManager] Successfully created attachment "API Request - Body" @03-01-2023 09:22:30.0117 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @03-01-2023 09:22:30.0285 AM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @03-01-2023 09:22:30.0287 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @03-01-2023 09:22:30.0306 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @03-01-2023 09:22:30.0339 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @03-01-2023 09:22:30.0340 AM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @03-01-2023 09:22:31.0224 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @03-01-2023 09:22:31.0225 AM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/lookups/cities | Content Type: */* | Response Time: 874ms". @03-01-2023 09:22:31.0254 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @03-01-2023 09:22:31.0255 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @03-01-2023 09:22:31.0256 AM
+[ReportManager] Assertion Passed: "200" is equal to "200". @03-01-2023 09:22:31.0256 AM
+[ReportManager] Verification Passed: "874" is greater than or equal to "1.1". @03-01-2023 09:22:31.0257 AM
+[ReportManager] Verification Passed: "874" is less than or equal to "10000". @03-01-2023 09:22:31.0258 AM
+[ReportManager] Assertion Passed: "{"page":0,"size":20,"totalPages":36,"totalElements":709,"content":[{"id":36,"nameArabic":"??????????","nameEnglish":"Kuala Lumpur","isActive":true,"lastUpdated":"2022-06-02T01:21:49Z","sectors":null},{"id":849,"nameArabic":"???????","nameEnglish":"Solngen","isActive":true,"lastUpdated":"2022-06-02T01:37:02Z","sectors":null},{"id":1006,"nameArabic":"??????","nameEnglish":"FRUNZE","isActive":true,"lastUpdated":"2022-06-02T00:20:05Z","sectors":null},{"id":985,"nameArabic":"??????","nameEnglish":"KANDAHAR","isActive":true,"lastUpdated":"2022-06-02T00:25:20Z","sectors":null},{"id":736,"nameArabic":"?????","nameEnglish":"Tabrka","isActive":true,"lastUpdated":"2022-06-02T01:16:50Z","sectors":null},{"id":953,"nameArabic":"?????","nameEnglish":"Sohag","isActive":true,"lastUpdated":"2022-06-02T00:25:24Z","sectors":null},{"id":816,"nameArabic":"??????","nameEnglish":"Cochin","isActive":true,"lastUpdated":"2022-06-02T01:06:13Z","sectors":null},{"id":789,"nameArabic":"???? ????","nameEnglish":"Faisalabad","isActive":true,"lastUpdated":"2022-06-02T01:27:12Z","sectors":null},{"id":1013,"nameArabic":"?????","nameEnglish":"KAZAN","isActive":true,"lastUpdated":"2022-06-02T00:37:19Z","sectors":null},{"id":794,"nameArabic":"???????","nameEnglish":"KAYSERI","isActive":true,"lastUpdated":"2022-06-02T01:21:58Z","sectors":null},{"id":764,"nameArabic":"????","nameEnglish":"Tangier","isActive":true,"lastUpdated":"2022-06-02T01:27:13Z","sectors":null},{"id":780,"nameArabic":"??????","nameEnglish":"Shahyraz","isActive":true,"lastUpdated":"2022-06-02T00:37:28Z","sectors":null},{"id":712,"nameArabic":"?????","nameEnglish":"Tashkent","isActive":true,"lastUpdated":"2022-06-02T01:27:13Z","sectors":null},{"id":824,"nameArabic":"??????","nameEnglish":"Samarqand","isActive":true,"lastUpdated":"2022-06-02T00:37:28Z","sectors":null},{"id":993,"nameArabic":"?????","nameEnglish":"KRBI","isActive":true,"lastUpdated":"2022-06-02T01:22:03Z","sectors":null},{"id":820,"nameArabic":"???????","nameEnglish":"CALICUT","isActive":true,"lastUpdated":"2022-06-02T01:27:21Z","sectors":null},{"id":91,"nameArabic":"????","nameEnglish":"KANO","isActive":true,"lastUpdated":"2022-06-02T01:22:03Z","sectors":null},{"id":125,"nameArabic":"????","nameEnglish":"Kabul","isActive":true,"lastUpdated":"2022-06-02T00:42:58Z","sectors":null},{"id":34,"nameArabic":"?????","nameEnglish":"Vienna","isActive":true,"lastUpdated":"2022-06-02T00:42:59Z","sectors":null},{"id":67,"nameArabic":"?????","nameEnglish":"Sanaa","isActive":true,"lastUpdated":"2022-06-02T00:55:27Z","sectors":null}]}" contains "content". @03-01-2023 09:22:31.0261 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @03-01-2023 09:22:31.0263 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @03-01-2023 09:22:31.0264 AM
+[ReportManager] Get response jsonvalue "content". @03-01-2023 09:22:31.0408 AM
+[ReportManager] Assertion Passed: Check that content object is not null. @03-01-2023 09:22:31.0410 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @03-01-2023 09:22:31.0411 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @03-01-2023 09:22:31.0412 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Lookups_cities_schema.json"". @03-01-2023 09:22:31.0413 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Lookups_cities_schema.json"". @03-01-2023 09:22:31.0414 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Lookups_cities_schema.json"". @03-01-2023 09:22:31.0414 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Lookups_cities_schema.json"". @03-01-2023 09:22:32.0362 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Lookups_cities_schema.json"". @03-01-2023 09:22:32.0362 AM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Lookups_cities_schema.json"". @03-01-2023 09:22:32.0363 AM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/Lookups_cities_schema.json". @03-01-2023 09:22:32.0366 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @03-01-2023 09:22:32.0367 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @03-01-2023 09:22:32.0369 AM

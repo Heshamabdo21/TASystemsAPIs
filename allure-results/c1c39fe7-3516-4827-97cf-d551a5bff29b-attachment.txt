@@ -1,0 +1,29 @@
+
+################################################################################################################################################
+Starting Execution:	"4 out of 6" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.Bad_Token_RQ_TC"
+Test Description:	"TC003 - Peform Post Token API with empty request body"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @03-01-2023 09:22:35.0691 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @03-01-2023 09:22:35.0709 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @03-01-2023 09:22:35.0710 AM
+[ReportManager] Response status code: "400", status line: "HTTP/1.1 400 Bad Request" @03-01-2023 09:22:36.0302 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @03-01-2023 09:22:36.0303 AM
+[ReportManager] Perform request "POST | Target Status Code: 400 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 589ms". @03-01-2023 09:22:36.0314 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @03-01-2023 09:22:36.0315 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @03-01-2023 09:22:36.0317 AM
+[ReportManager] Assertion Passed: Check Response Status Code is 400 and it is Bad RQ. @03-01-2023 09:22:36.0317 AM
+[ReportManager] Assertion Passed: Check error_description is existed. @03-01-2023 09:22:36.0318 AM
+[ReportManager] Get response jsonvalue "error_description". @03-01-2023 09:22:36.0318 AM
+[ReportManager] Assertion Passed: Check error_description is not null. @03-01-2023 09:22:36.0318 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Token_Unauthorized_schema.json"". @03-01-2023 09:22:36.0319 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Token_Unauthorized_schema.json"". @03-01-2023 09:22:36.0320 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Token_Unauthorized_schema.json"". @03-01-2023 09:22:36.0320 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_Unauthorized_schema.json"". @03-01-2023 09:22:36.0327 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_Unauthorized_schema.json"". @03-01-2023 09:22:36.0330 AM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_Unauthorized_schema.json"". @03-01-2023 09:22:36.0331 AM
+[ReportManager] Assertion Passed: Unauthorized Token Schema is matched with Unauthorized schema. @03-01-2023 09:22:36.0332 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @03-01-2023 09:22:36.0333 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @03-01-2023 09:22:36.0334 AM
+[ReportManager] Verification Passed: "589" is greater than or equal to "1.1". @03-01-2023 09:22:36.0335 AM
+[ReportManager] Verification Passed: "589" is less than or equal to "10000". @03-01-2023 09:22:36.0335 AM
