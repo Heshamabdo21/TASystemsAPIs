@@ -1,0 +1,420 @@
+[INFO ] 2023-01-04 12:49:31.527 [main] ReportManager - 
+################################################################################################################################################
+Detected SHAFT Engine Version: "SHAFT Engine v6.4.20221215"
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:32.129 [main] ReportManager - Loaded OpenCV "opencv_java455".
+[INFO ] 2023-01-04 12:49:32.307 [main] Utils - [TestNG] Running:
+  C:\Users\HeshamAbdElhamedGhar\AppData\Local\JetBrains\IdeaIC2022.3\temp-testng-customsuite.xml
+
+[INFO ] 2023-01-04 12:49:32.383 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"com.shaft.tools.listeners.LogsHelper.setupActivities"
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:32.411 [main] ReportManager - Initializing Allure Reporting Environment...
+[INFO ] 2023-01-04 12:49:32.552 [main] ReportManager - Initializing Extent Reporting Environment...
+[INFO ] 2023-01-04 12:49:33.133 [main] ReportManager - Initializing Important Links...
+[INFO ] 2023-01-04 12:49:33.147 [main] ReportManager - Initializing Custom Properties...
+[INFO ] 2023-01-04 12:49:33.235 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.Setup_data"
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:33.240 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"".
+[DEBUG] 2023-01-04 12:49:33.558 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-01-04 12:49:33.562 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-01-04 12:49:33.563 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2023-01-04 12:49:33.565 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2023-01-04 12:49:34.302 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[DEBUG] 2023-01-04 12:49:34.302 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[INFO ] 2023-01-04 12:49:34.469 [main] ReportManager - Successfully created attachment "Test Data - Excel"
+[ERROR] 2023-01-04 12:49:34.500 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-01-04 12:49:34.502 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Current Method log: Setup_data"
+[INFO ] 2023-01-04 12:49:34.552 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution:	"1 out of 1" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.Valid_Add_Cancel_Policy_TC"
+Test Description:	"TC005 - Perform Add Valid Cancel Policy"
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:34.562 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"".
+[DEBUG] 2023-01-04 12:49:34.571 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-01-04 12:49:34.572 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-01-04 12:49:34.573 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2023-01-04 12:49:34.574 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2023-01-04 12:49:34.607 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[DEBUG] 2023-01-04 12:49:34.608 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[INFO ] 2023-01-04 12:49:34.643 [main] ReportManager - Successfully created attachment "Test Data - Excel"
+[DEBUG] 2023-01-04 12:49:36.912 [main] BasicClientConnectionManager - Get connection for route {s}->https://auth-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:37.030 [main] DefaultClientConnectionOperator - Connecting to auth-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:37.486 [main] RequestAddCookies - CookieSpec selected: ignoreCookies
+[DEBUG] 2023-01-04 12:49:37.489 [main] RequestAuthCache - Auth cache not set in the context
+[DEBUG] 2023-01-04 12:49:37.491 [main] RequestTargetAuthentication - Target auth state: UNCHALLENGED
+[DEBUG] 2023-01-04 12:49:37.491 [main] RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+[DEBUG] 2023-01-04 12:49:37.491 [main] DefaultHttpClient - Attempt 1 to execute request
+[DEBUG] 2023-01-04 12:49:37.491 [main] DefaultClientConnection - Sending request: POST /auth/realms/tic/protocol/openid-connect/token HTTP/1.1
+[DEBUG] 2023-01-04 12:49:37.491 [main] wire -  >> "POST /auth/realms/tic/protocol/openid-connect/token HTTP/1.1[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.492 [main] wire -  >> "Accept: */*[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.492 [main] wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.492 [main] wire -  >> "Content-Length: 65[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.493 [main] wire -  >> "Host: auth-demo.np.transporticonline.com[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.493 [main] wire -  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.493 [main] wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.493 [main] wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.493 [main] wire -  >> "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> POST /auth/realms/tic/protocol/openid-connect/token HTTP/1.1
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> Accept: */*
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> Content-Length: 65
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> Host: auth-demo.np.transporticonline.com
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> Connection: Keep-Alive
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+[DEBUG] 2023-01-04 12:49:37.493 [main] headers - >> Accept-Encoding: gzip,deflate
+[DEBUG] 2023-01-04 12:49:37.494 [main] wire -  >> "username=tokhi&password=123&grant_type=password&client_id=tic-api"
+[DEBUG] 2023-01-04 12:49:37.813 [main] wire -  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.815 [main] wire -  << "Date: Wed, 04 Jan 2023 10:49:37 GMT[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Content-Type: application/json[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Content-Length: 2285[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Connection: keep-alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Cache-Control: no-store[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Set-Cookie: KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Set-Cookie: KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Pragma: no-cache[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "Strict-Transport-Security: max-age=15724800; includeSubDomains[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.817 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:37.818 [main] DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << HTTP/1.1 200 OK
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Date: Wed, 04 Jan 2023 10:49:37 GMT
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Content-Type: application/json
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Content-Length: 2285
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Connection: keep-alive
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Cache-Control: no-store
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Set-Cookie: KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Set-Cookie: KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << X-XSS-Protection: 1; mode=block
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Pragma: no-cache
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << X-Frame-Options: SAMEORIGIN
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Referrer-Policy: no-referrer
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << Strict-Transport-Security: max-age=15724800; includeSubDomains
+[DEBUG] 2023-01-04 12:49:37.818 [main] headers - << X-Content-Type-Options: nosniff
+[DEBUG] 2023-01-04 12:49:37.821 [main] DefaultHttpClient - Connection can be kept alive indefinitely
+[DEBUG] 2023-01-04 12:49:37.826 [main] RestAssuredHttpBuilder - Parsing response as: application/json
+[DEBUG] 2023-01-04 12:49:37.826 [main] RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[INFO ] 2023-01-04 12:49:37.870 [main] ReportManager - Response status code: "200", status line: "HTTP/1.1 200 OK"
+[DEBUG] 2023-01-04 12:49:37.911 [main] wire -  << "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI4NTA5NzcsImlhdCI6MTY3MjgyOTM3NywianRpIjoiMmJlZTFhZDEtMDAyYS00OTk0LWE5OTgtMmJiNzFiNGRmMDAxIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6Ijk5YmQxMDY1LWJmNDMtNDg5My05ZThjLWU1ODAyM2NhNWNmMyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijk5YmQxMDY1LWJmNDMtNDg5My05ZThjLWU1ODAyM2NhNWNmMyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.dH2JMGv5hL2shbNcAvG4KW9YWrY-7BXwsBBy0qomjvxc6HQDQu7lAgjUSQSVcDnLngu6niZgq81e4SxQmdGVXk8KbPAbNQF1sKJId378I6lxosQgFbKUVCiKZE_DvdPyv6O12Yg12rlfupg-p--aeG90fCa7m4__RR0_L-LPYrwJ_UR33qb-nicps9chEIayFiKv-fInLbJDUJoSpCBDfSech3qzu09B8SChMo_QibuElNnh8nSlbyhF-_ceQn1Goexy1zTgerb6maFLuEVQKRgbIzw4aWzP-Dj9dWbOkWGM8njR1TygN8JDpkLgW6hja3mAg1ClXBGaqBvl4Yx7Cw","expires_in":21600,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI4MzExNzcsImlhdCI6MTY3MjgyOTM3NywianRpIjoiODlhNzRkZDMtZGMyZS00Y2E5LWIzMDYtNTUzOWFiYTQ4OGY4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI5OWJkMTA2NS1iZjQzLTQ4OTMtOWU4Yy1lNTgwMjNjYTVjZjMiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI5OWJkMTA2NS1iZjQzLTQ4OTMtOWU4Yy1lNTgwMjNjYTVjZjMifQ.SKQHgK_RxZiwP6Vj8pFLeTAlOkrwXJ3NJy0rKzNOfoE","token_type":"Bearer","not-before-policy":0,"session_state":"99bd1065-bf43-4893-9e8c-e58023ca5cf3","scope":"email profile"}"
+[DEBUG] 2023-01-04 12:49:37.912 [main] BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@55aadbf2
+[DEBUG] 2023-01-04 12:49:37.912 [main] BasicClientConnectionManager - Connection can be kept alive indefinitely
+[INFO ] 2023-01-04 12:49:39.053 [main] ReportManager - Successfully created attachment "API Request - Specifications"
+[INFO ] 2023-01-04 12:49:39.058 [main] ReportManager - Successfully created attachment "API Request - Body"
+[DEBUG] 2023-01-04 12:49:39.103 [main] cache - Couldn't find template in cache for "codeblock.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-01-04 12:49:39.104 [main] cache - TemplateLoader.findTemplateSource("codeblock_en_US.ftl"): Not found
+[DEBUG] 2023-01-04 12:49:39.106 [main] cache - TemplateLoader.findTemplateSource("codeblock_en.ftl"): Not found
+[DEBUG] 2023-01-04 12:49:39.107 [main] cache - TemplateLoader.findTemplateSource("codeblock.ftl"): Found
+[DEBUG] 2023-01-04 12:49:39.107 [main] cache - Loading template for "codeblock.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/markup/codeblock.ftl"
+[DEBUG] 2023-01-04 12:49:39.292 [main] cache - Couldn't find template in cache for "codeblock.json.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-01-04 12:49:39.293 [main] cache - TemplateLoader.findTemplateSource("codeblock.json_en_US.ftl"): Not found
+[DEBUG] 2023-01-04 12:49:39.293 [main] cache - TemplateLoader.findTemplateSource("codeblock.json_en.ftl"): Not found
+[DEBUG] 2023-01-04 12:49:39.293 [main] cache - TemplateLoader.findTemplateSource("codeblock.json.ftl"): Found
+[DEBUG] 2023-01-04 12:49:39.293 [main] cache - Loading template for "codeblock.json.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/markup/codeblock.json.ftl"
+[INFO ] 2023-01-04 12:49:39.329 [main] ReportManager - Successfully created attachment "API Response - JSON Body"
+[INFO ] 2023-01-04 12:49:39.354 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"".
+[DEBUG] 2023-01-04 12:49:39.365 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-01-04 12:49:39.366 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-01-04 12:49:39.367 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2023-01-04 12:49:39.367 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2023-01-04 12:49:39.401 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[DEBUG] 2023-01-04 12:49:39.401 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[INFO ] 2023-01-04 12:49:39.438 [main] ReportManager - Successfully created attachment "Test Data - Excel"
+[DEBUG] 2023-01-04 12:49:39.489 [main] BasicClientConnectionManager - Get connection for route {s}->https://api-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:39.554 [main] DefaultClientConnectionOperator - Connecting to api-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:39.864 [main] RequestAddCookies - CookieSpec selected: ignoreCookies
+[DEBUG] 2023-01-04 12:49:39.864 [main] RequestAuthCache - Auth cache not set in the context
+[DEBUG] 2023-01-04 12:49:39.864 [main] RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+[DEBUG] 2023-01-04 12:49:39.864 [main] DefaultHttpClient - Attempt 1 to execute request
+[DEBUG] 2023-01-04 12:49:39.864 [main] DefaultClientConnection - Sending request: POST /steeringcompanies/v1/policies/cancellation HTTP/1.1
+[DEBUG] 2023-01-04 12:49:39.864 [main] wire -  >> "POST /steeringcompanies/v1/policies/cancellation HTTP/1.1[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.864 [main] wire -  >> "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI4NTA5NzcsImlhdCI6MTY3MjgyOTM3NywianRpIjoiMmJlZTFhZDEtMDAyYS00OTk0LWE5OTgtMmJiNzFiNGRmMDAxIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6Ijk5YmQxMDY1LWJmNDMtNDg5My05ZThjLWU1ODAyM2NhNWNmMyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijk5YmQxMDY1LWJmNDMtNDg5My05ZThjLWU1ODAyM2NhNWNmMyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.dH2JMGv5hL2shbNcAvG4KW9YWrY-7BXwsBBy0qomjvxc6HQDQu7lAgjUSQSVcDnLngu6niZgq81e4SxQmdGVXk8KbPAbNQF1sKJId378I6lxosQgFbKUVCiKZE_DvdPyv6O12Yg12rlfupg-p--aeG90fCa7m4__RR0_L-LPYrwJ_UR33qb-nicps9chEIayFiKv-fInLbJDUJoSpCBDfSech3qzu09B8SChMo_QibuElNnh8nSlbyhF-_ceQn1Goexy1zTgerb6maFLuEVQKRgbIzw4aWzP-Dj9dWbOkWGM8njR1TygN8JDpkLgW6hja3mAg1ClXBGaqBvl4Yx7Cw[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.864 [main] wire -  >> "Accept: */*[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "Content-Length: 361[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "Host: api-demo.np.transporticonline.com[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] wire -  >> "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> POST /steeringcompanies/v1/policies/cancellation HTTP/1.1
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI4NTA5NzcsImlhdCI6MTY3MjgyOTM3NywianRpIjoiMmJlZTFhZDEtMDAyYS00OTk0LWE5OTgtMmJiNzFiNGRmMDAxIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6Ijk5YmQxMDY1LWJmNDMtNDg5My05ZThjLWU1ODAyM2NhNWNmMyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijk5YmQxMDY1LWJmNDMtNDg5My05ZThjLWU1ODAyM2NhNWNmMyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.dH2JMGv5hL2shbNcAvG4KW9YWrY-7BXwsBBy0qomjvxc6HQDQu7lAgjUSQSVcDnLngu6niZgq81e4SxQmdGVXk8KbPAbNQF1sKJId378I6lxosQgFbKUVCiKZE_DvdPyv6O12Yg12rlfupg-p--aeG90fCa7m4__RR0_L-LPYrwJ_UR33qb-nicps9chEIayFiKv-fInLbJDUJoSpCBDfSech3qzu09B8SChMo_QibuElNnh8nSlbyhF-_ceQn1Goexy1zTgerb6maFLuEVQKRgbIzw4aWzP-Dj9dWbOkWGM8njR1TygN8JDpkLgW6hja3mAg1ClXBGaqBvl4Yx7Cw
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Accept: */*
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Content-Type: application/json; charset=UTF-8
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Content-Length: 361
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Host: api-demo.np.transporticonline.com
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Connection: Keep-Alive
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+[DEBUG] 2023-01-04 12:49:39.865 [main] headers - >> Accept-Encoding: gzip,deflate
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "{[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "nameArabic": "[0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9] 120",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "nameEnglish": "Normal Cancel Policy 120",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "descriptionArabic": "[0xd8][0xaa][0xd8][0xb9][0xd8][0xb1][0xd9][0x8a][0xd9][0x81] [0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9]20",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "descriptionEnglish": "Description Cancel Policy20",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "chargeUnit": "days",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "deadline": "10",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "chargeType": "percentage",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "chargeValue": "10",[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "    "id": ""[\n]"
+[DEBUG] 2023-01-04 12:49:39.866 [main] wire -  >> "}"
+[DEBUG] 2023-01-04 12:49:40.133 [main] wire -  << "HTTP/1.1 201 [\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.133 [main] wire -  << "Date: Wed, 04 Jan 2023 10:49:40 GMT[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.133 [main] wire -  << "Content-Type: application/json[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.133 [main] wire -  << "Transfer-Encoding: chunked[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.133 [main] wire -  << "Connection: keep-alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Set-Cookie: JSESSIONID=1CEE0D96E13973DB81F6E7CB5408B055; Path=/v1; Secure; HttpOnly[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Vary: Origin[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Vary: Access-Control-Request-Method[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Vary: Access-Control-Request-Headers[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Pragma: no-cache[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Expires: 0[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "Strict-Transport-Security: max-age=15724800; includeSubDomains[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "X-Frame-Options: DENY[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.134 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.135 [main] DefaultClientConnection - Receiving response: HTTP/1.1 201 
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << HTTP/1.1 201 
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Date: Wed, 04 Jan 2023 10:49:40 GMT
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Content-Type: application/json
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Transfer-Encoding: chunked
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Connection: keep-alive
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Set-Cookie: JSESSIONID=1CEE0D96E13973DB81F6E7CB5408B055; Path=/v1; Secure; HttpOnly
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Vary: Origin
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Vary: Access-Control-Request-Method
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Vary: Access-Control-Request-Headers
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << X-Content-Type-Options: nosniff
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << X-XSS-Protection: 1; mode=block
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Pragma: no-cache
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Expires: 0
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << Strict-Transport-Security: max-age=15724800; includeSubDomains
+[DEBUG] 2023-01-04 12:49:40.135 [main] headers - << X-Frame-Options: DENY
+[DEBUG] 2023-01-04 12:49:40.138 [main] DefaultHttpClient - Connection can be kept alive indefinitely
+[DEBUG] 2023-01-04 12:49:40.138 [main] RestAssuredHttpBuilder - Parsing response as: application/json
+[DEBUG] 2023-01-04 12:49:40.138 [main] RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[INFO ] 2023-01-04 12:49:40.140 [main] ReportManager - Response status code: "201", status line: "HTTP/1.1 201 "
+[DEBUG] 2023-01-04 12:49:40.141 [main] wire -  << "13f[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.141 [main] wire -  << "{"id":310,"nameArabic":"[0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9] 120","nameEnglish":"Normal Cancel Policy 120","descriptionArabic":"[0xd8][0xaa][0xd8][0xb9][0xd8][0xb1][0xd9][0x8a][0xd9][0x81] [0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9]20","descriptionEnglish":"Description Cancel Policy20","isActive":true,"chargeUnit":"days","deadline":10,"chargeType":"percentage","chargeValue":10}"
+[DEBUG] 2023-01-04 12:49:40.141 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.141 [main] wire -  << "0[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.141 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:40.141 [main] BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1c322b6a
+[DEBUG] 2023-01-04 12:49:40.141 [main] BasicClientConnectionManager - Connection can be kept alive indefinitely
+[INFO ] 2023-01-04 12:49:40.155 [main] ReportManager - Successfully created attachment "API Request - Specifications"
+[INFO ] 2023-01-04 12:49:40.156 [main] ReportManager - Successfully created attachment "API Request - JSON Body"
+[INFO ] 2023-01-04 12:49:40.157 [main] ReportManager - Successfully created attachment "API Response - JSON Body"
+[INFO ] 2023-01-04 12:49:40.162 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:40.163 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:40.163 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:41.074 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:41.075 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:41.076 [main] ReportManager - File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:41.081 [main] ReportManager - Successfully created attachment "Validation Test Data - Expected JSON Value"
+[INFO ] 2023-01-04 12:49:41.083 [main] ReportManager - Successfully created attachment "Validation Test Data - Actual JSON Value"
+[INFO ] 2023-01-04 12:49:41.088 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Current Method log: Valid_Add_Cancel_Policy_TC"
+[INFO ] 2023-01-04 12:49:41.227 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution:	"2 out of 1" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.Valid_Add_Cancel_Policy_TC"
+Test Description:	"TC005 - Perform Add Valid Cancel Policy"
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:41.228 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"".
+[DEBUG] 2023-01-04 12:49:41.234 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-01-04 12:49:41.236 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-01-04 12:49:41.237 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2023-01-04 12:49:41.238 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2023-01-04 12:49:41.257 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[DEBUG] 2023-01-04 12:49:41.257 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[INFO ] 2023-01-04 12:49:41.278 [main] ReportManager - Successfully created attachment "Test Data - Excel"
+[DEBUG] 2023-01-04 12:49:41.304 [main] BasicClientConnectionManager - Get connection for route {s}->https://auth-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:41.304 [main] DefaultClientConnectionOperator - Connecting to auth-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:41.598 [main] RequestAddCookies - CookieSpec selected: ignoreCookies
+[DEBUG] 2023-01-04 12:49:41.598 [main] RequestAuthCache - Auth cache not set in the context
+[DEBUG] 2023-01-04 12:49:41.598 [main] RequestTargetAuthentication - Target auth state: UNCHALLENGED
+[DEBUG] 2023-01-04 12:49:41.598 [main] RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+[DEBUG] 2023-01-04 12:49:41.598 [main] DefaultHttpClient - Attempt 1 to execute request
+[DEBUG] 2023-01-04 12:49:41.598 [main] DefaultClientConnection - Sending request: POST /auth/realms/tic/protocol/openid-connect/token HTTP/1.1
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "POST /auth/realms/tic/protocol/openid-connect/token HTTP/1.1[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "Accept: */*[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "Content-Length: 65[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "Host: auth-demo.np.transporticonline.com[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> POST /auth/realms/tic/protocol/openid-connect/token HTTP/1.1
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> Accept: */*
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> Content-Length: 65
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> Host: auth-demo.np.transporticonline.com
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> Connection: Keep-Alive
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+[DEBUG] 2023-01-04 12:49:41.599 [main] headers - >> Accept-Encoding: gzip,deflate
+[DEBUG] 2023-01-04 12:49:41.599 [main] wire -  >> "username=tokhi&password=123&grant_type=password&client_id=tic-api"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Date: Wed, 04 Jan 2023 10:49:42 GMT[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Content-Type: application/json[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Content-Length: 2285[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Connection: keep-alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Cache-Control: no-store[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Set-Cookie: KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Set-Cookie: KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.898 [main] wire -  << "Pragma: no-cache[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.899 [main] wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.899 [main] wire -  << "Referrer-Policy: no-referrer[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.899 [main] wire -  << "Strict-Transport-Security: max-age=15724800; includeSubDomains[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.899 [main] wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.899 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:41.900 [main] DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << HTTP/1.1 200 OK
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Date: Wed, 04 Jan 2023 10:49:42 GMT
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Content-Type: application/json
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Content-Length: 2285
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Connection: keep-alive
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Cache-Control: no-store
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Set-Cookie: KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Set-Cookie: KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/tic/; HttpOnly
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << X-XSS-Protection: 1; mode=block
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Pragma: no-cache
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << X-Frame-Options: SAMEORIGIN
+[DEBUG] 2023-01-04 12:49:41.900 [main] headers - << Referrer-Policy: no-referrer
+[DEBUG] 2023-01-04 12:49:41.901 [main] headers - << Strict-Transport-Security: max-age=15724800; includeSubDomains
+[DEBUG] 2023-01-04 12:49:41.901 [main] headers - << X-Content-Type-Options: nosniff
+[DEBUG] 2023-01-04 12:49:41.901 [main] DefaultHttpClient - Connection can be kept alive indefinitely
+[DEBUG] 2023-01-04 12:49:41.901 [main] RestAssuredHttpBuilder - Parsing response as: application/json
+[DEBUG] 2023-01-04 12:49:41.901 [main] RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[INFO ] 2023-01-04 12:49:41.903 [main] ReportManager - Response status code: "200", status line: "HTTP/1.1 200 OK"
+[DEBUG] 2023-01-04 12:49:41.904 [main] wire -  << "{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI4NTA5ODEsImlhdCI6MTY3MjgyOTM4MSwianRpIjoiYTg4NDZlMDctY2E3Yi00YTg0LWFlOGYtMzVlZTEwNGQ0ZmEyIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjhiMjI3NzQzLTA1MDUtNDE4My04YTgyLWQ3M2U4MTdhNWY3ZSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhiMjI3NzQzLTA1MDUtNDE4My04YTgyLWQ3M2U4MTdhNWY3ZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.QZ8MrkB0hNQBq2mSK9eGY93Dy3GwXh7__5in1QfrLGATfZ6hEuvnmchIQTMNX0oNVpBgcn4vsWxHhWpmyPHnta1e8Pk1lfAZP4zyUfY_VgsV-G_7yLJwqmCvfwBDmuRJ88A9m7BOGN_2Qyxq_NkK1dQskjQBHmZxzztCCYSSzKHxnyWyDl1yNwwHLHGY4lb_FCDL-uAPfFCnIJn9gIjfjaLY5Pv-Mt0dls3yC9qYtU8UJ53v7xtjEwKilAo0m--i--rIWvoCrfLTzMr71Nfkx-eBfJzbkjuToKVmYZla7HCBDUpBQG1FtS9ToVtv0yEfCxvXHwUYcHRow38pkfnfsA","expires_in":21600,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2NzI4MzExODEsImlhdCI6MTY3MjgyOTM4MSwianRpIjoiMjJiMWQ0Y2UtMWI1OC00MDM5LTgyNGUtM2I1Y2Q0ZGVmMzUxIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI4YjIyNzc0My0wNTA1LTQxODMtOGE4Mi1kNzNlODE3YTVmN2UiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI4YjIyNzc0My0wNTA1LTQxODMtOGE4Mi1kNzNlODE3YTVmN2UifQ.1Ubvp7kVceqRHJhvdMHanD8A0NU0qM7sBD6VqWwZRt0","token_type":"Bearer","not-before-policy":0,"session_state":"8b227743-0505-4183-8a82-d73e817a5f7e","scope":"email profile"}"
+[DEBUG] 2023-01-04 12:49:41.904 [main] BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2dec97ea
+[DEBUG] 2023-01-04 12:49:41.904 [main] BasicClientConnectionManager - Connection can be kept alive indefinitely
+[INFO ] 2023-01-04 12:49:41.927 [main] ReportManager - Successfully created attachment "API Request - Specifications"
+[INFO ] 2023-01-04 12:49:41.928 [main] ReportManager - Successfully created attachment "API Request - Body"
+[INFO ] 2023-01-04 12:49:41.931 [main] ReportManager - Successfully created attachment "API Response - JSON Body"
+[INFO ] 2023-01-04 12:49:41.947 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"".
+[DEBUG] 2023-01-04 12:49:41.953 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-01-04 12:49:41.954 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-01-04 12:49:41.955 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2023-01-04 12:49:41.955 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2023-01-04 12:49:41.972 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[DEBUG] 2023-01-04 12:49:41.972 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings
+[INFO ] 2023-01-04 12:49:41.988 [main] ReportManager - Successfully created attachment "Test Data - Excel"
+[DEBUG] 2023-01-04 12:49:42.007 [main] BasicClientConnectionManager - Get connection for route {s}->https://api-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:42.007 [main] DefaultClientConnectionOperator - Connecting to api-demo.np.transporticonline.com:443
+[DEBUG] 2023-01-04 12:49:42.303 [main] RequestAddCookies - CookieSpec selected: ignoreCookies
+[DEBUG] 2023-01-04 12:49:42.303 [main] RequestAuthCache - Auth cache not set in the context
+[DEBUG] 2023-01-04 12:49:42.303 [main] RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+[DEBUG] 2023-01-04 12:49:42.303 [main] DefaultHttpClient - Attempt 1 to execute request
+[DEBUG] 2023-01-04 12:49:42.303 [main] DefaultClientConnection - Sending request: POST /steeringcompanies/v1/policies/cancellation HTTP/1.1
+[DEBUG] 2023-01-04 12:49:42.303 [main] wire -  >> "POST /steeringcompanies/v1/policies/cancellation HTTP/1.1[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI4NTA5ODEsImlhdCI6MTY3MjgyOTM4MSwianRpIjoiYTg4NDZlMDctY2E3Yi00YTg0LWFlOGYtMzVlZTEwNGQ0ZmEyIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjhiMjI3NzQzLTA1MDUtNDE4My04YTgyLWQ3M2U4MTdhNWY3ZSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhiMjI3NzQzLTA1MDUtNDE4My04YTgyLWQ3M2U4MTdhNWY3ZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.QZ8MrkB0hNQBq2mSK9eGY93Dy3GwXh7__5in1QfrLGATfZ6hEuvnmchIQTMNX0oNVpBgcn4vsWxHhWpmyPHnta1e8Pk1lfAZP4zyUfY_VgsV-G_7yLJwqmCvfwBDmuRJ88A9m7BOGN_2Qyxq_NkK1dQskjQBHmZxzztCCYSSzKHxnyWyDl1yNwwHLHGY4lb_FCDL-uAPfFCnIJn9gIjfjaLY5Pv-Mt0dls3yC9qYtU8UJ53v7xtjEwKilAo0m--i--rIWvoCrfLTzMr71Nfkx-eBfJzbkjuToKVmYZla7HCBDUpBQG1FtS9ToVtv0yEfCxvXHwUYcHRow38pkfnfsA[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Accept: */*[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Content-Length: 367[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Host: api-demo.np.transporticonline.com[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> POST /steeringcompanies/v1/policies/cancellation HTTP/1.1
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2NzI4NTA5ODEsImlhdCI6MTY3MjgyOTM4MSwianRpIjoiYTg4NDZlMDctY2E3Yi00YTg0LWFlOGYtMzVlZTEwNGQ0ZmEyIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjhiMjI3NzQzLTA1MDUtNDE4My04YTgyLWQ3M2U4MTdhNWY3ZSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhiMjI3NzQzLTA1MDUtNDE4My04YTgyLWQ3M2U4MTdhNWY3ZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.QZ8MrkB0hNQBq2mSK9eGY93Dy3GwXh7__5in1QfrLGATfZ6hEuvnmchIQTMNX0oNVpBgcn4vsWxHhWpmyPHnta1e8Pk1lfAZP4zyUfY_VgsV-G_7yLJwqmCvfwBDmuRJ88A9m7BOGN_2Qyxq_NkK1dQskjQBHmZxzztCCYSSzKHxnyWyDl1yNwwHLHGY4lb_FCDL-uAPfFCnIJn9gIjfjaLY5Pv-Mt0dls3yC9qYtU8UJ53v7xtjEwKilAo0m--i--rIWvoCrfLTzMr71Nfkx-eBfJzbkjuToKVmYZla7HCBDUpBQG1FtS9ToVtv0yEfCxvXHwUYcHRow38pkfnfsA
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Accept: */*
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Content-Type: application/json; charset=UTF-8
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Content-Length: 367
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Host: api-demo.np.transporticonline.com
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Connection: Keep-Alive
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+[DEBUG] 2023-01-04 12:49:42.304 [main] headers - >> Accept-Encoding: gzip,deflate
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "{[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "nameArabic": "[0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9] 25793",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "nameEnglish": "Normal Cancel Policy 25793",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "descriptionArabic": "[0xd8][0xaa][0xd8][0xb9][0xd8][0xb1][0xd9][0x8a][0xd9][0x81] [0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9]5793",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "descriptionEnglish": "Description Cancel Policy5793",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "chargeUnit": "days",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "deadline": "5",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "chargeType": "percentage",[\n]"
+[DEBUG] 2023-01-04 12:49:42.304 [main] wire -  >> "    "chargeValue": "2",[\n]"
+[DEBUG] 2023-01-04 12:49:42.305 [main] wire -  >> "    "id": ""[\n]"
+[DEBUG] 2023-01-04 12:49:42.305 [main] wire -  >> "}"
+[DEBUG] 2023-01-04 12:49:42.487 [main] wire -  << "HTTP/1.1 201 [\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Date: Wed, 04 Jan 2023 10:49:42 GMT[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Content-Type: application/json[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Transfer-Encoding: chunked[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Connection: keep-alive[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Set-Cookie: JSESSIONID=82BBE7FA17AF34F4FE73BB5453C58590; Path=/v1; Secure; HttpOnly[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Vary: Origin[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Vary: Access-Control-Request-Method[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Vary: Access-Control-Request-Headers[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Pragma: no-cache[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Expires: 0[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "Strict-Transport-Security: max-age=15724800; includeSubDomains[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "X-Frame-Options: DENY[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.488 [main] DefaultClientConnection - Receiving response: HTTP/1.1 201 
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << HTTP/1.1 201 
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Date: Wed, 04 Jan 2023 10:49:42 GMT
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Content-Type: application/json
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Transfer-Encoding: chunked
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Connection: keep-alive
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Set-Cookie: JSESSIONID=82BBE7FA17AF34F4FE73BB5453C58590; Path=/v1; Secure; HttpOnly
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Vary: Origin
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Vary: Access-Control-Request-Method
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Vary: Access-Control-Request-Headers
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << X-Content-Type-Options: nosniff
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << X-XSS-Protection: 1; mode=block
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Pragma: no-cache
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Expires: 0
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << Strict-Transport-Security: max-age=15724800; includeSubDomains
+[DEBUG] 2023-01-04 12:49:42.488 [main] headers - << X-Frame-Options: DENY
+[DEBUG] 2023-01-04 12:49:42.489 [main] DefaultHttpClient - Connection can be kept alive indefinitely
+[DEBUG] 2023-01-04 12:49:42.490 [main] RestAssuredHttpBuilder - Parsing response as: application/json
+[DEBUG] 2023-01-04 12:49:42.490 [main] RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[INFO ] 2023-01-04 12:49:42.491 [main] ReportManager - Response status code: "201", status line: "HTTP/1.1 201 "
+[DEBUG] 2023-01-04 12:49:42.492 [main] wire -  << "145[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.492 [main] wire -  << "{"id":311,"nameArabic":"[0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9] 25793","nameEnglish":"Normal Cancel Policy 25793","descriptionArabic":"[0xd8][0xaa][0xd8][0xb9][0xd8][0xb1][0xd9][0x8a][0xd9][0x81] [0xd8][0xb3][0xd9][0x8a][0xd8][0xa7][0xd8][0xb3][0xd9][0x8a][0xd8][0xa9] [0xd8][0xa7][0xd9][0x84][0xd8][0xba][0xd8][0xa7][0xd8][0xa1] [0xd8][0xb9][0xd8][0xa7][0xd8][0xaf][0xd9][0x8a][0xd8][0xa9]5793","descriptionEnglish":"Description Cancel Policy5793","isActive":true,"chargeUnit":"days","deadline":5,"chargeType":"percentage","chargeValue":2}"
+[DEBUG] 2023-01-04 12:49:42.492 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.492 [main] wire -  << "0[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.492 [main] wire -  << "[\r][\n]"
+[DEBUG] 2023-01-04 12:49:42.492 [main] BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@772f3774
+[DEBUG] 2023-01-04 12:49:42.492 [main] BasicClientConnectionManager - Connection can be kept alive indefinitely
+[INFO ] 2023-01-04 12:49:42.505 [main] ReportManager - Successfully created attachment "API Request - Specifications"
+[INFO ] 2023-01-04 12:49:42.506 [main] ReportManager - Successfully created attachment "API Request - JSON Body"
+[INFO ] 2023-01-04 12:49:42.508 [main] ReportManager - Successfully created attachment "API Response - JSON Body"
+[INFO ] 2023-01-04 12:49:42.510 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:42.511 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:42.511 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:42.517 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:42.517 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:42.518 [main] ReportManager - File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Cancel_Policy_schema.json"".
+[INFO ] 2023-01-04 12:49:42.521 [main] ReportManager - Successfully created attachment "Validation Test Data - Expected JSON Value"
+[INFO ] 2023-01-04 12:49:42.522 [main] ReportManager - Successfully created attachment "Validation Test Data - Actual JSON Value"
+[INFO ] 2023-01-04 12:49:42.523 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Current Method log: Valid_Add_Cancel_Policy_TC"
+[INFO ] 2023-01-04 12:49:42.541 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"com.shaft.tools.listeners.LogsHelper.teardownActivities"
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:42.547 [main] ReportManager - Successfully Closed Driver.
+[INFO ] 2023-01-04 12:49:42.547 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Execution log"
+[INFO ] 2023-01-04 12:49:42.547 [main] ReportManager - 
+################################################################################################################################################
+This test run was powered by SHAFT Engine Version: "SHAFT Engine v6.4.20221215"
+SHAFT Engine is licensed under the MIT License: [https://github.com/ShaftHQ/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################
+[INFO ] 2023-01-04 12:49:42.548 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/logs/log4j.log"".
+[INFO ] 2023-01-04 12:49:42.548 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "target/logs/log4j.log"".
