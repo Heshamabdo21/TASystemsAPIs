@@ -1,0 +1,540 @@
+{
+  "generalPolicies": [
+    {
+      "descriptionArabic": "?????? ? ??????? 11",
+      "nameArabic": "????? ???? 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "3????? ????",
+      "nameEnglish": "general policy3",
+      "id": 171,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "????? ????",
+      "nameArabic": "2????? ????",
+      "nameEnglish": "general policy2",
+      "id": 175,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "12345678912345678912345678912345678912345678912345",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "12345678912345678912345678912345678912345678912345"
+    },
+    {
+      "descriptionArabic": "????? ?????? ???? ?????9149",
+      "nameArabic": "?????? ???? ????? 19149",
+      "nameEnglish": "Normal General Policy 19149",
+      "id": 176,
+      "isActive": true,
+      "descriptionEnglish": "Description General Policy9149"
+    },
+    {
+      "descriptionArabic": "????? ?????? ???? ?????8674",
+      "nameArabic": "?????? ???? ????? 28674",
+      "nameEnglish": "Normal General Policy 28674",
+      "id": 177,
+      "isActive": true,
+      "descriptionEnglish": "Description General Policy8674"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "??? ????? ????? 11",
+      "nameArabic": "????? ????? 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": "percentage",
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "tokhi Tax policy",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tokhi Tax policy descr"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????6120",
+      "nameArabic": "?????? ????? ????? 26120",
+      "nameEnglish": "Normal Tax Policy 26120",
+      "chargeType": "percentage",
+      "id": 195,
+      "isActive": true,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Tax Policy6120"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "????? ?????22",
+      "nameEnglish": "Tax Policy22",
+      "chargeType": "percentage",
+      "id": 190,
+      "isActive": true,
+      "chargeValue": 11.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "2????? ?????",
+      "nameEnglish": "Tax Policy2",
+      "chargeType": "percentage",
+      "id": 191,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "??? ????? ?????",
+      "nameArabic": "33????? ?????",
+      "nameEnglish": "Tax Policy33",
+      "chargeType": "percentage",
+      "id": 193,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????7566",
+      "nameArabic": "?????? ????? ????? 17566",
+      "nameEnglish": "Normal Tax Policy 17566",
+      "chargeType": "percentage",
+      "id": 194,
+      "isActive": true,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Tax Policy7566"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "????? ?? ?????????",
+      "nameArabic": "??",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "2????? ???????",
+      "nameEnglish": "Usage Policy2",
+      "id": 173,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "22????? ???????",
+      "nameEnglish": "Usage Policy22",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ???????",
+      "nameArabic": "????? ???????",
+      "nameEnglish": "Usage Policy",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "????? ?????? ??????? ?????1029",
+      "nameArabic": "?????? ??????? ????? 11029",
+      "nameEnglish": "Normal Usage Policy 11029",
+      "id": 179,
+      "isActive": true,
+      "descriptionEnglish": "Description Usage Policy1029"
+    },
+    {
+      "descriptionArabic": "????? ?????? ??????? ?????2094",
+      "nameArabic": "?????? ??????? ????? 22094",
+      "nameEnglish": "Normal Usage Policy 22094",
+      "id": 180,
+      "isActive": true,
+      "descriptionEnglish": "Description Usage Policy2094"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "????? ?????? ????? ?????7376",
+      "nameArabic": "?????? ????? ????? 17376",
+      "nameEnglish": "Normal Cancel Policy 17376",
+      "chargeType": "percentage",
+      "id": 308,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy7376",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????7974",
+      "nameArabic": "?????? ????? ????? 27974",
+      "nameEnglish": "Normal Cancel Policy 27974",
+      "chargeType": "percentage",
+      "id": 309,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy7974",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "3?????",
+      "nameEnglish": "Policy3",
+      "chargeType": "percentage",
+      "id": 302,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "2????? ????? ????",
+      "nameEnglish": "policy",
+      "chargeType": "percentage",
+      "id": 299,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "32??? ????",
+      "nameEnglish": "Test English23",
+      "chargeType": "percentage",
+      "id": 295,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 1.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "4 ??? ????",
+      "nameEnglish": "Test English 4",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "chargeType": "percentage",
+      "id": 298,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????? ????",
+      "nameArabic": "????? ????? ????",
+      "nameEnglish": "test",
+      "chargeType": "percentage",
+      "id": 161,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 20.0,
+      "descriptionEnglish": "tokhi cancel policy DESCR",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "2????? ????? ???1?",
+      "nameEnglish": "polic1y",
+      "chargeType": "percentage",
+      "id": 303,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????",
+      "nameArabic": "?????? ????? ????? 1",
+      "nameEnglish": "Normal Cancel Policy 1",
+      "chargeType": "percentage",
+      "id": 304,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????",
+      "nameArabic": "?????? ????? ????? 2",
+      "nameEnglish": "Normal Cancel Policy 2",
+      "chargeType": "percentage",
+      "id": 305,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????27",
+      "nameArabic": "?????? ????? ????? 127",
+      "nameEnglish": "Normal Cancel Policy 127",
+      "chargeType": "percentage",
+      "id": 306,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy27",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????20",
+      "nameArabic": "?????? ????? ????? 120",
+      "nameEnglish": "Normal Cancel Policy 120",
+      "chargeType": "percentage",
+      "id": 310,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy20",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ?????",
+      "nameEnglish": "Policy2",
+      "chargeType": "percentage",
+      "id": 301,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ???????",
+      "nameArabic": "???? ???? ?????",
+      "nameEnglish": "Policy1",
+      "chargeType": "percentage",
+      "id": 300,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????8",
+      "nameArabic": "?????? ????? ????? 28",
+      "nameEnglish": "Normal Cancel Policy 28",
+      "chargeType": "percentage",
+      "id": 307,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy8",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????5793",
+      "nameArabic": "?????? ????? ????? 25793",
+      "nameEnglish": "Normal Cancel Policy 25793",
+      "chargeType": "percentage",
+      "id": 311,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy5793",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????892",
+      "nameArabic": "?????? ????? ????? 1892",
+      "nameEnglish": "Normal Cancel Policy 1892",
+      "chargeType": "percentage",
+      "id": 312,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy892",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????6618",
+      "nameArabic": "?????? ????? ????? 26618",
+      "nameEnglish": "Normal Cancel Policy 26618",
+      "chargeType": "percentage",
+      "id": 313,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy6618",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "??? ????? ????",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "cancel policy",
+      "chargeType": "percentage",
+      "id": 159,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "???? ???",
+      "nameArabic": "????? ????? ??????",
+      "nameEnglish": "Amr Test",
+      "chargeType": "percentage",
+      "id": 156,
+      "isActive": true,
+      "deadline": 100,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????95",
+      "nameArabic": "?????? ????? ????? 195",
+      "nameEnglish": "Normal Cancel Policy 195",
+      "chargeType": "percentage",
+      "id": 314,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy95",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "????? ?????? ????? ?????5897",
+      "nameArabic": "?????? ????? ????? 25897",
+      "nameEnglish": "Normal Cancel Policy 25897",
+      "chargeType": "percentage",
+      "id": 315,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy5897",
+      "chargeUnit": "days"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 2 ????? ???",
+      "nameEnglish": "payment policy 2",
+      "cancellationPolicyId": 296,
+      "id": 195,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 3 ????? ???",
+      "nameEnglish": "payment policy 3",
+      "cancellationPolicyId": 296,
+      "id": 194,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " ????? ???",
+      "nameEnglish": "payment policy",
+      "cancellationPolicyId": 296,
+      "id": 197,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "cancellationPolicyId": 296,
+      "id": 198,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ???",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 22 ????? ???",
+      "nameEnglish": "payment policy2",
+      "cancellationPolicyId": 296,
+      "id": 200,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ?????? ??? ?????4964",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "?????? ??? ????? 14964",
+      "nameEnglish": "Normal Payment Policy 14964",
+      "cancellationPolicyId": 296,
+      "id": 201,
+      "isActive": true,
+      "descriptionEnglish": "Description Payment Policy4964",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "????? ?????? ??? ?????3461",
+      "refundType": "full_refundable",
+      "nameArabic": "?????? ??? ????? 23461",
+      "nameEnglish": "Normal Payment Policy 23461",
+      "id": 202,
+      "isActive": true,
+      "descriptionEnglish": "Description Payment Policy3461",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "??",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  ]
+}

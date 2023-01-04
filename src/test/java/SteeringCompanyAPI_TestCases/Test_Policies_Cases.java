@@ -85,26 +85,28 @@ public class Test_Policies_Cases {
     /////////////////////// Test Case for Add Cancel Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_for_Cancel_Policy")
     public Object[][] Valid_Cancel_Policy(){
-        Object data[][]=new Object[2][ 11];
+        Object data[][]=new Object[2][ 12];
         for (int i=0;i<2;i++)
         {
             data[i][0]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"TC_Type");
-            data[i][1]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameArabic");;
-            data[i][2]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameEnglish");;
-            data[i][3]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionArabic");;
-            data[i][4]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionEnglish");;
-            data[i][5]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeUnit");;
-            data[i][6]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"deadline");;
-            data[i][7]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeType");;
-            data[i][8]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeValue");;
-            data[i][9]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"id");;
-            data[i][10]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"ExpectedResult");;
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeUnit");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"deadline");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeType");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeValue");
+            data[i][10]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"id");
+            data[i][11]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"ExpectedResult");
+
         }
         return data;
     }
 
     @Test(description = "TC005 - Perform Add Valid Cancel Policy",dataProvider = "Valid_data_for_Cancel_Policy")
-    @Story("CRUD Operations")
+    @Story("Adding Cancel Policy")
     @Severity(SeverityLevel.CRITICAL)
     public void Valid_Add_Cancel_Policy_TC(Object data[]){
         Token_API Token_TC=new Token_API();
@@ -117,7 +119,154 @@ public class Test_Policies_Cases {
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
         AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
        // AddCancelPolicies_TC.Check_policies_Valid_Content();
-        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema();
+        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    /////////////////////// Test Case for Add Tax Policies //////////////////////////////////////////
+    @DataProvider (name = "Valid_data_for_Tax_Policy")
+    public Object[][] Valid_Tax_Policy(){
+        Object data[][]=new Object[2][ 10];
+        for (int i=0;i<2;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    @Test(description = "TC006 - Perform Add Valid Tax Policy",dataProvider = "Valid_data_for_Tax_Policy")
+    @Story("Adding Tax Policy")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Valid_Add_Tax_Policy_TC(Object data[]){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API AddCancelPolicies_TC=new Policies_API();
+        AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
+        AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
+        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    /////////////////////// Test Case for Add Usage Policies //////////////////////////////////////////
+    @DataProvider (name = "Valid_data_for_Usage_Policy")
+    public Object[][] Valid_Usage_Policy(){
+        Object data[][]=new Object[2][ 8];
+        for (int i=0;i<2;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @Test(description = "TC007 - Perform Add Valid Usage Policy",dataProvider = "Valid_data_for_Usage_Policy")
+    @Story("Adding Usage Policy")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Valid_Add_Usage_Policy_TC(Object data[]){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API AddCancelPolicies_TC=new Policies_API();
+        AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
+        AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
+        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    /////////////////////// Test Case for Add Payment Policies //////////////////////////////////////////
+    @DataProvider (name = "Valid_data_for_Payment_Policy")
+    public Object[][] Valid_Payment_Policy(){
+        Object data[][]=new Object[2][ 10];
+        for (int i=0;i<2;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @Test(description = "TC008 - Perform Add Valid Payment Policy",dataProvider = "Valid_data_for_Payment_Policy")
+    @Story("Adding Payment Policy")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Valid_Add_Payment_Policy_TC(Object data[]){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API AddCancelPolicies_TC=new Policies_API();
+        AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
+        AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
+        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    /////////////////////// Test Case for Add General Policies //////////////////////////////////////////
+    @DataProvider (name = "Valid_data_for_General_Policy")
+    public Object[][] Valid_General_Policy(){
+        Object data[][]=new Object[2][ 8];
+        for (int i=0;i<2;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @Test(description = "TC009 - Perform Add Valid General Policy",dataProvider = "Valid_data_for_General_Policy")
+    @Story("Adding General Policy")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Valid_Add_General_Policy_TC(Object data[]){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API AddCancelPolicies_TC=new Policies_API();
+        AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
+        AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
+        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
     }
 
 

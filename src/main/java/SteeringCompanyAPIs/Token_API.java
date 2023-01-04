@@ -16,9 +16,9 @@ public class Token_API {
 
     ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
    // String KEYCLOAK_HOST = "https://auth-demo.np.transporticonline.com" ;
-    String KEYCLOAK_HOST=testDataReader.getCellData("API_Data","KEYCLOAK_HOST","Path");
+    String KEYCLOAK_HOST=testDataReader.getCellData("API_Data","KEYCLOAK_HOST","URL");
     //String Token_Path = "/auth/realms/tic/protocol/openid-connect/token";
-    String Token_Path = testDataReader.getCellData("API_Data","Token_Path","Path");
+    String Token_Path = testDataReader.getCellData("API_Data","Token_Path","URL");
     Response token_Response;
    private SHAFT.API token_api;
     
@@ -72,15 +72,15 @@ public class Token_API {
     }
     
     public void Check_Token_Response_Valid_Schema() {     
-        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","Schema")).withCustomReportMessage("Token Schema is matched with valid schema.").perform();
+        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","Valid_Schema")).withCustomReportMessage("Token Schema is matched with valid schema.").perform();
     }
 
     public void Check_Token_Response_Unauthorized_Schema() {     
-        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","InvalidSchema")).withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();
+        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","InValid_Schema")).withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();
     }
    
     public void Check_Token_Response_Bad_Schema() {     
-        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","InvalidSchema")).withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();
+        token_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","TokenRequest","InValid_Schema")).withCustomReportMessage("Unauthorized Token Schema is matched with Unauthorized schema.").perform();
     }
     
     public void Check_Token_Response_Valid_content() {
