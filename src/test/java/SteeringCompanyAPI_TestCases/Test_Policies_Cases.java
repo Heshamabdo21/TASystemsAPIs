@@ -32,11 +32,11 @@ public class Test_Policies_Cases {
          String Token =Token_TC.Get_Valid_Access_Token();
 
          Policies_API GetAllPolicies_TC=new Policies_API();
-         GetAllPolicies_TC.GET_all_Policies_Rq(Token);
+         GetAllPolicies_TC.GET_All_Policies_Rq(Token);
          GetAllPolicies_TC.Check_Valid_policies_status_Code_Response();
          GetAllPolicies_TC.Check_policies_Response_Time();
-         GetAllPolicies_TC.Check_policies_Valid_Content();
-         GetAllPolicies_TC.Check_policies_Response_Valid_Schema();
+         GetAllPolicies_TC.Check_All_policies_Valid_Content();
+         GetAllPolicies_TC.Check_All_policies_Response_Valid_Schema();
      }
 
     @Test(description = "TC002 - Perform Get all Policies API with pagination with valid user name and password")
@@ -47,11 +47,11 @@ public class Test_Policies_Cases {
         String Token =Token_TC.Get_Valid_Access_Token();
 
         Policies_API GetAllPolicies_TC=new Policies_API();
-        GetAllPolicies_TC.GET_all_Policies_Path_by_parameter_Query_Rq(Token,"3","0");
+        GetAllPolicies_TC.GET_All_Policies_Path_by_parameter_Query_Rq(Token,"3","0");
         GetAllPolicies_TC.Check_Valid_policies_status_Code_Response();
         GetAllPolicies_TC.Check_policies_Response_Time();
-        GetAllPolicies_TC.Check_policies_Valid_Content();
-        GetAllPolicies_TC.Check_policies_Response_Valid_Schema();
+        GetAllPolicies_TC.Check_All_policies_Valid_Content();
+        GetAllPolicies_TC.Check_All_policies_Response_Valid_Schema();
     }
 
     @Test(description = "TC003 - Perform Get all Policies API with missing Token")
@@ -62,10 +62,10 @@ public class Test_Policies_Cases {
         String Token =Token_TC.Get_Valid_Access_Token();
 
         Policies_API GetAllPolicies_TC=new Policies_API();
-        GetAllPolicies_TC.GET_all_Policies_With_Missing_Token_Rq();
-        GetAllPolicies_TC.Check_Policies_status_Code_Unauthorized_Response();
+        GetAllPolicies_TC.GET_All_Policies_With_Missing_Token_Rq();
+        GetAllPolicies_TC.Check_Unauthorized_Policies_status_Code_Response();
         GetAllPolicies_TC.Check_policies_Response_Time();
-        GetAllPolicies_TC.Check_policies_Response_Unauthorized_Schema();
+        GetAllPolicies_TC.Check_All_policies_Response_Unauthorized_Schema();
     }
 
     @Test(description = "TC004 - Perform Get all Policies API with invalid or expired Token")
@@ -76,10 +76,10 @@ public class Test_Policies_Cases {
         String Token =Token_TC.Get_Valid_Access_Token();
 
         Policies_API GetAllPolicies_TC=new Policies_API();
-        GetAllPolicies_TC.GET_all_Policies_With_InValid_Token_Rq("123");
-        GetAllPolicies_TC.Check_Policies_status_Code_Unauthorized_Response();
+        GetAllPolicies_TC.GET_All_Policies_With_InValid_Token_Rq("123");
+        GetAllPolicies_TC.Check_Unauthorized_Policies_status_Code_Response();
         GetAllPolicies_TC.Check_policies_Response_Time();
-        //GetAllPolicies_TC.Check_policies_Response_Unauthorized_Schema(); // There is no response content
+        //GetAllPolicies_TC.Check_All_policies_Response_Unauthorized_Schema(); // There is no response content
     }
 
     /////////////////////// Test Case for Add Cancel Policies //////////////////////////////////////////
@@ -117,9 +117,9 @@ public class Test_Policies_Cases {
         Policies_API AddCancelPolicies_TC=new Policies_API();
         AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
-        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
-       // AddCancelPolicies_TC.Check_policies_Valid_Content();
-        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+        AddCancelPolicies_TC.Check_Policy_Response_Time();
+       // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
     /////////////////////// Test Case for Add Tax Policies //////////////////////////////////////////
@@ -154,9 +154,9 @@ public class Test_Policies_Cases {
         Policies_API AddCancelPolicies_TC=new Policies_API();
         AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
-        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
-        // AddCancelPolicies_TC.Check_policies_Valid_Content();
-        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+        AddCancelPolicies_TC.Check_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
     /////////////////////// Test Case for Add Usage Policies //////////////////////////////////////////
@@ -190,9 +190,9 @@ public class Test_Policies_Cases {
         Policies_API AddCancelPolicies_TC=new Policies_API();
         AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
-        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
-        // AddCancelPolicies_TC.Check_policies_Valid_Content();
-        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+        AddCancelPolicies_TC.Check_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
     /////////////////////// Test Case for Add Payment Policies //////////////////////////////////////////
@@ -228,9 +228,9 @@ public class Test_Policies_Cases {
         Policies_API AddCancelPolicies_TC=new Policies_API();
         AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
-        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
-        // AddCancelPolicies_TC.Check_policies_Valid_Content();
-        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+        AddCancelPolicies_TC.Check_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
     /////////////////////// Test Case for Add General Policies //////////////////////////////////////////
@@ -264,9 +264,9 @@ public class Test_Policies_Cases {
         Policies_API AddCancelPolicies_TC=new Policies_API();
         AddCancelPolicies_TC.Add_Policy_Rq(Token,data);
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
-        AddCancelPolicies_TC.Check_Add_Policy_Response_Time();
-        // AddCancelPolicies_TC.Check_policies_Valid_Content();
-        AddCancelPolicies_TC.Check_Add_policy_Response_Valid_Schema(data[1].toString());
+        AddCancelPolicies_TC.Check_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
 

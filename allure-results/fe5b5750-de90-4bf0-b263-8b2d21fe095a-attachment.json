@@ -1,0 +1,637 @@
+{
+  "generalPolicies": [
+    {
+      "descriptionArabic": "الشروط و الاحكام 11",
+      "nameArabic": "سياسة عامة 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    {
+      "descriptionArabic": "سياسة عامة",
+      "nameArabic": "3سياسة عامة",
+      "nameEnglish": "general policy3",
+      "id": 171,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "سياسة عامة",
+      "nameArabic": "2سياسة عامة",
+      "nameEnglish": "general policy2",
+      "id": 175,
+      "isActive": true,
+      "descriptionEnglish": "general policy descr"
+    },
+    {
+      "descriptionArabic": "12345678912345678912345678912345678912345678912345",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "12345678912345678912345678912345678912345678912345"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية عامة عادية9149",
+      "nameArabic": "سياسية عامة عادية 19149",
+      "nameEnglish": "Normal General Policy 19149",
+      "id": 176,
+      "isActive": true,
+      "descriptionEnglish": "Description General Policy9149"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية عامة عادية8674",
+      "nameArabic": "سياسية عامة عادية 28674",
+      "nameEnglish": "Normal General Policy 28674",
+      "id": 177,
+      "isActive": true,
+      "descriptionEnglish": "Description General Policy8674"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية عامة عادية65",
+      "nameArabic": "سياسية عامة عادية 165",
+      "nameEnglish": "Normal General Policy 165",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Description General Policy65"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية عامة عادية3826",
+      "nameArabic": "سياسية عامة عادية 23826",
+      "nameEnglish": "Normal General Policy 23826",
+      "id": 179,
+      "isActive": true,
+      "descriptionEnglish": "Description General Policy3826"
+    }
+  ],
+  "taxesPolicies": [
+    {
+      "descriptionArabic": "وصف سياسة ضريبة 11",
+      "nameArabic": "سياسة ضريبة 11",
+      "nameEnglish": "tax policy 11",
+      "chargeType": "percentage",
+      "id": 121,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tax policy description 11"
+    },
+    {
+      "descriptionArabic": "وصف سياسة ضريبة طوخي",
+      "nameArabic": "سياسة ضريبة طوخي",
+      "nameEnglish": "tokhi Tax policy",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 15.0,
+      "descriptionEnglish": "tokhi Tax policy descr"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية ضريبة عادية6120",
+      "nameArabic": "سياسية ضريبة عادية 26120",
+      "nameEnglish": "Normal Tax Policy 26120",
+      "chargeType": "percentage",
+      "id": 195,
+      "isActive": true,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Tax Policy6120"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية ضريبة عادية229",
+      "nameArabic": "سياسية ضريبة عادية 1229",
+      "nameEnglish": "Normal Tax Policy 1229",
+      "chargeType": "percentage",
+      "id": 196,
+      "isActive": true,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Tax Policy229"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية ضريبة عادية3200",
+      "nameArabic": "سياسية ضريبة عادية 23200",
+      "nameEnglish": "Normal Tax Policy 23200",
+      "chargeType": "percentage",
+      "id": 197,
+      "isActive": true,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Tax Policy3200"
+    },
+    {
+      "descriptionArabic": "وصف سياسة ضريبة",
+      "nameArabic": "سياسة ضريبة22",
+      "nameEnglish": "Tax Policy22",
+      "chargeType": "percentage",
+      "id": 190,
+      "isActive": true,
+      "chargeValue": 11.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "وصف سياسة ضريبة",
+      "nameArabic": "2سياسة ضريبة",
+      "nameEnglish": "Tax Policy2",
+      "chargeType": "percentage",
+      "id": 191,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "وصف سياسة ضريبة",
+      "nameArabic": "33سياسة ضريبة",
+      "nameEnglish": "Tax Policy33",
+      "chargeType": "percentage",
+      "id": 193,
+      "isActive": true,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "Tax Descr test"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية ضريبة عادية7566",
+      "nameArabic": "سياسية ضريبة عادية 17566",
+      "nameEnglish": "Normal Tax Policy 17566",
+      "chargeType": "percentage",
+      "id": 194,
+      "isActive": true,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Tax Policy7566"
+    }
+  ],
+  "usagePolicies": [
+    {
+      "descriptionArabic": "تعديل من الريكويست",
+      "nameArabic": "ين",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    {
+      "descriptionArabic": "سياسة استخدام",
+      "nameArabic": "2سياسة استخدام",
+      "nameEnglish": "Usage Policy2",
+      "id": 173,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "سياسة استخدام",
+      "nameArabic": "22سياسة استخدام",
+      "nameEnglish": "Usage Policy22",
+      "id": 172,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "سياسة استخدام",
+      "nameArabic": "سياسة استخدام",
+      "nameEnglish": "Usage Policy",
+      "id": 178,
+      "isActive": true,
+      "descriptionEnglish": "Usage Policy"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية استخدام عادية1029",
+      "nameArabic": "سياسية استخدام عادية 11029",
+      "nameEnglish": "Normal Usage Policy 11029",
+      "id": 179,
+      "isActive": true,
+      "descriptionEnglish": "Description Usage Policy1029"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية استخدام عادية2094",
+      "nameArabic": "سياسية استخدام عادية 22094",
+      "nameEnglish": "Normal Usage Policy 22094",
+      "id": 180,
+      "isActive": true,
+      "descriptionEnglish": "Description Usage Policy2094"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية استخدام عادية8998",
+      "nameArabic": "سياسية استخدام عادية 18998",
+      "nameEnglish": "Normal Usage Policy 18998",
+      "id": 181,
+      "isActive": true,
+      "descriptionEnglish": "Description Usage Policy8998"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية استخدام عادية3154",
+      "nameArabic": "سياسية استخدام عادية 23154",
+      "nameEnglish": "Normal Usage Policy 23154",
+      "id": 182,
+      "isActive": true,
+      "descriptionEnglish": "Description Usage Policy3154"
+    }
+  ],
+  "cancellationPolicies": [
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية7376",
+      "nameArabic": "سياسية الغاء عادية 17376",
+      "nameEnglish": "Normal Cancel Policy 17376",
+      "chargeType": "percentage",
+      "id": 308,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy7376",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية7974",
+      "nameArabic": "سياسية الغاء عادية 27974",
+      "nameEnglish": "Normal Cancel Policy 27974",
+      "chargeType": "percentage",
+      "id": 309,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy7974",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "3سياسة",
+      "nameEnglish": "Policy3",
+      "chargeType": "percentage",
+      "id": 302,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "2سياسة الغاء طوخي",
+      "nameEnglish": "policy",
+      "chargeType": "percentage",
+      "id": 299,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "32تست عربي",
+      "nameEnglish": "Test English23",
+      "chargeType": "percentage",
+      "id": 295,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 1.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "4 تست عربي",
+      "nameEnglish": "Test English 4",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "chargeType": "percentage",
+      "id": 298,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف سياسة الغاء طوخي",
+      "nameArabic": "سياسة الغاء طوخي",
+      "nameEnglish": "test",
+      "chargeType": "percentage",
+      "id": 161,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 20.0,
+      "descriptionEnglish": "tokhi cancel policy DESCR",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "2سياسة الغاء طوخ1ي",
+      "nameEnglish": "polic1y",
+      "chargeType": "percentage",
+      "id": 303,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية",
+      "nameArabic": "سياسية الغاء عادية 1",
+      "nameEnglish": "Normal Cancel Policy 1",
+      "chargeType": "percentage",
+      "id": 304,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية",
+      "nameArabic": "سياسية الغاء عادية 2",
+      "nameEnglish": "Normal Cancel Policy 2",
+      "chargeType": "percentage",
+      "id": 305,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية27",
+      "nameArabic": "سياسية الغاء عادية 127",
+      "nameEnglish": "Normal Cancel Policy 127",
+      "chargeType": "percentage",
+      "id": 306,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy27",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية20",
+      "nameArabic": "سياسية الغاء عادية 120",
+      "nameEnglish": "Normal Cancel Policy 120",
+      "chargeType": "percentage",
+      "id": 310,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy20",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "عربي سياسة",
+      "nameEnglish": "Policy2",
+      "chargeType": "percentage",
+      "id": 301,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف بالعربي",
+      "nameArabic": "عربي عربي سياسة",
+      "nameEnglish": "Policy1",
+      "chargeType": "percentage",
+      "id": 300,
+      "isActive": true,
+      "deadline": 0,
+      "chargeValue": 0.0,
+      "descriptionEnglish": "English Desc test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية8",
+      "nameArabic": "سياسية الغاء عادية 28",
+      "nameEnglish": "Normal Cancel Policy 28",
+      "chargeType": "percentage",
+      "id": 307,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy8",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية5793",
+      "nameArabic": "سياسية الغاء عادية 25793",
+      "nameEnglish": "Normal Cancel Policy 25793",
+      "chargeType": "percentage",
+      "id": 311,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy5793",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية892",
+      "nameArabic": "سياسية الغاء عادية 1892",
+      "nameEnglish": "Normal Cancel Policy 1892",
+      "chargeType": "percentage",
+      "id": 312,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy892",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية6618",
+      "nameArabic": "سياسية الغاء عادية 26618",
+      "nameEnglish": "Normal Cancel Policy 26618",
+      "chargeType": "percentage",
+      "id": 313,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy6618",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "وصف سياسة عربي",
+      "nameArabic": "سياسة الغاء الطوخي",
+      "nameEnglish": "cancel policy",
+      "chargeType": "percentage",
+      "id": 159,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "policy description eng",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "عمرو تست",
+      "nameArabic": "سياسة الغاء الطوخي",
+      "nameEnglish": "Amr Test",
+      "chargeType": "percentage",
+      "id": 156,
+      "isActive": true,
+      "deadline": 100,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Amr Test",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية95",
+      "nameArabic": "سياسية الغاء عادية 195",
+      "nameEnglish": "Normal Cancel Policy 195",
+      "chargeType": "percentage",
+      "id": 314,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy95",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية5897",
+      "nameArabic": "سياسية الغاء عادية 25897",
+      "nameEnglish": "Normal Cancel Policy 25897",
+      "chargeType": "percentage",
+      "id": 315,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy5897",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية5767",
+      "nameArabic": "سياسية الغاء عادية 15767",
+      "nameEnglish": "Normal Cancel Policy 15767",
+      "chargeType": "percentage",
+      "id": 316,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy5767",
+      "chargeUnit": "days"
+    },
+    {
+      "descriptionArabic": "تعريف سياسية الغاء عادية3796",
+      "nameArabic": "سياسية الغاء عادية 23796",
+      "nameEnglish": "Normal Cancel Policy 23796",
+      "chargeType": "percentage",
+      "id": 317,
+      "isActive": true,
+      "deadline": 5,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Cancel Policy3796",
+      "chargeUnit": "days"
+    }
+  ],
+  "paymentPolicies": [
+    {
+      "descriptionArabic": "سياسة دفع",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 2 سياسة دفع",
+      "nameEnglish": "payment policy 2",
+      "cancellationPolicyId": 296,
+      "id": 195,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "سياسة دفع",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 3 سياسة دفع",
+      "nameEnglish": "payment policy 3",
+      "cancellationPolicyId": 296,
+      "id": 194,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "سياسة دفع",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " سياسة دفع",
+      "nameEnglish": "payment policy",
+      "cancellationPolicyId": 296,
+      "id": 197,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "سياسة دفع",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "12345678912345678912345678912345678912345678912345",
+      "nameEnglish": "12345678912345678912345678912345678912345678912345",
+      "cancellationPolicyId": 296,
+      "id": 198,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "سياسة دفع",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": " 22 سياسة دفع",
+      "nameEnglish": "payment policy2",
+      "cancellationPolicyId": 296,
+      "id": 200,
+      "isActive": true,
+      "descriptionEnglish": "payment policy",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "تعريف سياسية دفع عادية4964",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "سياسية دفع عادية 14964",
+      "nameEnglish": "Normal Payment Policy 14964",
+      "cancellationPolicyId": 296,
+      "id": 201,
+      "isActive": true,
+      "descriptionEnglish": "Description Payment Policy4964",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "تعريف سياسية دفع عادية3461",
+      "refundType": "full_refundable",
+      "nameArabic": "سياسية دفع عادية 23461",
+      "nameEnglish": "Normal Payment Policy 23461",
+      "id": 202,
+      "isActive": true,
+      "descriptionEnglish": "Description Payment Policy3461",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "تعريف سياسية دفع عادية1973",
+      "refundType": "apply_cancellation_policy",
+      "nameArabic": "سياسية دفع عادية 11973",
+      "nameEnglish": "Normal Payment Policy 11973",
+      "cancellationPolicyId": 296,
+      "id": 203,
+      "isActive": true,
+      "descriptionEnglish": "Description Payment Policy1973",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "تعريف سياسية دفع عادية7504",
+      "refundType": "full_refundable",
+      "nameArabic": "سياسية دفع عادية 27504",
+      "nameEnglish": "Normal Payment Policy 27504",
+      "id": 204,
+      "isActive": true,
+      "descriptionEnglish": "Description Payment Policy7504",
+      "isRefundable": true
+    },
+    {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "ست",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  ]
+}
