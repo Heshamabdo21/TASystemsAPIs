@@ -1,23 +1,15 @@
 package SteeringCompanyAPI_TestCases;
 
+import SteeringCompanyAPIs.Token_API;
+import com.shaft.tools.io.ExcelFileManager;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.shaft.tools.io.ExcelFileManager;
-
-import SteeringCompanyAPIs.CreationalPeriods_API;
-import SteeringCompanyAPIs.Lookups_API;
-import SteeringCompanyAPIs.PeriodProgramTemplates_API;
-import SteeringCompanyAPIs.Token_API;
-import SteeringCompanyAPIs.Policies_API;
-import SteeringCompanyAPIs.Reservations_API;
 
 public class Test_Token_Cases {
     
     ExcelFileManager testDataReader ;
-    String KEYCLOAK_HOST,UserName,Password,InValidUserName,InValidPassword;
-   //     String EmptyUserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data3");
-  //      String EmptyPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data3");
+    String UserName,Password,InValidUserName,InValidPassword;
+
      @BeforeClass
      public void Setup_data() {
      testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
@@ -28,7 +20,7 @@ public class Test_Token_Cases {
      InValidPassword=testDataReader.getCellData("TokenAPI_TestData","Password","Data2");  
      }
     
-    @Test(description = "TC001 - Peform Post Token API with valid user name and password and retun with token")
+    @Test(description = "TC001 - Perform Post Token API with valid user name and password and return with token")
     public void Valid_Token_RQ_TC() {  
     	Token_API Token_TC=new Token_API();
     	Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
@@ -43,7 +35,7 @@ public class Test_Token_Cases {
         Token_TC.CheckTokenpreferred_username(Token,"\"tokhi\"");
     }
     
-    @Test(description = "TC002 - Peform Post Token API with Invalid user name and password")
+    @Test(description = "TC002 - Perform Post Token API with Invalid user name and password")
     public void InValid_Token_RQ_TC() {  
         Token_API Token_TC2=new Token_API();
         Token_TC2.POST_Unauthorized_TOKEN_Rq(InValidUserName,InValidPassword);
@@ -53,7 +45,7 @@ public class Test_Token_Cases {
         Token_TC2.Check_Token_Response_Time();
     }
     
-    @Test(description = "TC003 - Peform Post Token API with empty request body")
+    @Test(description = "TC003 - Perform Post Token API with empty request body")
     public void Bad_Token_RQ_TC() {  
         Token_API Token_TC3=new Token_API();
         Token_TC3.POST_InValid_TOKEN_Rq();

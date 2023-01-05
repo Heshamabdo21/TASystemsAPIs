@@ -6,18 +6,21 @@ import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 
 import com.shaft.tools.io.ExcelFileManager;
-
+import Utils.ExtraExcelFun;
 import SteeringCompanyAPIs.Policies_API;
 import SteeringCompanyAPIs.Token_API;
 
 public class Test_Policies_Cases {
     
     ExcelFileManager testDataReader ;
+    ExtraExcelFun testDataReader2;
+
     String UserName,Password;
      @BeforeClass
      ///////// Read Data for Token API ///////////////////////////////
      public void Setup_data() {
      testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+     testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
      UserName=testDataReader.getCellData("TokenAPI_TestData","UserName","Data1");
      Password=testDataReader.getCellData("TokenAPI_TestData","Password","Data1");
      }
@@ -59,7 +62,7 @@ public class Test_Policies_Cases {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
-        String Token =Token_TC.Get_Valid_Access_Token();
+        //String Token =Token_TC.Get_Valid_Access_Token();
 
         Policies_API GetAllPolicies_TC=new Policies_API();
         GetAllPolicies_TC.GET_All_Policies_With_Missing_Token_Rq();
@@ -70,11 +73,10 @@ public class Test_Policies_Cases {
 
     @Test(description = "TC004 - Perform Get all Policies API with invalid or expired Token")
     public void Invalid_GET_all_Policies_with_invalid_Token_TC() {
-        Token_API Token_TC=new Token_API();
-        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-        Token_TC.Check_Token_Valid_status_Code_Response();
-        String Token =Token_TC.Get_Valid_Access_Token();
-
+         Token_API Token_TC=new Token_API();
+         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+         Token_TC.Check_Token_Valid_status_Code_Response();
+         //String Token =Token_TC.Get_Valid_Access_Token();
         Policies_API GetAllPolicies_TC=new Policies_API();
         GetAllPolicies_TC.GET_All_Policies_With_InValid_Token_Rq("123");
         GetAllPolicies_TC.Check_Unauthorized_Policies_status_Code_Response();
@@ -85,30 +87,32 @@ public class Test_Policies_Cases {
     /////////////////////// Test Case for Add Cancel Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_for_Cancel_Policy")
     public Object[][] Valid_Cancel_Policy(){
-        Object data[][]=new Object[2][ 12];
-        for (int i=0;i<2;i++)
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Cancel_Valid_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
         {
-            data[i][0]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"TC_Type");
-            data[i][1]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"APIName");
-            data[i][2]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameArabic");
-            data[i][3]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameEnglish");
-            data[i][4]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionArabic");
-            data[i][5]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionEnglish");
-            data[i][6]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeUnit");
-            data[i][7]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"deadline");
-            data[i][8]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeType");
-            data[i][9]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeValue");
-            data[i][10]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"id");
-            data[i][11]=testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"ExpectedResult");
+            data[i][0]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"APIName");
+            data[i][2]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"deadline");
+            data[i][8]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeType");
+            data[i][9]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"id");
+            data[i][11]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"ExpectedResult");
 
         }
         return data;
     }
 
+    @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC005 - Perform Add Valid Cancel Policy",dataProvider = "Valid_data_for_Cancel_Policy")
     @Story("Adding Cancel Policy")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Add_Cancel_Policy_TC(Object data[]){
+    public void Valid_Add_Cancel_Policy_TC(Object[] data){
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -125,8 +129,9 @@ public class Test_Policies_Cases {
     /////////////////////// Test Case for Add Tax Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_for_Tax_Policy")
     public Object[][] Valid_Tax_Policy(){
-        Object data[][]=new Object[2][ 10];
-        for (int i=0;i<2;i++)
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Tax_Valid_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
         {
             data[i][0]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"TC_Type");
             data[i][1]=testDataReader.getCellData("Policy_TestData","Tax_Valid_"+(i+1),"APIName");
@@ -141,11 +146,11 @@ public class Test_Policies_Cases {
         }
         return data;
     }
-
+    @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC006 - Perform Add Valid Tax Policy",dataProvider = "Valid_data_for_Tax_Policy")
     @Story("Adding Tax Policy")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Add_Tax_Policy_TC(Object data[]){
+    public void Valid_Add_Tax_Policy_TC(Object[] data){
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -162,8 +167,9 @@ public class Test_Policies_Cases {
     /////////////////////// Test Case for Add Usage Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_for_Usage_Policy")
     public Object[][] Valid_Usage_Policy(){
-        Object data[][]=new Object[2][ 8];
-        for (int i=0;i<2;i++)
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Usage_Valid_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
         {
             data[i][0]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"TC_Type");
             data[i][1]=testDataReader.getCellData("Policy_TestData","Usage_Valid_"+(i+1),"APIName");
@@ -177,11 +183,11 @@ public class Test_Policies_Cases {
         }
         return data;
     }
-
+    @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC007 - Perform Add Valid Usage Policy",dataProvider = "Valid_data_for_Usage_Policy")
     @Story("Adding Usage Policy")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Add_Usage_Policy_TC(Object data[]){
+    public void Valid_Add_Usage_Policy_TC(Object[] data){
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -198,8 +204,10 @@ public class Test_Policies_Cases {
     /////////////////////// Test Case for Add Payment Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_for_Payment_Policy")
     public Object[][] Valid_Payment_Policy(){
-        Object data[][]=new Object[2][ 10];
-        for (int i=0;i<2;i++)
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Payment_Valid_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
         {
             data[i][0]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"TC_Type");
             data[i][1]=testDataReader.getCellData("Policy_TestData","Payment_Valid_"+(i+1),"APIName");
@@ -215,11 +223,11 @@ public class Test_Policies_Cases {
         }
         return data;
     }
-
+    @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC008 - Perform Add Valid Payment Policy",dataProvider = "Valid_data_for_Payment_Policy")
     @Story("Adding Payment Policy")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Add_Payment_Policy_TC(Object data[]){
+    public void Valid_Add_Payment_Policy_TC(Object[] data){
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -236,8 +244,10 @@ public class Test_Policies_Cases {
     /////////////////////// Test Case for Add General Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_for_General_Policy")
     public Object[][] Valid_General_Policy(){
-        Object data[][]=new Object[2][ 8];
-        for (int i=0;i<2;i++)
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","General_Valid_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
         {
             data[i][0]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"TC_Type");
             data[i][1]=testDataReader.getCellData("Policy_TestData","General_Valid_"+(i+1),"APIName");
@@ -251,11 +261,11 @@ public class Test_Policies_Cases {
         }
         return data;
     }
-
+    @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC009 - Perform Add Valid General Policy",dataProvider = "Valid_data_for_General_Policy")
     @Story("Adding General Policy")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Add_General_Policy_TC(Object data[]){
+    public void Valid_Add_General_Policy_TC(Object[] data){
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();

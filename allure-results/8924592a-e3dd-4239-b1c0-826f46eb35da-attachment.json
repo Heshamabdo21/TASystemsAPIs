@@ -1,0 +1,12 @@
+{
+  "descriptionArabic": "تعريف سياسية الغاء عادية6942",
+  "nameArabic": "سياسية الغاء عادية 16942",
+  "nameEnglish": "Normal Cancel Policy 16942",
+  "chargeType": "percentage",
+  "id": 331,
+  "isActive": true,
+  "deadline": 10,
+  "chargeValue": 10,
+  "descriptionEnglish": "Description Cancel Policy6942",
+  "chargeUnit": "days"
+}

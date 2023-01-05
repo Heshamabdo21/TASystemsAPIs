@@ -1,0 +1,11 @@
+{
+  "descriptionArabic": "تعريف سياسية دفع عادية6866",
+  "refundType": "apply_cancellation_policy",
+  "nameArabic": "سياسية دفع عادية 16866",
+  "nameEnglish": "Normal Payment Policy 16866",
+  "cancellationPolicyId": 296,
+  "id": 211,
+  "isActive": true,
+  "descriptionEnglish": "Description Payment Policy6866",
+  "isRefundable": true
+}
