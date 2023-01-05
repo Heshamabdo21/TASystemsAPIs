@@ -91,18 +91,18 @@ public class Test_Policies_Cases {
         Object[][] data =new Object[dataRowsNumber][ 12];
         for (int i=0;i<dataRowsNumber;i++)
         {
-            data[i][0]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"TC_Type");
-            data[i][1]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"APIName");
-            data[i][2]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameArabic");
-            data[i][3]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameEnglish");
-            data[i][4]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionArabic");
-            data[i][5]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionEnglish");
-            data[i][6]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeUnit");
-            data[i][7]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"deadline");
-            data[i][8]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeType");
-            data[i][9]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeValue");
-            data[i][10]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"id");
-            data[i][11]= testDataReader2.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"ExpectedResult");
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Cancel_Valid_"+(i+1),"ExpectedResult");
 
         }
         return data;
