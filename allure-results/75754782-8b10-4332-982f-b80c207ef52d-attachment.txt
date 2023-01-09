@@ -1,0 +1,26 @@
+
+################################################################################################################################################
+Starting Execution:	"40 out of 54" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Get_Tax_Policy_With_Missing_Token_TC"
+Test Description:	"TC042 - Perform Get Tax Policy With Missing Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @09-01-2023 22:33:48.0818 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @09-01-2023 22:33:48.0829 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @09-01-2023 22:33:48.0831 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @09-01-2023 22:33:50.0039 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @09-01-2023 22:33:50.0040 PM
+[ReportManager] Perform request "GET | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/tax/122 | Content Type: */* | Response Time: 1203ms". @09-01-2023 22:33:50.0053 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @09-01-2023 22:33:50.0054 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @09-01-2023 22:33:50.0055 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @09-01-2023 22:33:50.0055 PM
+[ReportManager] Verification Passed: "1203" is greater than or equal to "1.1". @09-01-2023 22:33:50.0055 PM
+[ReportManager] Verification Passed: "1203" is less than or equal to "10000". @09-01-2023 22:33:50.0055 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:33:50.0056 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:33:50.0056 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:33:50.0057 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:33:50.0059 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:33:50.0062 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:33:50.0063 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json". @09-01-2023 22:33:50.0064 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @09-01-2023 22:33:50.0065 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @09-01-2023 22:33:50.0067 PM

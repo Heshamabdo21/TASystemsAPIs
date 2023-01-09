@@ -418,7 +418,7 @@ public class Test_Policies_Cases {
         return data;
     }
     @SuppressWarnings("TestDataSupplier")
-    @Test(description = "TC009 - Perform Add Valid General Policy",dataProvider = "Valid_data_add_General_Policy")
+    @Test(description = "TC009 - Perform Add Valid General Policy ",dataProvider = "Valid_data_add_General_Policy")
     @Story("Adding General Policy")
     @Severity(SeverityLevel.CRITICAL)
     public void Valid_Add_General_Policy_TC(Object[] data){
@@ -433,6 +433,42 @@ public class Test_Policies_Cases {
         AddGeneralPolicies_TC.Check_Policy_Response_Time();
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         AddGeneralPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC028 - Perform Add General Policy With Missing Token",dataProvider = "Valid_data_add_General_Policy")
+    @Story("Adding General Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Add_General_Policy_With_Missing_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API AddGeneralPolicies_TC=new Policies_API();
+        AddGeneralPolicies_TC.Add_Policy_With_Missing_Token_Rq(data);
+        AddGeneralPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        AddGeneralPolicies_TC.Check_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        AddGeneralPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC029 - Perform Add General Policy With Invalid/Expired Token",dataProvider = "Valid_data_add_General_Policy")
+    @Story("Adding General Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Add_General_Policy_With_Invalid_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API AddGeneralPolicies_TC=new Policies_API();
+        AddGeneralPolicies_TC.Add_Policy_With_InValid_Token_Rq("123",data);
+        AddGeneralPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        AddGeneralPolicies_TC.Check_Policy_Response_Time();
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+      //  AddGeneralPolicies_TC.Check_policy_Response_Unauthorized_Schema();
     }
 
     /////////////////////// Test Case for Update Cancel Policies //////////////////////////////////////////
@@ -477,6 +513,42 @@ public class Test_Policies_Cases {
         UpdateCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC030 - Perform Update Cancel Policy with missing Token",dataProvider = "Valid_data_Update_Cancel_Policy")
+    @Story("Updating Cancel Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Cancel_Policy_With_Missing_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateCancelPolicies_TC=new Policies_API();
+        UpdateCancelPolicies_TC.Update_Policy_With_Missing_Token_Rq(data);
+        UpdateCancelPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateCancelPolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+        UpdateCancelPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC031 - Perform Update Cancel Policy with Invalid/Expired Token",dataProvider = "Valid_data_Update_Cancel_Policy")
+    @Story("Updating Cancel Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Cancel_Policy_With_Invalid_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateCancelPolicies_TC=new Policies_API();
+        UpdateCancelPolicies_TC.Update_Policy_With_InValid_Token_Rq("123",data);
+        UpdateCancelPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateCancelPolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+       // UpdateCancelPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
     /////////////////////// Test Case for Update Tax Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Update_Tax_Policy")
     public Object[][] Valid_Update_Tax_Policy(){
@@ -515,6 +587,42 @@ public class Test_Policies_Cases {
         UpdateTaxPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC032 - Perform Update Tax Policy With Missing Token",dataProvider = "Valid_data_Update_Tax_Policy")
+    @Story("Updating Tax Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Tax_Policy_TC(Object[] data){
+    /*    Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateTaxPolicies_TC=new Policies_API();
+        UpdateTaxPolicies_TC.Update_Policy_With_Missing_Token_Rq(data);
+        UpdateTaxPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateTaxPolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+        UpdateTaxPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC033 - Perform Update Tax Policy With Invalid/Expired Token",dataProvider = "Valid_data_Update_Tax_Policy")
+    @Story("Updating Tax Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Tax_Policy_With_InValid_Token_TC(Object[] data){
+    /*    Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateTaxPolicies_TC=new Policies_API();
+        UpdateTaxPolicies_TC.Update_Policy_With_InValid_Token_Rq("123",data);
+        UpdateTaxPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateTaxPolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+       // UpdateTaxPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
     /////////////////////// Test Case for Update Usage Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Update_Usage_Policy")
     public Object[][] Valid_Update_Usage_Policy(){
@@ -550,6 +658,42 @@ public class Test_Policies_Cases {
         UpdateUsagePolicies_TC.Check_Policy_Response_Time();
         // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
         UpdateUsagePolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC034 - Perform Update Usage Policy With Missing Token",dataProvider = "Valid_data_Update_Usage_Policy")
+    @Story("Updating Usage Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Usage_Policy_With_Missing_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateUsagePolicies_TC=new Policies_API();
+        UpdateUsagePolicies_TC.Update_Policy_With_Missing_Token_Rq(data);
+        UpdateUsagePolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateUsagePolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+        UpdateUsagePolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC035 - Perform Update Usage Policy With Invalid/Expired Token",dataProvider = "Valid_data_Update_Usage_Policy")
+    @Story("Updating Usage Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Usage_Policy_With_Invalid_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateUsagePolicies_TC=new Policies_API();
+        UpdateUsagePolicies_TC.Update_Policy_With_InValid_Token_Rq("123",data);
+        UpdateUsagePolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateUsagePolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+       // UpdateUsagePolicies_TC.Check_policy_Response_Unauthorized_Schema();
     }
 
     /////////////////////// Test Case for Update Payment Policies //////////////////////////////////////////
@@ -592,6 +736,42 @@ public class Test_Policies_Cases {
         UpdatePaymentPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC036 - Perform Update Payment Policy With Missing Token",dataProvider = "Valid_data_Update_Payment_Policy")
+    @Story("Updating Payment Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Payment_Policy_With_Missing_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdatePaymentPolicies_TC=new Policies_API();
+        UpdatePaymentPolicies_TC.Update_Policy_With_Missing_Token_Rq(data);
+        UpdatePaymentPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdatePaymentPolicies_TC.Check_Policy_Response_Time();
+        // UpdatePaymentPolicies_TC.Check_All_policies_Valid_Content();
+        UpdatePaymentPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC037 - Perform Update Payment Policy With Invalid/Expired Token",dataProvider = "Valid_data_Update_Payment_Policy")
+    @Story("Updating Payment Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_Payment_Policy_With_InValid_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdatePaymentPolicies_TC=new Policies_API();
+        UpdatePaymentPolicies_TC.Update_Policy_With_InValid_Token_Rq("123",data);
+        UpdatePaymentPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdatePaymentPolicies_TC.Check_Policy_Response_Time();
+        // UpdatePaymentPolicies_TC.Check_All_policies_Valid_Content();
+       // UpdatePaymentPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
     /////////////////////// Test Case for Update General Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Update_General_Policy")
     public Object[][] Valid_Update_General_Policy(){
@@ -630,6 +810,41 @@ public class Test_Policies_Cases {
         UpdateGeneralPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC038 - Perform Update General Policy With Missing Token",dataProvider = "Valid_data_Update_General_Policy")
+    @Story("Updating General Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_General_Policy_With_Missing_Token_TC(Object[] data){
+       /* Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateGeneralPolicies_TC=new Policies_API();
+        UpdateGeneralPolicies_TC.Update_Policy_With_Missing_Token_Rq(data);
+        UpdateGeneralPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateGeneralPolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+        UpdateGeneralPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC039 - Perform Update General Policy With InValid/Expired Token",dataProvider = "Valid_data_Update_General_Policy")
+    @Story("Updating General Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Update_General_Policy_With_InValid_Token_TC(Object[] data){
+      /* Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API UpdateGeneralPolicies_TC=new Policies_API();
+        UpdateGeneralPolicies_TC.Update_Policy_With_InValid_Token_Rq("123",data);
+        UpdateGeneralPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        UpdateGeneralPolicies_TC.Check_Policy_Response_Time();
+        // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
+     //   UpdateGeneralPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
 
     /////////////////////// Test Case for Get Cancel Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Get_Cancel_Policy")
@@ -673,6 +888,42 @@ public class Test_Policies_Cases {
         GetCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC040 - Perform Get Cancel Policy With Missing Token",dataProvider = "Valid_data_Get_Cancel_Policy")
+    @Story("Retrieving Cancel Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Cancel_Policy_With_Missing_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetCancelPolicies_TC=new Policies_API();
+        GetCancelPolicies_TC.Get_Policy_With_Missing_Token_Rq(data);
+        GetCancelPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetCancelPolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+        GetCancelPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC041 - Perform Get Cancel Policy With InValid/Expired Token",dataProvider = "Valid_data_Get_Cancel_Policy")
+    @Story("Retrieving Cancel Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Cancel_Policy_With_InValid_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetCancelPolicies_TC=new Policies_API();
+        GetCancelPolicies_TC.Get_Policy_With_InValid_Token_Rq("123",data);
+        GetCancelPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetCancelPolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+      //  GetCancelPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
     /////////////////////// Test Case for Get Tax Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Get_Tax_Policy")
     public Object[][] Valid_Get_Tax_Policy(){
@@ -711,6 +962,42 @@ public class Test_Policies_Cases {
         GetTaxPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC042 - Perform Get Tax Policy With Missing Token",dataProvider = "Valid_data_Get_Tax_Policy")
+    @Story("Retrieving Tax Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Tax_Policy_With_Missing_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetTaxPolicies_TC=new Policies_API();
+        GetTaxPolicies_TC.Get_Policy_With_Missing_Token_Rq(data);
+        GetTaxPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetTaxPolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+        GetTaxPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC043 - Perform Get Tax Policy With InValid/Expired Token",dataProvider = "Valid_data_Get_Tax_Policy")
+    @Story("Retrieving Tax Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Tax_Policy_With_InValid_Token_TC(Object[] data){
+    /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetTaxPolicies_TC=new Policies_API();
+        GetTaxPolicies_TC.Get_Policy_With_InValid_Token_Rq("123",data);
+        GetTaxPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetTaxPolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+       // GetTaxPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
     /////////////////////// Test Case for Get Usage Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Get_Usage_Policy")
     public Object[][] Valid_Get_Usage_Policy(){
@@ -746,6 +1033,42 @@ public class Test_Policies_Cases {
         GetUsagePolicies_TC.Check_Policy_Response_Time();
         // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
         GetUsagePolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC044 - Perform Get Usage Policy With Missing Token",dataProvider = "Valid_data_Get_Usage_Policy")
+    @Story("Retrieving Usage Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Usage_Policy_With_Missing_Token_TC(Object[] data){
+    /*    Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetUsagePolicies_TC=new Policies_API();
+        GetUsagePolicies_TC.Get_Policy_With_Missing_Token_Rq(data);
+        GetUsagePolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetUsagePolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+        GetUsagePolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC045 - Perform Get Usage Policy With InValid/Expired Token",dataProvider = "Valid_data_Get_Usage_Policy")
+    @Story("Retrieving Usage Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Usage_Policy_With_InValid_Token_TC(Object[] data){
+    /*    Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetUsagePolicies_TC=new Policies_API();
+        GetUsagePolicies_TC.Get_Policy_With_InValid_Token_Rq("123",data);
+        GetUsagePolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetUsagePolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+       // GetUsagePolicies_TC.Check_policy_Response_Unauthorized_Schema();
     }
 
     /////////////////////// Test Case for Get Payment Policies //////////////////////////////////////////
@@ -788,6 +1111,42 @@ public class Test_Policies_Cases {
         GetPaymentPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC046 - Perform Get Payment Policy With Missing Token",dataProvider = "Valid_data_Get_Payment_Policy")
+    @Story("Retrieving Payment Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Payment_Policy_With_Missing_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetPaymentPolicies_TC=new Policies_API();
+        GetPaymentPolicies_TC.Get_Policy_With_Missing_Token_Rq(data);
+        GetPaymentPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetPaymentPolicies_TC.Check_Policy_Response_Time();
+        // GetPaymentPolicies_TC.Check_All_policies_Valid_Content();
+        GetPaymentPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC047 - Perform Get Payment Policy With Invalid/Expired Token",dataProvider = "Valid_data_Get_Payment_Policy")
+    @Story("Retrieving Payment Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_Payment_Policy_With_InValid_Token_TC(Object[] data){
+      /*  Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetPaymentPolicies_TC=new Policies_API();
+        GetPaymentPolicies_TC.Get_Policy_With_InValid_Token_Rq("123",data);
+        GetPaymentPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetPaymentPolicies_TC.Check_Policy_Response_Time();
+        // GetPaymentPolicies_TC.Check_All_policies_Valid_Content();
+       // GetPaymentPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
     /////////////////////// Test Case for Get General Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_Get_General_Policy")
     public Object[][] Valid_Get_General_Policy(){
@@ -826,5 +1185,41 @@ public class Test_Policies_Cases {
         GetGeneralPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
 
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC048 - Perform Get General Policy With Missing Token",dataProvider = "Valid_data_Get_General_Policy")
+    @Story("Retrieving General Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_General_Policy_With_Missing_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetGeneralPolicies_TC=new Policies_API();
+        GetGeneralPolicies_TC.Get_Policy_With_Missing_Token_Rq(data);
+        GetGeneralPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetGeneralPolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+        GetGeneralPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC049 - Perform Get General Policy With InValid/Expired Token",dataProvider = "Valid_data_Get_General_Policy")
+    @Story("Retrieving General Policy")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_General_Policy_With_InValid_Token_TC(Object[] data){
+     /*   Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+*/
+        Policies_API GetGeneralPolicies_TC=new Policies_API();
+        GetGeneralPolicies_TC.Get_Policy_With_InValid_Token_Rq("123",data);
+        GetGeneralPolicies_TC.Check_Unauthorized_policy_status_Code_Response();
+        GetGeneralPolicies_TC.Check_Policy_Response_Time();
+        // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
+       // GetGeneralPolicies_TC.Check_policy_Response_Unauthorized_Schema();
+    }
 
 }

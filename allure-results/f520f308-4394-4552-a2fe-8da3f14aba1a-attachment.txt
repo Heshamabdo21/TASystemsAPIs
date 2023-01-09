@@ -1,0 +1,27 @@
+
+################################################################################################################################################
+Starting Execution:	"48 out of 54" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Cancel_Policy_With_Missing_Token_TC"
+Test Description:	"TC030 - Perform Update Cancel Policy with missing Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @09-01-2023 22:34:00.0425 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @09-01-2023 22:34:00.0443 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @09-01-2023 22:34:00.0444 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @09-01-2023 22:34:02.0810 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @09-01-2023 22:34:02.0811 PM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/cancellation/309 | Content Type: application/json | Response Time: 2363ms". @09-01-2023 22:34:02.0822 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @09-01-2023 22:34:02.0823 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @09-01-2023 22:34:02.0825 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @09-01-2023 22:34:02.0826 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @09-01-2023 22:34:02.0826 PM
+[ReportManager] Verification Passed: "2363" is greater than or equal to "1.1". @09-01-2023 22:34:02.0826 PM
+[ReportManager] Verification Passed: "2363" is less than or equal to "10000". @09-01-2023 22:34:02.0826 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:34:02.0827 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:34:02.0827 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:34:02.0827 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:34:02.0830 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:34:02.0831 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @09-01-2023 22:34:02.0831 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json". @09-01-2023 22:34:02.0832 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @09-01-2023 22:34:02.0834 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @09-01-2023 22:34:02.0835 PM
