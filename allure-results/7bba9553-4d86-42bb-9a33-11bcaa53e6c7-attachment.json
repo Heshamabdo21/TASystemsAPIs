@@ -1,0 +1,10 @@
+{
+  "descriptionArabic": "تعريف سياسية ضريبة عادية8912",
+  "nameArabic": "سياسية ضريبة عادية 18912",
+  "nameEnglish": "Normal Tax Policy 18912",
+  "chargeType": "percentage",
+  "id": 121,
+  "isActive": true,
+  "chargeValue": 10.0,
+  "descriptionEnglish": "Description Tax Policy8912"
+}

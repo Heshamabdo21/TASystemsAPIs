@@ -28,7 +28,7 @@
                     "type": "string"
                 },
                 "chargeValue": {
-                    "type": "integer"
+                    "type": "number"
                 }
             },
             "required": [
