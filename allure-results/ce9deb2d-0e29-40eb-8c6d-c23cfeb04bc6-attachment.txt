@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"55 out of 56" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Add_Usage_Policy_With_Invalid_Token_TC"
+Test Description:	"TC025 - Perform Add Usage Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @12-01-2023 11:56:51.0280 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @12-01-2023 11:56:51.0308 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @12-01-2023 11:56:51.0311 AM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @12-01-2023 11:56:51.0757 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @12-01-2023 11:56:51.0757 AM
+[ReportManager] Perform request "POST | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/usage | Content Type: application/json | Response Time: 443ms". @12-01-2023 11:56:51.0758 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @12-01-2023 11:56:51.0760 AM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @12-01-2023 11:56:51.0761 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @12-01-2023 11:56:51.0763 AM
+[ReportManager] Assertion Passed: "401" is equal to "401". @12-01-2023 11:56:51.0764 AM
+[ReportManager] Verification Passed: "443" is greater than or equal to "1.1". @12-01-2023 11:56:51.0764 AM
+[ReportManager] Verification Passed: "443" is less than or equal to "10000". @12-01-2023 11:56:51.0765 AM

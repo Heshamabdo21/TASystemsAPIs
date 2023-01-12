@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"94 out of 56" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Usage_Policy_With_Invalid_Token_TC"
+Test Description:	"TC035 - Perform Update Usage Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @12-01-2023 11:57:10.0547 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @12-01-2023 11:57:10.0555 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @12-01-2023 11:57:10.0556 AM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @12-01-2023 11:57:10.0998 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @12-01-2023 11:57:10.0999 AM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/usage/192 | Content Type: application/json | Response Time: 440ms". @12-01-2023 11:57:10.0999 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @12-01-2023 11:57:11.0000 AM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @12-01-2023 11:57:11.0001 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @12-01-2023 11:57:11.0002 AM
+[ReportManager] Assertion Passed: "401" is equal to "401". @12-01-2023 11:57:11.0002 AM
+[ReportManager] Verification Passed: "440" is greater than or equal to "1.1". @12-01-2023 11:57:11.0003 AM
+[ReportManager] Verification Passed: "440" is less than or equal to "10000". @12-01-2023 11:57:11.0003 AM
