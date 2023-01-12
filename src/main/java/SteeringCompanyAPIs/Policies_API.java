@@ -392,7 +392,100 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-
+    public void Add_Policy_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
+       // Random random=new Random();
+        //int x=random.nextInt(10000);
+        Policy_api = new SHAFT.API(BaseURL);
+        if(data[1].equals("Cancel"))
+        {
+            String Add_Cancel_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
+                    "    \"deadline\": \""+data[7]+"\",\n" +
+                    "    \"chargeType\": \""+data[8]+"\",\n" +
+                    "    \"chargeValue\": \""+data[9]+"\",\n" +
+                    "    \"id\": \""+data[10]+"\"\n"+
+                    "}";
+            Policy_api.post(Cancel_Policy_Path).
+                    setRequestBody(Add_Cancel_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Payment"))
+        {
+            String Add_Payment_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"refundType\": \""+data[6]+"\",\n" +
+                    "    \"cancellationPolicyId\": \""+data[7]+"\",\n" +
+                    "    \"id\": \""+data[8]+"\"\n"+
+                    "}";
+            Policy_api.post(Payment_Policy_Path).
+                    setRequestBody(Add_Payment_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Tax"))
+        {
+            String Add_Tax_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"chargeType\": \""+data[6]+"\",\n" +
+                    "    \"chargeValue\": \""+data[7]+"\",\n" +
+                    "    \"id\": \""+data[8]+"\"\n"+
+                    "}";
+            Policy_api.post(Tax_Policy_Path).
+                    setRequestBody(Add_Tax_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Usage"))
+        {
+            String Add_Usage_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"id\": \""+data[6]+"\"\n"+
+                    "}";
+            Policy_api.post(Usage_Policy_Path).
+                    setRequestBody(Add_Usage_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("General"))
+        {
+            String Add_General_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"id\": \""+data[6]+"\"\n"+
+                    "}";
+            Policy_api.post(General_Policy_Path).
+                    setRequestBody(Add_General_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        Policy_Response = Policy_api.getResponse();
+    }
 
     ////////////////////////////////Update Policy/////////////////////////////////
     public void Update_Policy_Rq(@NotNull String TokenValue,  @NotNull Object data[]) {
@@ -583,7 +676,6 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-
     public void Update_Policy_With_InValid_Token_Rq(@NotNull String TokenValue,  @NotNull Object data[]) {
         Random random=new Random();
         int x=random.nextInt(10000);
@@ -672,6 +764,100 @@ public class Policies_API {
             Policy_api.put(General_Policy_Path+"/"+data[6]).
                     setRequestBody(Update_General_PolicyBody).
                     setTargetStatusCode(401).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        Policy_Response = Policy_api.getResponse();
+    }
+    public void Update_Policy_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
+        //Random random=new Random();
+        //int x=random.nextInt(10000);
+        Policy_api = new SHAFT.API(BaseURL);
+        if(data[1].equals("Cancel"))
+        {
+            String Update_Cancel_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
+                    "    \"deadline\": \""+data[7]+"\",\n" +
+                    "    \"chargeType\": \""+data[8]+"\",\n" +
+                    "    \"chargeValue\": \""+data[9]+"\",\n" +
+                    "    \"-id\": \""+data[10]+"\"\n"+
+                    "}";
+            Policy_api.put(Cancel_Policy_Path+"/"+data[10]).
+                    setRequestBody(Update_Cancel_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Payment"))
+        {
+            String Update_Payment_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"refundType\": \""+data[6]+"\",\n" +
+                    "    \"cancellationPolicyId\": \""+data[7]+"\",\n" +
+                    "    \"-id\": \""+data[8]+"\"\n"+
+                    "}";
+            Policy_api.put(Payment_Policy_Path+"/"+data[8]).
+                    setRequestBody(Update_Payment_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Tax"))
+        {
+            String Update_Tax_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"chargeType\": \""+data[6]+"\",\n" +
+                    "    \"chargeValue\": \""+data[7]+"\",\n" +
+                    "    \"-id\": \""+data[8]+"\"\n"+
+                    "}";
+            Policy_api.put(Tax_Policy_Path+"/"+data[8]).
+                    setRequestBody(Update_Tax_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Usage"))
+        {
+            String Update_Usage_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"-id\": \""+data[6]+"\"\n"+
+                    "}";
+            Policy_api.put(Usage_Policy_Path+"/"+data[6]).
+                    setRequestBody(Update_Usage_PolicyBody).
+                    setTargetStatusCode(422).
+                    setContentType(ContentType.JSON).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("General"))
+        {
+            String Update_General_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
+                    "    \"-id\": \""+data[6]+"\"\n"+
+                    "}";
+            Policy_api.put(General_Policy_Path+"/"+data[6]).
+                    setRequestBody(Update_General_PolicyBody).
+                    setTargetStatusCode(422).
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
@@ -970,6 +1156,13 @@ public class Policies_API {
     public void Check_Valid_Add_policies_status_Code_Response(){
         SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(201).perform();
     }
+    public void Check_Validation_Error_policy_status_Code_Response(){
+        SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(422).perform();
+    }
+
+    public void Check_Unauthorized_policy_status_Code_Response(){
+        SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(401).perform();
+    }
 
     public void Check_Valid_Update_policies_status_Code_Response(){
         SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(200).perform();
@@ -1006,10 +1199,17 @@ public class Policies_API {
         Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","UnAuthorized","URL")).perform();
     }
 
-
-    public void Check_Unauthorized_policy_status_Code_Response(){
-        SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(401).perform();
+    public void Check_policy_Response_Validation_Error_Schema() {
+        Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","Validation Error","URL")).perform();
     }
 
 
+    public void Check_policy_Content(String ExpectedResult) {
+        String Policy_ResponseBody = Policy_Response.getBody().asString();
+        Policy_api.assertThatResponse().body().contains(ExpectedResult).
+               withCustomReportMessage("Check that content object contains"+ExpectedResult).
+                perform();
+       // SHAFT.Validations.assertThat().object(Policy_ResponseBody.contains(ExpectedResult)).isTrue().perform();
+        //SHAFT.Validations.assertThat().object(Policy_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
+    }
 }

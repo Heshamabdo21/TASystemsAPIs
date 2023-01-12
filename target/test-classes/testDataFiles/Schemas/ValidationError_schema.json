@@ -16,7 +16,15 @@
                     "type": "string"
                 },
                 "errors": {
-                    "type": "array",
+                    "anyOf": [
+                        {
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+
                     "items": {
                         "$ref": "#/definitions/Error"
                     }
