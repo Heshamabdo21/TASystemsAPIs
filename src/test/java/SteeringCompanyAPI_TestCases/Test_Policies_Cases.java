@@ -137,7 +137,7 @@ public class Test_Policies_Cases {
        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC020 - Perform Add Cancel Policy With Missing Token",dataProvider = "Valid_data_add_Cancel_Policy")
     @Story("Adding Cancel Policy")
@@ -210,7 +210,7 @@ public class Test_Policies_Cases {
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         AddTaxPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC022 - Perform Add Valid Tax Policy With Missing Token",dataProvider = "Valid_data_add_Tax_Policy")
     @Story("Adding Tax Policy")
@@ -266,8 +266,6 @@ public class Test_Policies_Cases {
         }
         return data;
     }
-  //  int x=0;
-
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC007 - Perform Add Valid Usage Policy",dataProvider = "Valid_data_add_Usage_Policy")
     @Story("Adding Usage Policy")
@@ -286,7 +284,7 @@ public class Test_Policies_Cases {
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         AddUsagePolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC024 - Perform Add Usage Policy With Missing Token",dataProvider = "Valid_data_add_Usage_Policy")
     @Story("Adding Usage Policy")
@@ -364,7 +362,7 @@ public class Test_Policies_Cases {
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         AddPaymentPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC026 - Perform Add Payment Policy With Missing Token",dataProvider = "Valid_data_add_Payment_Policy")
     @Story("Adding Payment Policy")
@@ -383,7 +381,6 @@ public class Test_Policies_Cases {
         AddPaymentPolicies_TC.Check_policy_Response_Unauthorized_Schema();
     }
 
-
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC027 - Perform Add Payment Policy With Invalid/Expired Token",dataProvider = "Valid_data_add_Payment_Policy")
     @Story("Adding Payment Policy")
@@ -401,6 +398,7 @@ public class Test_Policies_Cases {
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
        // AddPaymentPolicies_TC.Check_All_policies_Response_Unauthorized_Schema();
     }
+
     /////////////////////// Test Case for Add General Policies //////////////////////////////////////////
     @DataProvider (name = "Valid_data_add_General_Policy")
     public Object[][] Valid_Add_General_Policy(){
@@ -438,7 +436,7 @@ public class Test_Policies_Cases {
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         AddGeneralPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC028 - Perform Add General Policy With Missing Token",dataProvider = "Valid_data_add_General_Policy")
     @Story("Adding General Policy")
@@ -516,7 +514,7 @@ public class Test_Policies_Cases {
         // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
         UpdateCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC030 - Perform Update Cancel Policy with missing Token",dataProvider = "Valid_data_Update_Cancel_Policy")
     @Story("Updating Cancel Policy")
@@ -590,7 +588,7 @@ public class Test_Policies_Cases {
         // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
         UpdateTaxPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC032 - Perform Update Tax Policy With Missing Token",dataProvider = "Valid_data_Update_Tax_Policy")
     @Story("Updating Tax Policy")
@@ -663,7 +661,7 @@ public class Test_Policies_Cases {
         // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
         UpdateUsagePolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC034 - Perform Update Usage Policy With Missing Token",dataProvider = "Valid_data_Update_Usage_Policy")
     @Story("Updating Usage Policy")
@@ -739,7 +737,7 @@ public class Test_Policies_Cases {
         // UpdatePaymentPolicies_TC.Check_All_policies_Valid_Content();
         UpdatePaymentPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC036 - Perform Update Payment Policy With Missing Token",dataProvider = "Valid_data_Update_Payment_Policy")
     @Story("Updating Payment Policy")
@@ -813,7 +811,7 @@ public class Test_Policies_Cases {
         // UpdateCancelPolicies_TC.Check_All_policies_Valid_Content();
         UpdateGeneralPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC038 - Perform Update General Policy With Missing Token",dataProvider = "Valid_data_Update_General_Policy")
     @Story("Updating General Policy")
@@ -891,7 +889,7 @@ public class Test_Policies_Cases {
         // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
         GetCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC040 - Perform Get Cancel Policy With Missing Token",dataProvider = "Valid_data_Get_Cancel_Policy")
     @Story("Retrieving Cancel Policy")
@@ -965,7 +963,7 @@ public class Test_Policies_Cases {
         // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
         GetTaxPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC042 - Perform Get Tax Policy With Missing Token",dataProvider = "Valid_data_Get_Tax_Policy")
     @Story("Retrieving Tax Policy")
@@ -1038,7 +1036,7 @@ public class Test_Policies_Cases {
         // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
         GetUsagePolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC044 - Perform Get Usage Policy With Missing Token",dataProvider = "Valid_data_Get_Usage_Policy")
     @Story("Retrieving Usage Policy")
@@ -1114,7 +1112,7 @@ public class Test_Policies_Cases {
         // GetPaymentPolicies_TC.Check_All_policies_Valid_Content();
         GetPaymentPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC046 - Perform Get Payment Policy With Missing Token",dataProvider = "Valid_data_Get_Payment_Policy")
     @Story("Retrieving Payment Policy")
@@ -1188,7 +1186,7 @@ public class Test_Policies_Cases {
         // GetCancelPolicies_TC.Check_All_policies_Valid_Content();
         GetGeneralPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC048 - Perform Get General Policy With Missing Token",dataProvider = "Valid_data_Get_General_Policy")
@@ -1227,8 +1225,7 @@ public class Test_Policies_Cases {
     }
 
     
-    ///////////////////////////////////////// Missing Keys Test Cases /////////////////////////////////////
-    // @DataProvider (name = "Missing_data_add_Cancel_Policy")
+    ///////////////////////////////////////// Missing Keys Test Cases for Add Policy /////////////////////////////////////
     public Object[][] Missing_Add_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Cancel_Missing_");
         Object[][] data =new Object[dataRowsNumber][ 12];
@@ -1251,7 +1248,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "Missing_data_add_Tax_Policy")
     public Object[][] Missing_Add_Tax_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Tax_Missing_");
         Object[][] data =new Object[dataRowsNumber][ 10];
@@ -1271,7 +1267,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "Missing_data_add_Usage_Policy")
     public Object[][] Missing_Add_Usage_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Usage_Missing_");
         Object[][] data =new Object[dataRowsNumber][ 8];
@@ -1290,7 +1285,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "Missing_data_add_Payment_Policy")
     public Object[][] Missing_Add_Payment_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Payment_Missing_");
 
@@ -1312,7 +1306,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "Missing_data_add_General_Policy")
     public Object[][] Missing_Add_General_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_General_Missing_");
 
@@ -1362,9 +1355,8 @@ public class Test_Policies_Cases {
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
     }
 
-/////////////////////////////////////////////////
+//////////////////////////////Missing keys Test Cases for Update Policy///////////////////
 
-    // @DataProvider (name = "Missing_data_Update_Cancel_Policy")
     public Object[][] Missing_Update_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Cancel_Missing_");
         Object[][] data =new Object[dataRowsNumber][ 12];
@@ -1387,7 +1379,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "Missing_data_Update_Tax_Policy")
     public Object[][] Missing_Update_Tax_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Tax_Missing_");
         Object[][] data =new Object[dataRowsNumber][ 10];
@@ -1407,7 +1398,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "Missing_data_Update_Usage_Policy")
     public Object[][] Missing_Update_Usage_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Usage_Missing_");
         Object[][] data =new Object[dataRowsNumber][ 8];
@@ -1426,7 +1416,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "Missing_data_Update_Payment_Policy")
     public Object[][] Missing_Update_Payment_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Payment_Missing_");
 
@@ -1448,7 +1437,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "Missing_data_Update_General_Policy")
     public Object[][] Missing_Update_General_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_General_Missing_");
 
@@ -1498,8 +1486,7 @@ public class Test_Policies_Cases {
     }
 
 
-    ///////////////////////////////////////// InValid Data Test Cases /////////////////////////////////////
-    // @DataProvider (name = "InValid_data_add_Cancel_Policy")
+    ///////////////////////////////////////// InValid Data Test Cases for Add Policy/////////////////////////////////////
     public Object[][] InValid_Add_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Cancel_InValid_");
         Object[][] data =new Object[dataRowsNumber][ 12];
@@ -1522,7 +1509,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "InValid_data_add_Tax_Policy")
     public Object[][] InValid_Add_Tax_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Tax_InValid_");
         Object[][] data =new Object[dataRowsNumber][ 10];
@@ -1542,7 +1528,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "InValid_data_add_Usage_Policy")
     public Object[][] InValid_Add_Usage_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Usage_InValid_");
         Object[][] data =new Object[dataRowsNumber][ 8];
@@ -1561,7 +1546,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "InValid_data_add_Payment_Policy")
     public Object[][] InValid_Add_Payment_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Payment_InValid_");
 
@@ -1583,7 +1567,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "InValid_data_add_General_Policy")
     public Object[][] InValid_Add_General_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_General_InValid_");
 
@@ -1633,8 +1616,7 @@ public class Test_Policies_Cases {
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
     }
 
-    ///////////////////////////////////////// InValid Data Test Cases /////////////////////////////////////
-    // @DataProvider (name = "InValid_data_Update_Cancel_Policy")
+    ///////////////////////////////////////// InValid Data Test Cases for Update Policy /////////////////////////////////////
     public Object[][] InValid_Update_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Cancel_InValid_");
         Object[][] data =new Object[dataRowsNumber][ 12];
@@ -1657,7 +1639,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "InValid_data_Update_Tax_Policy")
     public Object[][] InValid_Update_Tax_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Tax_InValid_");
         Object[][] data =new Object[dataRowsNumber][ 10];
@@ -1677,7 +1658,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "InValid_data_Update_Usage_Policy")
     public Object[][] InValid_Update_Usage_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Usage_InValid_");
         Object[][] data =new Object[dataRowsNumber][ 8];
@@ -1696,7 +1676,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    // @DataProvider (name = "InValid_data_Update_Payment_Policy")
     public Object[][] InValid_Update_Payment_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Payment_InValid_");
 
@@ -1718,7 +1697,6 @@ public class Test_Policies_Cases {
         return data;
     }
 
-    //  @DataProvider (name = "InValid_data_Update_General_Policy")
     public Object[][] InValid_Update_General_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_General_InValid_");
 
@@ -1766,6 +1744,528 @@ public class Test_Policies_Cases {
         //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
+    }
+
+    ///////////////////////////////////////// Not Accepted Data Data Test Cases for Add Policy/////////////////////////////////////
+    public Object[][] NotAccepted_Add_Cancel_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Cancel_NotAccepted_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Add_Tax_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Tax_NotAccepted_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotAccepted_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Add_Usage_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Usage_NotAccepted_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Add_Payment_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Payment_NotAccepted_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Add_General_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_General_NotAccepted_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_General_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @DataProvider(name = "NotAccepted_data_add_Policy")
+    public Object[][] NotAccepted_data_add_Policy() {
+        List<Object[]> result = Lists.newArrayList();
+        result.addAll(Arrays.asList(NotAccepted_Add_Cancel_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Add_Tax_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Add_Usage_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Add_Payment_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Add_General_Policy()));
+        return result.toArray(new Object[result.size()][]);
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC054 - Perform Add Policy with NotAccepted data",dataProvider = "NotAccepted_data_add_Policy")
+    @Story("Adding Policy with NotAccepted data")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Add_Policy_With_NotAccepted_data_TC(Object[] data){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API Policies_TC=new Policies_API();
+        Policies_TC.Add_Policy_With_NotAccepted_Input_Rq(Token,data);
+        Policies_TC.Check_Validation_NotAccepted_policy_status_Code_Response();
+        Policies_TC.Check_Policy_Response_Time();
+        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        Policies_TC.Check_policy_Response_NotAccepted_Error_Schema();
+    }
+
+    ///////////////////////////////////////// Not Accepted Data Test Cases for Update Policy /////////////////////////////////////
+    public Object[][] NotAccepted_Update_Cancel_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Cancel_NotAccepted_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Update_Tax_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Tax_NotAccepted_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotAccepted_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Update_Usage_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Usage_NotAccepted_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Update_Payment_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Payment_NotAccepted_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotAccepted_Update_General_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_General_NotAccepted_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_General_NotAccepted_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @DataProvider(name = "NotAccepted_data_Update_Policy")
+    public Object[][] NotAccepted_data_Update_Policy() {
+        List<Object[]> result = Lists.newArrayList();
+        result.addAll(Arrays.asList(NotAccepted_Update_Cancel_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Update_Tax_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Update_Usage_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Update_Payment_Policy()));
+        result.addAll(Arrays.asList(NotAccepted_Update_General_Policy()));
+        return result.toArray(new Object[result.size()][]);
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC055 - Perform Update Policy with NotAccepted data",dataProvider = "NotAccepted_data_Update_Policy")
+    @Story("Updating Policy with NotAccepted data")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Update_Policy_With_NotAccepted_data_TC(Object[] data){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API Policies_TC=new Policies_API();
+        Policies_TC.Update_Policy_With_NotAccepted_Input_Rq(Token,data);
+        Policies_TC.Check_Validation_NotAccepted_policy_status_Code_Response();
+        Policies_TC.Check_Policy_Response_Time();
+        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        Policies_TC.Check_policy_Response_NotAccepted_Error_Schema();
+    }
+
+
+
+    ///////////////////////////////////////// Not Accepted Data Data Test Cases for Add Policy/////////////////////////////////////
+    public Object[][] NotFound_Add_Cancel_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Cancel_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Add_Cancel_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Add_Tax_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Tax_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Add_Tax_NotFound_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Add_Usage_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Usage_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_Usage_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Add_Payment_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Payment_NotFound_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Add_Payment_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Add_General_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_General_NotFound_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Add_General_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @DataProvider(name = "NotFound_data_add_Policy")
+    public Object[][] NotFound_data_add_Policy() {
+        List<Object[]> result = Lists.newArrayList();
+        result.addAll(Arrays.asList(NotFound_Add_Cancel_Policy()));
+        result.addAll(Arrays.asList(NotFound_Add_Tax_Policy()));
+        result.addAll(Arrays.asList(NotFound_Add_Usage_Policy()));
+        result.addAll(Arrays.asList(NotFound_Add_Payment_Policy()));
+        result.addAll(Arrays.asList(NotFound_Add_General_Policy()));
+        return result.toArray(new Object[result.size()][]);
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC056 - Perform Add Policy with NotFound data",dataProvider = "NotFound_data_add_Policy")
+    @Story("Adding Policy with NotFound data")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Add_Policy_With_NotFound_data_TC(Object[] data){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API Policies_TC=new Policies_API();
+        Policies_TC.Add_Policy_With_NotFound_Input_Rq(Token,data);
+        Policies_TC.Check_Validation_NotFound_policy_status_Code_Response();
+        Policies_TC.Check_Policy_Response_Time();
+        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        Policies_TC.Check_policy_Response_NotFound_Error_Schema();
+    }
+
+    ///////////////////////////////////////// Not Accepted Data Test Cases for Update Policy /////////////////////////////////////
+    public Object[][] NotFound_Update_Cancel_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Cancel_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Update_Cancel_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Update_Tax_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Tax_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Update_Tax_NotFound_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Update_Usage_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Usage_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_Usage_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Update_Payment_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Payment_NotFound_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Update_Payment_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Update_General_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_General_NotFound_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Update_General_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @DataProvider(name = "NotFound_data_Update_Policy")
+    public Object[][] NotFound_data_Update_Policy() {
+        List<Object[]> result = Lists.newArrayList();
+        result.addAll(Arrays.asList(NotFound_Update_Cancel_Policy()));
+        result.addAll(Arrays.asList(NotFound_Update_Tax_Policy()));
+        result.addAll(Arrays.asList(NotFound_Update_Usage_Policy()));
+        result.addAll(Arrays.asList(NotFound_Update_Payment_Policy()));
+        result.addAll(Arrays.asList(NotFound_Update_General_Policy()));
+        return result.toArray(new Object[result.size()][]);
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC057 - Perform Update Policy with NotFound data",dataProvider = "NotFound_data_Update_Policy")
+    @Story("Updating Policy with NotFound data")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Update_Policy_With_NotFound_data_TC(Object[] data){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API Policies_TC=new Policies_API();
+        Policies_TC.Update_Policy_With_NotFound_Input_Rq(Token,data);
+        Policies_TC.Check_Validation_NotFound_policy_status_Code_Response();
+        Policies_TC.Check_Policy_Response_Time();
+        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        Policies_TC.Check_policy_Response_NotFound_Error_Schema();
     }
 
 }

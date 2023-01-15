@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"125 out of 62" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Tax_Policy_With_InValid_Token_TC"
+Test Description:	"TC033 - Perform Update Tax Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @15-01-2023 19:30:47.0609 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @15-01-2023 19:30:47.0619 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @15-01-2023 19:30:47.0620 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @15-01-2023 19:30:48.0198 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @15-01-2023 19:30:48.0199 PM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/tax/122 | Content Type: application/json | Response Time: 577ms". @15-01-2023 19:30:48.0200 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @15-01-2023 19:30:48.0201 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @15-01-2023 19:30:48.0202 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @15-01-2023 19:30:48.0203 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @15-01-2023 19:30:48.0204 PM
+[ReportManager] Verification Passed: "577" is greater than or equal to "1.1". @15-01-2023 19:30:48.0204 PM
+[ReportManager] Verification Passed: "577" is less than or equal to "30000". @15-01-2023 19:30:48.0204 PM
