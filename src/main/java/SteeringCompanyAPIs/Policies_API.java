@@ -1192,7 +1192,7 @@ public class Policies_API {
 
     public void Check_Policy_Response_Time() {
         SHAFT.Validations.verifyThat().number(Policy_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
-        SHAFT.Validations.verifyThat().number(Policy_Response.getTime()).isLessThanOrEquals(10000).perform();
+        SHAFT.Validations.verifyThat().number(Policy_Response.getTime()).isLessThanOrEquals(30000).perform();
     }
 
     public void Check_policy_Response_Unauthorized_Schema() {

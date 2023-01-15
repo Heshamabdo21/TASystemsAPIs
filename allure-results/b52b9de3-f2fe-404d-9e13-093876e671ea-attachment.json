@@ -1,0 +1,11 @@
+{
+  "detail": "Cancellation policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Cancellation policy.Charge value",
+      "detail": "Must be greater than or equal zero"
+    }
+  ],
+  "status": 422
+}

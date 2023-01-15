@@ -1,0 +1,17 @@
+
+################################################################################################################################################
+Starting Execution:	"76 out of 53" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Get_Cancel_Policy_With_InValid_Token_TC"
+Test Description:	"TC041 - Perform Get Cancel Policy With InValid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @15-01-2023 14:33:49.0979 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @15-01-2023 14:33:49.0988 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @15-01-2023 14:33:49.0988 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @15-01-2023 14:33:50.0456 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @15-01-2023 14:33:50.0456 PM
+[ReportManager] Perform request "GET | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/cancellation/308 | Content Type: */* | Response Time: 464ms". @15-01-2023 14:33:50.0458 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @15-01-2023 14:33:50.0459 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @15-01-2023 14:33:50.0460 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @15-01-2023 14:33:50.0461 PM
+[ReportManager] Verification Passed: "464" is greater than or equal to "1.1". @15-01-2023 14:33:50.0461 PM
+[ReportManager] Verification Passed: "464" is less than or equal to "30000". @15-01-2023 14:33:50.0461 PM
