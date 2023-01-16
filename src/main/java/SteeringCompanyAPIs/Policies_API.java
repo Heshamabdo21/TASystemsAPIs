@@ -110,7 +110,7 @@ public class Policies_API {
     Response Policy_Response;
     SHAFT.API Policy_api;
     ////////////////////////////////Add Policy/////////////////////////////////
-    public void Add_Policy_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
+    public void Add_Policy_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         Random random=new Random();
         int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -204,7 +204,7 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-    public void Add_Policy_With_Missing_Token_Rq( @NotNull Object data[]) {
+    public void Add_Policy_With_Missing_Token_Rq( @NotNull Object[] data) {
         Random random=new Random();
         int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -298,7 +298,7 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-    public void Add_Policy_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
+    public void Add_Policy_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         Random random=new Random();
         int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -392,7 +392,7 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-    public void Add_Policy_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
+    public void Add_Policy_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
        // Random random=new Random();
         //int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -676,7 +676,7 @@ public class Policies_API {
     }
 
         ////////////////////////////////Update Policy/////////////////////////////////
-    public void Update_Policy_Rq(@NotNull String TokenValue,  @NotNull Object data[]) {
+    public void Update_Policy_Rq(@NotNull String TokenValue,  @NotNull Object[] data) {
         Random random=new Random();
         int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -770,7 +770,7 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-    public void Update_Policy_With_Missing_Token_Rq( @NotNull Object data[]) {
+    public void Update_Policy_With_Missing_Token_Rq( @NotNull Object[] data) {
         Random random=new Random();
         int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -864,7 +864,7 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-    public void Update_Policy_With_InValid_Token_Rq(@NotNull String TokenValue,  @NotNull Object data[]) {
+    public void Update_Policy_With_InValid_Token_Rq(@NotNull String TokenValue,  @NotNull Object[] data) {
         Random random=new Random();
         int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -958,7 +958,7 @@ public class Policies_API {
         }
         Policy_Response = Policy_api.getResponse();
     }
-    public void Update_Policy_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
+    public void Update_Policy_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         //Random random=new Random();
         //int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
@@ -1242,9 +1242,9 @@ public class Policies_API {
     }
     
     ////////////////////////////////GET Policy/////////////////////////////////
-    public void Get_Policy_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
-        Random random=new Random();
-        int x=random.nextInt(10000);
+    public void Get_Policy_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
+       // Random random=new Random();
+       // int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
         if(data[1].equals("Cancel"))
         {
@@ -1337,9 +1337,9 @@ public class Policies_API {
         Policy_Response = Policy_api.getResponse();
     }
 
-    public void Get_Policy_With_Missing_Token_Rq( @NotNull Object data[]) {
-        Random random=new Random();
-        int x=random.nextInt(10000);
+    public void Get_Policy_With_Missing_Token_Rq( @NotNull Object[] data) {
+        //Random random=new Random();
+        //int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
         if(data[1].equals("Cancel"))
         {
@@ -1432,9 +1432,9 @@ public class Policies_API {
         Policy_Response = Policy_api.getResponse();
     }
 
-    public void Get_Policy_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object data[]) {
-        Random random=new Random();
-        int x=random.nextInt(10000);
+    public void Get_Policy_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
+     //   Random random=new Random();
+     //   int x=random.nextInt(10000);
         Policy_api = new SHAFT.API(BaseURL);
         if(data[1].equals("Cancel"))
         {
@@ -1527,6 +1527,217 @@ public class Policies_API {
         Policy_Response = Policy_api.getResponse();
     }
 
+    public void Get_Policy_With_NotFound_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
+       // Random random=new Random();
+        //int x=random.nextInt(10000);
+        Policy_api = new SHAFT.API(BaseURL);
+        if(data[1].equals("Cancel"))
+        {
+/*            String GET_Cancel_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
+                    "    \"deadline\": \""+data[7]+"\",\n" +
+                    "    \"chargeType\": \""+data[8]+"\",\n" +
+                    "    \"chargeValue\": \""+data[9]+"\",\n" +
+                    "    \"id\": \""+data[10]+"\"\n"+
+                    "}";*/
+            Policy_api.get(Cancel_Policy_Path+"/"+data[10]).
+                    //          setRequestBody(GET_Cancel_PolicyBody).
+                            setTargetStatusCode(404).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Payment"))
+        {
+/*            String GET_Payment_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"refundType\": \""+data[6]+"\",\n" +
+                    "    \"cancellationPolicyId\": \""+data[7]+"\",\n" +
+                    "    \"id\": \""+data[8]+"\"\n"+
+                    "}";*/
+            Policy_api.get(Payment_Policy_Path+"/"+data[8]).
+                    //         setRequestBody(GET_Payment_PolicyBody).
+                            setTargetStatusCode(404).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Tax"))
+        {
+/*            String GET_Tax_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"chargeType\": \""+data[6]+"\",\n" +
+                    "    \"chargeValue\": \""+data[7]+"\",\n" +
+                    "    \"id\": \""+data[8]+"\"\n"+
+                    "}";*/
+            Policy_api.get(Tax_Policy_Path+"/"+data[8]).
+                    //     setRequestBody(GET_Tax_PolicyBody).
+                            setTargetStatusCode(404).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Usage"))
+        {
+/*            String GET_Usage_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"id\": \""+data[6]+"\"\n"+
+                    "}";*/
+            Policy_api.get(Usage_Policy_Path+"/"+data[6]).
+                    //          setRequestBody(GET_Usage_PolicyBody).
+                            setTargetStatusCode(404).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("General"))
+        {
+ /*           String GET_General_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"id\": \""+data[6]+"\"\n"+
+                    "}";*/
+            Policy_api.get(General_Policy_Path+"/"+data[6]).
+                    //         setRequestBody(GET_General_PolicyBody).
+                            setTargetStatusCode(404).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        Policy_Response = Policy_api.getResponse();
+    }
+
+    public void Get_Policy_With_BadRequest_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
+       // Random random=new Random();
+       // int x=random.nextInt(10000);
+       // if (data[10].toString().)
+        Policy_api = new SHAFT.API(BaseURL);
+        if(data[1].equals("Cancel"))
+        {
+            /*            String GET_Cancel_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
+                    "    \"deadline\": \""+data[7]+"\",\n" +
+                    "    \"chargeType\": \""+data[8]+"\",\n" +
+                    "    \"chargeValue\": \""+data[9]+"\",\n" +
+                    "    \"id\": \""+data[10]+"\"\n"+
+                    "}";*/
+            if(data[10].toString().contains(" ")) {
+                data[10]='\u2001';
+            }
+
+            Policy_api.get(Cancel_Policy_Path+"/"+ data[10]).
+        //          setRequestBody(GET_Cancel_PolicyBody).
+                    setTargetStatusCode(400).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).
+                    perform();
+        }
+        else if (data[1].equals("Payment"))
+        {
+         /*            String GET_Payment_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"refundType\": \""+data[6]+"\",\n" +
+                    "    \"cancellationPolicyId\": \""+data[7]+"\",\n" +
+                    "    \"id\": \""+data[8]+"\"\n"+
+                    "}";*/
+            if(data[8].toString().contains(" ")) {
+                data[8]='\u2001';
+            }
+
+            Policy_api.get(Payment_Policy_Path+"/"+ data[8]).
+         //         setRequestBody(GET_Payment_PolicyBody).
+                    setTargetStatusCode(400).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Tax"))
+        {
+            /*            String GET_Tax_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"chargeType\": \""+data[6]+"\",\n" +
+                    "    \"chargeValue\": \""+data[7]+"\",\n" +
+                    "    \"id\": \""+data[8]+"\"\n"+
+                    "}";*/
+            if(data[8].toString().contains(" ")) {
+                data[8]='\u2001';
+            }
+
+            Policy_api.get(Tax_Policy_Path+"/"+ data[8]).
+             //     setRequestBody(GET_Tax_PolicyBody).
+                    setTargetStatusCode(400).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("Usage"))
+        {
+            /*            String GET_Usage_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"id\": \""+data[6]+"\"\n"+
+                    "}";*/
+            if(data[6].toString().contains(" ")) {
+                data[6]='\u2001';
+            }
+            Policy_api.get(Usage_Policy_Path+"/"+ data[6]).
+        //          setRequestBody(GET_Usage_PolicyBody).
+                    setTargetStatusCode(400).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        else if (data[1].equals("General"))
+        {
+            /*           String GET_General_PolicyBody="{\n"+
+                    "    \"nameArabic\": \""+data[2]+x+"\",\n" +
+                    "    \"nameEnglish\": \""+data[3]+x+"\",\n" +
+                    "    \"descriptionArabic\": \""+data[4]+x+"\",\n" +
+                    "    \"descriptionEnglish\": \""+data[5]+x+"\",\n" +
+                    "    \"id\": \""+data[6]+"\"\n"+
+                    "}";*/
+            if(data[6].toString().contains(" ")) {
+                data[6]='\u2001';
+            }
+
+            Policy_api.get(General_Policy_Path+"/"+ data[6]).
+         //         setRequestBody(GET_General_PolicyBody).
+                    setTargetStatusCode(400).
+                    setContentType(ContentType.ANY).
+                    setAuthentication("","", AuthenticationType.NONE).
+                    addHeader("Authorization", "Bearer " + TokenValue).perform();
+        }
+        Policy_Response = Policy_api.getResponse();
+    }
+
     ///////////////////Status Code////////////////////////////
     public void Check_Valid_Add_policies_status_Code_Response(){
         SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(201).perform();
@@ -1554,23 +1765,26 @@ public class Policies_API {
         SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(404).perform();
 
     }
+    public void Check_Validation_BadRequest_policy_status_Code_Response() {
+        SHAFT.Validations.assertThat().number(Policy_Response.getStatusCode()).isEqualTo(400).perform();
 
-/////////////////////////////Schema//////////////////////////////////////
+    }
+
+
+    /////////////////////////////Schema//////////////////////////////////////
     public void Check_Policy_Response_Valid_Schema(@NotNull String PolicyType) {
-        if(PolicyType.equals("Cancel"))
-            Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","AddCancellationPolicies","Valid_Schema")).perform();
-
-        else if (PolicyType.equals("Payment"))
-            Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","AddPaymentPolicies","Valid_Schema")).perform();
-
-        else if (PolicyType.equals("Tax"))
-            Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","AddTaxPolicies","Valid_Schema")).perform();
-
-        else if (PolicyType.equals("Usage"))
-            Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","AddUsagePolicies","Valid_Schema")).perform();
-
-        else if (PolicyType.equals("General"))
-            Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","AddGeneralPolicies","Valid_Schema")).perform();
+        switch (PolicyType) {
+            case "Cancel" ->
+                    Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddCancellationPolicies", "Valid_Schema")).perform();
+            case "Payment" ->
+                    Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddPaymentPolicies", "Valid_Schema")).perform();
+            case "Tax" ->
+                    Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddTaxPolicies", "Valid_Schema")).perform();
+            case "Usage" ->
+                    Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddUsagePolicies", "Valid_Schema")).perform();
+            case "General" ->
+                    Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddGeneralPolicies", "Valid_Schema")).perform();
+        }
 
     }
 
@@ -1594,10 +1808,14 @@ public class Policies_API {
     public void Check_policy_Response_NotFound_Error_Schema() {
         Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "Not Found", "URL")).perform();
     }
-    
-        //////////////////////////////content/////////////////////////////////////
+    public void Check_policy_Response_BadRequest_Error_Schema() {
+        Policy_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "Bad Request", "URL")).perform();
+    }
+
+
+    //////////////////////////////content/////////////////////////////////////
     public void Check_policy_Content(String ExpectedResult) {
-        String Policy_ResponseBody = Policy_Response.getBody().asString();
+        //String Policy_ResponseBody = Policy_Response.getBody().asString();
         Policy_api.assertThatResponse().body().contains(ExpectedResult).
                withCustomReportMessage("Check that content object contains"+ExpectedResult).
                 perform();

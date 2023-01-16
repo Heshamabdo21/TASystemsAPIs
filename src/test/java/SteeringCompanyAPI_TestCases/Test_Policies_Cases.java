@@ -1746,7 +1746,7 @@ public class Test_Policies_Cases {
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
     }
 
-    ///////////////////////////////////////// Not Accepted Data Data Test Cases for Add Policy/////////////////////////////////////
+    ///////////////////////////////////////// Not Accepted Test Cases for Add Policy/////////////////////////////////////
     public Object[][] NotAccepted_Add_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Cancel_NotAccepted_");
         Object[][] data =new Object[dataRowsNumber][ 12];
@@ -2008,7 +2008,7 @@ public class Test_Policies_Cases {
 
 
 
-    ///////////////////////////////////////// Not Accepted Data Data Test Cases for Add Policy/////////////////////////////////////
+    ///////////////////////////////////////// Not Accepted Test Cases for Add Policy/////////////////////////////////////
     public Object[][] NotFound_Add_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Add_Cancel_NotFound_");
         Object[][] data =new Object[dataRowsNumber][ 12];
@@ -2266,6 +2266,267 @@ public class Test_Policies_Cases {
         //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_NotFound_Error_Schema();
+    }
+
+
+    ///////////////////////////////////////// Not Found data Test Cases for Get Policy /////////////////////////////////////
+    public Object[][] NotFound_Get_Cancel_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Cancel_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Get_Cancel_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Get_Tax_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Tax_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Get_Tax_NotFound_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Get_Usage_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Usage_NotFound_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_Usage_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Get_Payment_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Payment_NotFound_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Get_Payment_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] NotFound_Get_General_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_General_NotFound_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_General_NotFound_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @DataProvider(name = "NotFound_data_Get_Policy")
+    public Object[][] NotFound_data_Get_Policy() {
+        List<Object[]> result = Lists.newArrayList();
+        result.addAll(Arrays.asList(NotFound_Get_Cancel_Policy()));
+        result.addAll(Arrays.asList(NotFound_Get_Tax_Policy()));
+        result.addAll(Arrays.asList(NotFound_Get_Usage_Policy()));
+        result.addAll(Arrays.asList(NotFound_Get_Payment_Policy()));
+        result.addAll(Arrays.asList(NotFound_Get_General_Policy()));
+        return result.toArray(new Object[result.size()][]);
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC058 - Perform Get Policy with NotFound data",dataProvider = "NotFound_data_Get_Policy")
+    @Story("Retrieving Policy with NotFound data")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Get_Policy_With_NotFound_data_TC(Object[] data){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API Policies_TC=new Policies_API();
+        Policies_TC.Get_Policy_With_NotFound_Input_Rq(Token,data);
+        Policies_TC.Check_Validation_NotFound_policy_status_Code_Response();
+        Policies_TC.Check_Policy_Response_Time();
+        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        Policies_TC.Check_policy_Response_NotFound_Error_Schema();
+    }
+
+    ///////////////////////////////////////// Bad Request data Test Cases for Get Policy /////////////////////////////////////
+    public Object[][] BadRequest_Get_Cancel_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Cancel_BadRequest_");
+        Object[][] data =new Object[dataRowsNumber][ 12];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"APIName");
+            data[i][2]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"nameArabic");
+            data[i][3]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"nameEnglish");
+            data[i][4]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"descriptionArabic");
+            data[i][5]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"descriptionEnglish");
+            data[i][6]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"chargeUnit");
+            data[i][7]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"deadline");
+            data[i][8]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"chargeType");
+            data[i][9]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"chargeValue");
+            data[i][10]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"id");
+            data[i][11]= testDataReader.getCellData("Policy_TestData","Get_Cancel_BadRequest_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] BadRequest_Get_Tax_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Tax_BadRequest_");
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"chargeType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"chargeValue");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Get_Tax_BadRequest_"+(i+1),"ExpectedResult");
+        }
+        return data;
+    }
+
+    public Object[][] BadRequest_Get_Usage_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Usage_BadRequest_");
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_Usage_BadRequest_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] BadRequest_Get_Payment_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_Payment_BadRequest_");
+
+        Object[][] data =new Object[dataRowsNumber][ 10];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"refundType");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"cancellationPolicyId");
+            data[i][8]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"id");
+            data[i][9]=testDataReader.getCellData("Policy_TestData","Get_Payment_BadRequest_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    public Object[][] BadRequest_Get_General_Policy(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Get_General_BadRequest_");
+
+        Object[][] data =new Object[dataRowsNumber][ 8];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"TC_Type");
+            data[i][1]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"APIName");
+            data[i][2]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"nameArabic");
+            data[i][3]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"nameEnglish");
+            data[i][4]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"descriptionArabic");
+            data[i][5]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"descriptionEnglish");
+            data[i][6]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"id");
+            data[i][7]=testDataReader.getCellData("Policy_TestData","Get_General_BadRequest_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+
+    @DataProvider(name = "BadRequest_data_Get_Policy")
+    public Object[][] BadRequest_data_Get_Policy() {
+        List<Object[]> result = Lists.newArrayList();
+        result.addAll(Arrays.asList(BadRequest_Get_Cancel_Policy()));
+        result.addAll(Arrays.asList(BadRequest_Get_Tax_Policy()));
+        result.addAll(Arrays.asList(BadRequest_Get_Usage_Policy()));
+        result.addAll(Arrays.asList(BadRequest_Get_Payment_Policy()));
+        result.addAll(Arrays.asList(BadRequest_Get_General_Policy()));
+        return result.toArray(new Object[result.size()][]);
+    }
+
+    @SuppressWarnings("TestDataSupplier")
+    @Test(description = "TC059 - Perform Get Policy with BadRequest data",dataProvider = "BadRequest_data_Get_Policy")
+    @Story("Retrieving Policy with BadRequest data")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Get_Policy_With_BadRequest_data_TC(Object[] data){
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        Policies_API Policies_TC=new Policies_API();
+        Policies_TC.Get_Policy_With_BadRequest_Input_Rq(Token,data);
+        Policies_TC.Check_Validation_BadRequest_policy_status_Code_Response();
+        Policies_TC.Check_Policy_Response_Time();
+        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+        Policies_TC.Check_policy_Response_BadRequest_Error_Schema();
     }
 
 }
