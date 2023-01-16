@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"92 out of 64" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Add_General_Policy_With_Invalid_Token_TC"
+Test Description:	"TC029 - Perform Add General Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @16-01-2023 14:09:46.0961 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @16-01-2023 14:09:46.0975 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @16-01-2023 14:09:46.0976 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @16-01-2023 14:09:48.0003 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @16-01-2023 14:09:48.0003 PM
+[ReportManager] Perform request "POST | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/general | Content Type: application/json | Response Time: 1027ms". @16-01-2023 14:09:48.0004 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @16-01-2023 14:09:48.0006 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @16-01-2023 14:09:48.0007 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @16-01-2023 14:09:48.0008 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @16-01-2023 14:09:48.0008 PM
+[ReportManager] Verification Passed: "1027" is greater than or equal to "1.1". @16-01-2023 14:09:48.0008 PM
+[ReportManager] Verification Passed: "1027" is less than or equal to "30000". @16-01-2023 14:09:48.0008 PM

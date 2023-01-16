@@ -1,0 +1,23 @@
+{
+  "detail": "Usage policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Usage policy.Name Arabic",
+      "detail": "Must not be empty"
+    },
+    {
+      "field": "Usage policy.Name English",
+      "detail": "Must not be empty"
+    },
+    {
+      "field": "Usage policy.Description Arabic",
+      "detail": "Must not be empty"
+    },
+    {
+      "field": "Usage policy.Description English",
+      "detail": "Must not be empty"
+    }
+  ],
+  "status": 422
+}

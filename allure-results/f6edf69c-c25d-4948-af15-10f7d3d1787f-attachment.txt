@@ -1,0 +1,27 @@
+
+################################################################################################################################################
+Starting Execution:	"130 out of 64" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Cancel_Policy_With_Missing_Token_TC"
+Test Description:	"TC030 - Perform Update Cancel Policy with missing Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @16-01-2023 14:10:19.0532 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @16-01-2023 14:10:19.0544 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @16-01-2023 14:10:19.0546 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @16-01-2023 14:10:20.0264 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @16-01-2023 14:10:20.0265 PM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/cancellation/309 | Content Type: application/json | Response Time: 717ms". @16-01-2023 14:10:20.0272 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @16-01-2023 14:10:20.0273 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @16-01-2023 14:10:20.0273 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @16-01-2023 14:10:20.0274 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @16-01-2023 14:10:20.0274 PM
+[ReportManager] Verification Passed: "717" is greater than or equal to "1.1". @16-01-2023 14:10:20.0274 PM
+[ReportManager] Verification Passed: "717" is less than or equal to "30000". @16-01-2023 14:10:20.0274 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @16-01-2023 14:10:20.0274 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @16-01-2023 14:10:20.0274 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @16-01-2023 14:10:20.0274 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @16-01-2023 14:10:20.0275 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @16-01-2023 14:10:20.0276 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @16-01-2023 14:10:20.0276 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json". @16-01-2023 14:10:20.0276 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @16-01-2023 14:10:20.0277 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @16-01-2023 14:10:20.0277 PM

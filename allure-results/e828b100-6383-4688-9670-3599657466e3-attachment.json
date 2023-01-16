@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome9",
+  "definitions": {
+    "Welcome9": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome9",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "chargeType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "deadline": {
+          "type": "integer"
+        },
+        "chargeValue": {
+          "type": "number"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "chargeUnit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "chargeType",
+        "chargeUnit",
+        "chargeValue",
+        "deadline",
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    }
+  }
+}

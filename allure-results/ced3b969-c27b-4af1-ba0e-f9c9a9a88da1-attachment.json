@@ -1,0 +1,11 @@
+{
+  "detail": "Cancellation policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Cancellation policy.Name Arabic",
+      "detail": "Must have a maximum length of 50"
+    }
+  ],
+  "status": 422
+}

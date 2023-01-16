@@ -1,0 +1,11 @@
+{
+  "detail": "General policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "General policy.Name Arabic",
+      "detail": "Must not be empty"
+    }
+  ],
+  "status": 422
+}
