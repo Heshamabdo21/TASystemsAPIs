@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"134 out of 64" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Add_Tax_Policy_With_Invalid_Token_TC"
+Test Description:	"TC023 - Perform Add Valid Tax Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @19-01-2023 11:47:09.0930 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @19-01-2023 11:47:09.0993 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @19-01-2023 11:47:09.0994 AM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @19-01-2023 11:47:10.0506 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @19-01-2023 11:47:10.0507 AM
+[ReportManager] Perform request "POST | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/tax | Content Type: application/json | Response Time: 507ms". @19-01-2023 11:47:10.0507 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @19-01-2023 11:47:10.0509 AM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @19-01-2023 11:47:10.0510 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @19-01-2023 11:47:10.0514 AM
+[ReportManager] Assertion Passed: "401" is equal to "401". @19-01-2023 11:47:10.0515 AM
+[ReportManager] Verification Passed: "507" is greater than or equal to "1.1". @19-01-2023 11:47:10.0515 AM
+[ReportManager] Verification Passed: "507" is less than or equal to "30000". @19-01-2023 11:47:10.0515 AM

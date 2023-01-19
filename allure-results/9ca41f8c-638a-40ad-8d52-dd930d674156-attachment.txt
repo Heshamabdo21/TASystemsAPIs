@@ -1,0 +1,27 @@
+
+################################################################################################################################################
+Starting Execution:	"163 out of 64" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Cancel_Policy_With_Missing_Token_TC"
+Test Description:	"TC030 - Perform Update Cancel Policy with missing Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @19-01-2023 11:47:27.0673 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @19-01-2023 11:47:27.0728 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @19-01-2023 11:47:27.0732 AM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @19-01-2023 11:47:28.0236 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @19-01-2023 11:47:28.0237 AM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/cancellation/308 | Content Type: application/json | Response Time: 501ms". @19-01-2023 11:47:28.0251 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @19-01-2023 11:47:28.0253 AM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @19-01-2023 11:47:28.0254 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @19-01-2023 11:47:28.0254 AM
+[ReportManager] Assertion Passed: "401" is equal to "401". @19-01-2023 11:47:28.0255 AM
+[ReportManager] Verification Passed: "501" is greater than or equal to "1.1". @19-01-2023 11:47:28.0255 AM
+[ReportManager] Verification Passed: "501" is less than or equal to "30000". @19-01-2023 11:47:28.0255 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @19-01-2023 11:47:28.0255 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @19-01-2023 11:47:28.0255 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json"". @19-01-2023 11:47:28.0255 AM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @19-01-2023 11:47:28.0257 AM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @19-01-2023 11:47:28.0257 AM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\InvalidTokenRequest_Unauthorized_schema.json"". @19-01-2023 11:47:28.0257 AM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/InvalidTokenRequest_Unauthorized_schema.json". @19-01-2023 11:47:28.0258 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @19-01-2023 11:47:28.0263 AM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @19-01-2023 11:47:28.0265 AM

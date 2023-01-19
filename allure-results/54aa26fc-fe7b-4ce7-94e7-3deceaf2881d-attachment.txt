@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"162 out of 64" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Cancel_Policy_With_Invalid_Token_TC"
+Test Description:	"TC031 - Perform Update Cancel Policy with Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @19-01-2023 11:47:27.0056 AM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @19-01-2023 11:47:27.0119 AM
+[ReportManager] Successfully created attachment "Test Data - Excel" @19-01-2023 11:47:27.0121 AM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @19-01-2023 11:47:27.0649 AM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @19-01-2023 11:47:27.0650 AM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/cancellation/309 | Content Type: application/json | Response Time: 525ms". @19-01-2023 11:47:27.0651 AM
+[ReportManager] Successfully created attachment "API Request - Specifications" @19-01-2023 11:47:27.0652 AM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @19-01-2023 11:47:27.0654 AM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @19-01-2023 11:47:27.0658 AM
+[ReportManager] Assertion Passed: "401" is equal to "401". @19-01-2023 11:47:27.0658 AM
+[ReportManager] Verification Passed: "525" is greater than or equal to "1.1". @19-01-2023 11:47:27.0658 AM
+[ReportManager] Verification Passed: "525" is less than or equal to "30000". @19-01-2023 11:47:27.0658 AM

@@ -107,7 +107,7 @@ public class Policies_API {
     String General_Policy_Path = testDataReader.getCellData("API_Data","AddGeneralPolicies","URL");
     String Usage_Policy_Path = testDataReader.getCellData("API_Data","AddUsagePolicies","URL");
 
-    Response Policy_Response;
+    public Response Policy_Response;
     SHAFT.API Policy_api;
     ////////////////////////////////Add Policy/////////////////////////////////
     public void Add_Policy_Rq(@NotNull String TokenValue, @NotNull Object[] data) {

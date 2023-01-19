@@ -194,33 +194,41 @@ public class ExtraExcelFun extends ExcelFileManager {
             return -1; // in case of failure this line is unreachable
         }
     }
-/*
-    public void AddExpectedResult(String sheetName, String rowName,String columnName,String ExpectedResult) {
+
+    public void AddExpectedResult(String sheetName, String rowName,String columnName,String ExpectedResult) throws IOException {
         //     try {
         // get the row number that corresponds to the desired rowName within the first
         // column [0]
+        excelFilePath = JavaHelper.appendTestDataToRelativePath(excelFilePath);
+
+        FileInputStream ExcelFile = new FileInputStream(excelFilePath);
+        workbook = new XSSFWorkbook(ExcelFile);
         sheet = workbook.getSheet(sheetName);
         int rowNum = getRowNumberFromRowName(sheetName, rowName);
         int columnNum = getColumnNumberFromColumnName(sheetName, columnName);
 
         row = sheet.getRow(rowNum);
+        cell=row.getCell(columnNum);
             // get the first cell of each row, and compare it to rowName
             // if they match then that's the row we want
 
-          //  if (row != null ) {
+            if (cell == null ) {
                  cell = row.createCell(columnNum);
+            
                 cell.setCellValue(ExpectedResult);
-        excelFilePath = JavaHelper.appendTestDataToRelativePath(excelFilePath);
+            } else {
+                cell.setCellValue(ExpectedResult);
+            }
+            
       //  initializeVariables();
-        this.excelFilePath = excelFilePath;
+       // this.excelFilePath = excelFilePath;
 
 
         try {
-            fis = new FileInputStream(excelFilePath);
-            workbook = new XSSFWorkbook(fis);
-            fis.close();
+
             FileOutputStream fos  = new FileOutputStream(excelFilePath);
             workbook.write(fos);
+            fos.flush();
             fos.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -231,6 +239,6 @@ public class ExtraExcelFun extends ExcelFileManager {
         //  }
     }
 
-*/
+
 
     }

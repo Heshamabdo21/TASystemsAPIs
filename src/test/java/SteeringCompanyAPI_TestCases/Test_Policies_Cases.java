@@ -1,14 +1,15 @@
 package SteeringCompanyAPI_TestCases;
 
-import io.qameta.allure.*;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.DataProvider;
-
-import com.shaft.tools.io.ExcelFileManager;
-import Utils.ExtraExcelFun;
 import SteeringCompanyAPIs.Policies_API;
 import SteeringCompanyAPIs.Token_API;
+import Utils.ExtraExcelFun;
+import com.shaft.tools.io.ExcelFileManager;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import org.testng.collections.Lists;
 
 import java.util.Arrays;
@@ -124,7 +125,7 @@ public class Test_Policies_Cases {
     @Test(description = "TC005 - Perform Add Valid Cancel Policy",dataProvider = "Valid_data_add_Cancel_Policy")
     @Story("Adding Cancel Policy")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Add_Cancel_Policy_TC(Object[] data){
+    public void Valid_Add_Cancel_Policy_TC(Object[] data) {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -135,6 +136,7 @@ public class Test_Policies_Cases {
         AddCancelPolicies_TC.Check_Valid_Add_policies_status_Code_Response();
         AddCancelPolicies_TC.Check_Policy_Response_Time();
        // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
+     //   testDataReader2.AddExpectedResult("Policy_TestData", "Add_Cancel_Valid_1", "ExpectedResult", "TestDone");
         AddCancelPolicies_TC.Check_Policy_Response_Valid_Schema(data[1].toString());
     }
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -272,7 +274,7 @@ public class Test_Policies_Cases {
     @Severity(SeverityLevel.CRITICAL)
     public void Valid_Add_Usage_Policy_TC(Object[] data){
         Token_API Token_TC=new Token_API();
-    //    ++x;
+    //    ++xx;
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
@@ -291,7 +293,7 @@ public class Test_Policies_Cases {
     @Severity(SeverityLevel.NORMAL)
     public void InValid_Add_Usage_Policy_With_Missing_Token_TC(Object[] data){
      /*   Token_API Token_TC=new Token_API();
-        //    ++x;
+        //    ++xx;
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
@@ -310,7 +312,7 @@ public class Test_Policies_Cases {
     @Severity(SeverityLevel.NORMAL)
     public void InValid_Add_Usage_Policy_With_Invalid_Token_TC(Object[] data){
      /*   Token_API Token_TC=new Token_API();
-        //    ++x;
+        //    ++xx;
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
@@ -1350,6 +1352,12 @@ public class Test_Policies_Cases {
         Policies_TC.Add_Policy_With_Invalid_Input_Rq(Token,data);
         Policies_TC.Check_Validation_Error_policy_status_Code_Response();
         Policies_TC.Check_Policy_Response_Time();
+    /*    try {
+            testDataReader2.AddExpectedResult("Expected","Row"+(++xx),
+                    "Expected",Policies_TC.Policy_Response.asString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }*/
         Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
@@ -1481,6 +1489,7 @@ public class Test_Policies_Cases {
         Policies_TC.Update_Policy_With_Invalid_Input_Rq(Token,data);
         Policies_TC.Check_Validation_Error_policy_status_Code_Response();
         Policies_TC.Check_Policy_Response_Time();
+
         Policies_TC.Check_policy_Content(data[data.length-1].toString());
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
     }
@@ -1611,11 +1620,12 @@ public class Test_Policies_Cases {
         Policies_TC.Add_Policy_With_Invalid_Input_Rq(Token,data);
         Policies_TC.Check_Validation_Error_policy_status_Code_Response();
         Policies_TC.Check_Policy_Response_Time();
-      //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+
+        Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
     }
-
+    //int xx =0;
     ///////////////////////////////////////// InValid Data Test Cases for Update Policy /////////////////////////////////////
     public Object[][] InValid_Update_Cancel_Policy(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Policy_TestData","Update_Cancel_InValid_");
@@ -1741,7 +1751,8 @@ public class Test_Policies_Cases {
         Policies_TC.Update_Policy_With_Invalid_Input_Rq(Token,data);
         Policies_TC.Check_Validation_Error_policy_status_Code_Response();
         Policies_TC.Check_Policy_Response_Time();
-        //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
+
+          Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_Validation_Error_Schema();
     }
@@ -2001,6 +2012,7 @@ public class Test_Policies_Cases {
         Policies_TC.Update_Policy_With_NotAccepted_Input_Rq(Token,data);
         Policies_TC.Check_Validation_NotAccepted_policy_status_Code_Response();
         Policies_TC.Check_Policy_Response_Time();
+
         //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_NotAccepted_Error_Schema();
@@ -2524,6 +2536,7 @@ public class Test_Policies_Cases {
         Policies_TC.Get_Policy_With_BadRequest_Input_Rq(Token,data);
         Policies_TC.Check_Validation_BadRequest_policy_status_Code_Response();
         Policies_TC.Check_Policy_Response_Time();
+
         //  Policies_TC.Check_policy_Content(data[data.length-1].toString());
         // AddCancelPolicies_TC.Check_All_policies_Valid_Content();
         Policies_TC.Check_policy_Response_BadRequest_Error_Schema();
