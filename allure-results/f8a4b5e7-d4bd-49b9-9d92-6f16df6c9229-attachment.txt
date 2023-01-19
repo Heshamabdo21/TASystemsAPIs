@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"168 out of 59" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Update_Payment_Policy_With_InValid_Token_TC"
+Test Description:	"TC037 - Perform Update Payment Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @19-01-2023 12:52:22.0820 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @19-01-2023 12:52:22.0854 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @19-01-2023 12:52:22.0855 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @19-01-2023 12:52:23.0330 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @19-01-2023 12:52:23.0331 PM
+[ReportManager] Perform request "PUT | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/payment/195 | Content Type: application/json | Response Time: 473ms". @19-01-2023 12:52:23.0331 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @19-01-2023 12:52:23.0332 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @19-01-2023 12:52:23.0333 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @19-01-2023 12:52:23.0334 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @19-01-2023 12:52:23.0334 PM
+[ReportManager] Verification Passed: "473" is greater than or equal to "1.1". @19-01-2023 12:52:23.0334 PM
+[ReportManager] Verification Passed: "473" is less than or equal to "30000". @19-01-2023 12:52:23.0334 PM

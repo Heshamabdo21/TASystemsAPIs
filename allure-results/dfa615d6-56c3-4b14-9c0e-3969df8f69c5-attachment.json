@@ -1,0 +1,12 @@
+{
+  "descriptionArabic": "تعريف سياسية الغاء عادية2800",
+  "nameArabic": "سياسية الغاء عادية 22800",
+  "nameEnglish": "Normal Cancel Policy 22800",
+  "chargeType": "percentage",
+  "id": 451,
+  "isActive": true,
+  "deadline": 5,
+  "chargeValue": 2,
+  "descriptionEnglish": "Description Cancel Policy2800",
+  "chargeUnit": "days"
+}

@@ -1,0 +1,11 @@
+{
+  "descriptionArabic": "تعريف سياسية الغاء عادية",
+  "nameArabic": "سياسة الغاء جديدة 137",
+  "nameEnglish": "Normal New Cancel Policy 18",
+  "chargeType": "percentage",
+  "id": "123",
+  "deadline": "10",
+  "chargeValue": "10",
+  "descriptionEnglish": "Description Cancel Policy",
+  "chargeUnit": "days"
+}

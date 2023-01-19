@@ -1,0 +1,18 @@
+
+################################################################################################################################################
+Starting Execution:	"123 out of 59" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Add_General_Policy_With_Invalid_Token_TC"
+Test Description:	"TC029 - Perform Add General Policy With Invalid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @19-01-2023 12:51:58.0404 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @19-01-2023 12:51:58.0418 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @19-01-2023 12:51:58.0420 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @19-01-2023 12:51:58.0905 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @19-01-2023 12:51:58.0905 PM
+[ReportManager] Perform request "POST | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/general | Content Type: application/json | Response Time: 479ms". @19-01-2023 12:51:58.0906 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @19-01-2023 12:51:58.0908 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @19-01-2023 12:51:58.0910 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @19-01-2023 12:51:58.0911 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @19-01-2023 12:51:58.0911 PM
+[ReportManager] Verification Passed: "479" is greater than or equal to "1.1". @19-01-2023 12:51:58.0911 PM
+[ReportManager] Verification Passed: "479" is less than or equal to "30000". @19-01-2023 12:51:58.0911 PM

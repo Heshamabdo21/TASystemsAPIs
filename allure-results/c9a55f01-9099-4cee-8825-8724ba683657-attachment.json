@@ -1,0 +1,10 @@
+{
+  "descriptionArabic": "تعريف سياسية ضريبة عادية7659",
+  "nameArabic": "سياسية ضريبة عادية 17659",
+  "nameEnglish": "Normal Tax Policy 17659",
+  "chargeType": "percentage",
+  "id": 121,
+  "isActive": true,
+  "chargeValue": 10.0,
+  "descriptionEnglish": "Description Tax Policy7659"
+}

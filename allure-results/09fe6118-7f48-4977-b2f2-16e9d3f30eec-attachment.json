@@ -1,0 +1,11 @@
+{
+  "descriptionArabic": "تعريف سياسية الغاء عادية",
+  "nameArabic": "سياسية الغاء عادية 2",
+  "nameEnglish": "Normal Cancel Policy 2",
+  "chargeType": "percentage",
+  "-id": "309",
+  "deadline": "",
+  "chargeValue": "2",
+  "descriptionEnglish": "Description Cancel Policy",
+  "chargeUnit": "days"
+}

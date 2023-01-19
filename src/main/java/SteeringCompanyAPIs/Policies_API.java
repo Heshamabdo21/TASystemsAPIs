@@ -17,9 +17,6 @@ import java.util.Random;
 public class Policies_API {
     ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
     String BaseURL = testDataReader.getCellData("API_Data","Steering_Base_URL","URL");
-
-    //String BaseURL = "https://api-demo.np.transporticonline.com/steeringcompanies/v1" ;
-
     Response All_Policies_Response;
     SHAFT.API All_Policies_api;
    // String All_Policies_Path = "/policies";
@@ -52,7 +49,8 @@ public class Policies_API {
         All_Policies_api = new SHAFT.API(BaseURL);
         All_Policies_api.get(All_Policies_Path).
                 setAuthentication("","", AuthenticationType.NONE).
-                setTargetStatusCode(401).perform();
+                setTargetStatusCode(401).
+                perform();
               //  addHeader("Authorization", "Bearer " ).perform();
 
         All_Policies_Response = All_Policies_api.getResponse();
