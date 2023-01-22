@@ -225,13 +225,11 @@ public class ExtraExcelFun extends ExcelFileManager {
 
 
         try {
-
+            ExcelFile.close();
             FileOutputStream fos  = new FileOutputStream(excelFilePath);
             workbook.write(fos);
             fos.flush();
             fos.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
