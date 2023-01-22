@@ -1,0 +1,36 @@
+
+################################################################################################################################################
+Starting Execution:	"38 out of 83" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_PeriodProgramTemplate_Cases.Valid_GET_all_PeriodProgramTemplate_by_Qry_Rq_TC"
+Test Description:	"TC002  -PeriodProgramTemplate-   Perform Get all PeriodProgramTemplate API with pagination with valid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:02:23.0723 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:02:23.0771 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:02:23.0773 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @22-01-2023 22:02:24.0886 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @22-01-2023 22:02:24.0887 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1109ms". @22-01-2023 22:02:24.0900 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @22-01-2023 22:02:24.0901 PM
+[ReportManager] Successfully created attachment "API Request - Body" @22-01-2023 22:02:24.0903 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @22-01-2023 22:02:24.0904 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @22-01-2023 22:02:24.0904 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:02:24.0915 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:02:24.0947 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:02:24.0948 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @22-01-2023 22:02:25.0859 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @22-01-2023 22:02:25.0859 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodProgramTemplates | Content Type: */* | Response Time: 909ms". @22-01-2023 22:02:26.0026 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @22-01-2023 22:02:26.0028 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @22-01-2023 22:02:26.0029 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @22-01-2023 22:02:26.0029 PM
+[ReportManager] Verification Passed: "909" is greater than or equal to "1.1". @22-01-2023 22:02:26.0029 PM
+[ReportManager] Verification Passed: "909" is less than or equal to "10000". @22-01-2023 22:02:26.0030 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/PeriodProgramTemplates_schema.json"". @22-01-2023 22:02:26.0030 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/PeriodProgramTemplates_schema.json"". @22-01-2023 22:02:26.0030 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/PeriodProgramTemplates_schema.json"". @22-01-2023 22:02:26.0031 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\PeriodProgramTemplates_schema.json"". @22-01-2023 22:02:26.0037 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\PeriodProgramTemplates_schema.json"". @22-01-2023 22:02:26.0038 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\PeriodProgramTemplates_schema.json"". @22-01-2023 22:02:26.0038 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/PeriodProgramTemplates_schema.json". @22-01-2023 22:02:26.0041 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @22-01-2023 22:02:26.0043 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @22-01-2023 22:02:26.0044 PM

@@ -1,0 +1,20 @@
+{
+  "seasonType": "umrah",
+  "vehicleCategoryId": 2,
+  "programType": "Routes",
+  "vehicleTypeId": 4,
+  "templatePeriodEndDate": "2022-12-13",
+  "templatePeriodMaximumQuota": 1000,
+  "minimumSeat": 7,
+  "isActive": true,
+  "templatePeriodStartDate": "2022-09-15",
+  "minimumVehiclePricePer": 3500,
+  "routeId": 58,
+  "minimumModelYear": 2010,
+  "saleSystem": "GDS",
+  "season": 1444,
+  "id": 247,
+  "maximumModelYear": 2022,
+  "programMechanism": "reservations",
+  "maximumSeat": 13
+}

@@ -1,0 +1,51 @@
+
+################################################################################################################################################
+Starting Execution:	"332 out of 83" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.Valid_Add_Tax_Policy_TC"
+Test Description:	"TC006 -Policy- Perform Add Valid Tax Policy"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:26.0126 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:14:26.0161 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:14:26.0163 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @22-01-2023 22:14:27.0226 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @22-01-2023 22:14:27.0227 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1061ms". @22-01-2023 22:14:27.0239 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @22-01-2023 22:14:27.0240 PM
+[ReportManager] Successfully created attachment "API Request - Body" @22-01-2023 22:14:27.0242 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @22-01-2023 22:14:27.0243 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @22-01-2023 22:14:27.0243 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:27.0257 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:14:27.0309 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:14:27.0310 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:27.0310 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:14:27.0352 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:14:27.0353 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:27.0353 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:14:27.0396 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:14:27.0397 PM
+[ReportManager] Response status code: "201", status line: "HTTP/1.1 201 " @22-01-2023 22:14:28.0371 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @22-01-2023 22:14:28.0372 PM
+[ReportManager] Perform request "POST | Target Status Code: 201 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/tax | Content Type: application/json | Response Time: 972ms". @22-01-2023 22:14:28.0383 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @22-01-2023 22:14:28.0385 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @22-01-2023 22:14:28.0387 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @22-01-2023 22:14:28.0388 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:28.0388 PM
+[ReportManager] Assertion Passed: "201" is equal to "201". @22-01-2023 22:14:28.0463 PM
+[ReportManager] Verification Passed: "972" is greater than or equal to "1.1". @22-01-2023 22:14:28.0464 PM
+[ReportManager] Verification Passed: "972" is less than or equal to "30000". @22-01-2023 22:14:28.0464 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:28.0464 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:14:28.0494 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:14:28.0495 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @22-01-2023 22:14:28.0495 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @22-01-2023 22:14:28.0524 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @22-01-2023 22:14:28.0525 PM
+[ReportManager] Assertion Passed: Check that content object contains : "nameArabic":"?????? ????? ????? 22620" @22-01-2023 22:14:28.0526 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Tax_Policy_schema.json"". @22-01-2023 22:14:28.0527 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Tax_Policy_schema.json"". @22-01-2023 22:14:28.0527 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Tax_Policy_schema.json"". @22-01-2023 22:14:28.0527 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Tax_Policy_schema.json"". @22-01-2023 22:14:28.0528 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Tax_Policy_schema.json"". @22-01-2023 22:14:28.0529 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Tax_Policy_schema.json"". @22-01-2023 22:14:28.0529 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/Tax_Policy_schema.json". @22-01-2023 22:14:28.0529 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @22-01-2023 22:14:28.0530 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @22-01-2023 22:14:28.0531 PM
