@@ -1,0 +1,11 @@
+{
+  "detail": "Cancellation policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Cancellation policy.Cancellation policy number",
+      "detail": "Must be empty"
+    }
+  ],
+  "status": 422
+}
