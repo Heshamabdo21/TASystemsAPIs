@@ -1,0 +1,36 @@
+
+################################################################################################################################################
+Starting Execution:	"15 out of 10" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_CreationalPeriod_Cases.Get_Valid_all_CreationalPeriod_by_Qry_Rq_TC"
+Test Description:	"TC002  -CreationalPeriod-   Perform Get all CreationalPeriod API with pagination with valid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @23-01-2023 12:31:59.0986 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @23-01-2023 12:32:00.0112 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @23-01-2023 12:32:00.0115 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @23-01-2023 12:32:00.0791 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @23-01-2023 12:32:00.0792 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 671ms". @23-01-2023 12:32:00.0823 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @23-01-2023 12:32:00.0826 PM
+[ReportManager] Successfully created attachment "API Request - Body" @23-01-2023 12:32:00.0828 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @23-01-2023 12:32:00.0830 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @23-01-2023 12:32:00.0831 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @23-01-2023 12:32:00.0861 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @23-01-2023 12:32:00.0944 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @23-01-2023 12:32:00.0946 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @23-01-2023 12:32:01.0521 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @23-01-2023 12:32:01.0523 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/creationalPeriods | Content Type: */* | Response Time: 569ms". @23-01-2023 12:32:01.0558 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @23-01-2023 12:32:01.0560 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @23-01-2023 12:32:01.0562 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @23-01-2023 12:32:01.0564 PM
+[ReportManager] Verification Passed: "569" is greater than or equal to "1.1". @23-01-2023 12:32:01.0564 PM
+[ReportManager] Verification Passed: "569" is less than or equal to "10000". @23-01-2023 12:32:01.0565 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/CreationalPeriods_schema.json"". @23-01-2023 12:32:01.0566 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/CreationalPeriods_schema.json"". @23-01-2023 12:32:01.0567 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/CreationalPeriods_schema.json"". @23-01-2023 12:32:01.0568 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\CreationalPeriods_schema.json"". @23-01-2023 12:32:01.0589 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\CreationalPeriods_schema.json"". @23-01-2023 12:32:01.0590 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\CreationalPeriods_schema.json"". @23-01-2023 12:32:01.0591 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/CreationalPeriods_schema.json". @23-01-2023 12:32:01.0594 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @23-01-2023 12:32:01.0597 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @23-01-2023 12:32:01.0600 PM

@@ -66,7 +66,7 @@ public class PeriodProgramTemplates_API {
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
         PeriodProgramTemplates_Response = PeriodProgramTemplates_api.getResponse();
     }
-    //////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////
     public void Get_PeriodProgramTemplates_With_NotFound_by_id_Rq(String TokenValue,String PeriodProgramTemplatesID) {
         PeriodProgramTemplates_api = new SHAFT.API(BaseURL);
         PeriodProgramTemplates_api.get(PeriodProgramTemplates_Path+"/"+PeriodProgramTemplatesID).
@@ -86,7 +86,7 @@ public class PeriodProgramTemplates_API {
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
         PeriodProgramTemplates_Response = PeriodProgramTemplates_api.getResponse();
     }
-    ///////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////
     public void Get_all_PeriodProgramTemplates_With_Missing_Token_Rq() {
         // String Lookup_cities_Path = "/lookups/cities";
         PeriodProgramTemplates_api = new SHAFT.API(BaseURL);
@@ -110,7 +110,7 @@ public class PeriodProgramTemplates_API {
 
         PeriodProgramTemplates_Response = PeriodProgramTemplates_api.getResponse();
     }
-    //////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////
     public void Get_PeriodProgramTemplates_by_id_With_Missing_Token_Rq(String PeriodProgramTemplatesID) {
         // String Lookup_cities_Path = "/lookups/cities";
         PeriodProgramTemplates_api = new SHAFT.API(BaseURL);
@@ -152,18 +152,18 @@ public class PeriodProgramTemplates_API {
         SHAFT.Validations.assertThat().number(PeriodProgramTemplates_Response.getStatusCode()).isEqualTo(400).perform();
 
     }
-    ////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////Time////////////////////////////////////////////////
     public void Check_PeriodProgramTemplates_Response_Time() {
         SHAFT.Validations.verifyThat().number(PeriodProgramTemplates_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(PeriodProgramTemplates_Response.getTime()).isLessThanOrEquals(10000).perform();
     }
-    /////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////
     public void Check_all_PeriodProgramTemplates_Valid_Content() {
         String PeriodProgramTemplates_ResponseBody = PeriodProgramTemplates_Response.getBody().asString();
         SHAFT.Validations.assertThat().object(PeriodProgramTemplates_ResponseBody).contains("content").perform();
         PeriodProgramTemplates_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
-    //////////////////////////////////////////////////Schema////////////////////////////
+    //////////////////////////////////////////////////Schema///////////////////////////////////
     public void Check_all_PeriodProgramTemplates_Response_Valid_Schema() {
         PeriodProgramTemplates_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","PeriodProgramTemplates","Valid_Schema")).perform();
     }

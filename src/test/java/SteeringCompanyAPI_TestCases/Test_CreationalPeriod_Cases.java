@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 
 @SuppressWarnings("ALL")
 public class Test_CreationalPeriod_Cases {
-    //ExtraExcelFun testDataReader ;
     ExtraExcelFun testDataReader2;
 
     String UserName,Password;
@@ -24,13 +23,11 @@ public class Test_CreationalPeriod_Cases {
         UserName=testDataReader2.getCellData("TokenAPI_TestData","UserName","Data1");
         Password=testDataReader2.getCellData("TokenAPI_TestData","Password","Data1");
     }
-
     //////////////////Test Cases for Get All Active CreationalPeriod API ////////////////////////////
-
     @Test(description = "TC001  -CreationalPeriod-  Perform Get all CreationalPeriod API with valid user name and password")
     @Story("Retrieving All Active CreationalPeriod")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_GET_all_CreationalPeriod_Rq_TC() {
+    public void Get_Valid_all_CreationalPeriod_Rq_TC() {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -42,9 +39,9 @@ public class Test_CreationalPeriod_Cases {
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
         GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Valid_Schema();
     }
-
+    //////////////////Test Cases for Get All Active CreationalPeriod API with Pagination ////////////////
     @DataProvider(name = "Valid_Get_CreationalPeriod_Pagination")
-    public Object[][] Valid_Get_CreationalPeriod_Pagination(){
+    public Object[][] Get_Valid_CreationalPeriod_Pagination(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("CreationalPeriod_TestData","Get_Valid_Creational_Pagenation_");
         Object[][] data =new Object[dataRowsNumber][ 5];
         for (int i=0;i<dataRowsNumber;i++)
@@ -58,12 +55,11 @@ public class Test_CreationalPeriod_Cases {
         }
         return data;
     }
-
     @Test(description = "TC002  -CreationalPeriod-   Perform Get all CreationalPeriod API with pagination with valid user name and password"
             ,dataProvider = "Valid_Get_CreationalPeriod_Pagination")
     @Story("Retrieving All Active CreationalPeriod with Pagination")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_GET_all_CreationalPeriod_by_Qry_Rq_TC(Object[] data) {
+    public void Get_Valid_all_CreationalPeriod_by_Qry_Rq_TC(Object[] data) {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -76,67 +72,7 @@ public class Test_CreationalPeriod_Cases {
         //  GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Valid_Content();
         GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Valid_Schema();
     }
-
-    ///////////////Test cases for missing /invalid/expired Token/////////////////////////////////////////
-    @Test(description = "TC003  -CreationalPeriod-   Perform Get all CreationalPeriod API with missing Token")
-    @Story("Retrieving All Active CreationalPeriod with missing Token")
-    @Severity(SeverityLevel.MINOR)
-    public void Invalid_GET_all_CreationalPeriod_with_missing_Token_TC() {
-        Token_API Token_TC=new Token_API();
-        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-        Token_TC.Check_Token_Valid_status_Code_Response();
-
-        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
-        GetAllCreationalPeriod_TC.Get_all_CreationalPeriods_With_Missing_Token_Rq();
-        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
-        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
-        GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Unauthorized_Schema();
-    }
-
-    @Test(description = "TC004  -CreationalPeriod-   Perform Get CreationalPeriod by ID with missing Token")
-    @Story("Retrieving Active CreationalPeriod By ID with missing Token")
-    @Severity(SeverityLevel.MINOR)
-    public void Invalid_GET_CreationalPeriod_ByID_with_missing_Token_TC() {
-        Token_API Token_TC=new Token_API();
-        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-        Token_TC.Check_Token_Valid_status_Code_Response();
-
-        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
-        GetAllCreationalPeriod_TC.Get_CreationalPeriods_by_id_With_Missing_Token_Rq("228");
-        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
-        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
-        GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Unauthorized_Schema();
-    }
-
-    @Test(description = "TC005 -CreationalPeriod-  Perform Get all CreationalPeriod API with invalid or expired Token")
-    @Story("Retrieving All Active CreationalPeriod with invalid/expired Token")
-    @Severity(SeverityLevel.MINOR)
-    public void Invalid_GET_all_CreationalPeriod_with_invalid_Token_TC() {
-        Token_API Token_TC=new Token_API();
-        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-        Token_TC.Check_Token_Valid_status_Code_Response();
-        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
-        GetAllCreationalPeriod_TC.Get_all_CreationalPeriods_With_InValid_Token_Rq("123");
-        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
-        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
-        //GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Response_Unauthorized_Schema(); // There is no response content
-    }
-
-    @Test(description = "TC006 -CreationalPeriod-  Perform Get all CreationalPeriod API with invalid or expired Token")
-    @Story("Retrieving All Active CreationalPeriod with invalid/expired Token")
-    @Severity(SeverityLevel.MINOR)
-    public void Invalid_GET_CreationalPeriod_ByID_with_invalid_Token_TC() {
-        Token_API Token_TC=new Token_API();
-        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-        Token_TC.Check_Token_Valid_status_Code_Response();
-        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
-        GetAllCreationalPeriod_TC.Get_CreationalPeriods_by_id_With_InValid_Token_Rq("123","228");
-        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
-        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
-        //GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Response_Unauthorized_Schema(); // There is no response content
-    }
-//////////////////////////////////////////////////////////////////////////////////////
-
+    ///////////////Test cases for Get Creational Period for Valid ID///////////////////////////////
     @DataProvider(name = "Get_Valid_CreationalPeriod_ByID")
     public Object[][] Get_Valid_CreationalPeriod_ByID(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("CreationalPeriod_TestData","Get_Valid_Creational_ByID_");
@@ -151,12 +87,11 @@ public class Test_CreationalPeriod_Cases {
         }
         return data;
     }
-
     @Test(description = "TC007  -CreationalPeriod-   Perform Get CreationalPeriod API by ID"
             ,dataProvider = "Get_Valid_CreationalPeriod_ByID")
     @Story("Retrieving CreationalPeriod by ID")
     @Severity(SeverityLevel.CRITICAL)
-    public void Valid_Get_CreationalPeriod_ByID_Rq_TC(Object[] data) {
+    public void Get_Valid_CreationalPeriod_ByID_Rq_TC(Object[] data) {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
@@ -169,9 +104,7 @@ public class Test_CreationalPeriod_Cases {
         //  GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Valid_Content();
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_by_id_Response_Valid_Schema();
     }
-
-    //////////////////////////////////////////////////////////////////////////////////////
-
+    ///////////////Test cases for Get Creational Period for NotFound ID///////////////////////////////
     @DataProvider(name = "Get_CreationalPeriod_With_NotFound_ByID")
     public Object[][] Get_CreationalPeriod_With_NotFound_ByID(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("CreationalPeriod_TestData","Get_NotFound_Creational_ByID_");
@@ -186,7 +119,6 @@ public class Test_CreationalPeriod_Cases {
         }
         return data;
     }
-
     @Test(description = "TC008  -CreationalPeriod-   Perform Get CreationalPeriod API With NotFound by ID"
             ,dataProvider = "Get_CreationalPeriod_With_NotFound_ByID")
     @Story("Retrieving CreationalPeriod by ID With Not Found Response")
@@ -204,9 +136,7 @@ public class Test_CreationalPeriod_Cases {
         //  GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Valid_Content();
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_NotFound_Error_Schema();
     }
-
-    //////////////////////////////////////////////////////////////////////////////////////
-
+    ///////////////Test cases for Get Creational Period for BadRequest ID///////////////////////////////
     @DataProvider(name = "Get_CreationalPeriod_With_BadRequest_ByID")
     public Object[][] Get_CreationalPeriod_With_BadRequest_ByID(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("CreationalPeriod_TestData","Get_BadRequest_Creational_ByID_");
@@ -221,7 +151,6 @@ public class Test_CreationalPeriod_Cases {
         }
         return data;
     }
-
     @Test(description = "TC009  -CreationalPeriod-   Perform Get CreationalPeriod API With BadRequest by ID"
             ,dataProvider = "Get_CreationalPeriod_With_BadRequest_ByID")
     @Story("Retrieving CreationalPeriod by ID With BadRequest Response")
@@ -239,9 +168,7 @@ public class Test_CreationalPeriod_Cases {
         //  GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Valid_Content();
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_BadRequest_Error_Schema();
     }
-
-    //////////////////////////////////////////////////////////////////////////////////////
-
+    ///////////////Test cases for Get Invalid Creational Period Pagenation//////////////////////////////
     @DataProvider(name = "Get_InValid_Creational_Pagenation")
     public Object[][] Get_InValid_Creational_Pagenation(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("CreationalPeriod_TestData","Get_InValid_Creational_Pagenation_");
@@ -257,7 +184,6 @@ public class Test_CreationalPeriod_Cases {
         }
         return data;
     }
-
     @Test(description = "TC010  -CreationalPeriod-   Perform Get all CreationalPeriod API With invalid Pagenation"
             ,dataProvider = "Get_InValid_Creational_Pagenation")
     @Story("Retrieving all CreationalPeriod  With InValid Pagenation")
@@ -275,5 +201,59 @@ public class Test_CreationalPeriod_Cases {
         //  GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Valid_Content();
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Validation_Error_Schema();
     }
+    ///////////////Test cases for missing /invalid/expired Token/////////////////////////////////////////
+    @Test(description = "TC003  -CreationalPeriod-   Perform Get all CreationalPeriod API with missing Token")
+    @Story("Retrieving All Active CreationalPeriod with missing Token")
+    @Severity(SeverityLevel.MINOR)
+    public void Get_Invalid_all_CreationalPeriod_with_missing_Token_TC() {
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
 
+        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
+        GetAllCreationalPeriod_TC.Get_all_CreationalPeriods_With_Missing_Token_Rq();
+        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
+        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
+        GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Unauthorized_Schema();
+    }
+    @Test(description = "TC004  -CreationalPeriod-   Perform Get CreationalPeriod by ID with missing Token")
+    @Story("Retrieving Active CreationalPeriod By ID with missing Token")
+    @Severity(SeverityLevel.MINOR)
+    public void Get_Invalid_CreationalPeriod_ByID_with_missing_Token_TC() {
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+
+        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
+        GetAllCreationalPeriod_TC.Get_CreationalPeriods_by_id_With_Missing_Token_Rq("228");
+        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
+        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
+        GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Unauthorized_Schema();
+    }
+    @Test(description = "TC005 -CreationalPeriod-  Perform Get all CreationalPeriod API with invalid or expired Token")
+    @Story("Retrieving All Active CreationalPeriod with invalid/expired Token")
+    @Severity(SeverityLevel.MINOR)
+    public void Get_Invalid_all_CreationalPeriod_with_invalid_Token_TC() {
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
+        GetAllCreationalPeriod_TC.Get_all_CreationalPeriods_With_InValid_Token_Rq("123");
+        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
+        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
+        //GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Response_Unauthorized_Schema(); // There is no response content
+    }
+    @Test(description = "TC006 -CreationalPeriod-  Perform Get all CreationalPeriod API with invalid or expired Token")
+    @Story("Retrieving All Active CreationalPeriod with invalid/expired Token")
+    @Severity(SeverityLevel.MINOR)
+    public void Get_Invalid_CreationalPeriod_ByID_with_invalid_Token_TC() {
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
+        GetAllCreationalPeriod_TC.Get_CreationalPeriods_by_id_With_InValid_Token_Rq("123","228");
+        GetAllCreationalPeriod_TC.Check_Unauthorized_CreationalPeriods_status_Code_Response();
+        GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
+        //GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Response_Unauthorized_Schema(); // There is no response content
+    }
 }
