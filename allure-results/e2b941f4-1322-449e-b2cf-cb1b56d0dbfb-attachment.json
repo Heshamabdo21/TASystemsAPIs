@@ -1,0 +1,12 @@
+{
+  "periodMaxQuotaPerPeriod": 300.0,
+  "endDate": "2022-11-14T13:00:00Z",
+  "periodProgramTemplates": [
+    313,
+    314,
+    315
+  ],
+  "id": 188,
+  "startDate": "2022-10-23T21:00:00Z",
+  "status": "Active"
+}

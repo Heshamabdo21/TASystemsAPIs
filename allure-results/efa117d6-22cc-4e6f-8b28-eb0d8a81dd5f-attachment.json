@@ -1,0 +1,20 @@
+{
+  "size": 1,
+  "totalPages": 4,
+  "page": 1,
+  "content": [
+    {
+      "periodMaxQuotaPerPeriod": 300.0,
+      "endDate": "2022-11-14T16:00:00Z",
+      "periodProgramTemplates": [
+        313,
+        314,
+        315
+      ],
+      "id": 188,
+      "startDate": "2022-10-24T00:00:00Z",
+      "status": "Active"
+    }
+  ],
+  "totalElements": 4
+}

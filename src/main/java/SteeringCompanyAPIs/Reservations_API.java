@@ -23,7 +23,7 @@ public class Reservations_API {
     Response Reservations_Response;
     SHAFT.API Reservations_api;
 
-    public void Get_Valid_Reservations_by_Reservations_id_Rq(String TokenValue,String ReservationsID) {
+    public void Get_Valid_Reservations_by_id_Rq(String TokenValue,String ReservationsID) {
         Reservations_api = new SHAFT.API(BaseURL);
         Reservations_api.get(Reservations_Path+"/"+ReservationsID).
                 setAuthentication("", "", AuthenticationType.NONE).
@@ -31,7 +31,7 @@ public class Reservations_API {
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
         Reservations_Response = Reservations_api.getResponse();
     }
-    public void Get_Reservations_With_NotFound_Reservations_id_Rq(String TokenValue,String ReservationsID) {
+    public void Get_Reservations_With_NotFound_by_id_Rq(String TokenValue,String ReservationsID) {
         Reservations_api = new SHAFT.API(BaseURL);
         Reservations_api.get(Reservations_Path+"/"+ReservationsID).
                 setAuthentication("", "", AuthenticationType.NONE).
@@ -39,7 +39,7 @@ public class Reservations_API {
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
         Reservations_Response = Reservations_api.getResponse();
     }
-    public void Get_Reservations_With_BadRequest_Reservations_id_Rq(String TokenValue,String ReservationsID) {
+    public void Get_Reservations_With_BadRequest_by_id_Rq(String TokenValue,String ReservationsID) {
         Reservations_api = new SHAFT.API(BaseURL);
         Reservations_api.get(Reservations_Path+"/"+ReservationsID).
                 setAuthentication("", "", AuthenticationType.NONE).
@@ -47,7 +47,7 @@ public class Reservations_API {
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
         Reservations_Response = Reservations_api.getResponse();
     }
-    public void Get_Reservationsby_Reservations_id_With_Missing_Token_Rq(String ReservationsID) {
+    public void Get_Reservation_by_id_With_Missing_Token_Rq(String ReservationsID) {
         // String Lookup_cities_Path = "/lookups/cities";
         Reservations_api = new SHAFT.API(BaseURL);
         Reservations_api.get(Reservations_Path+"/"+ ReservationsID).
@@ -58,7 +58,7 @@ public class Reservations_API {
 
         Reservations_Response = Reservations_api.getResponse();
     }
-    public void Get_Reservationsby_Reservations_id_With_InValid_Token_Rq(String TokenValue,String ReservationsID) {
+    public void Get_Reservation_by_id_With_InValid_Token_Rq(String TokenValue,String ReservationsID) {
         // String Lookup_cities_Path = "/lookups/cities";
 
         Reservations_api = new SHAFT.API(BaseURL);
@@ -89,13 +89,22 @@ public class Reservations_API {
         SHAFT.Validations.verifyThat().number(Reservations_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(Reservations_Response.getTime()).isLessThanOrEquals(10000).perform();
     }
-    public void Check_Reservations_Valid_Content() {
-        String Reservations_ResponseBody = Reservations_Response.getBody().asString();
-        SHAFT.Validations.assertThat().object(Reservations_ResponseBody).contains("vehicleTypes").perform();
-        Reservations_api.assertThatResponse().extractedJsonValue("vehicleTypes").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
+    ////////////////////////////////Content////////////////////////////////
+    public void Check_Reservations_Content(String ExpectedResult) {
+        //String Policy_ResponseBody = Policy_Response.getBody().asString();
+        Reservations_api.assertThatResponse().body().contains(ExpectedResult).
+                withCustomReportMessage("Check that content object contains : "+ExpectedResult).
+                perform();
+        // SHAFT.Validations.assertThat().object(Policy_ResponseBody.contains(ExpectedResult)).isTrue().perform();
+        //SHAFT.Validations.assertThat().object(Policy_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
+    }
+    public void Check_all_Reservations_Valid_Content() {
+        String CreationalPeriods_ResponseBody = Reservations_Response.getBody().asString();
+        SHAFT.Validations.assertThat().object(CreationalPeriods_ResponseBody).contains("content").perform();
+        Reservations_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
     //////////////////////////////////////////////////Schema////////////////////////////
-    public void Check_Reservations_by_Reservations_id_Response_Valid_Schema() {
+    public void Check_Reservations_by_id_Response_Valid_Schema() {
         Reservations_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","GetReservationsById","Valid_Schema")).perform();
     }
     public void Check_all_Reservations_Response_Unauthorized_Schema() {

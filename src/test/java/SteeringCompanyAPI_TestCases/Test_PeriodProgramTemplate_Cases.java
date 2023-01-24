@@ -36,6 +36,7 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Get_Valid_all_PeriodProgramTemplates_Rq(Token);
         GetAllPeriodProgramTemplate_TC.Check_Valid_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
+        GetAllPeriodProgramTemplate_TC.Check_all_PeriodProgramTemplates_Valid_Content();
         GetAllPeriodProgramTemplate_TC.Check_all_PeriodProgramTemplates_Response_Valid_Schema();
     }
     //////////////////Test Cases for Get All Active PeriodProgramTemplate API with Pagination ////////////////
@@ -68,7 +69,7 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Get_Valid_all_PeriodProgramTemplates_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
         GetAllPeriodProgramTemplate_TC.Check_Valid_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
-        //  GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Valid_Content();
+        GetAllPeriodProgramTemplate_TC.Check_all_PeriodProgramTemplates_Valid_Content();
         GetAllPeriodProgramTemplate_TC.Check_all_PeriodProgramTemplates_Response_Valid_Schema();
     }
    /////////////////Test Cases for Valid  Get Period Program Template by ID///////////////////////////////////
@@ -86,7 +87,7 @@ public class Test_PeriodProgramTemplate_Cases {
         }
         return data;
     }
-    @Test(description = "TC007  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate API by ID"
+    @Test(description = "TC003  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate API by ID"
             ,dataProvider = "Get_Valid_PeriodProgramTemplate_ByID")
     @Story("Retrieving PeriodProgramTemplate by ID")
     @Severity(SeverityLevel.CRITICAL)
@@ -100,7 +101,7 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id_Rq(Token,data[2].toString());
         GetAllPeriodProgramTemplate_TC.Check_Valid_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
-        //  GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Valid_Content();
+        GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Content(data[3].toString());
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_by_id_Response_Valid_Schema();
     }
     ////////////////Test Cases for  Get Period Program Template for Not Found ID////////////////////////////////
@@ -118,7 +119,7 @@ public class Test_PeriodProgramTemplate_Cases {
         }
         return data;
     }
-    @Test(description = "TC008  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate API With NotFound by ID"
+    @Test(description = "TC004  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate API With NotFound by ID"
             ,dataProvider = "Get_PeriodProgramTemplate_With_NotFound_ByID")
     @Story("Retrieving PeriodProgramTemplate by ID With Not Found Response")
     @Severity(SeverityLevel.CRITICAL)
@@ -132,7 +133,7 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Get_PeriodProgramTemplates_With_NotFound_by_id_Rq(Token,data[2].toString());
         GetAllPeriodProgramTemplate_TC.Check_Validation_NotFound_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
-        //  GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Valid_Content();
+        GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Content(data[3].toString());
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_NotFound_Error_Schema();
     }
     /////////////////Test Cases for  Get Period Program Template for BadRequest ID/////////////////////////////////////////////////////////////////////
@@ -150,7 +151,7 @@ public class Test_PeriodProgramTemplate_Cases {
         }
         return data;
     }
-    @Test(description = "TC009  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate API With BadRequest by ID"
+    @Test(description = "TC005  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate API With BadRequest by ID"
             ,dataProvider = "Get_PeriodProgramTemplate_With_BadRequest_ByID")
     @Story("Retrieving PeriodProgramTemplate by ID With BadRequest Response")
     @Severity(SeverityLevel.CRITICAL)
@@ -164,11 +165,11 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Get_PeriodProgramTemplates_With_BadRequest_by_id_Rq(Token,data[2].toString());
         GetAllPeriodProgramTemplate_TC.Check_Validation_BadRequest_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
-        //  GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Valid_Content();
+        GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Content(data[3].toString());
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_BadRequest_Error_Schema();
     }
     ///////////////Test cases for missing /invalid/expired Token/////////////////////////////////////////
-    @Test(description = "TC003  -PeriodProgramTemplate-   Perform Get all PeriodProgramTemplate API with missing Token")
+    @Test(description = "TC006  -PeriodProgramTemplate-   Perform Get all PeriodProgramTemplate API with missing Token")
     @Story("Retrieving All Active PeriodProgramTemplate with missing Token")
     @Severity(SeverityLevel.MINOR)
     public void Get_Invalid_all_PeriodProgramTemplate_with_missing_Token_TC() {
@@ -182,21 +183,22 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
         GetAllPeriodProgramTemplate_TC.Check_all_PeriodProgramTemplates_Response_Unauthorized_Schema();
     }
-    @Test(description = "TC004  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate by ID with missing Token")
-    @Story("Retrieving Active PeriodProgramTemplate By ID with missing Token")
+    @Test(description = "TC007  -PeriodProgramTemplate-   Perform Get PeriodProgramTemplate by ID with missing Token"
+            ,dataProvider = "Get_Valid_PeriodProgramTemplate_ByID")
+    @Story("Retrieving PeriodProgramTemplate By ID with missing Token")
     @Severity(SeverityLevel.MINOR)
-    public void Get_Invalid_PeriodProgramTemplate_ByID_with_missing_Token_TC() {
+    public void Get_Invalid_PeriodProgramTemplate_ByID_with_missing_Token_TC(Object [] data) {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
 
         PeriodProgramTemplates_API GetAllPeriodProgramTemplate_TC=new PeriodProgramTemplates_API();
-        GetAllPeriodProgramTemplate_TC.Get_PeriodProgramTemplates_by_id_With_Missing_Token_Rq("247");
+        GetAllPeriodProgramTemplate_TC.Get_PeriodProgramTemplates_by_id_With_Missing_Token_Rq(data[2].toString());
         GetAllPeriodProgramTemplate_TC.Check_Unauthorized_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
         GetAllPeriodProgramTemplate_TC.Check_all_PeriodProgramTemplates_Response_Unauthorized_Schema();
     }
-    @Test(description = "TC005 -PeriodProgramTemplate-  Perform Get all PeriodProgramTemplate API with invalid or expired Token")
+    @Test(description = "TC008 -PeriodProgramTemplate-  Perform Get all PeriodProgramTemplate API with invalid or expired Token")
     @Story("Retrieving All Active PeriodProgramTemplate with invalid/expired Token")
     @Severity(SeverityLevel.MINOR)
     public void Get_Invalid_all_PeriodProgramTemplate_with_invalid_Token_TC() {
@@ -209,15 +211,16 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
         //GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Response_Unauthorized_Schema(); // There is no response content
     }
-    @Test(description = "TC006 -PeriodProgramTemplate-  Perform Get all PeriodProgramTemplate API with invalid or expired Token")
-    @Story("Retrieving All Active PeriodProgramTemplate with invalid/expired Token")
+    @Test(description = "TC009 -PeriodProgramTemplate-  Perform PeriodProgramTemplate API by ID with invalid or expired Token"
+            ,dataProvider = "Get_Valid_PeriodProgramTemplate_ByID")
+    @Story("Retrieving PeriodProgramTemplate by ID with invalid/expired Token")
     @Severity(SeverityLevel.MINOR)
-    public void Get_Invalid_PeriodProgramTemplate_ByID_with_invalid_Token_TC() {
+    public void Get_Invalid_PeriodProgramTemplate_ByID_with_invalid_Token_TC(Object [] data) {
         Token_API Token_TC=new Token_API();
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
         PeriodProgramTemplates_API GetAllPeriodProgramTemplate_TC=new PeriodProgramTemplates_API();
-        GetAllPeriodProgramTemplate_TC.Get_PeriodProgramTemplates_by_id_With_InValid_Token_Rq("123","228");
+        GetAllPeriodProgramTemplate_TC.Get_PeriodProgramTemplates_by_id_With_InValid_Token_Rq("123",data[2].toString());
         GetAllPeriodProgramTemplate_TC.Check_Unauthorized_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
         //GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Response_Unauthorized_Schema(); // There is no response content
