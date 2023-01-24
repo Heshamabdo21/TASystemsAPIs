@@ -149,16 +149,10 @@ public class CreationalPeriods_API {
         SHAFT.Validations.assertThat().number(CreationalPeriods_Response.getStatusCode()).isEqualTo(400).perform();
 
     }
-    ////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////Time/////////////////////////////////////////////
     public void Check_CreationalPeriods_Response_Time() {
         SHAFT.Validations.verifyThat().number(CreationalPeriods_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(CreationalPeriods_Response.getTime()).isLessThanOrEquals(10000).perform();
-    }
-    /////////////////////////////////////////////////////////////////////////////
-    public void Check_all_CreationalPeriods_Valid_Content() {
-        String CreationalPeriods_ResponseBody = CreationalPeriods_Response.getBody().asString();
-        SHAFT.Validations.assertThat().object(CreationalPeriods_ResponseBody).contains("content").perform();
-        CreationalPeriods_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
     //////////////////////////////////////////////////Schema////////////////////////////
     public void Check_all_CreationalPeriods_Response_Valid_Schema() {
@@ -178,6 +172,20 @@ public class CreationalPeriods_API {
     }
     public void Check_CreationalPeriods_Response_BadRequest_Error_Schema() {
         CreationalPeriods_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "Bad Request", "URL")).perform();
+    }
+    ////////////////////////////////Content////////////////////////////////
+    public void Check_CreationalPeriods_Content(String ExpectedResult) {
+        //String Policy_ResponseBody = Policy_Response.getBody().asString();
+        CreationalPeriods_api.assertThatResponse().body().contains(ExpectedResult).
+                withCustomReportMessage("Check that content object contains : "+ExpectedResult).
+                perform();
+        // SHAFT.Validations.assertThat().object(Policy_ResponseBody.contains(ExpectedResult)).isTrue().perform();
+        //SHAFT.Validations.assertThat().object(Policy_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
+    }
+    public void Check_all_CreationalPeriods_Valid_Content() {
+        String CreationalPeriods_ResponseBody = CreationalPeriods_Response.getBody().asString();
+        SHAFT.Validations.assertThat().object(CreationalPeriods_ResponseBody).contains("content").perform();
+        CreationalPeriods_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
 
 }

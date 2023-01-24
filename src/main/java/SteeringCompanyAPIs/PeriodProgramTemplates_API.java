@@ -1,23 +1,18 @@
 package SteeringCompanyAPIs;
 
-import com.shaft.driver.SHAFT;
-import com.shaft.driver.SHAFT.API;
-import com.shaft.api.*;
 import com.shaft.api.RequestBuilder.AuthenticationType;
-
+import com.shaft.api.RestActions;
+import com.shaft.driver.SHAFT;
 import com.shaft.tools.io.ExcelFileManager;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 
 public class PeriodProgramTemplates_API {
     ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
     String BaseURL = testDataReader.getCellData("API_Data","Steering_Base_URL","URL");
-
     String PeriodProgramTemplates_Path = testDataReader.getCellData("API_Data","PeriodProgramTemplates","URL");
     Response PeriodProgramTemplates_Response;
     SHAFT.API PeriodProgramTemplates_api;
@@ -57,7 +52,6 @@ public class PeriodProgramTemplates_API {
         PeriodProgramTemplates_Response = PeriodProgramTemplates_api.getResponse();
 
     }
-
     public void Get_Valid_PeriodProgramTemplates_by_id_Rq(String TokenValue, String PeriodProgramTemplatesID) {
         PeriodProgramTemplates_api = new SHAFT.API(BaseURL);
         PeriodProgramTemplates_api.get(PeriodProgramTemplates_Path+"/"+PeriodProgramTemplatesID).
@@ -182,4 +176,14 @@ public class PeriodProgramTemplates_API {
     public void Check_PeriodProgramTemplates_Response_BadRequest_Error_Schema() {
         PeriodProgramTemplates_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "Bad Request", "URL")).perform();
     }
+    //////////////////////////////////////////////////////////////
+    public void Check_PeriodProgramTemplates_Content(String ExpectedResult) {
+        //String Policy_ResponseBody = Policy_Response.getBody().asString();
+        PeriodProgramTemplates_api.assertThatResponse().body().contains(ExpectedResult).
+                withCustomReportMessage("Check that content object contains : "+ExpectedResult).
+                perform();
+        // SHAFT.Validations.assertThat().object(Policy_ResponseBody.contains(ExpectedResult)).isTrue().perform();
+        //SHAFT.Validations.assertThat().object(Policy_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
+    }
+
 }

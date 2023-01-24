@@ -37,6 +37,7 @@ public class Test_CreationalPeriod_Cases {
         GetAllCreationalPeriod_TC.Get_Valid_all_CreationalPeriods_Rq(Token);
         GetAllCreationalPeriod_TC.Check_Valid_CreationalPeriods_status_Code_Response();
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
+        GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Valid_Content();
         GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Valid_Schema();
     }
     //////////////////Test Cases for Get All Active CreationalPeriod API with Pagination ////////////////
@@ -69,7 +70,7 @@ public class Test_CreationalPeriod_Cases {
         GetAllCreationalPeriod_TC.Get_Valid_all_CreationalPeriods_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
         GetAllCreationalPeriod_TC.Check_Valid_CreationalPeriods_status_Code_Response();
         GetAllCreationalPeriod_TC.Check_CreationalPeriods_Response_Time();
-        //  GetAllCreationalPeriod_TC.Check_All_CreationalPeriod_Valid_Content();
+        GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Valid_Content();
         GetAllCreationalPeriod_TC.Check_all_CreationalPeriods_Response_Valid_Schema();
     }
     ///////////////Test cases for Get Creational Period for Valid ID///////////////////////////////
@@ -87,7 +88,7 @@ public class Test_CreationalPeriod_Cases {
         }
         return data;
     }
-    @Test(description = "TC007  -CreationalPeriod-   Perform Get CreationalPeriod API by ID"
+    @Test(description = "TC003  -CreationalPeriod-   Perform Get CreationalPeriod API by ID"
             ,dataProvider = "Get_Valid_CreationalPeriod_ByID")
     @Story("Retrieving CreationalPeriod by ID")
     @Severity(SeverityLevel.CRITICAL)
