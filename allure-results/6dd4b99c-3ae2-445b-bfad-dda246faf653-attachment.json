@@ -1,0 +1,15 @@
+{
+  "detail": "General policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "General policy.Name Arabic",
+      "detail": "Must have a maximum length of 50"
+    },
+    {
+      "field": "General policy.Name English",
+      "detail": "Policy English name is used before"
+    }
+  ],
+  "status": 422
+}

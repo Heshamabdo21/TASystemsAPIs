@@ -1,17 +1,9 @@
 package SteeringCompanyAPIs;
 
-import com.shaft.driver.SHAFT;
-import com.shaft.driver.SHAFT.API;
-import com.shaft.api.*;
 import com.shaft.api.RequestBuilder.AuthenticationType;
-
+import com.shaft.driver.SHAFT;
 import com.shaft.tools.io.ExcelFileManager;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 
 
 public class Reservations_API {
@@ -41,6 +33,9 @@ public class Reservations_API {
     }
     public void Get_Reservations_With_BadRequest_by_id_Rq(String TokenValue,String ReservationsID) {
         Reservations_api = new SHAFT.API(BaseURL);
+        if(ReservationsID.contains(" ")) {
+            ReservationsID = String.valueOf('\u2001');
+        }
         Reservations_api.get(Reservations_Path+"/"+ReservationsID).
                 setAuthentication("", "", AuthenticationType.NONE).
                 setTargetStatusCode(400).
@@ -99,9 +94,9 @@ public class Reservations_API {
         //SHAFT.Validations.assertThat().object(Policy_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
     }
     public void Check_all_Reservations_Valid_Content() {
-        String CreationalPeriods_ResponseBody = Reservations_Response.getBody().asString();
-        SHAFT.Validations.assertThat().object(CreationalPeriods_ResponseBody).contains("content").perform();
-        Reservations_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
+        String Reservations_ResponseBody = Reservations_Response.getBody().asString();
+        SHAFT.Validations.assertThat().object(Reservations_ResponseBody).contains("vehicleTypes").perform();
+        Reservations_api.assertThatResponse().extractedJsonValue("vehicleTypes").isNotNull().withCustomReportMessage("Check that vehicleTypes object is not null.").perform();
     }
     //////////////////////////////////////////////////Schema////////////////////////////
     public void Check_Reservations_by_id_Response_Valid_Schema() {

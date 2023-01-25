@@ -27,14 +27,14 @@ public class Test_Reservation_Cases {
     ///////////////Test cases for Get Reservation for Valid ID///////////////////////////////
     @DataProvider(name = "Get_Valid_Reservation_ByID")
     public Object[][] Get_Valid_Reservation_ByID(){
-        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Reservation_TestData","Get_Valid_Creational_ByID_");
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Reservation_TestData","Get_Valid_Reservation_ByID_");
         Object[][] data =new Object[dataRowsNumber][ 4];
         for (int i=0;i<dataRowsNumber;i++)
         {
-            data[i][0]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Creational_ByID_"+(i+1),"TC_Type");
-            data[i][1]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Creational_ByID_"+(i+1),"APIName");
-            data[i][2]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Creational_ByID_"+(i+1),"ReservationID");
-            data[i][3]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Creational_ByID_"+(i+1),"ExpectedResult");
+            data[i][0]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Reservation_ByID_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Reservation_ByID_"+(i+1),"APIName");
+            data[i][2]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Reservation_ByID_"+(i+1),"ReservationID");
+            data[i][3]= testDataReader2.getCellData("Reservation_TestData","Get_Valid_Reservation_ByID_"+(i+1),"ExpectedResult");
 
         }
         return data;
@@ -53,20 +53,20 @@ public class Test_Reservation_Cases {
         GetAllReservation_TC.Get_Valid_Reservations_by_id_Rq(Token,data[2].toString());
         GetAllReservation_TC.Check_Valid_Reservations_status_Code_Response();
         GetAllReservation_TC.Check_Reservations_Response_Time();
-       // GetAllReservation_TC.Check_Reservations_Content(data[3].toString());
+        GetAllReservation_TC.Check_Reservations_Content(data[3].toString());
         GetAllReservation_TC.Check_Reservations_by_id_Response_Valid_Schema();
     }
-    ///////////////Test cases for Get Creational Period for NotFound ID///////////////////////////////
+    ///////////////Test cases for Get Reservation Period for NotFound ID///////////////////////////////
     @DataProvider(name = "Get_Reservation_With_NotFound_ByID")
     public Object[][] Get_Reservation_With_NotFound_ByID(){
-        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Reservation_TestData","Get_NotFound_Creational_ByID_");
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Reservation_TestData","Get_NotFound_Reservation_ByID_");
         Object[][] data =new Object[dataRowsNumber][ 4];
         for (int i=0;i<dataRowsNumber;i++)
         {
-            data[i][0]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Creational_ByID_"+(i+1),"TC_Type");
-            data[i][1]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Creational_ByID_"+(i+1),"APIName");
-            data[i][2]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Creational_ByID_"+(i+1),"ReservationID");
-            data[i][3]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Creational_ByID_"+(i+1),"ExpectedResult");
+            data[i][0]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Reservation_ByID_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Reservation_ByID_"+(i+1),"APIName");
+            data[i][2]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Reservation_ByID_"+(i+1),"ReservationID");
+            data[i][3]= testDataReader2.getCellData("Reservation_TestData","Get_NotFound_Reservation_ByID_"+(i+1),"ExpectedResult");
 
         }
         return data;
@@ -85,20 +85,20 @@ public class Test_Reservation_Cases {
         GetAllReservation_TC.Get_Reservations_With_NotFound_by_id_Rq(Token,data[2].toString());
         GetAllReservation_TC.Check_Validation_NotFound_Reservations_status_Code_Response();
         GetAllReservation_TC.Check_Reservations_Response_Time();
-      //  GetAllReservation_TC.Check_Reservations_Content(data[3].toString());
+        GetAllReservation_TC.Check_Reservations_Content(data[3].toString());
         GetAllReservation_TC.Check_Reservations_Response_NotFound_Error_Schema();
     }
-    ///////////////Test cases for Get Creational Period for BadRequest ID///////////////////////////////
+    ///////////////Test cases for Get Reservation Period for BadRequest ID///////////////////////////////
     @DataProvider(name = "Get_Reservation_With_BadRequest_ByID")
     public Object[][] Get_Reservation_With_BadRequest_ByID(){
-        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Reservation_TestData","Get_BadRequest_Creational_ByID_");
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Reservation_TestData","Get_BadRequest_Reservation_ByID_");
         Object[][] data =new Object[dataRowsNumber][ 4];
         for (int i=0;i<dataRowsNumber;i++)
         {
-            data[i][0]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Creational_ByID_"+(i+1),"TC_Type");
-            data[i][1]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Creational_ByID_"+(i+1),"APIName");
-            data[i][2]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Creational_ByID_"+(i+1),"ReservationID");
-            data[i][3]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Creational_ByID_"+(i+1),"ExpectedResult");
+            data[i][0]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Reservation_ByID_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Reservation_ByID_"+(i+1),"APIName");
+            data[i][2]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Reservation_ByID_"+(i+1),"ReservationID");
+            data[i][3]= testDataReader2.getCellData("Reservation_TestData","Get_BadRequest_Reservation_ByID_"+(i+1),"ExpectedResult");
 
         }
         return data;

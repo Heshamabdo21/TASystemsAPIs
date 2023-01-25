@@ -1,0 +1,5 @@
+{
+  "detail": "JWT Token is invalid or missing.",
+  "title": "JWT_INVALID_TOKEN",
+  "status": 401
+}

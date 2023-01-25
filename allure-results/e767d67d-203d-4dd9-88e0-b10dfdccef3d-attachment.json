@@ -1,0 +1,28 @@
+{
+  "size": 1,
+  "totalPages": 93,
+  "page": 0,
+  "content": [
+    {
+      "seasonType": "umrah",
+      "vehicleCategoryId": 1,
+      "programType": "Routes",
+      "vehicleTypeId": 4,
+      "templatePeriodEndDate": "2022-09-12",
+      "templatePeriodMaximumQuota": 100,
+      "minimumSeat": 5,
+      "isActive": true,
+      "templatePeriodStartDate": "2022-09-05",
+      "minimumVehiclePricePer": 1200,
+      "routeId": 60,
+      "minimumModelYear": 2010,
+      "saleSystem": "GDS",
+      "season": 1444,
+      "id": 213,
+      "maximumModelYear": 2022,
+      "programMechanism": "reservations",
+      "maximumSeat": 9
+    }
+  ],
+  "totalElements": 93
+}

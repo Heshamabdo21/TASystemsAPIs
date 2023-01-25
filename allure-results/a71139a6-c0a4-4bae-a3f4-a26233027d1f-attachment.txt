@@ -1,0 +1,38 @@
+
+################################################################################################################################################
+Starting Execution:	"372 out of 88" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.Valid_Token_RQ_TC"
+Test Description:	"TC001 - Perform Post Token API with valid user name and password and return with token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @25-01-2023 12:40:03.0098 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @25-01-2023 12:40:03.0111 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @25-01-2023 12:40:03.0113 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @25-01-2023 12:40:03.0703 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @25-01-2023 12:40:03.0704 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 589ms". @25-01-2023 12:40:03.0714 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @25-01-2023 12:40:03.0716 PM
+[ReportManager] Successfully created attachment "API Request - Body" @25-01-2023 12:40:03.0717 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @25-01-2023 12:40:03.0719 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @25-01-2023 12:40:03.0720 PM
+[ReportManager] Assertion Passed: Check Access Token is existed. @25-01-2023 12:40:03.0720 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @25-01-2023 12:40:03.0721 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @25-01-2023 12:40:03.0722 PM
+[ReportManager] Get response jsonvalue "access_token". @25-01-2023 12:40:03.0722 PM
+[ReportManager] Assertion Passed: Check Access token is not null. @25-01-2023 12:40:03.0723 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @25-01-2023 12:40:03.0723 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @25-01-2023 12:40:03.0724 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Token_schema.json"". @25-01-2023 12:40:03.0724 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Token_schema.json"". @25-01-2023 12:40:03.0724 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Token_schema.json"". @25-01-2023 12:40:03.0724 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_schema.json"". @25-01-2023 12:40:03.0726 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_schema.json"". @25-01-2023 12:40:03.0726 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_schema.json"". @25-01-2023 12:40:03.0727 PM
+[ReportManager] Assertion Passed: Token Schema is matched with valid schema. @25-01-2023 12:40:03.0727 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @25-01-2023 12:40:03.0728 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @25-01-2023 12:40:03.0729 PM
+[ReportManager] Verification Passed: "589" is greater than or equal to "1.1". @25-01-2023 12:40:03.0729 PM
+[ReportManager] Verification Passed: "589" is less than or equal to "10000". @25-01-2023 12:40:03.0729 PM
+[ReportManager] Verification Passed: Expiration Date Token is Valid @25-01-2023 12:40:03.0764 PM
+[ReportManager] Verification Passed: ISS is Valid @25-01-2023 12:40:03.0765 PM
+[ReportManager] Verification Passed: tcId is Valid @25-01-2023 12:40:03.0766 PM
+[ReportManager] Verification Passed: preferred_username is Valid @25-01-2023 12:40:03.0766 PM
