@@ -1,0 +1,11 @@
+{
+  "descriptionArabic": "????? ?????? ??? ?????9501",
+  "refundType": "apply_cancellation_policy",
+  "nameArabic": "?????? ??? ????? 19501",
+  "nameEnglish": "Normal Payment Policy 19501",
+  "cancellationPolicyId": 296,
+  "id": 194,
+  "isActive": true,
+  "descriptionEnglish": "Description Payment Policy9501",
+  "isRefundable": true
+}

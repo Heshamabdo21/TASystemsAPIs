@@ -182,8 +182,6 @@ public class PeriodProgramTemplates_API {
         PeriodProgramTemplates_api.assertThatResponse().body().contains(ExpectedResult).
                 withCustomReportMessage("Check that content object contains : "+ExpectedResult).
                 perform();
-        // SHAFT.Validations.assertThat().object(Policy_ResponseBody.contains(ExpectedResult)).isTrue().perform();
-        //SHAFT.Validations.assertThat().object(Policy_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
-    }
+          }
 
 }

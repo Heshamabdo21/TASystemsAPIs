@@ -1,0 +1,15 @@
+{
+  "detail": "Cancellation policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Cancellation policy.Name Arabic",
+      "detail": "Letters must be Arabic"
+    },
+    {
+      "field": "Cancellation policy.Name English",
+      "detail": "Policy English name is used before"
+    }
+  ],
+  "status": 422
+}

@@ -1,16 +1,13 @@
 package SteeringCompanyAPIs;
 
-import com.shaft.driver.SHAFT;
-import com.shaft.driver.SHAFT.API;
-import com.shaft.tools.io.ExcelFileManager;
-
-import java.util.Date;
-
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.shaft.api.*;
+import com.shaft.driver.SHAFT;
+import com.shaft.tools.io.ExcelFileManager;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+
+import java.util.Date;
 
 public class Token_API {
 
@@ -102,15 +99,16 @@ public class Token_API {
     }
 
     public String Get_Valid_Access_Token() {
-        String Token= token_api.getResponse().getBody().jsonPath().getJsonObject("access_token").toString();       
+    //    String Token= token_api.getResponse().getBody().jsonPath().getJsonObject("access_token").toString();
         //     String TokenValue = token_api.getResponse().getBody().jsonPath().getJsonObject("$['access_token']");
-             return Token;       
+            // return Token;
+        return token_api.getResponse().getBody().jsonPath().getJsonObject("access_token").toString();
     }
     
     public void CheckTokenExpiration(String Token) {
         DecodedJWT decodedJWT = JWT.decode(Token);        
         //String ExpirationDatetime = decodedJWT.getExpiresAt().toString();
-        Number ValidToken=0;
+        Number ValidToken;
         if( decodedJWT.getExpiresAt().before(new Date())) {
        //     System.out.println("token is expired");
             ValidToken=0;

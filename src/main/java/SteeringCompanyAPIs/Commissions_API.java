@@ -9,10 +9,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 
 public class Commissions_API {
@@ -107,9 +105,7 @@ public class Commissions_API {
         OTAs_api.assertThatResponse().body().contains(ExpectedResult).
                 withCustomReportMessage("Check that content object contains : "+ExpectedResult).
                 perform();
-        // SHAFT.Validations.assertThat().object(Commissions_ResponseBody.contains(ExpectedResult)).isTrue().perform();
-        //SHAFT.Validations.assertThat().object(Commissions_ResponseBody).contains(ExpectedResult).withCustomReportMessage("Check that content object contains"+ExpectedResult).perform();
-    }
+        }
     ////////////////////////////////////////////////////////////////////////////////////////////////
     public void Check_Get_all_OTAs_Response_Valid_Schema() {
         OTAs_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","GetOTAs","Valid_Schema")).perform();
@@ -127,8 +123,6 @@ public class Commissions_API {
     SHAFT.API Commissions_api;
     ////////////////////////////////Add Commissions/////////////////////////////////
     public void Add_Commissions_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
-        Random random=new Random();
-       // int x=random.nextInt(10000);
         Commissions_api = new SHAFT.API(BaseURL);
 
         String Add_CommissionsBody ="{\n"+
@@ -149,8 +143,6 @@ public class Commissions_API {
         Commissions_Response = Commissions_api.getResponse();
     }
     public void Add_Commissions_With_Missing_Token_Rq( @NotNull Object[] data) {
-        Random random=new Random();
-        int x=random.nextInt(10000);
         Commissions_api = new SHAFT.API(BaseURL);
             String Add_CommissionsBody ="{\n"+
                     "    \"otaCode\": \""+data[2]+"\",\n" +
@@ -165,8 +157,6 @@ public class Commissions_API {
         Commissions_Response = Commissions_api.getResponse();
     }
     public void Add_Commissions_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
-        Random random=new Random();
-        int x=random.nextInt(10000);
         Commissions_api = new SHAFT.API(BaseURL);
             String Add_CommissionsBody ="{\n"+
                     "    \"otaCode\": \""+data[2]+"\",\n" +
@@ -245,7 +235,6 @@ public class Commissions_API {
             throw new RuntimeException(e);
         }*/
     }
-
     ////////////////////////////////GET Commission By ID/////////////////////////////////
     public void Get_Commissions_ById_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
        // Random random=new Random();
@@ -327,7 +316,6 @@ public class Commissions_API {
                     perform();
         Commissions_Response = Commissions_api.getResponse();
     }
-
     /////////////////////////////////Get All Commissions////////////////////////////////////////////
     public void Get_all_Commissions_Rq(String TokenValue) {
         //   String Lookup_policies_Path = "/policies";
@@ -386,7 +374,6 @@ public class Commissions_API {
 
         Commissions_Response = Commissions_api.getResponse();
     }
-
     ///////////////////Status Code////////////////////////////
     public void Check_Valid_Commissions_status_Code_Response(){
         SHAFT.Validations.assertThat().number(Commissions_Response.getStatusCode()).isEqualTo(200).perform();
@@ -409,8 +396,6 @@ public class Commissions_API {
         SHAFT.Validations.assertThat().number(Commissions_Response.getStatusCode()).isEqualTo(400).perform();
 
     }
-
-
     /////////////////////////////Schema//////////////////////////////////////
     public void Check_Add_Commissions_Response_Valid_Schema() {
                     Commissions_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddCommission", "Valid_Schema")).perform();
