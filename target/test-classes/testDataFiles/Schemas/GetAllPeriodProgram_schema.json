@@ -1,0 +1,305 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome8",
+    "definitions": {
+        "Welcome8": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "page": {
+                    "type": "integer"
+                },
+                "size": {
+                    "type": "integer"
+                },
+                "totalPages": {
+                    "type": "integer"
+                },
+                "totalElements": {
+                    "type": "integer"
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Content"
+                    }
+                }
+            },
+            "required": [
+                "content",
+                "page",
+                "size",
+                "totalElements",
+                "totalPages"
+            ],
+            "title": "Welcome8"
+        },
+        "Content": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "templateId": {
+                    "type": "integer"
+                },
+                "periodMaxQuotaPerPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "minimumModelYear": {
+                    "type": "integer"
+                },
+                "maximumModelYear": {
+                    "type": "integer"
+                },
+                "minimumSeat": {
+                    "type": "integer"
+                },
+                "maximumSeat": {
+                    "type": "integer"
+                },
+                "vehiclePricePer": {
+                    "type": "number"
+                },
+                "creationPeriodId": {
+                    "type": "integer"
+                },
+                "isActive": {
+                    "type": "boolean"
+                },
+                "policyInfo": {
+                    "$ref": "#/definitions/PolicyInfo"
+                }
+            },
+            "required": [
+                "creationPeriodId",
+                "id",
+                "isActive",
+                "maximumModelYear",
+                "maximumSeat",
+                "minimumModelYear",
+                "minimumSeat",
+                "periodMaxQuotaPerPeriod",
+                "policyInfo",
+                "templateId",
+                "vehiclePricePer"
+            ],
+            "title": "Content"
+        },
+        "PolicyInfo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "cancellationPolicy": {
+                    "$ref": "#/definitions/Policy"
+                },
+                "paymentPolicy": {
+                    "$ref": "#/definitions/PaymentPolicy"
+                },
+                "usagePolicy": {
+                    "$ref": "#/definitions/Policy"
+                },
+                "taxesPolicy": {
+                    "$ref": "#/definitions/Policy"
+                },
+                "generalPolicy": {
+                    "$ref": "#/definitions/GeneralPolicy"
+                }
+            },
+            "required": [],
+            "title": "PolicyInfo"
+        },
+        "Policy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nameArabic": {
+                    "type": "string"
+                },
+                "nameEnglish": {
+                    "type": "string"
+                },
+                "descriptionArabic": {
+                    "type": "string"
+                },
+                "descriptionEnglish": {
+                    "type": "string"
+                },
+                "isActive": {
+                    "type": "boolean"
+                },
+                "chargeUnit": {
+                    "$ref": "#/definitions/ChargeUnit"
+                },
+                "deadline": {
+                    "type": "integer"
+                },
+                "chargeType": {
+                    "$ref": "#/definitions/ChargeType"
+                },
+                "chargeValue": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "descriptionArabic",
+                "descriptionEnglish",
+                "id",
+                "isActive",
+                "nameArabic",
+                "nameEnglish"
+            ],
+            "title": "Policy"
+        },
+        "GeneralPolicy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nameArabic": {
+                    "$ref": "#/definitions/GeneralPolicyNameArabic"
+                },
+                "nameEnglish": {
+                    "$ref": "#/definitions/GeneralPolicyNameEnglish"
+                },
+                "descriptionArabic": {
+                    "type": "string"
+                },
+                "descriptionEnglish": {
+                    "type": "string"
+                },
+                "isActive": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "descriptionArabic",
+                "descriptionEnglish",
+                "id",
+                "isActive",
+                "nameArabic",
+                "nameEnglish"
+            ],
+            "title": "GeneralPolicy"
+        },
+        "PaymentPolicy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nameArabic": {
+                    "$ref": "#/definitions/PaymentPolicyNameArabic"
+                },
+                "nameEnglish": {
+                    "$ref": "#/definitions/PaymentPolicyNameEnglish"
+                },
+                "descriptionArabic": {
+                    "type": "string"
+                },
+                "descriptionEnglish": {
+                    "type": "string"
+                },
+                "isActive": {
+                    "type": "boolean"
+                },
+                "refundType": {
+                    "$ref": "#/definitions/RefundType"
+                },
+                "isRefundable": {
+                    "type": "boolean"
+                },
+                "cancellationPolicyId": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "cancellationPolicyId",
+                "descriptionArabic",
+                "descriptionEnglish",
+                "id",
+                "isActive",
+                "isRefundable",
+                "nameArabic",
+                "nameEnglish",
+                "refundType"
+            ],
+            "title": "PaymentPolicy"
+        },
+        "ChargeType": {
+            "type": "string",
+            "enum": [
+                "percentage"
+            ],
+            "title": "ChargeType"
+        },
+        "ChargeUnit": {
+            "type": "string",
+            "enum": [
+                "days"
+            ],
+            "title": "ChargeUnit"
+        },
+        "GeneralPolicyNameArabic": {
+            "type": "string",
+            "enum": [
+                "سياسات عامة",
+                "سياسة عامة 11"
+            ],
+            "title": "GeneralPolicyNameArabic"
+        },
+        "GeneralPolicyNameEnglish": {
+            "type": "string",
+            "enum": [
+                "General policies",
+                "general policy 11"
+            ],
+            "title": "GeneralPolicyNameEnglish"
+        },
+        "PaymentPolicyNameArabic": {
+            "type": "string",
+            "enum": [
+                "سياسات الدفع",
+                "ست"
+            ],
+            "title": "PaymentPolicyNameArabic"
+        },
+        "PaymentPolicyNameEnglish": {
+            "type": "string",
+            "enum": [
+                "Payment policies",
+                "TEST"
+            ],
+            "title": "PaymentPolicyNameEnglish"
+        },
+        "RefundType": {
+            "type": "string",
+            "enum": [
+                "apply_cancellation_policy",
+                "full_refundable"
+            ],
+            "title": "RefundType"
+        }
+    }
+}

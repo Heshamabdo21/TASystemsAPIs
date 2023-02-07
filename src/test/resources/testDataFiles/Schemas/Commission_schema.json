@@ -1,68 +1,56 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome9",
-    "definitions": {
-        "Welcome9": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "page": {
-                    "type": "integer"
-                },
-                "size": {
-                    "type": "integer"
-                },
-                "totalPages": {
-                    "type": "integer"
-                },
-                "totalElements": {
-                    "type": "integer"
-                },
-                "content": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Content"
-                    }
-                }
-            },
-            "required": [
-                "content",
-                "page",
-                "size",
-                "totalElements",
-                "totalPages"
-            ],
-            "title": "Welcome9"
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+        "page": {
+            "type": "number"
         },
-        "Content": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "otaCode": {
-                    "type": "string"
+        "size": {
+            "type": "number"
+        },
+        "totalPages": {
+            "type": "number"
+        },
+        "totalElements": {
+            "type": "number"
+        },
+        "content": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "otaCode": {
+                        "type": "string"
+                    },
+                    "baseCommission": {
+                        "type": "number"
+                    },
+                    "addCommission": {
+                        "type": "number"
+                    },
+                    "lastUpdated": {
+                        "type": "string"
+                    },
+                    "isActive": {
+                        "type": "boolean"
+                    }
                 },
-                "baseCommission": {
-                    "type": "number"
-                },
-                "addCommission": {
-                    "type": "number"
-                },
-                "lastUpdated": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "isActive": {
-                    "type": "boolean"
-                }
-            },
-            "required": [
-                "addCommission",
-                "baseCommission",
-                "isActive",
-                "lastUpdated",
-                "otaCode"
-            ],
-            "title": "Content"
+                "required": [
+                    "otaCode",
+                    "baseCommission",
+                    "addCommission",
+                    "lastUpdated",
+                    "isActive"
+                ]
+            }
         }
-    }
+    },
+    "required": [
+        "page",
+        "size",
+        "totalPages",
+        "totalElements",
+        "content"
+    ]
 }

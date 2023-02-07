@@ -1,5 +1,6 @@
 package SteeringCompanyAPI_TestCases;
 
+import SteeringCompanyAPIs.CreationalPeriods_API;
 import SteeringCompanyAPIs.PeriodProgramTemplates_API;
 import SteeringCompanyAPIs.Token_API;
 import Utils.ExtraExcelFun;
@@ -224,5 +225,38 @@ public class Test_PeriodProgramTemplate_Cases {
         GetAllPeriodProgramTemplate_TC.Check_Unauthorized_PeriodProgramTemplates_status_Code_Response();
         GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
         //GetAllPeriodProgramTemplate_TC.Check_All_PeriodProgramTemplate_Response_Unauthorized_Schema(); // There is no response content
+    }
+    ///////////////Test cases for InValid PeriodProgramTemplate Pagenation/////////////////////////////////////////
+    @DataProvider(name = "Get_InValid_PeriodProgramTemplate_Pagenation")
+    public Object[][] Get_InValid_PeriodProgramTemplate_Pagenation(){
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("PeriodProgramTemplate_TestData","Get_InValid_PeriodProgramTemplate_Pagenation_");
+        Object[][] data =new Object[dataRowsNumber][ 5];
+        for (int i=0;i<dataRowsNumber;i++)
+        {
+            data[i][0]= testDataReader2.getCellData("PeriodProgramTemplate_TestData","Get_InValid_PeriodProgramTemplate_Pagenation_"+(i+1),"TC_Type");
+            data[i][1]= testDataReader2.getCellData("PeriodProgramTemplate_TestData","Get_InValid_PeriodProgramTemplate_Pagenation_"+(i+1),"APIName");
+            data[i][2]= testDataReader2.getCellData("PeriodProgramTemplate_TestData","Get_InValid_PeriodProgramTemplate_Pagenation_"+(i+1),"PageSize");
+            data[i][3]= testDataReader2.getCellData("PeriodProgramTemplate_TestData","Get_InValid_PeriodProgramTemplate_Pagenation_"+(i+1),"PageNumber");
+            data[i][4]= testDataReader2.getCellData("PeriodProgramTemplate_TestData","Get_InValid_PeriodProgramTemplate_Pagenation_"+(i+1),"ExpectedResult");
+
+        }
+        return data;
+    }
+    @Test(description = "TC010  -PeriodProgramTemplate-   Perform Get all PeriodProgramTemplate API With invalid Pagenation"
+            ,dataProvider = "Get_InValid_PeriodProgramTemplate_Pagenation")
+    @Story("Retrieving all PeriodProgramTemplate  With InValid Pagenation")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Get_InValid_PeriodProgramTemplate_Pagenation_Rq_TC(Object[] data) {
+        Token_API Token_TC=new Token_API();
+        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        Token_TC.Check_Token_Valid_status_Code_Response();
+        String Token =Token_TC.Get_Valid_Access_Token();
+
+        PeriodProgramTemplates_API GetAllPeriodProgramTemplate_TC=new PeriodProgramTemplates_API();
+        GetAllPeriodProgramTemplate_TC.Get_InValid_all_PeriodProgramTemplates_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
+        GetAllPeriodProgramTemplate_TC.Check_Validation_Error_PeriodProgramTemplates_status_Code_Response();
+        GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Time();
+        GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Content(data[4].toString());
+        GetAllPeriodProgramTemplate_TC.Check_PeriodProgramTemplates_Response_Validation_Error_Schema();
     }
 }
