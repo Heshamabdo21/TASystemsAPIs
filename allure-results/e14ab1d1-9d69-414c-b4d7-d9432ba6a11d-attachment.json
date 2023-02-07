@@ -1,0 +1,78 @@
+{
+  "size": 10,
+  "totalPages": 2,
+  "page": 0,
+  "content": [
+    {
+      "lastUpdated": "2022-12-15T17:26:35.889109",
+      "otaCode": "ZowarOTA",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 0.0
+    },
+    {
+      "lastUpdated": "2022-12-15T17:21:34.550112",
+      "otaCode": "AlrajhiOTA",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 0.0
+    },
+    {
+      "lastUpdated": "2022-12-15T17:26:06.5894",
+      "otaCode": "0226_OTA",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 3.5
+    },
+    {
+      "lastUpdated": "2022-12-12T15:49:49.939996",
+      "otaCode": "ELAF_OTA",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 0.0
+    },
+    {
+      "lastUpdated": "2022-12-01T14:29:31.706037",
+      "otaCode": "HotelGate",
+      "baseCommission": 3.0,
+      "isActive": false,
+      "addCommission": 3.125
+    },
+    {
+      "lastUpdated": "2022-12-12T15:49:54.037276",
+      "otaCode": "ZamzamOTA",
+      "baseCommission": 3.0,
+      "isActive": false,
+      "addCommission": 0.0
+    },
+    {
+      "lastUpdated": "2022-12-12T15:50:08.792469",
+      "otaCode": "SafirTravelOTA",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 0.0
+    },
+    {
+      "lastUpdated": "2022-12-12T15:50:12.53256",
+      "otaCode": "HUBOOKING",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 0.0
+    },
+    {
+      "lastUpdated": "2023-02-07T15:55:29.785514",
+      "otaCode": "agoda",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 10.0
+    },
+    {
+      "lastUpdated": "2023-02-07T15:55:32.534103",
+      "otaCode": "Mawasim",
+      "baseCommission": 3.0,
+      "isActive": true,
+      "addCommission": 0.0
+    }
+  ],
+  "totalElements": 18
+}

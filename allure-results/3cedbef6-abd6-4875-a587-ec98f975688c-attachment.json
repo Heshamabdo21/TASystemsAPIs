@@ -1,0 +1,11 @@
+{
+  "detail": "Usage policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Usage policy.Name English",
+      "detail": "Letters must be English"
+    }
+  ],
+  "status": 422
+}

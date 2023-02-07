@@ -1,0 +1,33 @@
+
+################################################################################################################################################
+Starting Execution:	"23 out of 110" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Commissions_Cases.Invalid_GET_all_Commissions_with_invalid_Token_TC"
+Test Description:	"TC004 -Commission- Perform Get all Commissions API with invalid or expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:24.0269 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:24.0320 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:24.0321 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @07-02-2023 14:55:24.0968 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @07-02-2023 14:55:24.0969 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 638ms". @07-02-2023 14:55:24.0999 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @07-02-2023 14:55:25.0001 PM
+[ReportManager] Successfully created attachment "API Request - Body" @07-02-2023 14:55:25.0001 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @07-02-2023 14:55:25.0003 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @07-02-2023 14:55:25.0003 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:25.0003 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:25.0053 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:25.0054 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:25.0055 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:25.0101 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:25.0102 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:25.0103 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:25.0167 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:25.0168 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @07-02-2023 14:55:26.0067 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @07-02-2023 14:55:26.0068 PM
+[ReportManager] Perform request "GET | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/commissions | Content Type: */* | Response Time: 894ms". @07-02-2023 14:55:26.0068 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @07-02-2023 14:55:26.0070 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @07-02-2023 14:55:26.0072 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @07-02-2023 14:55:26.0072 PM
+[ReportManager] Verification Passed: "894" is greater than or equal to "1.1". @07-02-2023 14:55:26.0072 PM
+[ReportManager] Verification Passed: "894" is less than or equal to "30000". @07-02-2023 14:55:26.0072 PM

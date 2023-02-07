@@ -1,0 +1,75 @@
+{
+  "companyCode": "319997",
+  "companyNameAR": "???? ???",
+  "routeCode": 58,
+  "travellerDetails": {
+    "details": {
+      "passportNo": "P12345678",
+      "firstName": "ABUBAKAR",
+      "lastName": "MINANGI",
+      "nationalityCode": "ng",
+      "phoneNumber": "545199421",
+      "gender": "M",
+      "birthDate": "2001-10-01",
+      "phoneNumberCountryCode": "966",
+      "email": "ibbsa2020@gmail.com"
+    }
+  },
+  "vehicleTypes": [
+    {
+      "vehicleTypeAR": "????? ?????",
+      "vehicleTypeCode": "1",
+      "categories": [
+        {
+          "categoryNameAR": "????",
+          "quantity": 1,
+          "model": {
+            "from": "2011",
+            "to": "2022"
+          },
+          "displayRateInfo": [
+            {
+              "amount": 1603.49,
+              "purpose": 1,
+              "description": "BaseRate",
+              "currencyCode": "SAR"
+            },
+            {
+              "amount": 233.0,
+              "purpose": 7,
+              "description": "TAXESAMOUNT",
+              "currencyCode": "SAR"
+            },
+            {
+              "amount": 53.49,
+              "purpose": 30,
+              "description": "COMMISSION",
+              "currencyCode": "SAR"
+            },
+            {
+              "amount": 1836.49,
+              "purpose": 10,
+              "description": "TOTALAMOUNT",
+              "currencyCode": "SAR"
+            }
+          ],
+          "categoryCode": "1",
+          "categoryName": "VIP",
+          "noOfPax": 1
+        }
+      ],
+      "vehicleType": "Sedan Car"
+    }
+  ],
+  "companyName": "Sair Steering Company",
+  "otaNameArabic": "-",
+  "totalCommission": 53.49,
+  "routeName": "Jeddah - Makkah - Madinah - Madinah Airport",
+  "otaCode": "agoda",
+  "bookingReferenceNo": "6107050",
+  "bookingStatus": "Confirmed",
+  "bookingDate": "2023-03-21",
+  "routeNameAR": "??? - ??? - ????? - ???? ???????",
+  "startDate": "2023-03-21",
+  "otaNameEnglish": "agoda_old"
+}

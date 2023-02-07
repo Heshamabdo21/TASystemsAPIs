@@ -1,0 +1,11 @@
+{
+  "detail": "Payment policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Payment policy.Name Arabic",
+      "detail": "Must have a maximum length of 50"
+    }
+  ],
+  "status": 422
+}

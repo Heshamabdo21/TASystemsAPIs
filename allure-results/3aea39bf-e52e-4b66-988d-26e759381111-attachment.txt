@@ -1,0 +1,23 @@
+
+################################################################################################################################################
+Starting Execution:	"245 out of 110" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Policies_Cases.InValid_Get_General_Policy_With_InValid_Token_TC"
+Test Description:	"TC049 -Policy- Perform Get General Policy With InValid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 15:01:16.0446 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 15:01:16.0474 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 15:01:16.0477 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 15:01:16.0479 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 15:01:16.0500 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 15:01:16.0501 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 15:01:16.0501 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 15:01:16.0543 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 15:01:16.0545 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @07-02-2023 15:01:17.0033 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @07-02-2023 15:01:17.0034 PM
+[ReportManager] Perform request "GET | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/policies/general/283 | Content Type: */* | Response Time: 486ms". @07-02-2023 15:01:17.0034 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @07-02-2023 15:01:17.0035 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @07-02-2023 15:01:17.0036 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @07-02-2023 15:01:17.0036 PM
+[ReportManager] Verification Passed: "486" is greater than or equal to "1.1". @07-02-2023 15:01:17.0036 PM
+[ReportManager] Verification Passed: "486" is less than or equal to "30000". @07-02-2023 15:01:17.0036 PM

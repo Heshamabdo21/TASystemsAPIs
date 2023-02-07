@@ -1,0 +1,11 @@
+{
+  "detail": "Tax policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Tax policy.Description Arabic",
+      "detail": "Must have a maximum length of 100"
+    }
+  ],
+  "status": 422
+}

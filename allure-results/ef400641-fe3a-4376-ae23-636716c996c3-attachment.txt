@@ -1,0 +1,49 @@
+
+################################################################################################################################################
+Starting Execution:	"30 out of 110" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Commissions_Cases.Valid_GET_all_Commissions_Rq_TC"
+Test Description:	"TC001  -Commission- Perform Get all Commissions API with valid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:38.0364 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:38.0412 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:38.0414 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @07-02-2023 14:55:39.0654 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @07-02-2023 14:55:39.0655 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1236ms". @07-02-2023 14:55:39.0683 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @07-02-2023 14:55:39.0684 PM
+[ReportManager] Successfully created attachment "API Request - Body" @07-02-2023 14:55:39.0687 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @07-02-2023 14:55:39.0687 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @07-02-2023 14:55:39.0688 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:39.0712 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:39.0759 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:39.0760 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:39.0761 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:39.0797 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:39.0799 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:39.0799 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:39.0843 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:39.0844 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @07-02-2023 14:55:40.0371 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @07-02-2023 14:55:40.0371 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/commissions | Content Type: */* | Response Time: 523ms". @07-02-2023 14:55:40.0397 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @07-02-2023 14:55:40.0398 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @07-02-2023 14:55:40.0400 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @07-02-2023 14:55:40.0401 PM
+[ReportManager] Verification Passed: "523" is greater than or equal to "1.1". @07-02-2023 14:55:40.0401 PM
+[ReportManager] Verification Passed: "523" is less than or equal to "30000". @07-02-2023 14:55:40.0402 PM
+[ReportManager] Assertion Passed: "{"page":0,"size":20,"totalPages":1,"totalElements":18,"content":[{"otaCode":"ZowarOTA","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-15T17:26:35.889109","isActive":true},{"otaCode":"AlrajhiOTA","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-15T17:21:34.550112","isActive":true},{"otaCode":"0226_OTA","baseCommission":3.0,"addCommission":3.5,"lastUpdated":"2022-12-15T17:26:06.5894","isActive":true},{"otaCode":"ELAF_OTA","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-12T15:49:49.939996","isActive":true},{"otaCode":"HotelGate","baseCommission":3.0,"addCommission":3.125,"lastUpdated":"2022-12-01T14:29:31.706037","isActive":false},{"otaCode":"ZamzamOTA","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-12T15:49:54.037276","isActive":false},{"otaCode":"SafirTravelOTA","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-12T15:50:08.792469","isActive":true},{"otaCode":"HUBOOKING","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-12T15:50:12.53256","isActive":true},{"otaCode":"agoda","baseCommission":3.0,"addCommission":10.0,"lastUpdated":"2023-02-07T15:55:29.785514","isActive":true},{"otaCode":"Mawasim","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2023-02-07T15:55:32.534103","isActive":true},{"otaCode":"UmrahTechOTA","baseCommission":3.0,"addCommission":1.1,"lastUpdated":"2023-02-06T18:40:51.915302","isActive":true},{"otaCode":"Taqneen","baseCommission":3.0,"addCommission":97.0,"lastUpdated":"2023-02-07T15:55:33.984656","isActive":true},{"otaCode":"AlbarakaOTA","baseCommission":3.0,"addCommission":3.125,"lastUpdated":"2022-12-14T17:25:27.041996","isActive":true},{"otaCode":"FlyNas","baseCommission":3.0,"addCommission":12.0,"lastUpdated":"2022-12-15T11:50:40.706193","isActive":true},{"otaCode":"MyHotel","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-15T17:10:26.135469","isActive":true},{"otaCode":"U1470","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-15T17:10:28.58079","isActive":true},{"otaCode":"WebBedsOTA","baseCommission":3.0,"addCommission":3.5,"lastUpdated":"2022-12-15T17:14:45.932447","isActive":true},{"otaCode":"WaytoUmrah","baseCommission":3.0,"addCommission":0.0,"lastUpdated":"2022-12-15T17:16:42.380968","isActive":true}]}" contains "content". @07-02-2023 14:55:40.0402 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @07-02-2023 14:55:40.0404 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @07-02-2023 14:55:40.0406 PM
+[ReportManager] Get response jsonvalue "content". @07-02-2023 14:55:40.0412 PM
+[ReportManager] Assertion Passed: Check that content object is not null. @07-02-2023 14:55:40.0413 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @07-02-2023 14:55:40.0414 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @07-02-2023 14:55:40.0416 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Commission_schema.json"". @07-02-2023 14:55:40.0418 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Commission_schema.json"". @07-02-2023 14:55:40.0419 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Commission_schema.json"". @07-02-2023 14:55:40.0419 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Commission_schema.json"". @07-02-2023 14:55:40.0437 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Commission_schema.json"". @07-02-2023 14:55:40.0437 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Commission_schema.json"". @07-02-2023 14:55:40.0439 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/Commission_schema.json". @07-02-2023 14:55:40.0439 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @07-02-2023 14:55:40.0443 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @07-02-2023 14:55:40.0445 PM

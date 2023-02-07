@@ -1,0 +1,23 @@
+
+################################################################################################################################################
+Starting Execution:	"19 out of 110" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Commissions_Cases.InValid_Get_Commissions_With_InValid_Token_TC"
+Test Description:	"TC010 -Commission- Perform Get Cancel Commission With InValid/Expired Token"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:19.0889 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:19.0952 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:19.0954 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:19.0955 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:20.0013 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:20.0014 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @07-02-2023 14:55:20.0014 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @07-02-2023 14:55:20.0088 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @07-02-2023 14:55:20.0091 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 " @07-02-2023 14:55:21.0881 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @07-02-2023 14:55:21.0882 PM
+[ReportManager] Perform request "GET | Target Status Code: 401 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/commissions/agoda | Content Type: */* | Response Time: 1782ms". @07-02-2023 14:55:21.0883 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @07-02-2023 14:55:21.0885 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @07-02-2023 14:55:21.0887 PM
+[ReportManager] Assertion Passed: "401" is equal to "401". @07-02-2023 14:55:21.0888 PM
+[ReportManager] Verification Passed: "1782" is greater than or equal to "1.1". @07-02-2023 14:55:21.0888 PM
+[ReportManager] Verification Passed: "1782" is less than or equal to "30000". @07-02-2023 14:55:21.0889 PM
