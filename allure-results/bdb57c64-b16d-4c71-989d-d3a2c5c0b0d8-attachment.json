@@ -1,5 +1,0 @@
-{
-  "detail": "Malformed request. Please check the error logs for more details!",
-  "title": "Bad Request",
-  "status": 400
-}

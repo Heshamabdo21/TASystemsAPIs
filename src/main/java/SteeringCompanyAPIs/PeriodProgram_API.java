@@ -161,8 +161,6 @@ public class PeriodProgram_API {
         String PeriodProgram_Path = "/periodPrograms";
 
     	SHAFT.API PeriodProgram_api = new SHAFT.API(BaseURL);
-    
-
     	JSONObject PeriodProgramRequestBody = new JSONObject();
         		PeriodProgramRequestBody.put("creationPeriodId", 150);
         		PeriodProgramRequestBody.put("templateId", 251);
@@ -173,25 +171,16 @@ public class PeriodProgram_API {
         		PeriodProgramRequestBody.put("maximumSeat", 4);
         		PeriodProgramRequestBody.put("vehiclePricePer", 4);
         		PeriodProgramRequestBody.put("isActive", true);
-        		JSONArray policies = new JSONArray("[  \"type\": \"Tax\","
-        				+ "            \"id\": 3 },"
-        				+ "        {"
-        				+ "            \"type\": \"Payment\","
-        				+ "            \"id\": 3"
-        				+ "        },"
-        				+ "        {"
-        				+ "            \"type\": \"Cancellation\","
-        				+ "            \"id\": 3"
-        				+ "        },"
-        				+ "        {"
-        				+ "            \"type\": \"General\","
-        				+ "            \"id\": 3"
-        				+ "        },"
-        				+ "        {"
-        				+ "            \"type\": \"Usage\","
-        				+ "            \"id\": 3"
-        				+ "        }]");
-
+        		JSONArray policies = new JSONArray("[ { \"type\":\"tax\","
+        				+ "            \"id\": 122 },"
+        				+ "        { \"type\": \"payment\","
+        				+ "            \"id\": 129 },"
+        				+ "        { \"type\": \"cancellation\","
+        				+ "            \"id\": 296 },"
+        				+ "        { \"type\": \"general\","
+        				+ "            \"id\": 120 },"
+        				+ "        { \"type\": \"usage\","
+        				+ "            \"id\": 121  }]");
         		PeriodProgramRequestBody.put("policies", policies);
 
 

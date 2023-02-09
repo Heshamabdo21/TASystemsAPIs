@@ -94,17 +94,54 @@ public class PeriodPrograms_API {
     ////////////////////////////////Add PeriodProgram/////////////////////////////////
     public void Add_PeriodProgram_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        String Add_PeriodProgramBody="{\n"+
-                "    \"nameArabic\": \""+data[2]+"\",\n" +
-                "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                "    \"deadline\": \""+data[7]+"\",\n" +
-                "    \"chargeType\": \""+data[8]+"\",\n" +
-                "    \"chargeValue\": \""+data[9]+"\",\n" +
-                "    \"id\": \""+data[10]+"\"\n"+
+        String Add_PeriodProgramBody;
+        if(data[0].toString().contains("WithPolicies")){
+         Add_PeriodProgramBody="{\n"+
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [\n" +
+                "        {\n" +
+                "            \"type\": \"tax\",\n" +
+                "            \"id\": "+data[11]+"\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"type\": \"payment\",\n" +
+                "            \"id\": "+data[12]+"\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"type\": \"cancellation\",\n" +
+                "            \"id\": "+data[13]+"\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"type\": \"general\",\n" +
+                "            \"id\": "+data[14]+"\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"type\": \"usage\",\n" +
+                "            \"id\": "+data[15]+"\n" +
+                "        }]"+
+                "}";}
+        else
+        {Add_PeriodProgramBody="{\n"+
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [] \n"+
                 "}";
+        }
         PeriodProgram_api.post(PeriodProgram_Path).
                 setRequestBody(Add_PeriodProgramBody).
                 setTargetStatusCode(201).
@@ -121,16 +158,18 @@ public class PeriodPrograms_API {
     public void Add_PeriodProgram_Without_Policies_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody="{\n"+
-                "    \"nameArabic\": \""+data[2]+"\",\n" +
-                "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                "    \"deadline\": \""+data[7]+"\",\n" +
-                "    \"chargeType\": \""+data[8]+"\",\n" +
-                "    \"chargeValue\": \""+data[9]+"\",\n" +
-                "    \"id\": \""+data[10]+"\"\n"+
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [] \n"+
                 "}";
+
         PeriodProgram_api.post(PeriodProgram_Path).
                 setRequestBody(Add_PeriodProgramBody).
                 setTargetStatusCode(201).
@@ -146,141 +185,317 @@ public class PeriodPrograms_API {
     }
     public void Add_PeriodProgram_With_Missing_Token_Rq( @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-            String Add_PeriodProgramBody = "{\n" +
-                    "    \"nameArabic\": \"" + data[2] + "\",\n" +
-                    "    \"nameEnglish\": \"" + data[3] + "\",\n" +
-                    "    \"descriptionArabic\": \"" + data[4] + "\",\n" +
-                    "    \"descriptionEnglish\": \"" + data[5] + "\",\n" +
-                    "    \"chargeUnit\": \"" + data[6] + "\",\n" +
-                    "    \"deadline\": \"" + data[7] + "\",\n" +
-                    "    \"chargeType\": \"" + data[8] + "\",\n" +
-                    "    \"chargeValue\": \"" + data[9] + "\",\n" +
-                    "    \"id\": \"" + data[10] + "\"\n" +
+        String Add_PeriodProgramBody;
+            if(data[0].toString().contains("WithPolicies")){
+                Add_PeriodProgramBody="{\n"+
+                        "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                        "    \"templateId\": \""+data[3]+"\",\n" +
+                        "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                        "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                        "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                        "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                        "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                        "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                        "    \"isActive\": \""+data[10]+"\",\n" +
+                        "    \"policies\": [\n" +
+                        "        {\n" +
+                        "            \"type\": \"tax\",\n" +
+                        "            \"id\": "+data[11]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"payment\",\n" +
+                        "            \"id\": "+data[12]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"cancellation\",\n" +
+                        "            \"id\": "+data[13]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"general\",\n" +
+                        "            \"id\": "+data[14]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"usage\",\n" +
+                        "            \"id\": "+data[15]+"\n" +
+                        "        }]"+
+                        "}";}
+            else
+            {Add_PeriodProgramBody="{\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
+            }
             PeriodProgram_api.post(PeriodProgram_Path).
                     setRequestBody(Add_PeriodProgramBody).
                     setTargetStatusCode(401).
                     setContentType(ContentType.JSON).
                     setAuthentication("", "", AuthenticationType.NONE).perform();
             // addHeader("Authorization", "Bearer " + TokenValue).
-        }
+        
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Add_PeriodProgram_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-            String Add_PeriodProgramBody = "{\n" +
-                    "    \"nameArabic\": \"" + data[2] + "\",\n" +
-                    "    \"nameEnglish\": \"" + data[3] + "\",\n" +
-                    "    \"descriptionArabic\": \"" + data[4] + "\",\n" +
-                    "    \"descriptionEnglish\": \"" + data[5] + "\",\n" +
-                    "    \"chargeUnit\": \"" + data[6] + "\",\n" +
-                    "    \"deadline\": \"" + data[7] + "\",\n" +
-                    "    \"chargeType\": \"" + data[8] + "\",\n" +
-                    "    \"chargeValue\": \"" + data[9] + "\",\n" +
-                    "    \"id\": \"" + data[10] + "\"\n" +
-                    "}";
+        String Add_PeriodProgramBody;
+        if(data[0].toString().contains("WithPolicies")){
+            Add_PeriodProgramBody="{\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [\n" +
+                    "        {\n" +
+                    "            \"type\": \"tax\",\n" +
+                    "            \"id\": "+data[11]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"payment\",\n" +
+                    "            \"id\": "+data[12]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"cancellation\",\n" +
+                    "            \"id\": "+data[13]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"general\",\n" +
+                    "            \"id\": "+data[14]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"usage\",\n" +
+                    "            \"id\": "+data[15]+"\n" +
+                    "        }]"+
+                    "}";}
+        else
+        {Add_PeriodProgramBody="{\n"+
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [] \n"+
+                "}";
+        }
             PeriodProgram_api.post(PeriodProgram_Path).
                     setRequestBody(Add_PeriodProgramBody).
                     setTargetStatusCode(401).
                     setContentType(ContentType.JSON).
                     setAuthentication("", "", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Add_PeriodProgram_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-            String Add_PeriodProgramBody = "{\n" +
-                    "    \"nameArabic\": \"" + data[2] + "\",\n" +
-                    "    \"nameEnglish\": \"" + data[3] + "\",\n" +
-                    "    \"descriptionArabic\": \"" + data[4] + "\",\n" +
-                    "    \"descriptionEnglish\": \"" + data[5] + "\",\n" +
-                    "    \"chargeUnit\": \"" + data[6] + "\",\n" +
-                    "    \"deadline\": \"" + data[7] + "\",\n" +
-                    "    \"chargeType\": \"" + data[8] + "\",\n" +
-                    "    \"chargeValue\": \"" + data[9] + "\",\n" +
-                    "    \"id\": \"" + data[10] + "\"\n" +
-                    "}";
+        String Add_PeriodProgramBody;
+        if(data[0].toString().contains("WithPolicies")){
+            Add_PeriodProgramBody="{\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [\n" +
+                    "        {\n" +
+                    "            \"type\": \"tax\",\n" +
+                    "            \"id\": "+data[11]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"payment\",\n" +
+                    "            \"id\": "+data[12]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"cancellation\",\n" +
+                    "            \"id\": "+data[13]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"general\",\n" +
+                    "            \"id\": "+data[14]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"usage\",\n" +
+                    "            \"id\": "+data[15]+"\n" +
+                    "        }]"+
+                    "}";}
+        else
+        {Add_PeriodProgramBody="{\n"+
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [] \n"+
+                "}";
+        }
             PeriodProgram_api.post(PeriodProgram_Path).
                     setRequestBody(Add_PeriodProgramBody).
                     setTargetStatusCode(422).
                     setContentType(ContentType.JSON).
                     setAuthentication("", "", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Add_PeriodProgram_With_NotAccepted_Input_Rq(String TokenValue, Object[] data)  {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-            String Add_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"id\": \""+data[10]+"\"\n"+
-                    "}";
+        String Add_PeriodProgramBody;
+        if(data[0].toString().contains("WithPolicies")){
+            Add_PeriodProgramBody="{\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [\n" +
+                    "        {\n" +
+                    "            \"type\": \"tax\",\n" +
+                    "            \"id\": "+data[11]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"payment\",\n" +
+                    "            \"id\": "+data[12]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"cancellation\",\n" +
+                    "            \"id\": "+data[13]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"general\",\n" +
+                    "            \"id\": "+data[14]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \"usage\",\n" +
+                    "            \"id\": "+data[15]+"\n" +
+                    "        }]"+
+                    "}";}
+        else
+        {Add_PeriodProgramBody="{\n"+
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [] \n"+
+                "}";
+        }
             PeriodProgram_api.post(PeriodProgram_Path).
                     setRequestBody(Add_PeriodProgramBody).
                     setTargetStatusCode(406).
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Add_PeriodProgram_With_NotFound_Input_Rq(String TokenValue, Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-            String Add_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"id\": \""+data[10]+"\"\n"+
+            String Add_PeriodProgramBody;
+            if(data[0].toString().contains("WithPolicies")){
+                Add_PeriodProgramBody="{\n"+
+                        "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                        "    \"templateId\": \""+data[3]+"\",\n" +
+                        "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                        "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                        "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                        "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                        "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                        "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                        "    \"isActive\": \""+data[10]+"\",\n" +
+                        "    \"policies\": [\n" +
+                        "        {\n" +
+                        "            \"type\": \"tax\",\n" +
+                        "            \"id\": "+data[11]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"payment\",\n" +
+                        "            \"id\": "+data[12]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"cancellation\",\n" +
+                        "            \"id\": "+data[13]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"general\",\n" +
+                        "            \"id\": "+data[14]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \"usage\",\n" +
+                        "            \"id\": "+data[15]+"\n" +
+                        "        }]"+
+                        "}";}
+            else
+            {Add_PeriodProgramBody="{\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
+            }
             PeriodProgram_api.post(PeriodProgram_Path).
                     setRequestBody(Add_PeriodProgramBody).
                     setTargetStatusCode(404).
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
+
         ////////////////////////////////Update PeriodProgram/////////////////////////////////
     public void Update_PeriodProgram_Rq(@NotNull String TokenValue,  @NotNull Object[] data)  {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
             String Update_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"-id\": \""+data[10]+"\"\n"+
-                    "}";
+                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                "    \"templateId\": \""+data[3]+"\",\n" +
+                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"policies\": [] \n"+
+                "}";
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(200).
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
       /*  try {
             testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"nameArabic\":\""+data[2]+"\"");
         } catch (IOException e) {
@@ -290,17 +505,17 @@ public class PeriodPrograms_API {
     }
     public void Update_PeriodProgram_With_Missing_Token_Rq( @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
             String Update_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"-id\": \""+data[10]+"\"\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
@@ -308,22 +523,23 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).perform();
                 //    addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
+
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Update_PeriodProgram_With_InValid_Token_Rq(@NotNull String TokenValue,  @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
+
             String Update_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"-id\": \""+data[10]+"\"\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
@@ -331,22 +547,23 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
+
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Update_PeriodProgram_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
+
             String Update_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"-id\": \""+data[10]+"\"\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
@@ -354,22 +571,23 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
+
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Update_PeriodProgram_With_NotAccepted_Input_Rq(String TokenValue, Object[] data)  {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
+
             String Update_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"-id\": \""+data[10]+"\"\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
@@ -377,22 +595,23 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.JSON).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
+
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Update_PeriodProgram_With_NotFound_Input_Rq(String TokenValue, Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-            String Update_PeriodProgramBody = "{\n" +
-                    "    \"nameArabic\": \"" + data[2] + "\",\n" +
-                    "    \"nameEnglish\": \"" + data[3] + "\",\n" +
-                    "    \"descriptionArabic\": \"" + data[4] + "\",\n" +
-                    "    \"descriptionEnglish\": \"" + data[5] + "\",\n" +
-                    "    \"chargeUnit\": \"" + data[6] + "\",\n" +
-                    "    \"deadline\": \"" + data[7] + "\",\n" +
-                    "    \"chargeType\": \"" + data[8] + "\",\n" +
-                    "    \"chargeValue\": \"" + data[9] + "\",\n" +
-                    "    \"-id\": \"" + data[10] + "\"\n" +
+
+            String Update_PeriodProgramBody = "{\n"+
+                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
+                    "    \"templateId\": \""+data[3]+"\",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
+                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
+                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
+                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
+                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
+                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
+                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"policies\": [] \n"+
                     "}";
             PeriodProgram_api.put(PeriodProgram_Path + "/" + data[10]).
                     setRequestBody(Update_PeriodProgramBody).
@@ -401,30 +620,18 @@ public class PeriodPrograms_API {
                     setAuthentication("", "", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
             PeriodProgram_Response = PeriodProgram_api.getResponse();
-        }
+
     }
     ////////////////////////////////GET PeriodProgram/////////////////////////////////
     public void Get_PeriodProgram_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
-/*            String GET_Cancel_PeriodProgramBody="{\n"+
-                    "    \"nameArabic\": \""+data[2]+"\",\n" +
-                    "    \"nameEnglish\": \""+data[3]+"\",\n" +
-                    "    \"descriptionArabic\": \""+data[4]+"\",\n" +
-                    "    \"descriptionEnglish\": \""+data[5]+"\",\n" +
-                    "    \"chargeUnit\": \""+data[6]+"\",\n" +
-                    "    \"deadline\": \""+data[7]+"\",\n" +
-                    "    \"chargeType\": \""+data[8]+"\",\n" +
-                    "    \"chargeValue\": \""+data[9]+"\",\n" +
-                    "    \"id\": \""+data[10]+"\"\n"+
-                    "}";*/
+
             PeriodProgram_api.get(PeriodProgram_Path+"/"+data[10]).
                     //          setRequestBody(GET_Cancel_PeriodProgramBody).
                             setTargetStatusCode(200).
                     setContentType(ContentType.ANY).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
 /*
         try {
             testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"id\":"+data[data.length-2]+"");
@@ -436,7 +643,6 @@ public class PeriodPrograms_API {
     }
     public void Get_PeriodProgram_With_Missing_Token_Rq( @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
 /*            String GET_Cancel_PeriodProgramBody="{\n"+
                     "    \"nameArabic\": \""+data[2]+"\",\n" +
                     "    \"nameEnglish\": \""+data[3]+"\",\n" +
@@ -454,12 +660,10 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.ANY).
                     setAuthentication("","", AuthenticationType.NONE).perform();
               //      addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Get_PeriodProgram_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
 /*            String GET_Cancel_PeriodProgramBody="{\n"+
                     "    \"nameArabic\": \""+data[2]+"\",\n" +
                     "    \"nameEnglish\": \""+data[3]+"\",\n" +
@@ -477,12 +681,10 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.ANY).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Get_PeriodProgram_With_NotFound_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
 /*            String GET_Cancel_PeriodProgramBody="{\n"+
                     "    \"nameArabic\": \""+data[2]+"\",\n" +
                     "    \"nameEnglish\": \""+data[3]+"\",\n" +
@@ -500,12 +702,10 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.ANY).
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     public void Get_PeriodProgram_With_BadRequest_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
-        {
             /*            String GET_Cancel_PeriodProgramBody="{\n"+
                     "    \"nameArabic\": \""+data[2]+"\",\n" +
                     "    \"nameEnglish\": \""+data[3]+"\",\n" +
@@ -528,7 +728,6 @@ public class PeriodPrograms_API {
                     setAuthentication("","", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).
                     perform();
-        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
     ///////////////////Status Code////////////////////////////
