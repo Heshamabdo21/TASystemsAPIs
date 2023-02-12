@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023.
+ */
+
 package SteeringCompanyAPIs;
 
 import com.auth0.jwt.JWT;

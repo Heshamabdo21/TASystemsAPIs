@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023.
+ */
+
 package SteeringCompanyAPIs;
 
 import Utils.ExtraExcelFun;
@@ -77,8 +81,8 @@ public class PeriodPrograms_API {
     }
     public void Check_All_PeriodPrograms_Valid_Content() {
         String Lookups_PeriodPrograms_ResponseBody = All_PeriodPrograms_Response.getBody().asString();
-        SHAFT.Validations.assertThat().object(Lookups_PeriodPrograms_ResponseBody).contains("cancellationPeriodPrograms").perform();
-        All_PeriodPrograms_api.assertThatResponse().extractedJsonValue("cancellationPeriodPrograms").isNotNull().withCustomReportMessage("Check that cancellationPeriodPrograms object is not null.").perform();
+        SHAFT.Validations.assertThat().object(Lookups_PeriodPrograms_ResponseBody).contains("content").perform();
+        All_PeriodPrograms_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
     public void Check_All_PeriodPrograms_Response_Valid_Schema() {
         All_PeriodPrograms_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","GetAllPeriodPrograms","Valid_Schema")).perform();
@@ -759,9 +763,17 @@ public class PeriodPrograms_API {
 
     }
     /////////////////////////////Schema//////////////////////////////////////
-    public void Check_PeriodProgram_Response_Valid_Schema() {
-     PeriodProgram_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddPeriodProgramsWithPolicies", "Valid_Schema")).perform();
-    }
+    public void Check_PeriodProgram_Response_Valid_Schema(String PeriodProgramType) {
+        if(PeriodProgramType.contains("WithPolicies"))
+        {
+            PeriodProgram_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddPeriodProgramsWithPolicies", "Valid_Schema")).perform();
+        }
+        else
+        {
+            PeriodProgram_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddPeriodPrograms", "Valid_Schema")).perform();
+
+        }
+        }
     public void Check_PeriodProgram_Without_Policies_Response_Valid_Schema() {
         PeriodProgram_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddPeriodPrograms", "Valid_Schema")).perform();
     }
@@ -790,5 +802,9 @@ public class PeriodPrograms_API {
                withCustomReportMessage("Check that content object contains : "+ExpectedResult).
                 perform();
     }
-    
+    public void Check_PeriodPrograms_Valid_Content() {
+        String PeriodPrograms_ResponseBody = PeriodProgram_Response.getBody().asString();
+        SHAFT.Validations.assertThat().object(PeriodPrograms_ResponseBody).contains("id").perform();
+        PeriodProgram_api.assertThatResponse().extractedJsonValue("id").isNotNull().withCustomReportMessage("Check that id object is not null.").perform();
+    }
 }

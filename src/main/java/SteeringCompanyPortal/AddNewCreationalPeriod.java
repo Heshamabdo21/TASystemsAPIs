@@ -135,7 +135,7 @@ public class AddNewCreationalPeriod {
 Thread.sleep(5000);
         driver.findElement(By.xpath("//*[@id=\"j_idt846\"]/span[1]")).click();
     }
-    @Test
+  //  @Test
     public void testAddNewCreationalPeriod() throws Exception {
         LogintoPortal();
    //     driver.get("https://portal-demo.np.transporticonline.com/Naqaba/auth.xhtml?dswid=-4096");

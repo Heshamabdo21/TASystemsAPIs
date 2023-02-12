@@ -1,8 +1,15 @@
+/*
+ * Copyright (c) 2023.
+ */
+
 package Utils;
 import com.shaft.tools.io.ExcelFileManager;
 import com.shaft.tools.io.ReportManager;
 import com.shaft.tools.io.ReportManagerHelper;
 import com.shaft.tools.support.JavaHelper;
+//import io.github.shafthq.shaft.tools.io.helpers.ReportManagerHelper; for new version
+//import io.github.shafthq.shaft.tools.support.JavaHelper; for new version
+
 import org.apache.poi.EmptyFileException;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -90,7 +97,7 @@ public class ExtraExcelFun extends ExcelFileManager {
     private XSSFRow row;
     private XSSFCell cell;
     private String excelFilePath;
-    private String testDataColumnNamePrefix;
+     String testDataColumnNamePrefix;
 
     public int CountRowsHasSpecificText(String sheetName, String rowName) {
         //     try {

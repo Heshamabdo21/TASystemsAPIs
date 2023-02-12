@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 public class SteeringCompanyQry {
 
-    public static void main( String args[] ) {
+    public static void Test(  ) {
         Connection c = null;
         Statement stmt = null;
         try {

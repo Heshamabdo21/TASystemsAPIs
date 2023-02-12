@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023.
+ */
+
 package SteeringCompanyAPI_TestCases;
 
 import SteeringCompanyAPIs.Commissions_API;
@@ -38,7 +42,7 @@ public class Test_Commissions_Cases {
          Token_TC.Check_Token_Valid_status_Code_Response();
          String Token =Token_TC.Get_Valid_Access_Token();
 
-         Commissions_API GetAllCommissions_TC=new Commissions_API();
+    Commissions_API GetAllCommissions_TC=new Commissions_API();
          GetAllCommissions_TC.Get_all_Commissions_Rq(Token);
          GetAllCommissions_TC.Check_Valid_Commissions_status_Code_Response();
          GetAllCommissions_TC.Check_Commissions_Response_Time();
@@ -71,7 +75,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllCommissions_TC=new Commissions_API();
+   Commissions_API GetAllCommissions_TC=new Commissions_API();
         GetAllCommissions_TC.Get_Commissions_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
         GetAllCommissions_TC.Check_Valid_Commissions_status_Code_Response();
         GetAllCommissions_TC.Check_Commissions_Response_Time();
@@ -88,7 +92,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         //String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllCommissions_TC=new Commissions_API();
+   Commissions_API GetAllCommissions_TC=new Commissions_API();
         GetAllCommissions_TC.Get_all_Commissions_With_Missing_Token_Rq();
         GetAllCommissions_TC.Check_Unauthorized_Commissions_status_Code_Response();
         GetAllCommissions_TC.Check_Commissions_Response_Time();
@@ -103,14 +107,14 @@ public class Test_Commissions_Cases {
          Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
          Token_TC.Check_Token_Valid_status_Code_Response();
          //String Token =Token_TC.Get_Valid_Access_Token();
-        Commissions_API GetAllCommissions_TC=new Commissions_API();
+   Commissions_API GetAllCommissions_TC=new Commissions_API();
         GetAllCommissions_TC.Get_all_Commissions_With_InValid_Token_Rq("123");
         GetAllCommissions_TC.Check_Unauthorized_Commissions_status_Code_Response();
         GetAllCommissions_TC.Check_Commissions_Response_Time();
         //GetAllCommissions_TC.Check_Commissions_Response_Unauthorized_Schema(); // There is no response content
     }
 
-    /////////////////////// Test Case for Add Cancel Commissions //////////////////////////////////////////
+    /////////////////////// Test Case for Add Commissions //////////////////////////////////////////
     @DataProvider (name = "Valid_data_add_Commissions")
     public Object[][] Valid_Add_Commissions(){
         int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("Commission_TestData","Add_Commission_Valid_");
@@ -129,7 +133,7 @@ public class Test_Commissions_Cases {
 
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC005 -Commission- Perform Add Valid Commission",dataProvider = "Valid_data_add_Commissions")
-    @Story("Adding Cancel Commission")
+    @Story("Adding Commission")
     @Severity(SeverityLevel.CRITICAL)
     public void Valid_Add_Commissions_TC(Object[] data) {
         Token_API Token_TC=new Token_API();
@@ -137,7 +141,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API AddCommissions_TC=new Commissions_API();
+   Commissions_API AddCommissions_TC=new Commissions_API();
         AddCommissions_TC.Add_Commissions_Rq(Token,data);
         AddCommissions_TC.Check_Valid_Commissions_status_Code_Response();
         AddCommissions_TC.Check_Commissions_Response_Time();
@@ -150,10 +154,10 @@ public class Test_Commissions_Cases {
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC006 -Commission- Perform Add Commission With Missing Token",dataProvider = "Valid_data_add_Commissions")
-    @Story("Adding Cancel Commission")
+    @Story("Adding Commission")
     @Severity(SeverityLevel.NORMAL)
     public void InValid_Add_Commissions_With_Missing_Token_TC(Object[] data){
-        Commissions_API AddCommissions_TC=new Commissions_API();
+   Commissions_API AddCommissions_TC=new Commissions_API();
         AddCommissions_TC.Add_Commissions_With_Missing_Token_Rq(data);
         AddCommissions_TC.Check_Unauthorized_Commissions_status_Code_Response();
         AddCommissions_TC.Check_Commissions_Response_Time();
@@ -162,11 +166,11 @@ public class Test_Commissions_Cases {
 
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC007 -Commission- Perform Add Commission With Invalid/Expired Token",dataProvider = "Valid_data_add_Commissions")
-    @Story("Adding Cancel Commission")
+    @Story("Adding Commission")
     @Severity(SeverityLevel.NORMAL)
     public void InValid_Add_Commissions_With_Invalid_Token_TC(Object[] data){
 
-        Commissions_API AddCommissions_TC=new Commissions_API();
+   Commissions_API AddCommissions_TC=new Commissions_API();
         AddCommissions_TC.Add_Commissions_With_InValid_Token_Rq("123",data);
         AddCommissions_TC.Check_Unauthorized_Commissions_status_Code_Response();
         AddCommissions_TC.Check_Commissions_Response_Time();
@@ -191,7 +195,7 @@ public class Test_Commissions_Cases {
 
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC008 -Commission- Perform Get Valid Commission",dataProvider = "Valid_data_Get_Commissions")
-    @Story("Retrieving Cancel Commission")
+    @Story("Retrieving Commission")
     @Severity(SeverityLevel.CRITICAL)
     public void Valid_Get_Commissions_TC(Object[] data){
         Token_API Token_TC=new Token_API();
@@ -199,7 +203,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetCommissions_TC=new Commissions_API();
+   Commissions_API GetCommissions_TC=new Commissions_API();
         GetCommissions_TC.Get_Commissions_ById_Rq(Token,data);
         GetCommissions_TC.Check_Valid_Commissions_status_Code_Response();
         GetCommissions_TC.Check_Commissions_Response_Time();
@@ -211,10 +215,10 @@ public class Test_Commissions_Cases {
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     @SuppressWarnings("TestDataSupplier")
     @Test(description = "TC009 -Commission- Perform Get Commission With Missing Token",dataProvider = "Valid_data_Get_Commissions")
-    @Story("Retrieving Cancel Commission")
+    @Story("Retrieving Commission")
     @Severity(SeverityLevel.NORMAL)
     public void InValid_Get_Commissions_With_Missing_Token_TC(Object[] data){
-        Commissions_API GetCommissions_TC=new Commissions_API();
+   Commissions_API GetCommissions_TC=new Commissions_API();
         GetCommissions_TC.Get_Commissions_ById_With_Missing_Token_Rq(data);
         GetCommissions_TC.Check_Unauthorized_Commissions_status_Code_Response();
         GetCommissions_TC.Check_Commissions_Response_Time();
@@ -223,11 +227,11 @@ public class Test_Commissions_Cases {
     }
 
     @SuppressWarnings("TestDataSupplier")
-    @Test(description = "TC010 -Commission- Perform Get Cancel Commission With InValid/Expired Token",dataProvider = "Valid_data_Get_Commissions")
-    @Story("Retrieving Cancel Commission")
+    @Test(description = "TC010 -Commission- Perform Get Commission With InValid/Expired Token",dataProvider = "Valid_data_Get_Commissions")
+    @Story("Retrieving Commission")
     @Severity(SeverityLevel.NORMAL)
     public void InValid_Get_Commissions_With_InValid_Token_TC(Object[] data){
-        Commissions_API GetCommissions_TC=new Commissions_API();
+   Commissions_API GetCommissions_TC=new Commissions_API();
         GetCommissions_TC.Get_Commissions_ById_With_InValid_Token_Rq("123",data);
         GetCommissions_TC.Check_Unauthorized_Commissions_status_Code_Response();
         GetCommissions_TC.Check_Commissions_Response_Time();
@@ -260,12 +264,12 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API Commissions_TC=new Commissions_API();
-        Commissions_TC.Add_Commissions_With_Invalid_Input_Rq(Token,data);
-        Commissions_TC.Check_Validation_Error_Commissions_status_Code_Response();
-        Commissions_TC.Check_Commissions_Response_Time();
-        Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
-        Commissions_TC.Check_Commissions_Response_Validation_Error_Schema();
+   Commissions_API Commissions_TC=new Commissions_API();
+   Commissions_TC.Add_Commissions_With_Invalid_Input_Rq(Token,data);
+   Commissions_TC.Check_Validation_Error_Commissions_status_Code_Response();
+   Commissions_TC.Check_Commissions_Response_Time();
+   Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
+   Commissions_TC.Check_Commissions_Response_Validation_Error_Schema();
     }
     
     ///////////////////////////////////////// InValid Data Test Cases for Add Commission/////////////////////////////////////
@@ -294,12 +298,12 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API Commissions_TC=new Commissions_API();
-        Commissions_TC.Add_Commissions_With_Invalid_Input_Rq(Token,data);
-        Commissions_TC.Check_Validation_Error_Commissions_status_Code_Response();
-        Commissions_TC.Check_Commissions_Response_Time();
-        Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
-        Commissions_TC.Check_Commissions_Response_Validation_Error_Schema();
+   Commissions_API Commissions_TC=new Commissions_API();
+   Commissions_TC.Add_Commissions_With_Invalid_Input_Rq(Token,data);
+   Commissions_TC.Check_Validation_Error_Commissions_status_Code_Response();
+   Commissions_TC.Check_Commissions_Response_Time();
+   Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
+   Commissions_TC.Check_Commissions_Response_Validation_Error_Schema();
     }
     
     ///////////////////////////////////////// Not Accepted Test Cases for Add Commission/////////////////////////////////////
@@ -328,12 +332,12 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API Commissions_TC=new Commissions_API();
-        Commissions_TC.Add_Commissions_With_NotAccepted_Input_Rq(Token,data);
-        Commissions_TC.Check_Validation_NotAccepted_Commissions_status_Code_Response();
-        Commissions_TC.Check_Commissions_Response_Time();
-        Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
-        Commissions_TC.Check_Commissions_Response_NotAccepted_Error_Schema();
+   Commissions_API Commissions_TC=new Commissions_API();
+   Commissions_TC.Add_Commissions_With_NotAccepted_Input_Rq(Token,data);
+   Commissions_TC.Check_Validation_NotAccepted_Commissions_status_Code_Response();
+   Commissions_TC.Check_Commissions_Response_Time();
+   Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
+   Commissions_TC.Check_Commissions_Response_NotAccepted_Error_Schema();
     }
     
     ///////////////////////////////////////// Not Accepted Test Cases for Add Commission/////////////////////////////////////
@@ -362,12 +366,12 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API Commissions_TC=new Commissions_API();
-        Commissions_TC.Add_Commissions_With_NotFound_Input_Rq(Token,data);
-        Commissions_TC.Check_Validation_NotFound_Commissions_status_Code_Response();
-        Commissions_TC.Check_Commissions_Response_Time();
-        Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
-        Commissions_TC.Check_Commissions_Response_NotFound_Error_Schema();
+   Commissions_API Commissions_TC=new Commissions_API();
+   Commissions_TC.Add_Commissions_With_NotFound_Input_Rq(Token,data);
+   Commissions_TC.Check_Validation_NotFound_Commissions_status_Code_Response();
+   Commissions_TC.Check_Commissions_Response_Time();
+   Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
+   Commissions_TC.Check_Commissions_Response_NotFound_Error_Schema();
     }
 
 
@@ -397,12 +401,12 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API Commissions_TC=new Commissions_API();
-        Commissions_TC.Get_Commissions_ById_With_NotFound_Input_Rq(Token,data);
-        Commissions_TC.Check_Validation_NotFound_Commissions_status_Code_Response();
-        Commissions_TC.Check_Commissions_Response_Time();
-        Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
-        Commissions_TC.Check_Commissions_Response_NotFound_Error_Schema();
+   Commissions_API Commissions_TC=new Commissions_API();
+   Commissions_TC.Get_Commissions_ById_With_NotFound_Input_Rq(Token,data);
+   Commissions_TC.Check_Validation_NotFound_Commissions_status_Code_Response();
+   Commissions_TC.Check_Commissions_Response_Time();
+   Commissions_TC.Check_Commissions_Content(data[data.length-1].toString());
+   Commissions_TC.Check_Commissions_Response_NotFound_Error_Schema();
     }
 
     //////////////////Test Cases for Get All Active Commissions API ////////////////////////////
@@ -416,7 +420,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllOTAs_TC=new Commissions_API();
+   Commissions_API GetAllOTAs_TC=new Commissions_API();
         GetAllOTAs_TC.Get_all_OTAs_Rq(Token);
         GetAllOTAs_TC.Check_Valid_OTAs_status_Code_Response();
         GetAllOTAs_TC.Check_OTAs_Response_Time();
@@ -449,7 +453,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllOTAs_TC=new Commissions_API();
+   Commissions_API GetAllOTAs_TC=new Commissions_API();
         GetAllOTAs_TC.GeT_all_OTAs_Path_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
         GetAllOTAs_TC.Check_Valid_OTAs_status_Code_Response();
         GetAllOTAs_TC.Check_OTAs_Response_Time();
@@ -466,7 +470,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         //String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllOTAs_TC=new Commissions_API();
+   Commissions_API GetAllOTAs_TC=new Commissions_API();
         GetAllOTAs_TC.GeT_all_OTAs_With_Missing_Token_Rq();
         GetAllOTAs_TC.Check_Unauthorized_OTAs_status_Code_Response();
         GetAllOTAs_TC.Check_OTAs_Response_Time();
@@ -481,7 +485,7 @@ public class Test_Commissions_Cases {
         Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
         Token_TC.Check_Token_Valid_status_Code_Response();
         //String Token =Token_TC.Get_Valid_Access_Token();
-        Commissions_API GetAllOTAs_TC=new Commissions_API();
+   Commissions_API GetAllOTAs_TC=new Commissions_API();
         GetAllOTAs_TC.GeT_all_OTAs_With_InValid_Token_Rq("123");
         GetAllOTAs_TC.Check_Unauthorized_OTAs_status_Code_Response();
         GetAllOTAs_TC.Check_OTAs_Response_Time();
@@ -513,7 +517,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllOTAs_TC=new Commissions_API();
+   Commissions_API GetAllOTAs_TC=new Commissions_API();
         GetAllOTAs_TC.Get_InValid_all_OTAs_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
         GetAllOTAs_TC.Check_Validation_Error_OTAs_status_Code_Response();
         GetAllOTAs_TC.Check_OTAs_Response_Time();
@@ -546,7 +550,7 @@ public class Test_Commissions_Cases {
         Token_TC.Check_Token_Valid_status_Code_Response();
         String Token =Token_TC.Get_Valid_Access_Token();
 
-        Commissions_API GetAllCommissions_TC=new Commissions_API();
+   Commissions_API GetAllCommissions_TC=new Commissions_API();
         GetAllCommissions_TC.Get_InValid_Commissions_by_parameter_Query_Rq(Token,data[2].toString(),data[3].toString());
         GetAllCommissions_TC.Check_Validation_Error_Commissions_status_Code_Response();
         GetAllCommissions_TC.Check_Commissions_Response_Time();
