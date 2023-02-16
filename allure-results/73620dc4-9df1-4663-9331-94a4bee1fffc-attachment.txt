@@ -1,0 +1,8 @@
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/downloadedFiles/"". @16-02-2023 16:59:42.0775 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/target/downloadedFiles/"". @16-02-2023 16:59:42.0776 PM
+[ReportManager] Attempting to run locally on: "Windows-64 | Google chrome". @16-02-2023 16:59:42.0835 PM
+[ReportManager] Identifying OS/Driver combination and selecting the correct driver version automatically. Please note that if a new driver executable will be downloaded it may take some time... @16-02-2023 16:59:42.0838 PM
+[ReportManager] Successfully Opened Google chrome. @16-02-2023 16:59:45.0956 PM
+[ReportManager] Target URL: "https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml" @16-02-2023 16:59:46.0724 PM
+[ReportManager] Initial URL: "data:," @16-02-2023 16:59:46.0777 PM
+[ReportManager] Navigate to new url failed "https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml". @16-02-2023 17:00:16.0809 PM

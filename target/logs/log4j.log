@@ -1,0 +1,501 @@
+[INFO ] 2023-02-16 16:59:41.002 [main] ReportManager - 
+################################################################################################################################################
+Detected SHAFT Engine Version: "SHAFT Engine v7.1.20230210"
+################################################################################################################################################
+[INFO ] 2023-02-16 16:59:41.525 [main] ReportManager - Loaded OpenCV "opencv_java455".
+[INFO ] 2023-02-16 16:59:41.802 [main] Utils - [TestNG] Running:
+  C:\Users\HeshamAbdElhamedGhar\AppData\Local\JetBrains\IdeaIC2022.3\temp-testng-customsuite.xml
+
+[INFO ] 2023-02-16 16:59:41.843 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"com.shaft.tools.listeners.LogsHelper.setupActivities"
+################################################################################################################################################
+[INFO ] 2023-02-16 16:59:41.885 [main] ReportManager - Initializing Allure Reporting Environment...
+[INFO ] 2023-02-16 16:59:42.058 [main] ReportManager - Initializing Extent Reporting Environment...
+[INFO ] 2023-02-16 16:59:42.626 [main] ReportManager - Initializing Important Links...
+[INFO ] 2023-02-16 16:59:42.641 [main] ReportManager - Initializing Custom Properties...
+[INFO ] 2023-02-16 16:59:42.764 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"SteeringCompanyPortal.AddNewCreationalPeriod.setUp"
+################################################################################################################################################
+[INFO ] 2023-02-16 16:59:42.775 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/downloadedFiles/"".
+[INFO ] 2023-02-16 16:59:42.777 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/target/downloadedFiles/"".
+[INFO ] 2023-02-16 16:59:42.835 [main] ReportManager - Attempting to run locally on: "Windows-64 | Google chrome".
+[INFO ] 2023-02-16 16:59:42.838 [main] ReportManager - Identifying OS/Driver combination and selecting the correct driver version automatically. Please note that if a new driver executable will be downloaded it may take some time...
+[DEBUG] 2023-02-16 16:59:43.204 [main] ResolutionCache - Resolution chrome=110 in cache (valid until 17:58:50 16/02/2023 EET)
+[DEBUG] 2023-02-16 16:59:43.205 [main] ResolutionCache - Resolution chrome110=110.0.5481.77 in cache (valid until 16:58:50 17/02/2023 EET)
+[INFO ] 2023-02-16 16:59:43.206 [main] WebDriverManager - Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+[DEBUG] 2023-02-16 16:59:43.225 [main] WebDriverManager - Driver chromedriver 110.0.5481.77 found in cache
+[INFO ] 2023-02-16 16:59:43.228 [main] WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\HeshamAbdElhamedGhar\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
+[DEBUG] 2023-02-16 16:59:43.584 [main] InternalLoggerFactory - Using SLF4J as the default logging framework
+[DEBUG] 2023-02-16 16:59:43.593 [main] ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+[DEBUG] 2023-02-16 16:59:43.593 [main] ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+[DEBUG] 2023-02-16 16:59:43.598 [main] ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7d2be319
+[DEBUG] 2023-02-16 16:59:43.650 [main] PlatformDependent0 - -Dio.netty.noUnsafe: false
+[DEBUG] 2023-02-16 16:59:43.650 [main] PlatformDependent0 - Java version: 17
+[DEBUG] 2023-02-16 16:59:43.652 [main] PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2023-02-16 16:59:43.652 [main] PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2023-02-16 16:59:43.653 [main] PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+[DEBUG] 2023-02-16 16:59:43.654 [main] PlatformDependent0 - java.nio.Buffer.address: available
+[DEBUG] 2023-02-16 16:59:43.655 [main] PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+[DEBUG] 2023-02-16 16:59:43.656 [main] PlatformDependent0 - java.nio.Bits.unaligned: available, true
+[DEBUG] 2023-02-16 16:59:43.657 [main] PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @14dd9eb7
+[DEBUG] 2023-02-16 16:59:43.658 [main] PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[DEBUG] 2023-02-16 16:59:43.658 [main] PlatformDependent - sun.misc.Unsafe: available
+[DEBUG] 2023-02-16 16:59:43.658 [main] PlatformDependent - maxDirectMemory: 4227858432 bytes (maybe)
+[DEBUG] 2023-02-16 16:59:43.659 [main] PlatformDependent - -Dio.netty.tmpdir: C:\Users\HESHAM~1\AppData\Local\Temp (java.io.tmpdir)
+[DEBUG] 2023-02-16 16:59:43.659 [main] PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2023-02-16 16:59:43.659 [main] PlatformDependent - Platform: Windows
+[DEBUG] 2023-02-16 16:59:43.660 [main] PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+[DEBUG] 2023-02-16 16:59:43.660 [main] PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[DEBUG] 2023-02-16 16:59:43.662 [main] CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+[DEBUG] 2023-02-16 16:59:43.662 [main] PlatformDependent - -Dio.netty.noPreferDirect: false
+[DEBUG] 2023-02-16 16:59:43.686 [main] PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+[DEBUG] 2023-02-16 16:59:43.734 [main] InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[DEBUG] 2023-02-16 16:59:43.734 [main] InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[DEBUG] 2023-02-16 16:59:43.823 [main] JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+[DEBUG] 2023-02-16 16:59:43.823 [main] JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+[DEBUG] 2023-02-16 16:59:43.906 [main] MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+[DEBUG] 2023-02-16 16:59:43.924 [main] NioEventLoop - -Dio.netty.noKeySetOptimization: false
+[DEBUG] 2023-02-16 16:59:43.924 [main] NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+[DEBUG] 2023-02-16 16:59:44.037 [main] PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[DEBUG] 2023-02-16 16:59:44.059 [main] ByteBufUtil - -Dio.netty.allocator.type: pooled
+[DEBUG] 2023-02-16 16:59:44.060 [main] ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+[DEBUG] 2023-02-16 16:59:44.060 [main] ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[DEBUG] 2023-02-16 16:59:44.599 [Forwarding newSession on session null to remote] DefaultChannelId - -Dio.netty.processId: 8928 (auto-detected)
+[DEBUG] 2023-02-16 16:59:44.602 [Forwarding newSession on session null to remote] NetUtil - -Djava.net.preferIPv4Stack: false
+[DEBUG] 2023-02-16 16:59:44.603 [Forwarding newSession on session null to remote] NetUtil - -Djava.net.preferIPv6Addresses: false
+[DEBUG] 2023-02-16 16:59:44.629 [Forwarding newSession on session null to remote] NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[DEBUG] 2023-02-16 16:59:44.631 [Forwarding newSession on session null to remote] NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[DEBUG] 2023-02-16 16:59:44.686 [Forwarding newSession on session null to remote] DefaultChannelId - -Dio.netty.machineId: 00:09:0f:ff:fe:aa:00:01 (auto-detected)
+[DEBUG] 2023-02-16 16:59:44.777 [AsyncHttpClient-1-2] AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+[DEBUG] 2023-02-16 16:59:44.777 [AsyncHttpClient-1-2] AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+[DEBUG] 2023-02-16 16:59:44.777 [AsyncHttpClient-1-2] ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5894fc9b
+[DEBUG] 2023-02-16 16:59:44.789 [AsyncHttpClient-1-2] NettyConnectListener - Using new Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to '/session'
+[DEBUG] 2023-02-16 16:59:44.807 [AsyncHttpClient-1-2] Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+[DEBUG] 2023-02-16 16:59:44.807 [AsyncHttpClient-1-2] Recycler - -Dio.netty.recycler.ratio: 8
+[DEBUG] 2023-02-16 16:59:44.807 [AsyncHttpClient-1-2] Recycler - -Dio.netty.recycler.chunkSize: 32
+[DEBUG] 2023-02-16 16:59:44.807 [AsyncHttpClient-1-2] Recycler - -Dio.netty.recycler.blocking: false
+[DEBUG] 2023-02-16 16:59:45.439 [AsyncHttpClient-1-2] Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+[DEBUG] 2023-02-16 16:59:45.440 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 1481
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 789
+
+[DEBUG] 2023-02-16 16:59:45.508 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 16:59:45.778 [AsyncHttpClient-1-3] NettyConnectListener - Using new Channel '[id: 0x23b7be1e, L:/127.0.0.1:64626 - R:localhost/127.0.0.1:64615]' for 'GET' to '/json/version'
+[DEBUG] 2023-02-16 16:59:45.793 [AsyncHttpClient-1-3] HttpHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /json/version HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+host: localhost:64615
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Security-Policy: frame-ancestors 'none'
+Content-Type: application/json; charset=UTF-8
+content-length: 423
+
+[DEBUG] 2023-02-16 16:59:45.793 [AsyncHttpClient-1-3] ChannelManager - Adding key: http://localhost:64615 for channel [id: 0x23b7be1e, L:/127.0.0.1:64626 - R:localhost/127.0.0.1:64615]
+[DEBUG] 2023-02-16 16:59:45.828 [main] ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x067d19e160ceb6d2
+[DEBUG] 2023-02-16 16:59:45.836 [AsyncHttpClient-1-4] NettyConnectListener - Using new Channel '[id: 0xea3bed3f, L:/127.0.0.1:64627 - R:localhost/127.0.0.1:64615]' for 'GET' to '/devtools/browser/43dfa64e-75b0-481a-8705-0d796dcaa5a5'
+[DEBUG] 2023-02-16 16:59:45.841 [AsyncHttpClient-1-4] WebSocketHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /devtools/browser/43dfa64e-75b0-481a-8705-0d796dcaa5a5 HTTP/1.1
+upgrade: websocket
+connection: upgrade
+sec-websocket-key: yZdJT+GwiIIaR7DJt6K2QA==
+sec-websocket-version: 13
+origin: http://localhost:64615
+host: localhost:64615
+accept: */*
+user-agent: AHC/2.1
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 101 WebSocket Protocol Handshake
+Upgrade: WebSocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 5l9Z0xlTqW7llWePyYZTB/51qrY=
+
+[INFO ] 2023-02-16 16:59:45.957 [main] ReportManager - Successfully Opened Google chrome.
+[DEBUG] 2023-02-16 16:59:45.996 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:45.996 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:43063 : 1
+[INFO ] 2023-02-16 16:59:46.724 [main] ReportManager - Target URL: "https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml"
+[DEBUG] 2023-02-16 16:59:46.732 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.732 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for POST '/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.739 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 54
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 12
+
+[DEBUG] 2023-02-16 16:59:46.739 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 16:59:46.742 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.742 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for POST '/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.746 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 70
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 15
+
+[DEBUG] 2023-02-16 16:59:46.746 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 16:59:46.748 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.748 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for POST '/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.752 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 70
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+[DEBUG] 2023-02-16 16:59:46.752 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 16:59:46.756 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.756 [Forwarding executeScript on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for POST '/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.760 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 61
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 20
+
+[DEBUG] 2023-02-16 16:59:46.760 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 16:59:46.762 [Forwarding getPageSource on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.762 [Forwarding getPageSource on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for POST '/session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync'
+[DEBUG] 2023-02-16 16:59:46.766 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/18e8ed8d7ad3d5d2bbacc9421f208232/execute/sync HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 176
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 81
+
+[DEBUG] 2023-02-16 16:59:46.767 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 16:59:46.768 [Forwarding getCurrentUrl on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'GET' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/url'
+[DEBUG] 2023-02-16 16:59:46.768 [Forwarding getCurrentUrl on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for GET '/session/18e8ed8d7ad3d5d2bbacc9421f208232/url'
+[DEBUG] 2023-02-16 16:59:46.775 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+GET /session/18e8ed8d7ad3d5d2bbacc9421f208232/url HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Cache-Control: no-cache
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 18
+
+[DEBUG] 2023-02-16 16:59:46.776 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[INFO ] 2023-02-16 16:59:46.777 [main] ReportManager - Initial URL: "data:,"
+[DEBUG] 2023-02-16 16:59:46.780 [Forwarding get on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'POST' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232/url'
+[DEBUG] 2023-02-16 16:59:46.780 [Forwarding get on session 18e8ed8d7ad3d5d2bbacc9421f208232 to remote] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for POST '/session/18e8ed8d7ad3d5d2bbacc9421f208232/url'
+[DEBUG] 2023-02-16 16:59:47.100 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:48.193 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:49.296 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:50.400 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:51.494 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:52.598 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:53.707 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:54.795 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:55.903 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:56.993 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:58.099 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 16:59:59.203 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:00.293 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:01.399 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:02.504 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:03.596 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:04.701 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:05.795 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:06.897 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:08.005 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:09.093 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:10.203 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:11.308 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:12.396 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:13.503 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:14.608 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:15.696 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:16.788 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
+POST /session/18e8ed8d7ad3d5d2bbacc9421f208232/url HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Length: 98
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 1022
+
+[DEBUG] 2023-02-16 17:00:16.789 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 17:00:16.801 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:16.802 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:43063 : 1
+[INFO ] 2023-02-16 17:00:16.809 [main] ReportManager - Navigate to new url failed "https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml".
+[ERROR] 2023-02-16 17:00:16.928 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-02-16 17:00:16.930 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Current Method log: setUp"
+[INFO ] 2023-02-16 17:00:17.029 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution:	"1 out of 1" test cases in the current suite
+Test Method:		"SteeringCompanyPortal.AddNewCreationalPeriod.testAddNewCreationalPeriod"
+################################################################################################################################################
+[INFO ] 2023-02-16 17:00:17.041 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Current Method log: testAddNewCreationalPeriod"
+[INFO ] 2023-02-16 17:00:17.080 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"SteeringCompanyPortal.AddNewCreationalPeriod.tearDown"
+################################################################################################################################################
+[DEBUG] 2023-02-16 17:00:17.090 [Driver Command Executor] NettyRequestSender - Using pooled Channel '[id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]' for 'DELETE' to 'http://localhost:43063/session/18e8ed8d7ad3d5d2bbacc9421f208232'
+[DEBUG] 2023-02-16 17:00:17.092 [AsyncHttpClient-1-4] WebSocketHandler - Channel Closed: [id: 0xea3bed3f, L:/127.0.0.1:64627 ! R:localhost/127.0.0.1:64615] with attribute NettyResponseFuture{currentRetry=0,
+	isDone=1,
+	isCancelled=0,
+	asyncHandler=org.asynchttpclient.ws.WebSocketUpgradeHandler@73ddc12a,
+	nettyRequest=org.asynchttpclient.netty.request.NettyRequest@cf03f8d,
+	future=java.util.concurrent.CompletableFuture@4560b6d4[Completed normally],
+	uri=ws://localhost:64615/devtools/browser/43dfa64e-75b0-481a-8705-0d796dcaa5a5,
+	keepAlive=true,
+	redirectCount=0,
+	timeoutsHolder=null,
+	inAuth=0,
+	touch=1676559585864}
+[DEBUG] 2023-02-16 17:00:17.092 [Driver Command Executor] NettyRequestSender - Using open Channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063] for DELETE '/session/18e8ed8d7ad3d5d2bbacc9421f208232'
+[DEBUG] 2023-02-16 17:00:17.093 [AsyncHttpClient-1-4] ChannelManager - Closing Channel [id: 0xea3bed3f, L:/127.0.0.1:64627 ! R:localhost/127.0.0.1:64615] 
+[DEBUG] 2023-02-16 17:00:17.319 [AsyncHttpClient-1-2] HttpHandler - 
+
+Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
+DELETE /session/18e8ed8d7ad3d5d2bbacc9421f208232 HTTP/1.1
+User-Agent: selenium/4.7.2 (java windows)
+Content-Type: application/json; charset=utf-8
+host: localhost:43063
+accept: */*
+
+Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 14
+
+[DEBUG] 2023-02-16 17:00:17.320 [AsyncHttpClient-1-2] ChannelManager - Adding key: http://localhost:43063 for channel [id: 0xf17e9670, L:/127.0.0.1:64612 - R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 17:00:17.290 [AsyncHttpClient-1-3] HttpHandler - Unexpected I/O exception on channel [id: 0x23b7be1e, L:/127.0.0.1:64626 - R:localhost/127.0.0.1:64615]
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259) ~[netty-buffer-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.86.Final.jar:4.1.86.Final]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[DEBUG] 2023-02-16 17:00:17.321 [AsyncHttpClient-1-3] ChannelManager - Closing Channel [id: 0x23b7be1e, L:/127.0.0.1:64626 - R:localhost/127.0.0.1:64615] 
+[DEBUG] 2023-02-16 17:00:17.326 [AsyncHttpClient-1-3] HttpHandler - Channel Closed: [id: 0x23b7be1e, L:/127.0.0.1:64626 ! R:localhost/127.0.0.1:64615] with attribute DISCARD
+[DEBUG] 2023-02-16 17:00:17.379 [AsyncHttpClient-1-2] HttpHandler - Channel Closed: [id: 0xf17e9670, L:/127.0.0.1:64612 ! R:localhost/127.0.0.1:43063] with attribute DISCARD
+[INFO ] 2023-02-16 17:00:17.419 [main] ReportManager - Successfully Closed Driver.
+[ERROR] 2023-02-16 17:00:17.422 [main] AllureLifecycle - Could not add attachment: no test is running
+[INFO ] 2023-02-16 17:00:17.424 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Current Method log: tearDown"
+[INFO ] 2023-02-16 17:00:17.439 [main] ReportManager - 
+################################################################################################################################################
+Starting Execution of a Configuration (Setup or Teardown) Method
+Test Method:		"com.shaft.tools.listeners.LogsHelper.teardownActivities"
+################################################################################################################################################
+[INFO ] 2023-02-16 17:00:17.442 [main] ReportManager - Successfully Closed Driver.
+[INFO ] 2023-02-16 17:00:17.443 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Execution log"
+[INFO ] 2023-02-16 17:00:17.444 [main] ReportManager - 
+################################################################################################################################################
+This test run was powered by SHAFT Engine Version: "SHAFT Engine v7.1.20230210"
+SHAFT Engine is licensed under the MIT License: [https://github.com/ShaftHQ/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################
+[INFO ] 2023-02-16 17:00:17.444 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/logs/log4j.log"".
+[INFO ] 2023-02-16 17:00:17.445 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "target/logs/log4j.log"".
+[INFO ] 2023-02-16 17:00:17.446 [main] ReportManager - File Action "ReadFileAsByteArray" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\target\logs\log4j.log"".
+[INFO ] 2023-02-16 17:00:17.447 [main] ReportManager - Successfully created attachment "SHAFT Engine Logs - Execution log: 20230216-170017"
+[INFO ] 2023-02-16 17:00:17.448 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "allure-results/cucumberReport.html"".
+[DEBUG] 2023-02-16 17:00:17.503 [main] cache - Couldn't find template in cache for "spark/spark.spa.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.504 [main] cache - TemplateLoader.findTemplateSource("spark/spark.spa_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.506 [main] cache - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.507 [main] cache - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.507 [main] cache - Loading template for "spark/spark.spa.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
+[DEBUG] 2023-02-16 17:00:17.748 [main] cache - Couldn't find template in cache for "commons/commons-variables.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.749 [main] cache - TemplateLoader.findTemplateSource("commons/commons-variables_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.749 [main] cache - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.749 [main] cache - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.749 [main] cache - Loading template for "commons/commons-variables.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
+[DEBUG] 2023-02-16 17:00:17.894 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:64615 : 1
+[DEBUG] 2023-02-16 17:00:17.894 [AsyncHttpClient-1-1] DefaultChannelPool - Entry count for : http://localhost:43063 : 1
+[DEBUG] 2023-02-16 17:00:17.895 [AsyncHttpClient-1-1] DefaultChannelPool - Adding Candidate expired Channel [id: 0x23b7be1e, L:/127.0.0.1:64626 ! R:localhost/127.0.0.1:64615] isIdleTimeoutExpired=false isRemotelyClosed=true isTtlExpired=false
+[DEBUG] 2023-02-16 17:00:17.895 [AsyncHttpClient-1-1] DefaultChannelPool - Closing Idle Channel [id: 0x23b7be1e, L:/127.0.0.1:64626 ! R:localhost/127.0.0.1:64615]
+[DEBUG] 2023-02-16 17:00:17.897 [AsyncHttpClient-1-1] DefaultChannelPool - Adding Candidate expired Channel [id: 0xf17e9670, L:/127.0.0.1:64612 ! R:localhost/127.0.0.1:43063] isIdleTimeoutExpired=false isRemotelyClosed=true isTtlExpired=false
+[DEBUG] 2023-02-16 17:00:17.897 [AsyncHttpClient-1-1] DefaultChannelPool - Closing Idle Channel [id: 0xf17e9670, L:/127.0.0.1:64612 ! R:localhost/127.0.0.1:43063]
+[DEBUG] 2023-02-16 17:00:17.897 [AsyncHttpClient-1-1] DefaultChannelPool - Closed 2 connections out of 2 in 3 ms
+[DEBUG] 2023-02-16 17:00:17.952 [main] cache - Couldn't find template in cache for "commons/commons-macros.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.953 [main] cache - TemplateLoader.findTemplateSource("commons/commons-macros_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.953 [main] cache - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.954 [main] cache - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.954 [main] cache - Loading template for "commons/commons-macros.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
+[DEBUG] 2023-02-16 17:00:17.959 [main] cache - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.959 [main] cache - TemplateLoader.findTemplateSource("spark/macros/attributes_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.959 [main] cache - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.960 [main] cache - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.960 [main] cache - Loading template for "spark/macros/attributes.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
+[DEBUG] 2023-02-16 17:00:17.961 [main] cache - Couldn't find template in cache for "spark/macros/log.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.962 [main] cache - TemplateLoader.findTemplateSource("spark/macros/log_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.962 [main] cache - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.962 [main] cache - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.962 [main] cache - Loading template for "spark/macros/log.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
+[DEBUG] 2023-02-16 17:00:17.963 [main] cache - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.964 [main] cache - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.964 [main] cache - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.965 [main] cache - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.965 [main] cache - Loading template for "spark/macros/recurse_nodes.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
+[DEBUG] 2023-02-16 17:00:17.968 [main] cache - "spark/macros/log.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+[DEBUG] 2023-02-16 17:00:17.968 [main] cache - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.968 [main] cache - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.968 [main] cache - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.969 [main] cache - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.969 [main] cache - Loading template for "spark/macros/attr-common.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
+[DEBUG] 2023-02-16 17:00:17.977 [main] cache - Couldn't find template in cache for "spark/partials/head.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.978 [main] cache - TemplateLoader.findTemplateSource("spark/partials/head_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.979 [main] cache - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.979 [main] cache - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.979 [main] cache - Loading template for "spark/partials/head.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
+[DEBUG] 2023-02-16 17:00:17.984 [main] cache - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.985 [main] cache - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.986 [main] cache - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.986 [main] cache - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.986 [main] cache - Loading template for "commons/commons-inject-css.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
+[DEBUG] 2023-02-16 17:00:17.987 [main] cache - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:17.988 [main] cache - TemplateLoader.findTemplateSource("spark/partials/navbar_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.988 [main] cache - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:17.988 [main] cache - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+[DEBUG] 2023-02-16 17:00:17.988 [main] cache - Loading template for "spark/partials/navbar.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
+[DEBUG] 2023-02-16 17:00:18.007 [main] cache - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.008 [main] cache - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.008 [main] cache - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.009 [main] cache - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.009 [main] cache - Loading template for "spark/partials/sidenav.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
+[DEBUG] 2023-02-16 17:00:18.024 [main] cache - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.024 [main] cache - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.024 [main] cache - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.025 [main] cache - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.025 [main] cache - Loading template for "spark/partials/dashboard.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
+[DEBUG] 2023-02-16 17:00:18.067 [main] cache - Couldn't find template in cache for "spark/partials/test.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.069 [main] cache - TemplateLoader.findTemplateSource("spark/partials/test_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.070 [main] cache - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.071 [main] cache - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.071 [main] cache - Loading template for "spark/partials/test.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
+[DEBUG] 2023-02-16 17:00:18.143 [main] cache - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.144 [main] cache - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.145 [main] cache - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.148 [main] cache - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.148 [main] cache - Loading template for "spark/partials/standard-content.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
+[DEBUG] 2023-02-16 17:00:18.168 [main] cache - Couldn't find template in cache for "spark/partials/exception.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.169 [main] cache - TemplateLoader.findTemplateSource("spark/partials/exception_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.169 [main] cache - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.170 [main] cache - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.170 [main] cache - Loading template for "spark/partials/exception.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
+[DEBUG] 2023-02-16 17:00:18.176 [main] cache - Couldn't find template in cache for "spark/partials/log.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.178 [main] cache - TemplateLoader.findTemplateSource("spark/partials/log_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.179 [main] cache - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.179 [main] cache - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.179 [main] cache - Loading template for "spark/partials/log.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
+[DEBUG] 2023-02-16 17:00:18.183 [main] cache - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.184 [main] cache - TemplateLoader.findTemplateSource("spark/partials/scripts_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.233 [main] cache - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.234 [main] cache - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.234 [main] cache - Loading template for "spark/partials/scripts.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
+[DEBUG] 2023-02-16 17:00:18.236 [main] cache - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2023-02-16 17:00:18.253 [main] cache - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_US.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.256 [main] cache - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+[DEBUG] 2023-02-16 17:00:18.257 [main] cache - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+[DEBUG] 2023-02-16 17:00:18.257 [main] cache - Loading template for "commons/commons-inject-js.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/HeshamAbdElhamedGhar/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+[INFO ] 2023-02-16 17:00:18.283 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "extent-reports/ExtentReports_16-02-2023_16-59-42-0061-PM.html"".
+[INFO ] 2023-02-16 17:00:18.287 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "extent-reports/ExtentReports_16-02-2023_16-59-42-0061-PM.html"".
+[INFO ] 2023-02-16 17:00:18.288 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "extent-reports/ExtentReports_16-02-2023_16-59-42-0061-PM.html"".
+[INFO ] 2023-02-16 17:00:18.289 [main] ReportManager - File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\extent-reports\ExtentReports_16-02-2023_16-59-42-0061-PM.html"".
+[INFO ] 2023-02-16 17:00:18.292 [main] ReportManager - Successfully created attachment "HTML - Extent Emailable Execution Report"
+[INFO ] 2023-02-16 17:00:18.303 [main] ReportManager - Attempting to perform the following command locally. Command: "generate_allure_report.bat"

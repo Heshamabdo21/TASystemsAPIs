@@ -1,53 +1,97 @@
 /*
- * Copyright (c) 2023.
+ * Copyright (conn) 2023.
  */
 
 package PostgresqlUtils;
+
+import Utils.DateConvert;
+import org.joda.time.Chronology;
+import org.joda.time.DateTimeZone;
+import org.joda.time.LocalDate;
+import org.joda.time.chrono.GJChronology;
+
 import java.sql.*;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-
 public class SteeringCompanyQry {
 
-    public static void Test(  ) {
-        Connection c = null;
-        Statement stmt = null;
+
+   static DateConvert MyDate;
+
+    public static void UpdateLastCreationalPeriod(LocalDate FromDate,LocalDate ToDate){
+        MyDate=new DateConvert();
         try {
             Class.forName("org.postgresql.Driver");
-            c = DriverManager
+            Connection connection = DriverManager
                     .getConnection("jdbc:postgresql://172.24.78.90:5432/demo1",
                             "naqaba", "naqaba");
-            c.setAutoCommit(false);
+            connection.setAutoCommit(false);
             System.out.println("Opened database successfully");
 
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "select  * from service_receiver_msg lrm " +
-                    " Order by service_receiver_msg_id desc  " +
+            Statement stmt = connection.createStatement();
+            ResultSet SelectLastCreationalPeriod = stmt.executeQuery( "SELECT * FROM tic.inventory_operational_setting_specifications  " +
+                    " order by ioss_id desc " +
                     "limit 1;" );
-            while ( rs.next() ) {
-                int service_receiver_msg_id = rs.getInt("service_receiver_msg_id");
-                String  service_receiving_status = rs.getString("service_receiving_status");
-                String service_error_code  = rs.getString("service_error_code");
-                String  service_error_description = rs.getString("service_error_description");
-                Timestamp  service_processing_timestamp = rs.getTimestamp("service_processing_timestamp");
+            int ioss_id = 0,ioss_iosp_id,ioss_creation_start_date_hij,ioss_creation_end_date_hij,ioss_state;
+            Timestamp ioss_creation_start_date,ioss_creation_end_date;
+            while ( SelectLastCreationalPeriod.next() ) {
+                 ioss_id = SelectLastCreationalPeriod.getInt("ioss_id");
+                 ioss_iosp_id = SelectLastCreationalPeriod.getInt("ioss_iosp_id");
+                 ioss_creation_start_date  = SelectLastCreationalPeriod.getTimestamp("ioss_creation_start_date");
+                 ioss_creation_start_date_hij = SelectLastCreationalPeriod.getInt("ioss_creation_start_date_hij");
+                 ioss_creation_end_date  = SelectLastCreationalPeriod.getTimestamp("ioss_creation_end_date");
+                 ioss_creation_end_date_hij = SelectLastCreationalPeriod.getInt("ioss_creation_end_date_hij");
+                 ioss_state = SelectLastCreationalPeriod.getInt("ioss_state");
 
                 //  float salary = rs.getFloat("salary");
-                System.out.println( "service_receiver_msg_id = " + service_receiver_msg_id );
-                System.out.println( "service_receiving_status = " + service_receiving_status );
-                System.out.println( "service_error_code = " + service_error_code );
-                System.out.println( "service_error_description = " + service_error_description );
-                System.out.println( "service_processing_timestamp = " + service_processing_timestamp );
+                System.out.println( "ioss_id = " + ioss_id );
+                System.out.println( "ioss_iosp_id = " + ioss_iosp_id );
+                System.out.println( "ioss_creation_start_date = " + ioss_creation_start_date );
+                System.out.println( "ioss_creation_start_date_hij = " + ioss_creation_start_date_hij );
+                System.out.println( "ioss_creation_end_date = " + ioss_creation_end_date );
+                System.out.println( "ioss_creation_end_date_hij = " + ioss_creation_end_date_hij );
+                System.out.println( "ioss_state = " + ioss_state );
+
                 System.out.println();
             }
-            rs.close();
+            SelectLastCreationalPeriod.close();
             stmt.close();
-            c.close();
+            System.out.println("Selecting Operation done successfully");
+            System.out.println("MyDate :::: "+MyDate.HijriDate(FromDate.toString("dd/MM/YYYY")).toString("YYYYMMdd"));
+            System.out.println("MyDate :::: "+MyDate.HijriDate(ToDate.toString("dd/MM/YYYY")).toString("YYYYMMdd"));
+
+            String sql = "UPDATE tic.inventory_operational_setting_specifications\n" +
+                    "SET ioss_creation_start_date='"+ FromDate.toDateTimeAtStartOfDay().toString("YYYY-MM-dd HH:MM:ss")+"', " +
+                   // "SET ioss_creation_start_date='2023-02-15 07:00:00.000', " +
+
+                    //"ioss_creation_start_date_hij=14440724, " +
+                    "ioss_creation_start_date_hij="+MyDate.ConvertToHijri(FromDate.toString("dd/MM/YYYY")).toString("YYYYMMdd")+", " +
+
+                    //     "ioss_creation_end_date='2023-02-16 07:00:00.000', " +
+                    "ioss_creation_end_date='"+ ToDate.toDateTimeAtCurrentTime().toString("YYYY-MM-dd HH:MM:ss")+"', " +
+
+                   // "ioss_creation_end_date_hij=14440725, " +
+                    "ioss_creation_end_date_hij="+MyDate.ConvertToHijri(ToDate.toString("dd/MM/YYYY")).toString("YYYYMMdd")+", " +
+
+                    "ioss_state=1, " +
+                    "change_comments='ByCodeTest', " +
+                    "change_db_username='naqaba'" +
+                    "WHERE ioss_id="+ioss_id+";";
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.executeUpdate();
+            System.out.println("Updating Operation done successfully");
+            connection.commit();
+            connection.close();
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName()+": "+ e.getMessage() );
             System.exit(0);
         }
         System.out.println("Operation done successfully");
+
+    }
+
+    public static void main( String[] args ) {
+        DateTimeZone zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
+        Chronology GJChronologydate = GJChronology.getInstance(zone);
+        LocalDate Today = new LocalDate(GJChronologydate);
+        UpdateLastCreationalPeriod(Today,Today.plusDays(1));
     }
 }
