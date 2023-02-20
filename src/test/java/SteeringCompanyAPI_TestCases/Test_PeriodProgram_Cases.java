@@ -4,17 +4,20 @@
 
 package SteeringCompanyAPI_TestCases;
 
+import PostgresqlUtils.SteeringCompanyQry;
 import SteeringCompanyAPIs.CreationalPeriods_API;
-import SteeringCompanyAPIs.PeriodPrograms_API;
+import SteeringCompanyAPIs.PeriodProgramTemplates_API;
 import SteeringCompanyAPIs.Token_API;
 import Utils.ExtraExcelFun;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import org.jetbrains.annotations.NotNull;
+import org.joda.time.Chronology;
+import org.joda.time.DateTimeZone;
+import org.joda.time.LocalDate;
+import org.joda.time.chrono.GJChronology;
 import org.json.JSONException;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @SuppressWarnings("ALL")
@@ -44,9 +47,21 @@ public class Test_PeriodProgram_Cases {
 
         CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
         GetAllCreationalPeriod_TC.Get_Valid_all_CreationalPeriods_Rq(Token);
-        GetAllCreationalPeriod_TC.Get_Valid_Today_CreationalPeriods();
-
+        Object[] FirstValidCreationData=GetAllCreationalPeriod_TC.Get_Valid_Today_CreationalPeriods();
+        Object[] FirstValidPeriodProgramTemplatesData;
+        if(FirstValidCreationData!=null) {
+            PeriodProgramTemplates_API GetAllPeriodProgramTemplate_TC = new PeriodProgramTemplates_API();
+            GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id_Rq(Token, FirstValidCreationData[2].toString());
+            FirstValidPeriodProgramTemplatesData=GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id();
+        }else{
+            DateTimeZone zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
+            Chronology GJChronologydate = GJChronology.getInstance(zone);
+            LocalDate Today = new LocalDate(GJChronologydate);
+            SteeringCompanyQry.UpdateLastCreationalPeriod(Today,Today.plusDays(1));
+        }
     }
+
+
 
     /////////////////////// Test Case for Add PeriodPrograms //////////////////////////////////////////
 

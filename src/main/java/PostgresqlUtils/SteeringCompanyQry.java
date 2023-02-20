@@ -88,10 +88,10 @@ public class SteeringCompanyQry {
 
     }
 
-    public static void main( String[] args ) {
-        DateTimeZone zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
-        Chronology GJChronologydate = GJChronology.getInstance(zone);
-        LocalDate Today = new LocalDate(GJChronologydate);
-        UpdateLastCreationalPeriod(Today,Today.plusDays(1));
-    }
+//    public static void main( String[] args ) {
+//        DateTimeZone zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
+//        Chronology GJChronologydate = GJChronology.getInstance(zone);
+//        LocalDate Today = new LocalDate(GJChronologydate);
+//        UpdateLastCreationalPeriod(Today,Today.plusDays(1));
+//    }
 }

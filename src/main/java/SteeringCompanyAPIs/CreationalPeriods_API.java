@@ -40,46 +40,60 @@ public class CreationalPeriods_API {
         CreationalPeriods_Response = CreationalPeriods_api.getResponse();
 
     }
-    public void Get_Valid_Today_CreationalPeriods() throws JSONException {
-        DateConvert Date1 = new DateConvert() ;
-        DateTimeZone zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
-        Chronology GJChronologydate = GJChronology.getInstance(zone);
-        LocalDateTime Today = new LocalDateTime(GJChronologydate);
+    public Object[] Get_Valid_Today_CreationalPeriods() throws JSONException {
+        DateConvert ConvertDate1 = new DateConvert() ;
+        DateTimeZone zonetime = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
+        Chronology GJChronologydate = GJChronology.getInstance(zonetime);
+        LocalDateTime TodayDateTime = new LocalDateTime(GJChronologydate);
         JSONObject ResponseJsonObject = new JSONObject (CreationalPeriods_Response.getBody().asString());
         JSONArray ContentArray =ResponseJsonObject.getJSONArray("content");
-        ArrayList<Object> Data = new ArrayList<>();
-        for(int i=0;i<ContentArray.length();i++)
-        {
-            JSONObject json = ContentArray.getJSONObject(i);
-            int CreationalPeriodID= json.getInt("id");
-            String CreationalPeriodStartDate= json.getString("startDate");
-            String CreationalPeriodEndDate= json.getString("endDate");
-            String CreationalPeriodStatus= json.getString("status");
-            double CreationalPeriodMaxQuotaPerPeriod= json.getDouble("periodMaxQuotaPerPeriod");
-            String[] Separator=new String[] {"T", "-"};
-            LocalDateTime CreationalStartDate= Date1.GregorianDateTime(CreationalPeriodStartDate,Separator);
-            LocalDateTime CreationalEndDate= Date1.GregorianDateTime(CreationalPeriodEndDate,Separator);
-            if(CreationalPeriodStatus.contains("Active") && Today.isAfter(CreationalStartDate) &&Today.plusHours(1).isBefore(CreationalEndDate))
-            {
-                JSONArray periodProgramTemplatesArray = json.getJSONArray("periodProgramTemplates");
-                for (int j = 0; j < periodProgramTemplatesArray.length(); j++) {
-                    System.out.println("periodProgramTemplatesArray ID: " + periodProgramTemplatesArray.get(j));
-                    Data.add(new Object[] {
+        ArrayList<Object> AllData = new ArrayList<>();
+        if(ContentArray.length()>0) {
+            for (int i = 0; i < ContentArray.length(); i++) {
+                JSONObject json = ContentArray.getJSONObject(i);
+                int CreationalPeriodID = json.getInt("id");
+                String CreationalPeriodStartDate = json.getString("startDate");
+                String CreationalPeriodEndDate = json.getString("endDate");
+                String CreationalPeriodStatus = json.getString("status");
+                double CreationalPeriodMaxQuotaPerPeriod = json.getDouble("periodMaxQuotaPerPeriod");
+                String[] Separator = new String[]{"T", "-"};
+                LocalDateTime CreationalStartDate = ConvertDate1.GregorianDateTime(CreationalPeriodStartDate, Separator);
+                LocalDateTime CreationalEndDate = ConvertDate1.GregorianDateTime(CreationalPeriodEndDate, Separator);
+                if (CreationalPeriodStatus.contains("Active") && TodayDateTime.isAfter(CreationalStartDate) && TodayDateTime.plusHours(1).isBefore(CreationalEndDate)) {
+                    JSONArray periodProgramTemplatesArray = json.getJSONArray("periodProgramTemplates");
+                    for (int j = 0; j < periodProgramTemplatesArray.length(); j++) {
+                        System.out.println("periodProgramTemplatesArray ID: " + periodProgramTemplatesArray.get(j));
+                        AllData.add(new Object[]{
                                 CreationalPeriodID,
                                 CreationalPeriodMaxQuotaPerPeriod,
                                 periodProgramTemplatesArray.get(j),
                                 CreationalPeriodStartDate,
                                 CreationalPeriodEndDate,
                                 CreationalPeriodStatus});
+                    }
                 }
+
+            }
+            if(AllData.size()>0) {
+                Object[] AllValidCreationalData = AllData.toArray();
+
+                Object[] FirstCreationalData = (Object[]) AllValidCreationalData[0];
+                //   Object[] Test= Arrays.stream(Print).toArray();
+                //for loop of specific aray
+                System.out.println("CreationalPeriodID ID: " + FirstCreationalData[0].toString());
+                return FirstCreationalData;
+            }
+            else {
+                System.out.println("====No Results====");
+                return null;
             }
         }
-        Object[] Print=Data.toArray();
+        else{
+            System.out.println("====No Results====");
+            return null;
 
-        Object[] Print2= (Object[]) Print[0];
-     //   Object[] Test= Arrays.stream(Print).toArray();
-        //for loop of specific aray
-        System.out.println("periodProgramTemplatesArray ID: "+Print2[0].toString() );
+        }
+
     }
 
     public void Get_Valid_all_CreationalPeriods_by_parameter_Query_Rq(String TokenValue,String PageSize,String PageNumber) {
