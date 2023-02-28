@@ -62,7 +62,7 @@ public class CreationalPeriods_API {
                 if (CreationalPeriodStatus.contains("Active") && TodayDateTime.isAfter(CreationalStartDate) && TodayDateTime.plusHours(1).isBefore(CreationalEndDate)) {
                     JSONArray periodProgramTemplatesArray = json.getJSONArray("periodProgramTemplates");
                     for (int j = 0; j < periodProgramTemplatesArray.length(); j++) {
-                        System.out.println("periodProgramTemplatesArray ID: " + periodProgramTemplatesArray.get(j));
+                       // System.out.println("periodProgramTemplatesArray ID: " + periodProgramTemplatesArray.get(j));
                         AllData.add(new Object[]{
                                 CreationalPeriodID,
                                 CreationalPeriodMaxQuotaPerPeriod,
@@ -80,16 +80,16 @@ public class CreationalPeriods_API {
                 Object[] FirstCreationalData = (Object[]) AllValidCreationalData[0];
                 //   Object[] Test= Arrays.stream(Print).toArray();
                 //for loop of specific aray
-                System.out.println("CreationalPeriodID ID: " + FirstCreationalData[0].toString());
+              //  System.out.println("CreationalPeriodID ID: " + FirstCreationalData[0].toString());
                 return FirstCreationalData;
             }
             else {
-                System.out.println("====No Results====");
+                System.out.println("====No CreationalPeriod Results====");
                 return null;
             }
         }
         else{
-            System.out.println("====No Results====");
+            System.out.println("====No CreationalPeriod Results====");
             return null;
 
         }

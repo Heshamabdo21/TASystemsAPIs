@@ -1,0 +1,6 @@
+{
+  "detail": "Couldn\u0027t find general policy with id 10",
+  "title": "GENERAL_POLICY_NOT_FOUND",
+  "errors": [],
+  "status": 404
+}

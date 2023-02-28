@@ -1,0 +1,24 @@
+
+################################################################################################################################################
+Starting Execution:	"425 out of 111" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Reservation_Cases.Get_Valid_Reservation_ByID_Rq_TC"
+Test Description:	"TC001  -Reservation-   Perform Get Reservation API by ID"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:25:47.0523 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:25:47.0537 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:25:47.0539 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @28-02-2023 13:25:48.0162 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-02-2023 13:25:48.0162 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 623ms". @28-02-2023 13:25:48.0170 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:25:48.0171 PM
+[ReportManager] Successfully created attachment "API Request - Body" @28-02-2023 13:25:48.0171 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:25:48.0173 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @28-02-2023 13:25:48.0174 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:25:48.0180 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:25:48.0194 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:25:48.0195 PM
+[ReportManager] Response status code: "500", status line: "HTTP/1.1 500 " @28-02-2023 13:25:48.0689 PM
+[ReportManager] Assertion Failed: Evaluating the actual response status code against the expected one... @28-02-2023 13:25:48.0689 PM
+[ReportManager] Perform request failed "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/reservations/6107050 | Content Type: */* | Response Time: 494ms". @28-02-2023 13:25:48.0697 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:25:48.0697 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:25:48.0698 PM

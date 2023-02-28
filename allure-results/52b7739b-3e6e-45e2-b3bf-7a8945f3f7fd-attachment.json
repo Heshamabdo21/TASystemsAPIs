@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome4",
+  "definitions": {
+    "Welcome4": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome4",
+      "properties": {
+        "seasonType": {
+          "type": "string"
+        },
+        "vehicleCategoryId": {
+          "type": "integer"
+        },
+        "programType": {
+          "type": "string"
+        },
+        "vehicleTypeId": {
+          "type": "integer"
+        },
+        "templatePeriodEndDate": {
+          "format": "date",
+          "type": "string"
+        },
+        "templatePeriodMaximumQuota": {
+          "type": "integer"
+        },
+        "minimumSeat": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "templatePeriodStartDate": {
+          "format": "date",
+          "type": "string"
+        },
+        "minimumVehiclePricePer": {
+          "type": "integer"
+        },
+        "routeId": {
+          "type": "integer"
+        },
+        "minimumModelYear": {
+          "type": "integer"
+        },
+        "saleSystem": {
+          "type": "string"
+        },
+        "season": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "maximumModelYear": {
+          "type": "integer"
+        },
+        "programMechanism": {
+          "type": "string"
+        },
+        "maximumSeat": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "isActive",
+        "maximumModelYear",
+        "maximumSeat",
+        "minimumModelYear",
+        "minimumSeat",
+        "minimumVehiclePricePer",
+        "programMechanism",
+        "programType",
+        "routeId",
+        "saleSystem",
+        "season",
+        "seasonType",
+        "templatePeriodEndDate",
+        "templatePeriodMaximumQuota",
+        "templatePeriodStartDate",
+        "vehicleCategoryId",
+        "vehicleTypeId"
+      ]
+    }
+  }
+}

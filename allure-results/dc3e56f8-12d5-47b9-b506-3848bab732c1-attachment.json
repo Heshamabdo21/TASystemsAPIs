@@ -1,0 +1,11 @@
+{
+  "detail": "Tax policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Tax policy.Charge value",
+      "detail": "101 must be less than or equal 100"
+    }
+  ],
+  "status": 422
+}

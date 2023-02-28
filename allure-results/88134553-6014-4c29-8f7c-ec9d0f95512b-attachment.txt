@@ -1,0 +1,39 @@
+
+################################################################################################################################################
+Starting Execution:	"95 out of 111" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_PeriodProgramTemplate_Cases.Get_Valid_all_PeriodProgramTemplate_by_Qry_Rq_TC"
+Test Description:	"TC002  -PeriodProgramTemplate-   Perform Get all PeriodProgramTemplate API with pagination with valid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:17:49.0790 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:17:49.0812 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:17:49.0813 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @28-02-2023 13:17:50.0428 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-02-2023 13:17:50.0428 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 614ms". @28-02-2023 13:17:50.0437 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:17:50.0438 PM
+[ReportManager] Successfully created attachment "API Request - Body" @28-02-2023 13:17:50.0438 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:17:50.0439 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @28-02-2023 13:17:50.0439 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:17:50.0447 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:17:50.0463 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:17:50.0464 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @28-02-2023 13:17:50.0977 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-02-2023 13:17:50.0977 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodProgramTemplates | Content Type: */* | Response Time: 512ms". @28-02-2023 13:17:50.0987 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:17:50.0988 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:17:50.0989 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @28-02-2023 13:17:50.0989 PM
+[ReportManager] Verification Passed: "512" is greater than or equal to "1.1". @28-02-2023 13:17:50.0989 PM
+[ReportManager] Verification Passed: "512" is less than or equal to "10000". @28-02-2023 13:17:50.0989 PM
+[ReportManager] Assertion Passed: "{"page":1,"size":1,"totalPages":102,"totalElements":102,"content":[{"id":214,"seasonType":"umrah","saleSystem":"GDS","programType":"Routes","programMechanism":"reservations","routeId":60,"season":1444,"vehicleTypeId":4,"vehicleCategoryId":2,"minimumModelYear":2010,"maximumModelYear":2022,"minimumVehiclePricePer":1200,"minimumSeat":5,"maximumSeat":9,"templatePeriodStartDate":"2022-09-05T00:00:00Z","templatePeriodEndDate":"2022-09-12T00:00:00Z","templatePeriodMaximumQuota":100,"isActive":true}]}" contains "content". @28-02-2023 13:17:50.0989 PM
+[ReportManager] Get response jsonvalue "content". @28-02-2023 13:17:50.0990 PM
+[ReportManager] Assertion Passed: Check that content object is not null. @28-02-2023 13:17:50.0990 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/PeriodProgramTemplates_schema.json"". @28-02-2023 13:17:50.0990 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/PeriodProgramTemplates_schema.json"". @28-02-2023 13:17:50.0990 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/PeriodProgramTemplates_schema.json"". @28-02-2023 13:17:50.0990 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\PeriodProgramTemplates_schema.json"". @28-02-2023 13:17:50.0993 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\PeriodProgramTemplates_schema.json"". @28-02-2023 13:17:50.0993 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\PeriodProgramTemplates_schema.json"". @28-02-2023 13:17:50.0993 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/PeriodProgramTemplates_schema.json". @28-02-2023 13:17:50.0994 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @28-02-2023 13:17:50.0994 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @28-02-2023 13:17:50.0995 PM

@@ -1,0 +1,15 @@
+{
+  "size": 1,
+  "totalPages": 47,
+  "page": 1,
+  "content": [
+    {
+      "otaCode": "Mawasim",
+      "nameArabic": "-",
+      "nameEnglish": "MawasimOTA",
+      "isActive": true,
+      "isEnable": true
+    }
+  ],
+  "totalElements": 47
+}

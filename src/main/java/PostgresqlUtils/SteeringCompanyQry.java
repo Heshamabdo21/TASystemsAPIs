@@ -8,6 +8,7 @@ import Utils.DateConvert;
 import org.joda.time.Chronology;
 import org.joda.time.DateTimeZone;
 import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 import org.joda.time.chrono.GJChronology;
 
 import java.sql.*;
@@ -15,9 +16,15 @@ public class SteeringCompanyQry {
 
 
    static DateConvert MyDate;
-
+    static DateTimeZone zone;
+    static Chronology GJChronologydate;
     public static void UpdateLastCreationalPeriod(LocalDate FromDate,LocalDate ToDate){
         MyDate=new DateConvert();
+
+        zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
+        GJChronologydate = GJChronology.getInstance(zone);
+        LocalTime EndDay=new LocalTime(23,0,0,0,GJChronologydate);
+
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager
@@ -66,7 +73,7 @@ public class SteeringCompanyQry {
                     "ioss_creation_start_date_hij="+MyDate.ConvertToHijri(FromDate.toString("dd/MM/YYYY")).toString("YYYYMMdd")+", " +
 
                     //     "ioss_creation_end_date='2023-02-16 07:00:00.000', " +
-                    "ioss_creation_end_date='"+ ToDate.toDateTimeAtCurrentTime().toString("YYYY-MM-dd HH:MM:ss")+"', " +
+                    "ioss_creation_end_date='"+ ToDate.toDateTime(EndDay).toString("YYYY-MM-dd HH:MM:ss")+"', " +
 
                    // "ioss_creation_end_date_hij=14440725, " +
                     "ioss_creation_end_date_hij="+MyDate.ConvertToHijri(ToDate.toString("dd/MM/YYYY")).toString("YYYYMMdd")+", " +

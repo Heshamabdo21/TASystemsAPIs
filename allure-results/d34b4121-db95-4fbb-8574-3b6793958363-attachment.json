@@ -1,0 +1,15 @@
+{
+  "detail": "Ota Commission not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Ota Commission.Add Commission",
+      "detail": "Must not be empty"
+    },
+    {
+      "field": "Ota Commission.Ota Details.Ota Code",
+      "detail": "Must not be empty"
+    }
+  ],
+  "status": 422
+}

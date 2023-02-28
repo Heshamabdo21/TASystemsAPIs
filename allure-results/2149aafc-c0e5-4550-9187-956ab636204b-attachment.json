@@ -1,0 +1,15 @@
+{
+  "size": 1,
+  "totalPages": 47,
+  "page": 0,
+  "content": [
+    {
+      "otaCode": "agoda",
+      "nameArabic": "-",
+      "nameEnglish": "agoda_old",
+      "isActive": true,
+      "isEnable": true
+    }
+  ],
+  "totalElements": 47
+}

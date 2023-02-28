@@ -1,0 +1,5 @@
+{
+  "detail": "page number or size is too large.",
+  "title": "VALIDATION_ERROR",
+  "status": 422
+}

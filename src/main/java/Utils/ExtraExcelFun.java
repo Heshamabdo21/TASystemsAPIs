@@ -3,17 +3,12 @@
  */
 
 package Utils;
+
 import com.shaft.tools.io.ExcelFileManager;
 import com.shaft.tools.io.ReportManager;
-import com.shaft.tools.io.ReportManagerHelper; //old version
-import com.shaft.tools.support.JavaHelper; //old version
-//import io.github.shafthq.shaft.tools.io.helpers.ReportManagerHelper; //for new version
-//import io.github.shafthq.shaft.tools.support.JavaHelper; //for new version
-
+import com.shaft.tools.io.ReportManagerHelper;
+import com.shaft.tools.support.JavaHelper;
 import org.apache.poi.EmptyFileException;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.DateUtil;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -24,11 +19,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 public class ExtraExcelFun extends ExcelFileManager {

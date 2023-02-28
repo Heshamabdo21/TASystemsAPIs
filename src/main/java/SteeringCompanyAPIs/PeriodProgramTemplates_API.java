@@ -4,16 +4,11 @@
 
 package SteeringCompanyAPIs;
 
-import Utils.DateConvert;
 import com.shaft.api.RequestBuilder.AuthenticationType;
 import com.shaft.api.RestActions;
 import com.shaft.driver.SHAFT;
 import com.shaft.tools.io.ExcelFileManager;
 import io.restassured.response.Response;
-import org.joda.time.Chronology;
-import org.joda.time.DateTimeZone;
-import org.joda.time.LocalDateTime;
-import org.joda.time.chrono.GJChronology;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -72,10 +67,7 @@ public class PeriodProgramTemplates_API {
         PeriodProgramTemplates_Response = PeriodProgramTemplates_api.getResponse();
     }
     public Object[] Get_Valid_PeriodProgramTemplates_by_id() throws JSONException {
-        //DateConvert ConvertDate1 = new DateConvert() ;
-        //DateTimeZone zonetime = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
-        //Chronology GJChronologydate = GJChronology.getInstance(zonetime);
-        //LocalDateTime TodayDateTime = new LocalDateTime(GJChronologydate);
+
         JSONObject ResponseJsonObject = new JSONObject (PeriodProgramTemplates_Response.getBody().asString());
 
                 int PeriodProgramTemplatesID = ResponseJsonObject.getInt("id");
@@ -85,9 +77,6 @@ public class PeriodProgramTemplates_API {
                 int minimumSeat = ResponseJsonObject.getInt("minimumSeat");
                 int maximumSeat = ResponseJsonObject.getInt("maximumSeat");
 
-               //String[] Separator = new String[]{"T", "-"};
-               // LocalDateTime CreationalStartDate = ConvertDate1.GregorianDateTime(PeriodProgramTemplatesStartDate, Separator);
-               // LocalDateTime CreationalEndDate = ConvertDate1.GregorianDateTime(PeriodProgramTemplatesEndDate, Separator);
                 return new Object[]{PeriodProgramTemplatesID,minimumModelYear,maximumModelYear,minimumVehiclePricePer,minimumSeat,maximumSeat};
 
     }

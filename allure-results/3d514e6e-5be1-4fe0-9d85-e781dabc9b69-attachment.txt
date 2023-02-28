@@ -1,0 +1,30 @@
+
+################################################################################################################################################
+Starting Execution:	"427 out of 111" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Token_Cases.InValid_Token_RQ_TC"
+Test Description:	"TC002 - Perform Post Token API with Invalid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:25:49.0241 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:25:49.0255 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:25:49.0256 PM
+[ReportManager] Response status code: "401", status line: "HTTP/1.1 401 Unauthorized" @28-02-2023 13:25:49.0788 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-02-2023 13:25:49.0789 PM
+[ReportManager] Perform request "POST | Target Status Code: 401 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 531ms". @28-02-2023 13:25:49.0796 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:25:49.0796 PM
+[ReportManager] Successfully created attachment "API Request - Body" @28-02-2023 13:25:49.0797 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:25:49.0798 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 401 and it is Unauthorized. @28-02-2023 13:25:49.0798 PM
+[ReportManager] Assertion Passed: Check error_description is existed. @28-02-2023 13:25:49.0798 PM
+[ReportManager] Get response jsonvalue "error_description". @28-02-2023 13:25:49.0798 PM
+[ReportManager] Assertion Passed: Check error_description is not null. @28-02-2023 13:25:49.0798 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/Token_Unauthorized_schema.json"". @28-02-2023 13:25:49.0799 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/Token_Unauthorized_schema.json"". @28-02-2023 13:25:49.0799 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/Token_Unauthorized_schema.json"". @28-02-2023 13:25:49.0799 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_Unauthorized_schema.json"". @28-02-2023 13:25:49.0800 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_Unauthorized_schema.json"". @28-02-2023 13:25:49.0800 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\Token_Unauthorized_schema.json"". @28-02-2023 13:25:49.0800 PM
+[ReportManager] Assertion Passed: Unauthorized Token Schema is matched with Unauthorized schema. @28-02-2023 13:25:49.0800 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @28-02-2023 13:25:49.0801 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @28-02-2023 13:25:49.0802 PM
+[ReportManager] Verification Passed: "531" is greater than or equal to "1.1". @28-02-2023 13:25:49.0802 PM
+[ReportManager] Verification Passed: "531" is less than or equal to "10000". @28-02-2023 13:25:49.0802 PM

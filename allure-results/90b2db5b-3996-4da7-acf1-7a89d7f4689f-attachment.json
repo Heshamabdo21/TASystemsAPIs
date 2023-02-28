@@ -1,0 +1,11 @@
+{
+  "detail": "Tax policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Tax policy.Name Arabic",
+      "detail": "Policy Arabic name is used before"
+    }
+  ],
+  "status": 422
+}

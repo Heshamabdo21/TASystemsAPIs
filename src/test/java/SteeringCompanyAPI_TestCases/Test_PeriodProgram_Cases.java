@@ -34,34 +34,48 @@ public class Test_PeriodProgram_Cases {
      testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
      UserName=testDataReader2.getCellData("TokenAPI_TestData","UserName","Data1");
      Password=testDataReader2.getCellData("TokenAPI_TestData","Password","Data1");
+        zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
+        GJChronologydate = GJChronology.getInstance(zone);
+        Today = new LocalDate(GJChronologydate);
      }
-
-    @Test(description = "PeriodProgram- Get Valid Today Creational Period")
+    DateTimeZone zone;
+    Chronology GJChronologydate;
+    LocalDate Today;
+    Object[] FirstValidCreationData,FirstValidPeriodProgramTemplatesData;
+public String SharedSteps_GetToken(){
+    Token_API Token_TC=new Token_API();
+    Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+    Token_TC.Check_Token_Valid_status_Code_Response();
+    String Token =Token_TC.Get_Valid_Access_Token();
+    return Token;
+}
+    @Test(description = "PeriodProgram- Get Valid Today Creational Period",priority = 0)
     @Story("Perpare Date for PeriodProgram")
     @Severity(SeverityLevel.CRITICAL)
     public void Get_Valid_Today_Creational_TC() throws JSONException {
-        Token_API Token_TC=new Token_API();
-        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
-        Token_TC.Check_Token_Valid_status_Code_Response();
-        String Token =Token_TC.Get_Valid_Access_Token();
-
+        String Token=SharedSteps_GetToken().toString();
         CreationalPeriods_API GetAllCreationalPeriod_TC=new CreationalPeriods_API();
         GetAllCreationalPeriod_TC.Get_Valid_all_CreationalPeriods_Rq(Token);
-        Object[] FirstValidCreationData=GetAllCreationalPeriod_TC.Get_Valid_Today_CreationalPeriods();
-        Object[] FirstValidPeriodProgramTemplatesData;
+        FirstValidCreationData=GetAllCreationalPeriod_TC.Get_Valid_Today_CreationalPeriods();
+        // FirstValidPeriodProgramTemplatesData;
+        PeriodProgramTemplates_API GetAllPeriodProgramTemplate_TC = new PeriodProgramTemplates_API();
         if(FirstValidCreationData!=null) {
-            PeriodProgramTemplates_API GetAllPeriodProgramTemplate_TC = new PeriodProgramTemplates_API();
             GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id_Rq(Token, FirstValidCreationData[2].toString());
             FirstValidPeriodProgramTemplatesData=GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id();
         }else{
-            DateTimeZone zone = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
-            Chronology GJChronologydate = GJChronology.getInstance(zone);
-            LocalDate Today = new LocalDate(GJChronologydate);
             SteeringCompanyQry.UpdateLastCreationalPeriod(Today,Today.plusDays(1));
+            GetAllCreationalPeriod_TC.Get_Valid_all_CreationalPeriods_Rq(Token);
+            FirstValidCreationData=GetAllCreationalPeriod_TC.Get_Valid_Today_CreationalPeriods();
+            GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id_Rq(Token, FirstValidCreationData[2].toString());
+            FirstValidPeriodProgramTemplatesData=GetAllPeriodProgramTemplate_TC.Get_Valid_PeriodProgramTemplates_by_id();
+        }
+        for (int i=0;i<FirstValidCreationData.length;i++){
+            System.out.println("FirstValidCreationData ["+i+"] ::: "+FirstValidCreationData[i].toString());
+        }
+        for (int i=0;i<FirstValidPeriodProgramTemplatesData.length;i++){
+            System.out.println("FirstValidPeriodProgramTemplatesData ["+i+"] ::: "+FirstValidPeriodProgramTemplatesData[i].toString());
         }
     }
-
-
 
     /////////////////////// Test Case for Add PeriodPrograms //////////////////////////////////////////
 

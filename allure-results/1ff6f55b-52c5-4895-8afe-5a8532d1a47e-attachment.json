@@ -1,0 +1,337 @@
+{
+  "size": 5000,
+  "totalPages": 1,
+  "page": 0,
+  "content": [
+    {
+      "otaCode": "agoda",
+      "nameArabic": "-",
+      "nameEnglish": "agoda_old",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "Mawasim",
+      "nameArabic": "-",
+      "nameEnglish": "MawasimOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "SaudiaHolidaysOTA",
+      "nameArabic": "-",
+      "nameEnglish": "SaudiaHolidaysOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "HotelGate",
+      "nameArabic": "-",
+      "nameEnglish": "HotelGate",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "AlrajhiOTA",
+      "nameArabic": "-",
+      "nameEnglish": "AlrajhiOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "ELAF_OTA",
+      "nameArabic": "-",
+      "nameEnglish": "Elaf Travel and Tourism",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "WebBedsOTA",
+      "nameArabic": "-",
+      "nameEnglish": "WebBeds OTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "U1470",
+      "nameArabic": "-",
+      "nameEnglish": "UmrahOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "MyHotel",
+      "nameArabic": "-",
+      "nameEnglish": "MyHotel",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "Taqneen",
+      "nameArabic": "-",
+      "nameEnglish": "Taqneen",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "ZamzamOTA",
+      "nameArabic": "-",
+      "nameEnglish": "ZamzamOTA",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "HuloolAl-Umrah",
+      "nameArabic": "-",
+      "nameEnglish": "Hulool Al-Umrah",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "UmrahGate",
+      "nameArabic": "-",
+      "nameEnglish": "UmrahGate",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "WaytoUmrah",
+      "nameArabic": "-",
+      "nameEnglish": "WaytoUmrah",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "HUBOOKING",
+      "nameArabic": "-",
+      "nameEnglish": "HUBOOKING",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "MahtatAlAlamOTA",
+      "nameArabic": "-",
+      "nameEnglish": "Mahtat Al-Alam",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "Akbar",
+      "nameArabic": "-",
+      "nameEnglish": "AKBAR TRAVELS OF INDIA PVT LTD",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "AnjumOTA",
+      "nameArabic": "-",
+      "nameEnglish": "Anjum OTA",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "Saudi2GoOTA",
+      "nameArabic": "-",
+      "nameEnglish": "Saudi2GoOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "EasyUmrahOTA",
+      "nameArabic": "-",
+      "nameEnglish": "EasyUmrahOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "ZowarOTA",
+      "nameArabic": "-",
+      "nameEnglish": "ZowarOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "HotelsMeOTA",
+      "nameArabic": "-",
+      "nameEnglish": "HotelsMeOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "TravelSoftTechOTA",
+      "nameArabic": "-",
+      "nameEnglish": "TravelSoftTechOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "UmrahWayOTA",
+      "nameArabic": "-",
+      "nameEnglish": "UmrahWayOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "AlbarakaOTA",
+      "nameArabic": "-",
+      "nameEnglish": "AlbarakaOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "MarmaraOTA",
+      "nameArabic": "-",
+      "nameEnglish": "MarmaraOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "SafirTravelOTA",
+      "nameArabic": "-",
+      "nameEnglish": "SafirTravelOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "0184_OTA",
+      "nameArabic": "-",
+      "nameEnglish": "Travel softtech company ltd",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "0226_OTA",
+      "nameArabic": "-",
+      "nameEnglish": "Easy Umrah",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "UmrahTechOTA",
+      "nameArabic": "-",
+      "nameEnglish": "UmrahTechOTA",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "TravelGuideOTA",
+      "nameArabic": "-",
+      "nameEnglish": "Travel Guide Inc",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "UmraatOTA",
+      "nameArabic": "-",
+      "nameEnglish": "umraat",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "TamratOTA",
+      "nameArabic": "-",
+      "nameEnglish": "B2BHolidays",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "AlahramTravel",
+      "nameArabic": "-",
+      "nameEnglish": "Go Umrah",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "AlHidayaOTA",
+      "nameArabic": "???? ???? ???????",
+      "nameEnglish": "Saleh Salem Bahwini",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "Agoda_OTA",
+      "nameArabic": "?????",
+      "nameEnglish": "agoda",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "test_ota2",
+      "nameArabic": "test_ota",
+      "nameEnglish": "test_ota2",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "FanadiqOTA",
+      "nameArabic": "-",
+      "nameEnglish": "Mohammad Salman Arain Computer Services. Est.",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "Tripshop_OTA",
+      "nameArabic": "???? ???",
+      "nameEnglish": "tripshop",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "onlinersv",
+      "nameArabic": "-",
+      "nameEnglish": "Development of platforms for information systems technology",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "test_ota",
+      "nameArabic": "test_ota1",
+      "nameEnglish": "test_ota",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "TasheerOTA",
+      "nameArabic": "-",
+      "nameEnglish": "Tasheer",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "testProvider",
+      "nameArabic": "-",
+      "nameEnglish": "Test Provider",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "holidayme",
+      "nameArabic": "-",
+      "nameEnglish": "holidayme",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "FlyNas",
+      "nameArabic": "-",
+      "nameEnglish": "FlyNas",
+      "isActive": true,
+      "isEnable": true
+    },
+    {
+      "otaCode": "test new ota code",
+      "nameArabic": "??? ???? ?????",
+      "nameEnglish": "test new ota",
+      "isActive": true,
+      "isEnable": false
+    },
+    {
+      "otaCode": "OYOO",
+      "nameArabic": "-",
+      "nameEnglish": "OYO Rooms",
+      "isActive": true,
+      "isEnable": false
+    }
+  ],
+  "totalElements": 47
+}

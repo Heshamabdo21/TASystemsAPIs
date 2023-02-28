@@ -1,0 +1,43 @@
+
+################################################################################################################################################
+Starting Execution:	"48 out of 111" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_Commissions_Cases.Valid_GET_all_OTAs_by_Qry_Rq_TC"
+Test Description:	"TC017  -OTAs- Perform Get all OTAs API with pagination with valid user name and password"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:16:36.0844 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:16:36.0885 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:16:36.0890 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @28-02-2023 13:16:37.0682 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-02-2023 13:16:37.0683 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 788ms". @28-02-2023 13:16:37.0694 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:16:37.0695 PM
+[ReportManager] Successfully created attachment "API Request - Body" @28-02-2023 13:16:37.0697 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:16:37.0699 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @28-02-2023 13:16:37.0700 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-02-2023 13:16:37.0721 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-02-2023 13:16:37.0774 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-02-2023 13:16:37.0775 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @28-02-2023 13:16:38.0305 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-02-2023 13:16:38.0306 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/otas | Content Type: */* | Response Time: 529ms". @28-02-2023 13:16:38.0330 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-02-2023 13:16:38.0332 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-02-2023 13:16:38.0333 PM
+[ReportManager] Assertion Passed: "200" is equal to "200". @28-02-2023 13:16:38.0333 PM
+[ReportManager] Verification Passed: "529" is greater than or equal to "1.1". @28-02-2023 13:16:38.0333 PM
+[ReportManager] Verification Passed: "529" is less than or equal to "10000". @28-02-2023 13:16:38.0333 PM
+[ReportManager] Assertion Passed: "{"page":0,"size":20,"totalPages":3,"totalElements":47,"content":[{"otaCode":"agoda","nameArabic":"-","nameEnglish":"agoda_old","isActive":true,"isEnable":true},{"otaCode":"Mawasim","nameArabic":"-","nameEnglish":"MawasimOTA","isActive":true,"isEnable":true},{"otaCode":"SaudiaHolidaysOTA","nameArabic":"-","nameEnglish":"SaudiaHolidaysOTA","isActive":true,"isEnable":true},{"otaCode":"HotelGate","nameArabic":"-","nameEnglish":"HotelGate","isActive":true,"isEnable":false},{"otaCode":"AlrajhiOTA","nameArabic":"-","nameEnglish":"AlrajhiOTA","isActive":true,"isEnable":true},{"otaCode":"ELAF_OTA","nameArabic":"-","nameEnglish":"Elaf Travel and Tourism","isActive":true,"isEnable":true},{"otaCode":"WebBedsOTA","nameArabic":"-","nameEnglish":"WebBeds OTA","isActive":true,"isEnable":true},{"otaCode":"U1470","nameArabic":"-","nameEnglish":"UmrahOTA","isActive":true,"isEnable":true},{"otaCode":"MyHotel","nameArabic":"-","nameEnglish":"MyHotel","isActive":true,"isEnable":true},{"otaCode":"Taqneen","nameArabic":"-","nameEnglish":"Taqneen","isActive":true,"isEnable":true},{"otaCode":"ZamzamOTA","nameArabic":"-","nameEnglish":"ZamzamOTA","isActive":true,"isEnable":false},{"otaCode":"HuloolAl-Umrah","nameArabic":"-","nameEnglish":"Hulool Al-Umrah","isActive":true,"isEnable":true},{"otaCode":"UmrahGate","nameArabic":"-","nameEnglish":"UmrahGate","isActive":true,"isEnable":true},{"otaCode":"WaytoUmrah","nameArabic":"-","nameEnglish":"WaytoUmrah","isActive":true,"isEnable":true},{"otaCode":"HUBOOKING","nameArabic":"-","nameEnglish":"HUBOOKING","isActive":true,"isEnable":true},{"otaCode":"MahtatAlAlamOTA","nameArabic":"-","nameEnglish":"Mahtat Al-Alam","isActive":true,"isEnable":true},{"otaCode":"Akbar","nameArabic":"-","nameEnglish":"AKBAR TRAVELS OF INDIA PVT LTD","isActive":true,"isEnable":true},{"otaCode":"AnjumOTA","nameArabic":"-","nameEnglish":"Anjum OTA","isActive":true,"isEnable":false},{"otaCode":"Saudi2GoOTA","nameArabic":"-","nameEnglish":"Saudi2GoOTA","isActive":true,"isEnable":true},{"otaCode":"EasyUmrahOTA","nameArabic":"-","nameEnglish":"EasyUmrahOTA","isActive":true,"isEnable":true}]}" contains "content". @28-02-2023 13:16:38.0333 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @28-02-2023 13:16:38.0334 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @28-02-2023 13:16:38.0335 PM
+[ReportManager] Get response jsonvalue "content". @28-02-2023 13:16:38.0336 PM
+[ReportManager] Assertion Passed: Check that content object is not null. @28-02-2023 13:16:38.0336 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected Value" @28-02-2023 13:16:38.0337 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual Value" @28-02-2023 13:16:38.0337 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/OTAs_schema.json"". @28-02-2023 13:16:38.0339 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/OTAs_schema.json"". @28-02-2023 13:16:38.0339 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/OTAs_schema.json"". @28-02-2023 13:16:38.0340 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\OTAs_schema.json"". @28-02-2023 13:16:38.0344 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\OTAs_schema.json"". @28-02-2023 13:16:38.0344 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\OTAs_schema.json"". @28-02-2023 13:16:38.0345 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/OTAs_schema.json". @28-02-2023 13:16:38.0345 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @28-02-2023 13:16:38.0347 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @28-02-2023 13:16:38.0347 PM

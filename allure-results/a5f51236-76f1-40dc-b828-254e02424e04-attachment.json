@@ -1,0 +1,11 @@
+{
+  "detail": "General policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "General policy.Description Arabic",
+      "detail": "Must have a maximum length of 3000"
+    }
+  ],
+  "status": 422
+}

@@ -4,7 +4,6 @@
 
 package SteeringCompanyAPIs;
 
-import Utils.ExtraExcelFun;
 import com.shaft.api.RequestBuilder.AuthenticationType;
 import com.shaft.api.RestActions;
 import com.shaft.driver.SHAFT;
@@ -19,7 +18,7 @@ import java.util.List;
 
 public class Commissions_API {
     ExcelFileManager testDataReader = new ExcelFileManager("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
-    ExtraExcelFun testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+    //ExtraExcelFun testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
 
     String BaseURL = testDataReader.getCellData("API_Data","Steering_Base_URL","URL");
     Response OTAs_Response;

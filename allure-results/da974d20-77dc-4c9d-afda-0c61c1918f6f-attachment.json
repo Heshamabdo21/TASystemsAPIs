@@ -1,0 +1,11 @@
+{
+  "detail": "Payment policy not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Payment policy.Name English",
+      "detail": "Must not be empty"
+    }
+  ],
+  "status": 422
+}
