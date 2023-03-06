@@ -1,0 +1,13 @@
+
+################################################################################################################################################
+Starting Execution:	"1 out of 1" test cases in the current suite
+Test Method:		"SteeringCompanyPortal.AddNewCreationalPeriod.testAddNewCreationalPeriod"
+################################################################################################################################################
+[ReportManager] An Exception Occured with this Message: timeout: Timed out receiving message from renderer: 30.000. @06-03-2023 00:21:02.0995 AM
+[ReportManager] Successfully created attachment "Exception Stack Trace - org.openqa.selenium.TimeoutException" @06-03-2023 00:21:03.0004 AM
+[ReportManager] Failed to Click "By.xpath: //*[@id="nav"]/li[7]/a". @06-03-2023 00:21:03.0018 AM
+[ReportManager] An Exception Occured with this Message: java.util.concurrent.TimeoutException. @06-03-2023 00:24:03.0084 AM
+[ReportManager] Successfully created attachment "Exception Stack Trace - org.openqa.selenium.TimeoutException" @06-03-2023 00:24:03.0086 AM
+[ReportManager] An Exception Occured with this Message: java.util.concurrent.TimeoutException. @06-03-2023 00:27:03.0104 AM
+[ReportManager] Successfully created attachment "Exception Stack Trace - org.openqa.selenium.TimeoutException" @06-03-2023 00:27:03.0107 AM
+[ReportManager] Failed to Click "By.xpath: //*[@id="nav"]/li[7]/a". @06-03-2023 00:27:03.0108 AM
