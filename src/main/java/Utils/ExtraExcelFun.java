@@ -39,6 +39,7 @@ public class ExtraExcelFun extends ExcelFileManager {
         testDataColumnNamePrefix = System.getProperty("testDataColumnNamePrefix");
     }
 
+
     /**
      * Creates a new instance of the test data Excel reader using the target Excel
      * file path
@@ -221,6 +222,7 @@ public class ExtraExcelFun extends ExcelFileManager {
             
       //  initializeVariables();
        // this.excelFilePath = excelFilePath;
+        workbook.setForceFormulaRecalculation(true);
 
 
         try {

@@ -109,6 +109,7 @@ public class AddNewCreationalPeriod {
     }
 
     public void AddSteeringOperationalPeriodProgramSetting() throws Exception {
+        driver.element().waitToBeReady(LastDateOperationalPeriod);
         WebElement LastDateOperationalPeriodTxt = driver.getDriver().findElement(LastDateOperationalPeriod);
         js.executeScript("arguments[0].scrollIntoView();", LastDateOperationalPeriodTxt);
         String LastDateOperationalPeriodString = LastDateOperationalPeriodTxt.getText().toString();
@@ -207,6 +208,7 @@ public class AddNewCreationalPeriod {
         DateTimeZone zone = DateTimeZone.forID("Asia/Riyadh");
         Chronology hijri = IslamicChronology.getInstance(zone);
         Today = new LocalDate(hijri);
+        DateConverter=new DateConvert();
     }
 
     @AfterMethod(alwaysRun = true)

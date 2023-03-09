@@ -13,6 +13,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -69,12 +70,14 @@ public class PeriodPrograms_API {
 
         All_PeriodPrograms_Response = All_PeriodPrograms_api.getResponse();
     }
-    public void Check_Valid_PeriodPrograms_status_Code_Response(){
+    //////////////////////////////////////////////////////////////////////////////////////
+    public void Check_Valid_All_PeriodPrograms_status_Code_Response(){
         SHAFT.Validations.assertThat().number(All_PeriodPrograms_Response.getStatusCode()).isEqualTo(200).perform();
     }
-    public void Check_Unauthorized_PeriodPrograms_status_Code_Response(){
+    public void Check_Unauthorized_All_PeriodPrograms_status_Code_Response(){
         SHAFT.Validations.assertThat().number(All_PeriodPrograms_Response.getStatusCode()).isEqualTo(401).perform();
     }
+    //////////////////////////////////////////////////////////////////////////////////////
     public void Check_PeriodPrograms_Response_Time() {
         SHAFT.Validations.verifyThat().number(All_PeriodPrograms_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(All_PeriodPrograms_Response.getTime()).isLessThanOrEquals(10000).perform();
@@ -84,9 +87,11 @@ public class PeriodPrograms_API {
         SHAFT.Validations.assertThat().object(Lookups_PeriodPrograms_ResponseBody).contains("content").perform();
         All_PeriodPrograms_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
     }
+    //////////////////////////////////////////////////////////////////////////////////////
     public void Check_All_PeriodPrograms_Response_Valid_Schema() {
         All_PeriodPrograms_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","GetAllPeriodPrograms","Valid_Schema")).perform();
     }
+    //////////////////////////////////////////////////////////////////////////////////////
     public void Check_All_PeriodPrograms_Response_Unauthorized_Schema() {
         All_PeriodPrograms_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","UnAuthorized","URL")).perform();
     }
@@ -99,50 +104,50 @@ public class PeriodPrograms_API {
     public void Add_PeriodProgram_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody;
-        if(data[0].toString().contains("WithPolicies")){
+        if(data[1].toString().contains("WithPolicies")){
          Add_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"creationPeriodId\": "+data[2]+",\n" +
+                "    \"templateId\": "+data[3]+",\n" +
+                "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                "    \"minimumModelYear\": "+data[5]+",\n" +
+                "    \"maximumModelYear\": "+data[6]+",\n" +
+                "    \"minimumSeat\": "+data[7]+",\n" +
+                "    \"maximumSeat\": "+data[8]+",\n" +
+                "    \"vehiclePricePer\": "+data[9]+",\n" +
+                "    \"isActive\": "+data[10]+",\n" +
                 "    \"policies\": [\n" +
                 "        {\n" +
-                "            \"type\": \"tax\",\n" +
-                "            \"id\": "+data[11]+"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"type\": \"payment\",\n" +
+                "            \"type\": \""+data[11]+"\",\n" +
                 "            \"id\": "+data[12]+"\n" +
                 "        },\n" +
                 "        {\n" +
-                "            \"type\": \"cancellation\",\n" +
-                "            \"id\": "+data[13]+"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"type\": \"general\",\n" +
+                "            \"type\": \""+data[13]+"\",\n" +
                 "            \"id\": "+data[14]+"\n" +
                 "        },\n" +
                 "        {\n" +
-                "            \"type\": \"usage\",\n" +
-                "            \"id\": "+data[15]+"\n" +
+                "            \"type\": \""+data[15]+"\",\n" +
+                "            \"id\": "+data[16]+"\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"type\": \""+data[17]+"\",\n" +
+                "            \"id\": "+data[18]+"\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"type\": \""+data[19]+"\",\n" +
+                "            \"id\": "+data[20]+"\n" +
                 "        }]"+
                 "}";}
         else
         {Add_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"creationPeriodId\": "+data[2]+",\n" +
+                "    \"templateId\": "+data[3]+",\n" +
+                "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                "    \"minimumModelYear\": "+data[5]+",\n" +
+                "    \"maximumModelYear\": "+data[6]+",\n" +
+                "    \"minimumSeat\": "+data[7]+",\n" +
+                "    \"maximumSeat\": "+data[8]+",\n" +
+                "    \"vehiclePricePer\": "+data[9]+",\n" +
+                "    \"isActive\": "+data[10]+",\n" +
                 "    \"policies\": [] \n"+
                 "}";
         }
@@ -152,25 +157,26 @@ public class PeriodPrograms_API {
                 setContentType(ContentType.JSON).
                 setAuthentication("","", AuthenticationType.NONE).
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
-      /*  try {
-            testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"nameArabic\":\""+data[2]+"\"");
+        try {
+            testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"creationPeriodId\":\""+data[2]+"\"");
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
+/*
     public void Add_PeriodProgram_Without_Policies_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"creationPeriodId\": "+data[2]+",\n" +
+                "    \"templateId\": "+data[3]+",\n" +
+                "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                "    \"minimumModelYear\": "+data[5]+",\n" +
+                "    \"maximumModelYear\": "+data[6]+",\n" +
+                "    \"minimumSeat\": "+data[7]+",\n" +
+                "    \"maximumSeat\": "+data[8]+",\n" +
+                "    \"vehiclePricePer\": "+data[9]+",\n" +
+                "    \"isActive\": "+data[10]+",\n" +
                 "    \"policies\": [] \n"+
                 "}";
 
@@ -180,60 +186,62 @@ public class PeriodPrograms_API {
                 setContentType(ContentType.JSON).
                 setAuthentication("","", AuthenticationType.NONE).
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
-      /*  try {
+      */
+/*  try {
             testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"nameArabic\":\""+data[2]+"\"");
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }*/
+        }*//*
         PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
+*/
     public void Add_PeriodProgram_With_Missing_Token_Rq( @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody;
-            if(data[0].toString().contains("WithPolicies")){
+            if(data[1].toString().contains("WithPolicies")){
                 Add_PeriodProgramBody="{\n"+
-                        "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                        "    \"templateId\": \""+data[3]+"\",\n" +
-                        "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                        "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                        "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                        "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                        "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                        "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                        "    \"isActive\": \""+data[10]+"\",\n" +
+                        "    \"creationPeriodId\": "+data[2]+",\n" +
+                        "    \"templateId\": "+data[3]+",\n" +
+                        "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                        "    \"minimumModelYear\": "+data[5]+",\n" +
+                        "    \"maximumModelYear\": "+data[6]+",\n" +
+                        "    \"minimumSeat\": "+data[7]+",\n" +
+                        "    \"maximumSeat\": "+data[8]+",\n" +
+                        "    \"vehiclePricePer\": "+data[9]+",\n" +
+                        "    \"isActive\": "+data[10]+",\n" +
                         "    \"policies\": [\n" +
                         "        {\n" +
-                        "            \"type\": \"tax\",\n" +
-                        "            \"id\": "+data[11]+"\n" +
-                        "        },\n" +
-                        "        {\n" +
-                        "            \"type\": \"payment\",\n" +
+                        "            \"type\": \""+data[11]+"\",\n" +
                         "            \"id\": "+data[12]+"\n" +
                         "        },\n" +
                         "        {\n" +
-                        "            \"type\": \"cancellation\",\n" +
-                        "            \"id\": "+data[13]+"\n" +
-                        "        },\n" +
-                        "        {\n" +
-                        "            \"type\": \"general\",\n" +
+                        "            \"type\": \""+data[13]+"\",\n" +
                         "            \"id\": "+data[14]+"\n" +
                         "        },\n" +
                         "        {\n" +
-                        "            \"type\": \"usage\",\n" +
-                        "            \"id\": "+data[15]+"\n" +
+                        "            \"type\": \""+data[15]+"\",\n" +
+                        "            \"id\": "+data[16]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \""+data[17]+"\",\n" +
+                        "            \"id\": "+data[18]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \""+data[19]+"\",\n" +
+                        "            \"id\": "+data[20]+"\n" +
                         "        }]"+
                         "}";}
             else
             {Add_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";
             }
@@ -249,50 +257,50 @@ public class PeriodPrograms_API {
     public void Add_PeriodProgram_With_InValid_Token_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody;
-        if(data[0].toString().contains("WithPolicies")){
+        if(data[1].toString().contains("WithPolicies")){
             Add_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [\n" +
                     "        {\n" +
-                    "            \"type\": \"tax\",\n" +
-                    "            \"id\": "+data[11]+"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"type\": \"payment\",\n" +
+                    "            \"type\": \""+data[11]+"\",\n" +
                     "            \"id\": "+data[12]+"\n" +
                     "        },\n" +
                     "        {\n" +
-                    "            \"type\": \"cancellation\",\n" +
-                    "            \"id\": "+data[13]+"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"type\": \"general\",\n" +
+                    "            \"type\": \""+data[13]+"\",\n" +
                     "            \"id\": "+data[14]+"\n" +
                     "        },\n" +
                     "        {\n" +
-                    "            \"type\": \"usage\",\n" +
-                    "            \"id\": "+data[15]+"\n" +
+                    "            \"type\": \""+data[15]+"\",\n" +
+                    "            \"id\": "+data[16]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \""+data[17]+"\",\n" +
+                    "            \"id\": "+data[18]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \""+data[19]+"\",\n" +
+                    "            \"id\": "+data[20]+"\n" +
                     "        }]"+
                     "}";}
         else
         {Add_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"creationPeriodId\": "+data[2]+",\n" +
+                "    \"templateId\": "+data[3]+",\n" +
+                "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                "    \"minimumModelYear\": "+data[5]+",\n" +
+                "    \"maximumModelYear\": "+data[6]+",\n" +
+                "    \"minimumSeat\": "+data[7]+",\n" +
+                "    \"maximumSeat\": "+data[8]+",\n" +
+                "    \"vehiclePricePer\": "+data[9]+",\n" +
+                "    \"isActive\": "+data[10]+",\n" +
                 "    \"policies\": [] \n"+
                 "}";
         }
@@ -307,50 +315,50 @@ public class PeriodPrograms_API {
     public void Add_PeriodProgram_With_Invalid_Input_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody;
-        if(data[0].toString().contains("WithPolicies")){
+        if(data[1].toString().contains("WithPolicies")){
             Add_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [\n" +
                     "        {\n" +
-                    "            \"type\": \"tax\",\n" +
-                    "            \"id\": "+data[11]+"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"type\": \"payment\",\n" +
+                    "            \"type\": \""+data[11]+"\",\n" +
                     "            \"id\": "+data[12]+"\n" +
                     "        },\n" +
                     "        {\n" +
-                    "            \"type\": \"cancellation\",\n" +
-                    "            \"id\": "+data[13]+"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"type\": \"general\",\n" +
+                    "            \"type\": \""+data[13]+"\",\n" +
                     "            \"id\": "+data[14]+"\n" +
                     "        },\n" +
                     "        {\n" +
-                    "            \"type\": \"usage\",\n" +
-                    "            \"id\": "+data[15]+"\n" +
+                    "            \"type\": \""+data[15]+"\",\n" +
+                    "            \"id\": "+data[16]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \""+data[17]+"\",\n" +
+                    "            \"id\": "+data[18]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \""+data[19]+"\",\n" +
+                    "            \"id\": "+data[20]+"\n" +
                     "        }]"+
                     "}";}
         else
         {Add_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"creationPeriodId\": "+data[2]+",\n" +
+                "    \"templateId\": "+data[3]+",\n" +
+                "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                "    \"minimumModelYear\": "+data[5]+",\n" +
+                "    \"maximumModelYear\": "+data[6]+",\n" +
+                "    \"minimumSeat\": "+data[7]+",\n" +
+                "    \"maximumSeat\": "+data[8]+",\n" +
+                "    \"vehiclePricePer\": "+data[9]+",\n" +
+                "    \"isActive\": "+data[10]+",\n" +
                 "    \"policies\": [] \n"+
                 "}";
         }
@@ -365,50 +373,50 @@ public class PeriodPrograms_API {
     public void Add_PeriodProgram_With_NotAccepted_Input_Rq(String TokenValue, Object[] data)  {
         PeriodProgram_api = new SHAFT.API(BaseURL);
         String Add_PeriodProgramBody;
-        if(data[0].toString().contains("WithPolicies")){
+        if(data[1].toString().contains("WithPolicies")){
             Add_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [\n" +
                     "        {\n" +
-                    "            \"type\": \"tax\",\n" +
-                    "            \"id\": "+data[11]+"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"type\": \"payment\",\n" +
+                    "            \"type\": \""+data[11]+"\",\n" +
                     "            \"id\": "+data[12]+"\n" +
                     "        },\n" +
                     "        {\n" +
-                    "            \"type\": \"cancellation\",\n" +
-                    "            \"id\": "+data[13]+"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"type\": \"general\",\n" +
+                    "            \"type\": \""+data[13]+"\",\n" +
                     "            \"id\": "+data[14]+"\n" +
                     "        },\n" +
                     "        {\n" +
-                    "            \"type\": \"usage\",\n" +
-                    "            \"id\": "+data[15]+"\n" +
+                    "            \"type\": \""+data[15]+"\",\n" +
+                    "            \"id\": "+data[16]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \""+data[17]+"\",\n" +
+                    "            \"id\": "+data[18]+"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"type\": \""+data[19]+"\",\n" +
+                    "            \"id\": "+data[20]+"\n" +
                     "        }]"+
                     "}";}
         else
         {Add_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
+                "    \"creationPeriodId\": "+data[2]+",\n" +
+                "    \"templateId\": "+data[3]+",\n" +
+                "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                "    \"minimumModelYear\": "+data[5]+",\n" +
+                "    \"maximumModelYear\": "+data[6]+",\n" +
+                "    \"minimumSeat\": "+data[7]+",\n" +
+                "    \"maximumSeat\": "+data[8]+",\n" +
+                "    \"vehiclePricePer\": "+data[9]+",\n" +
+                "    \"isActive\": "+data[10]+",\n" +
                 "    \"policies\": [] \n"+
                 "}";
         }
@@ -423,50 +431,50 @@ public class PeriodPrograms_API {
     public void Add_PeriodProgram_With_NotFound_Input_Rq(String TokenValue, Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
             String Add_PeriodProgramBody;
-            if(data[0].toString().contains("WithPolicies")){
+            if(data[1].toString().contains("WithPolicies")){
                 Add_PeriodProgramBody="{\n"+
-                        "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                        "    \"templateId\": \""+data[3]+"\",\n" +
-                        "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                        "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                        "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                        "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                        "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                        "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                        "    \"isActive\": \""+data[10]+"\",\n" +
+                        "    \"creationPeriodId\": "+data[2]+",\n" +
+                        "    \"templateId\": "+data[3]+",\n" +
+                        "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                        "    \"minimumModelYear\": "+data[5]+",\n" +
+                        "    \"maximumModelYear\": "+data[6]+",\n" +
+                        "    \"minimumSeat\": "+data[7]+",\n" +
+                        "    \"maximumSeat\": "+data[8]+",\n" +
+                        "    \"vehiclePricePer\": "+data[9]+",\n" +
+                        "    \"isActive\": "+data[10]+",\n" +
                         "    \"policies\": [\n" +
                         "        {\n" +
-                        "            \"type\": \"tax\",\n" +
-                        "            \"id\": "+data[11]+"\n" +
-                        "        },\n" +
-                        "        {\n" +
-                        "            \"type\": \"payment\",\n" +
+                        "            \"type\": \""+data[11]+"\",\n" +
                         "            \"id\": "+data[12]+"\n" +
                         "        },\n" +
                         "        {\n" +
-                        "            \"type\": \"cancellation\",\n" +
-                        "            \"id\": "+data[13]+"\n" +
-                        "        },\n" +
-                        "        {\n" +
-                        "            \"type\": \"general\",\n" +
+                        "            \"type\": \""+data[13]+"\",\n" +
                         "            \"id\": "+data[14]+"\n" +
                         "        },\n" +
                         "        {\n" +
-                        "            \"type\": \"usage\",\n" +
-                        "            \"id\": "+data[15]+"\n" +
+                        "            \"type\": \""+data[15]+"\",\n" +
+                        "            \"id\": "+data[16]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \""+data[17]+"\",\n" +
+                        "            \"id\": "+data[18]+"\n" +
+                        "        },\n" +
+                        "        {\n" +
+                        "            \"type\": \""+data[19]+"\",\n" +
+                        "            \"id\": "+data[20]+"\n" +
                         "        }]"+
                         "}";}
             else
             {Add_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";
             }
@@ -483,17 +491,17 @@ public class PeriodPrograms_API {
     public void Update_PeriodProgram_Rq(@NotNull String TokenValue,  @NotNull Object[] data)  {
         PeriodProgram_api = new SHAFT.API(BaseURL);
             String Update_PeriodProgramBody="{\n"+
-                "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                "    \"templateId\": \""+data[3]+"\",\n" +
-                "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                "    \"isActive\": \""+data[10]+"\",\n" +
-                "    \"policies\": [] \n"+
-                "}";
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
+                    "    \"policies\": [] \n"+
+                    "}";
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(200).
@@ -510,17 +518,17 @@ public class PeriodPrograms_API {
     public void Update_PeriodProgram_With_Missing_Token_Rq( @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
             String Update_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
-                    "}";
+                    "}";;
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(401).
@@ -534,17 +542,17 @@ public class PeriodPrograms_API {
         PeriodProgram_api = new SHAFT.API(BaseURL);
 
             String Update_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
-                    "}";
+                    "}";;
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(401).
@@ -558,17 +566,17 @@ public class PeriodPrograms_API {
         PeriodProgram_api = new SHAFT.API(BaseURL);
 
             String Update_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
-                    "}";
+                    "}";;
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(422).
@@ -582,17 +590,17 @@ public class PeriodPrograms_API {
         PeriodProgram_api = new SHAFT.API(BaseURL);
 
             String Update_PeriodProgramBody="{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
-                    "}";
+                    "}";;
             PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(406).
@@ -606,17 +614,17 @@ public class PeriodPrograms_API {
         PeriodProgram_api = new SHAFT.API(BaseURL);
 
             String Update_PeriodProgramBody = "{\n"+
-                    "    \"creationPeriodId\": \""+data[2]+"\",\n" +
-                    "    \"templateId\": \""+data[3]+"\",\n" +
-                    "    \"periodMaxQuotaPerPeriod\": \""+data[4]+"\",\n" +
-                    "    \"minimumModelYear\": \""+data[5]+"\",\n" +
-                    "    \"maximumModelYear\": \""+data[6]+"\",\n" +
-                    "    \"minimumSeat\": \""+data[7]+"\",\n" +
-                    "    \"maximumSeat\": \""+data[8]+"\",\n" +
-                    "    \"vehiclePricePer\": \""+data[9]+"\",\n" +
-                    "    \"isActive\": \""+data[10]+"\",\n" +
+                    "    \"creationPeriodId\": "+data[2]+",\n" +
+                    "    \"templateId\": "+data[3]+",\n" +
+                    "    \"periodMaxQuotaPerPeriod\": "+data[4]+",\n" +
+                    "    \"minimumModelYear\": "+data[5]+",\n" +
+                    "    \"maximumModelYear\": "+data[6]+",\n" +
+                    "    \"minimumSeat\": "+data[7]+",\n" +
+                    "    \"maximumSeat\": "+data[8]+",\n" +
+                    "    \"vehiclePricePer\": "+data[9]+",\n" +
+                    "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
-                    "}";
+                    "}";;
             PeriodProgram_api.put(PeriodProgram_Path + "/" + data[10]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(404).
@@ -738,17 +746,17 @@ public class PeriodPrograms_API {
     public void Check_Valid_Add_PeriodPrograms_status_Code_Response(){
         SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(201).perform();
     }
+    public void Check_Valid_Update_PeriodProgram_status_Code_Response(){
+        SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(200).perform();
+    }
+    public void Check_Valid_Get_PeriodPrograms_status_Code_Response(){
+        SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(200).perform();
+    }
     public void Check_Validation_Error_PeriodProgram_status_Code_Response(){
         SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(422).perform();
     }
     public void Check_Unauthorized_PeriodProgram_status_Code_Response(){
         SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(401).perform();
-    }
-    public void Check_Valid_Update_PeriodPrograms_status_Code_Response(){
-        SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(200).perform();
-    }
-    public void Check_Valid_Get_PeriodPrograms_status_Code_Response(){
-        SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(200).perform();
     }
     public void Check_Validation_NotAccepted_PeriodProgram_status_Code_Response() {
         SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(406).perform();
