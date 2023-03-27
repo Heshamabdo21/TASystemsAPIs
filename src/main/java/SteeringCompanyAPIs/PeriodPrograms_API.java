@@ -368,7 +368,13 @@ public class PeriodPrograms_API {
                     setContentType(ContentType.JSON).
                     setAuthentication("", "", AuthenticationType.NONE).
                     addHeader("Authorization", "Bearer " + TokenValue).perform();
+
         PeriodProgram_Response = PeriodProgram_api.getResponse();
+//        try {
+//            testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult",PeriodProgram_Response.asString() );
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
     }
     public void Add_PeriodProgram_With_NotAccepted_Input_Rq(String TokenValue, Object[] data)  {
         PeriodProgram_api = new SHAFT.API(BaseURL);
@@ -746,7 +752,7 @@ public class PeriodPrograms_API {
     public void Check_Valid_Add_PeriodPrograms_status_Code_Response(){
         SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(201).perform();
     }
-    public void Check_Valid_Update_PeriodProgram_status_Code_Response(){
+    public void Check_Valid_Update_PeriodPrograms_status_Code_Response(){
         SHAFT.Validations.assertThat().number(PeriodProgram_Response.getStatusCode()).isEqualTo(200).perform();
     }
     public void Check_Valid_Get_PeriodPrograms_status_Code_Response(){
@@ -782,9 +788,6 @@ public class PeriodPrograms_API {
 
         }
         }
-    public void Check_PeriodProgram_Without_Policies_Response_Valid_Schema() {
-        PeriodProgram_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data", "AddPeriodPrograms", "Valid_Schema")).perform();
-    }
     public void Check_PeriodProgram_Response_Time() {
         SHAFT.Validations.verifyThat().number(PeriodProgram_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
         SHAFT.Validations.verifyThat().number(PeriodProgram_Response.getTime()).isLessThanOrEquals(30000).perform();

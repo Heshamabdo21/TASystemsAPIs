@@ -9,10 +9,7 @@ import com.shaft.tools.io.ReportManager;
 import com.shaft.tools.io.ReportManagerHelper;
 import com.shaft.tools.support.JavaHelper;
 import org.apache.poi.EmptyFileException;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
 import org.testng.Assert;
 
 import java.io.FileInputStream;
@@ -222,7 +219,11 @@ public class ExtraExcelFun extends ExcelFileManager {
             
       //  initializeVariables();
        // this.excelFilePath = excelFilePath;
+       // workbook.setForceFormulaRecalculation();
+
+        XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
         workbook.setForceFormulaRecalculation(true);
+
 
 
         try {

@@ -1,0 +1,1504 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Reports</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Extent Reports - Powered by SHAFT_Engine</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mar 26, 2023 05:22:44 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Mar 26, 2023 05:22:44 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Mar 26, 2023 05:23:02 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>5</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>5</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='5%'><b>5</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>91</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"PeriodProgram- Get Valid Today Creational Period":8.523,"TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data":2.182,"TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data":1.491,"TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data":1.542,"TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data":1.524
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 5,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 5,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 91
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PeriodProgram- Get Valid Today Creational Period</p>
+            <p class="text-sm">
+              <span>5:22:47 PM</span> / <span>00:00:08:523</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">PeriodProgram- Get Valid Today Creational Period</h5>
+<span class='badge badge-success'>03.26.2023 5:22:47 PM</span>
+<span class='badge badge-danger'>03.26.2023 5:22:55 PM</span>
+<span class='badge badge-default'>00:00:08:523</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:47 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:49 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:50 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1298ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:50 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-0'></div>
+ <script>
+  function jsonTreeCreate0() { 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2Nzk4NjU3NjksImlhdCI6MTY3OTg0NDE2OSwianRpIjoiNTA4OTFmNDktZGY0Yy00OTIxLWE3MGEtYTE5YjFhZGI2ODI0IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjUxNTQ0MjEyLTA3MTYtNDU5NC1iOGNjLWQwOGI2NzgwZTkwYyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjUxNTQ0MjEyLTA3MTYtNDU5NC1iOGNjLWQwOGI2NzgwZTkwYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.ggR1N17QsUzlT0OdPdu1sffkdK_YeKTC7_ho3uSBtxtvx7RXpOCfcbORSB_IHvnPji-z-pkXzEvFgInHihQ9v-vDkuvzr0gLkxsW7gL2hdb41Of8D7jtsIp-3EtbG9a-j4yueH7s9JGffALO3UE3reh8093r2MJ8TcVIQDFcYVf_LZtxZoAK-i0L0eTKhViBHfsalGXjk7Dfg5LkeJNE6DrtaUiWG3GHAvTysMwO0aQ6SaDm_p4FSexI3nt8d2VXCs2-XQviRaJQQYFReECtcJgk5Gnj6icp8ewRZ_vKshX88C5gFzt9Qhr7KCza3OU9K7ktNqbvHUZMFPfuMdGO8A",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2Nzk4NDU5NjksImlhdCI6MTY3OTg0NDE2OSwianRpIjoiMWNjMDM1NDAtNjgyYy00Y2NjLWJiYjktZDAyNzc3M2YyZmU1IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI1MTU0NDIxMi0wNzE2LTQ1OTQtYjhjYy1kMDhiNjc4MGU5MGMiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI1MTU0NDIxMi0wNzE2LTQ1OTQtYjhjYy1kMDhiNjc4MGU5MGMifQ.-1MGiUG_vx5TA_G8Krxg8tcAC76miqG-2BJHi8QN1vM",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "51544212-0716-4594-b8cc-d08b6780e90c",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate0();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:50 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:51 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:51 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:51 PM</td>
+        <td>
+          Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/creationalPeriods | Content Type: */* | Response Time: 775ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:51 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-1'></div>
+ <script>
+  function jsonTreeCreate1() { 
+   document.getElementById('code-block-json-1').innerHTML = JSONTree.create({
+  "size": 20,
+  "totalPages": 1,
+  "page": 0,
+  "content": [
+    {
+      "periodMaxQuotaPerPeriod": 300.0,
+      "endDate": "2022-11-14T16:00:00Z",
+      "periodProgramTemplates": [
+        313,
+        314,
+        315
+      ],
+      "id": 188,
+      "startDate": "2022-10-24T00:00:00Z",
+      "status": "Active"
+    },
+    {
+      "periodMaxQuotaPerPeriod": 100.0,
+      "endDate": "2022-11-22T13:33:00Z",
+      "periodProgramTemplates": [
+        314
+      ],
+      "id": 193,
+      "startDate": "2022-11-21T01:33:00Z",
+      "status": "Active"
+    },
+    {
+      "periodMaxQuotaPerPeriod": 10.0,
+      "endDate": "2023-03-28T23:03:00Z",
+      "periodProgramTemplates": [
+        335,
+        336,
+        337
+      ],
+      "id": 232,
+      "startDate": "2023-03-14T00:03:00Z",
+      "status": "Active"
+    },
+    {
+      "periodMaxQuotaPerPeriod": 100.0,
+      "endDate": "2023-03-28T23:03:00Z",
+      "periodProgramTemplates": [
+        329,
+        330,
+        331
+      ],
+      "id": 233,
+      "startDate": "2023-03-19T00:03:00Z",
+      "status": "Active"
+    }
+  ],
+  "totalElements": 4
+}); 
+  }
+  jsonTreeCreate1();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:51 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:52 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:52 PM</td>
+        <td>
+          Perform request "GET | Target Status Code: 200 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodProgramTemplates/335 | Content Type: */* | Response Time: 513ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:52 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-2'></div>
+ <script>
+  function jsonTreeCreate2() { 
+   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({
+  "seasonType": "umrah",
+  "vehicleCategoryId": 3,
+  "programType": "Routes",
+  "vehicleTypeId": 4,
+  "templatePeriodEndDate": "2023-07-02T00:00:00Z",
+  "templatePeriodMaximumQuota": 10,
+  "minimumSeat": 9,
+  "isActive": true,
+  "templatePeriodStartDate": "2023-07-01T00:00:00Z",
+  "minimumVehiclePricePer": 1200,
+  "routeId": 60,
+  "minimumModelYear": 2010,
+  "saleSystem": "GDS",
+  "season": 1444,
+  "id": 335,
+  "maximumModelYear": 2022,
+  "programMechanism": "reservations",
+  "maximumSeat": 11
+}); 
+  }
+  jsonTreeCreate2();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:22:55 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:55 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:55 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</p>
+            <p class="text-sm">
+              <span>5:22:55 PM</span> / <span>00:00:02:182</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</h5>
+<span class='badge badge-success'>03.26.2023 5:22:55 PM</span>
+<span class='badge badge-danger'>03.26.2023 5:22:58 PM</span>
+<span class='badge badge-default'>00:00:02:182</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:55 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 631ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-3'></div>
+ <script>
+  function jsonTreeCreate3() { 
+   document.getElementById('code-block-json-3').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2Nzk4NjU3NzYsImlhdCI6MTY3OTg0NDE3NiwianRpIjoiNDQ2MTdiODctZjUxOS00MGY5LTg2YjItODdkMDU3YjY2YWI1IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjMzYjJmYTI2LTA5YTEtNDkwMy1hYmNmLTNmODJjNWFhZDcwZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjMzYjJmYTI2LTA5YTEtNDkwMy1hYmNmLTNmODJjNWFhZDcwZiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.JOiSXju9e-CpnoHOtC6u8VOFyTGkCs7EXeFXmAwtDx21ped7IcevGWbo5iARDrbhWUxl8U2pM-ajaElMbaSXi5vI4TznFM3DTDqoUuRqIz-XTD-JUse20_02g8c6tzAtGttT0JkNNMcqvhTF-0LkffmsCBRjDOqLdubYFKIIJdElMP60uTYCuRj60vIPRYDOq1ro1RWrytEJBgO81O0fPBFu9Ve45oO7IMpnmCekoJ-BbW9mvYWiIuo9m9D6y3XtV7gNibR7cOJJYIv3fwvVMlIGu8ZDSrUiXceVFuArOb-xD6da9msNatyW5LkSqnjHRsfG8xSWAUMDImdROvPKoQ",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2Nzk4NDU5NzYsImlhdCI6MTY3OTg0NDE3NiwianRpIjoiMWI2ODZmYmYtZjAxZC00MzA2LTgxMmQtMzY1YTUwODAzMTI4IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiIzM2IyZmEyNi0wOWExLTQ5MDMtYWJjZi0zZjgyYzVhYWQ3MGYiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIzM2IyZmEyNi0wOWExLTQ5MDMtYWJjZi0zZjgyYzVhYWQ3MGYifQ.sFrGZsH08KbwukQg0056tj5R2R2bKcwDi6_5U_CENxE",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "33b2fa26-09a1-4903-abcf-3f82c5aad70f",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate3();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:56 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 404 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodPrograms | Content Type: application/json | Response Time: 557ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-4'></div>
+ <script>
+  function jsonTreeCreate4() { 
+   document.getElementById('code-block-json-4').innerHTML = JSONTree.create({
+  "periodMaxQuotaPerPeriod": 10,
+  "minimumModelYear": 2010,
+  "policies": [],
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200,
+  "creationPeriodId": -1,
+  "templateId": 335,
+  "isActive": true,
+  "maximumSeat": 11
+}); 
+  }
+  jsonTreeCreate4();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-5'></div>
+ <script>
+  function jsonTreeCreate5() { 
+   document.getElementById('code-block-json-5').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find inventory setting specification with id -1",
+  "title": "INVENTORY_OPERATIONAL_SETTING_SPECIFICATION",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate5();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+          Assertion Passed: "404" is equal to "404".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+          Verification Passed: "557" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+          Verification Passed: "557" is less than or equal to "30000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:57 PM</td>
+        <td>
+          Assertion Passed: Check that content object contains : {"title":"INVENTORY_OPERATIONAL_SETTING_SPECIFICATION","status":404,"detail":"Couldn't find inventory setting specification with id
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/NotFoundError_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-6'></div>
+ <script>
+  function jsonTreeCreate6() { 
+   document.getElementById('code-block-json-6').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "items": {}
+    },
+    "status": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "status",
+    "detail",
+    "errors"
+  ]
+}); 
+  }
+  jsonTreeCreate6();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-7'></div>
+ <script>
+  function jsonTreeCreate7() { 
+   document.getElementById('code-block-json-7').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find inventory setting specification with id -1",
+  "title": "INVENTORY_OPERATIONAL_SETTING_SPECIFICATION",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate7();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</p>
+            <p class="text-sm">
+              <span>5:22:58 PM</span> / <span>00:00:01:491</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</h5>
+<span class='badge badge-success'>03.26.2023 5:22:58 PM</span>
+<span class='badge badge-danger'>03.26.2023 5:22:59 PM</span>
+<span class='badge badge-default'>00:00:01:491</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 660ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-8'></div>
+ <script>
+  function jsonTreeCreate8() { 
+   document.getElementById('code-block-json-8').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2Nzk4NjU3NzgsImlhdCI6MTY3OTg0NDE3OCwianRpIjoiMWE2NjVlZmMtYTAxNC00NjBkLTlhNWMtMmEwYWZiZjlhZmUyIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6ImM0ODAzMDAzLWU4MDktNGM5ZS1iOWY2LWZmMTZhNjc1NzNkZSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImM0ODAzMDAzLWU4MDktNGM5ZS1iOWY2LWZmMTZhNjc1NzNkZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.Un37jUM5DMcFTUgYnIO-yTOkP4g5tEsAn4J5TN9fHb6EIZ-njf9soYHbBwfJMlx2o6y6pZQoso4LtjkybDKUbpbAr4tZQ9YbaxVOJmGxXRNUxnXcoX5pqBvkpxfPHyColP0dnCKcfkdJ8o2IIm0T51lEOAnWGQIoOV8K1512w64NoZyi-XtVByM3duUNvYxTWc8f43DLKF4axVxEfTkFEG3WKZYUH9XQyF72RNK6lcMBaz-IHpOFqjW1SbGFHAZVQ11Vl1zlT--CJBilT1kG6mt5lG-mf3Lv0YBDPDe-tHSOakzQ5JdBSfO6JCfmvXrl1ziZ9i0GBKf9w2Mjo6mLWg",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2Nzk4NDU5NzgsImlhdCI6MTY3OTg0NDE3OCwianRpIjoiNjliZTA2ODMtMTY1ZC00MmZjLWIwMGYtNWZjNDg1OTcyMDk2IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiJjNDgwMzAwMy1lODA5LTRjOWUtYjlmNi1mZjE2YTY3NTczZGUiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiJjNDgwMzAwMy1lODA5LTRjOWUtYjlmNi1mZjE2YTY3NTczZGUifQ.rIEgs22pficQoDe3DaxsZbgYkhl_SutCnYpc8-MErzw",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "c4803003-e809-4c9e-b9f6-ff16a67573de",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate8();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:58 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 404 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodPrograms | Content Type: application/json | Response Time: 530ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-9'></div>
+ <script>
+  function jsonTreeCreate9() { 
+   document.getElementById('code-block-json-9').innerHTML = JSONTree.create({
+  "periodMaxQuotaPerPeriod": 10,
+  "minimumModelYear": 2010,
+  "policies": [],
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200,
+  "creationPeriodId": 474,
+  "templateId": 335,
+  "isActive": true,
+  "maximumSeat": 11
+}); 
+  }
+  jsonTreeCreate9();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-10'></div>
+ <script>
+  function jsonTreeCreate10() { 
+   document.getElementById('code-block-json-10').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find inventory setting specification with id 474",
+  "title": "INVENTORY_OPERATIONAL_SETTING_SPECIFICATION",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate10();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Assertion Passed: "404" is equal to "404".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Verification Passed: "530" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Verification Passed: "530" is less than or equal to "30000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Assertion Passed: Check that content object contains : {"title":"INVENTORY_OPERATIONAL_SETTING_SPECIFICATION","status":404,"detail":"Couldn't find inventory setting specification with id
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/NotFoundError_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-11'></div>
+ <script>
+  function jsonTreeCreate11() { 
+   document.getElementById('code-block-json-11').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "items": {}
+    },
+    "status": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "status",
+    "detail",
+    "errors"
+  ]
+}); 
+  }
+  jsonTreeCreate11();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-12'></div>
+ <script>
+  function jsonTreeCreate12() { 
+   document.getElementById('code-block-json-12').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find inventory setting specification with id 474",
+  "title": "INVENTORY_OPERATIONAL_SETTING_SPECIFICATION",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate12();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</p>
+            <p class="text-sm">
+              <span>5:22:59 PM</span> / <span>00:00:01:542</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</h5>
+<span class='badge badge-success'>03.26.2023 5:22:59 PM</span>
+<span class='badge badge-danger'>03.26.2023 5:23:01 PM</span>
+<span class='badge badge-default'>00:00:01:542</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:22:59 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 636ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-13'></div>
+ <script>
+  function jsonTreeCreate13() { 
+   document.getElementById('code-block-json-13').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2Nzk4NjU3NzksImlhdCI6MTY3OTg0NDE3OSwianRpIjoiMmU3ZThjMzItNDgxOC00MTcyLTliNjMtMGRlMjNjODM3M2VjIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjgyOGU2ZDcyLWRlYzUtNDU0MS04MjMwLTYyNGY2MGJiYjYxOCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjgyOGU2ZDcyLWRlYzUtNDU0MS04MjMwLTYyNGY2MGJiYjYxOCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.JBwSNJQtxDTA3MtNOUdvo15x5vu2c2NbvOrZlowLso3S0sXakjghxRrWjg_lXdVFH0ojyD-SSGwIpGpIN0V2HnY3fgIKbWaJc0iDEMAWVryTvxDwm-fQKt3sSKwPFcRs6j7YklXF7ozqnoq3rw4XLTAtsmNRN49qeQaKC8tjawPYMKpeoWAtNzN_RbXS8vkpXi3-rbXGFFP0sWG_SPUE0BrxUKH5HtDXqHjbhDy-oi-GiBVPH-qTOpfVtA639WBNp9A95rGs3hfubvQW2UxNBSnwatk_WtH-xCCBzXOBVuBEwtjPYxDbe7Pkv1u2tgsFGlHj_mObOlV3znM5rdEY3Q",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2Nzk4NDU5NzksImlhdCI6MTY3OTg0NDE3OSwianRpIjoiOTZhNmMzYjUtNjQzNS00MDcwLWE5OWYtYTgwM2IwYjAwYTY3IiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiI4MjhlNmQ3Mi1kZWM1LTQ1NDEtODIzMC02MjRmNjBiYmI2MTgiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiI4MjhlNmQ3Mi1kZWM1LTQ1NDEtODIzMC02MjRmNjBiYmI2MTgifQ.HodV5NXkC85vRta7YQDgC8LJOjSNomTnTFgrh-UKeec",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "828e6d72-dec5-4541-8230-624f60bbb618",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate13();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:00 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 404 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodPrograms | Content Type: application/json | Response Time: 649ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-14'></div>
+ <script>
+  function jsonTreeCreate14() { 
+   document.getElementById('code-block-json-14').innerHTML = JSONTree.create({
+  "periodMaxQuotaPerPeriod": 10,
+  "minimumModelYear": 2010,
+  "policies": [],
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200,
+  "creationPeriodId": 232,
+  "templateId": -1,
+  "isActive": true,
+  "maximumSeat": 11
+}); 
+  }
+  jsonTreeCreate14();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-15'></div>
+ <script>
+  function jsonTreeCreate15() { 
+   document.getElementById('code-block-json-15').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find template with id -1",
+  "title": "PERIOD_PROGRAM_TEMPLATE_NOT_FOUND",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate15();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Assertion Passed: "404" is equal to "404".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Verification Passed: "649" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Verification Passed: "649" is less than or equal to "30000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Assertion Passed: Check that content object contains : {"title":"PERIOD_PROGRAM_TEMPLATE_NOT_FOUND","status":404,"detail":"Couldn't find template with id 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/NotFoundError_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-16'></div>
+ <script>
+  function jsonTreeCreate16() { 
+   document.getElementById('code-block-json-16').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "items": {}
+    },
+    "status": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "status",
+    "detail",
+    "errors"
+  ]
+}); 
+  }
+  jsonTreeCreate16();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-17'></div>
+ <script>
+  function jsonTreeCreate17() { 
+   document.getElementById('code-block-json-17').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find template with id -1",
+  "title": "PERIOD_PROGRAM_TEMPLATE_NOT_FOUND",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate17();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</p>
+            <p class="text-sm">
+              <span>5:23:01 PM</span> / <span>00:00:01:524</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC006 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data</h5>
+<span class='badge badge-success'>03.26.2023 5:23:01 PM</span>
+<span class='badge badge-danger'>03.26.2023 5:23:02 PM</span>
+<span class='badge badge-default'>00:00:01:524</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 200 | Service URL: https://auth-demo.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 687ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-18'></div>
+ <script>
+  function jsonTreeCreate18() { 
+   document.getElementById('code-block-json-18').innerHTML = JSONTree.create({
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjck9ORDFNdFVPVWhzS2Mtb0ppVFFmb0o1d1l4REF6Y3k0ZjNYZ0dveGdZIn0.eyJleHAiOjE2Nzk4NjU3ODEsImlhdCI6MTY3OTg0NDE4MSwianRpIjoiNGY0MWIwYmEtZjU3OS00NWVmLTllNDgtZjhlMzAyMmNjYjFhIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWMtYXBpIiwic2Vzc2lvbl9zdGF0ZSI6IjJlMjA3YTRkLWY3ODgtNGI2NS04NGUyLTAyM2NlOWE1NjZiYyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktZGV2Lm5wLnRyYW5zcG9ydGljb25saW5lLmNvbSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXRpYyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjJlMjA3YTRkLWY3ODgtNGI2NS04NGUyLTAyM2NlOWE1NjZiYyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidG9raGkiLCJ0Y0lkIjoiMzE5OTU3In0.ZyZrlc8IyUDEIFvf02lapbttS4bLLgnW7vtTUEX18sghK_apjOwSXvUIHtLXrXSUvGnxw-t2QNaXgS8O0wAtl0b-IIYf8ZB4D7MPgACcECDovyB-qzIPwG9M3SaLSYXHK7tNOvnU8Q7Acnf7oU_Qo4VcbIaIwTZrRXA3JZ0I3M-NLLFsDApCCyDtKlrWDDbMTGg4feURABkVeUkXVwn7VIMmeb6mpxPVZapwXasyZpJj2YdqVKb6Z2-JUYKZQr2qbdT1Fr61igZOwfuLVrnEB-2aB6I381evK9n65ToQlyi9B179EH-Zf7-094x00hDs5ayVhjSK0Ufrmk1TsLD73g",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkMTFjNTY4Yi1iMjAyLTQzYjgtYTBiMy1hYWI4ZWMyYWQzZDEifQ.eyJleHAiOjE2Nzk4NDU5ODEsImlhdCI6MTY3OTg0NDE4MSwianRpIjoiZjRmN2U3NzgtNDQzNy00MDM2LWJmMTUtNzg5MjIwNjE3ZTdiIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLWRlbW8ubnAudHJhbnNwb3J0aWNvbmxpbmUuY29tL2F1dGgvcmVhbG1zL3RpYyIsImF1ZCI6Imh0dHBzOi8vYXV0aC1kZW1vLm5wLnRyYW5zcG9ydGljb25saW5lLmNvbS9hdXRoL3JlYWxtcy90aWMiLCJzdWIiOiI0ZTk3NmQ0NC1iM2ZkLTRjYTktODk1Ny0wYWJiODUwNzNhNzQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoidGljLWFwaSIsInNlc3Npb25fc3RhdGUiOiIyZTIwN2E0ZC1mNzg4LTRiNjUtODRlMi0wMjNjZTlhNTY2YmMiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIyZTIwN2E0ZC1mNzg4LTRiNjUtODRlMi0wMjNjZTlhNTY2YmMifQ.3ieR6Ok3AZfHAexzAE8rW9yJGCuW-rQkCR1dYoLYbvM",
+  "refresh_expires_in": 1800,
+  "not-before-policy": 0,
+  "scope": "email profile",
+  "token_type": "Bearer",
+  "session_state": "2e207a4d-f788-4b65-84e2-023ce9a566bc",
+  "expires_in": 21600
+}); 
+  }
+  jsonTreeCreate18();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Assertion Passed: Check Response Status Code is 200 and it is valid.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:01 PM</td>
+        <td>
+          Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Assertion Passed: Evaluating the actual response status code against the expected one...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Perform request "POST | Target Status Code: 404 | Service URL: https://api-demo.np.transporticonline.com/steeringcompanies/v1/periodPrograms | Content Type: application/json | Response Time: 605ms".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-19'></div>
+ <script>
+  function jsonTreeCreate19() { 
+   document.getElementById('code-block-json-19').innerHTML = JSONTree.create({
+  "periodMaxQuotaPerPeriod": 10,
+  "minimumModelYear": 2010,
+  "policies": [],
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200,
+  "creationPeriodId": 232,
+  "templateId": 680,
+  "isActive": true,
+  "maximumSeat": 11
+}); 
+  }
+  jsonTreeCreate19();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-20'></div>
+ <script>
+  function jsonTreeCreate20() { 
+   document.getElementById('code-block-json-20').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find template with id 680",
+  "title": "PERIOD_PROGRAM_TEMPLATE_NOT_FOUND",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate20();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Assertion Passed: "404" is equal to "404".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Verification Passed: "605" is greater than or equal to "1.1".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Verification Passed: "605" is less than or equal to "30000".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Assertion Passed: Check that content object contains : {"title":"PERIOD_PROGRAM_TEMPLATE_NOT_FOUND","status":404,"detail":"Couldn't find template with id 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/NotFoundError_schema.json".
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-21'></div>
+ <script>
+  function jsonTreeCreate21() { 
+   document.getElementById('code-block-json-21').innerHTML = JSONTree.create({
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "array",
+      "items": {}
+    },
+    "status": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "status",
+    "detail",
+    "errors"
+  ]
+}); 
+  }
+  jsonTreeCreate21();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-22'></div>
+ <script>
+  function jsonTreeCreate22() { 
+   document.getElementById('code-block-json-22').innerHTML = JSONTree.create({
+  "detail": "Couldn\u0027t find template with id 680",
+  "title": "PERIOD_PROGRAM_TEMPLATE_NOT_FOUND",
+  "errors": [],
+  "status": 404
+}); 
+  }
+  jsonTreeCreate22();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>5:23:02 PM</td>
+        <td>
+          Test Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
