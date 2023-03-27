@@ -12,6 +12,8 @@ import com.shaft.tools.io.ExcelFileManager;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.jetbrains.annotations.NotNull;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -157,12 +159,25 @@ public class PeriodPrograms_API {
                 setContentType(ContentType.JSON).
                 setAuthentication("","", AuthenticationType.NONE).
                 addHeader("Authorization", "Bearer " + TokenValue).perform();
+        PeriodProgram_Response = PeriodProgram_api.getResponse();
+        int PeriodProgramID;
         try {
-            testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"creationPeriodId\":\""+data[2]+"\"");
+            JSONObject ResponseJsonObject = new JSONObject (PeriodProgram_Response.getBody().asString());
+            PeriodProgramID =ResponseJsonObject.getInt("id");
+
+        } catch (JSONException e) {
+             PeriodProgramID=0;
+            throw new RuntimeException(e);
+        }
+
+
+        try {
+            testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "ExpectedResult", "\"creationPeriodId\":"+data[2]+"");
+            testDataReader2.AddExpectedResult("PeriodProgram_TestData", data[0].toString(), "PeriodProgramID", String.valueOf(PeriodProgramID));
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        PeriodProgram_Response = PeriodProgram_api.getResponse();
     }
 /*
     public void Add_PeriodProgram_Without_Policies_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
@@ -508,7 +523,7 @@ public class PeriodPrograms_API {
                     "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";
-            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[22]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(200).
                     setContentType(ContentType.JSON).
@@ -535,7 +550,7 @@ public class PeriodPrograms_API {
                     "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";;
-            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[22]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(401).
                     setContentType(ContentType.JSON).
@@ -559,7 +574,7 @@ public class PeriodPrograms_API {
                     "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";;
-            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[22]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(401).
                     setContentType(ContentType.JSON).
@@ -583,7 +598,7 @@ public class PeriodPrograms_API {
                     "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";;
-            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[22]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(422).
                     setContentType(ContentType.JSON).
@@ -607,7 +622,7 @@ public class PeriodPrograms_API {
                     "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";;
-            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.put(PeriodProgram_Path+"/"+data[22]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(406).
                     setContentType(ContentType.JSON).
@@ -631,7 +646,7 @@ public class PeriodPrograms_API {
                     "    \"isActive\": "+data[10]+",\n" +
                     "    \"policies\": [] \n"+
                     "}";;
-            PeriodProgram_api.put(PeriodProgram_Path + "/" + data[10]).
+            PeriodProgram_api.put(PeriodProgram_Path + "/" + data[22]).
                     setRequestBody(Update_PeriodProgramBody).
                     setTargetStatusCode(404).
                     setContentType(ContentType.JSON).

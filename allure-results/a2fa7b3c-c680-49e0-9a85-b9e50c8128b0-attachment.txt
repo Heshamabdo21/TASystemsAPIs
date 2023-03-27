@@ -1,0 +1,44 @@
+
+################################################################################################################################################
+Starting Execution:	"33 out of 13" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_PeriodProgram_Cases.InValid_Add_PeriodProgram_With_NotAccepted_Data_TC"
+Test Description:	"TC005 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:58:42.0656 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:58:42.0681 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:58:42.0682 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @27-03-2023 14:58:43.0242 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @27-03-2023 14:58:43.0243 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-dev.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 559ms". @27-03-2023 14:58:43.0253 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @27-03-2023 14:58:43.0254 PM
+[ReportManager] Successfully created attachment "API Request - Body" @27-03-2023 14:58:43.0255 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @27-03-2023 14:58:43.0255 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @27-03-2023 14:58:43.0255 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:58:43.0263 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:58:43.0289 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:58:43.0290 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:58:43.0290 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:58:43.0320 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:58:43.0321 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:58:43.0321 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:58:43.0347 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:58:43.0348 PM
+[ReportManager] Response status code: "406", status line: "HTTP/1.1 406 " @27-03-2023 14:58:43.0792 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @27-03-2023 14:58:43.0793 PM
+[ReportManager] Perform request "POST | Target Status Code: 406 | Service URL: https://api-dev.np.transporticonline.com/steeringcompanies/v1/periodPrograms | Content Type: application/json | Response Time: 442ms". @27-03-2023 14:58:43.0806 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @27-03-2023 14:58:43.0807 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @27-03-2023 14:58:43.0807 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @27-03-2023 14:58:43.0808 PM
+[ReportManager] Assertion Passed: "406" is equal to "406". @27-03-2023 14:58:43.0808 PM
+[ReportManager] Verification Passed: "442" is greater than or equal to "1.1". @27-03-2023 14:58:43.0808 PM
+[ReportManager] Verification Passed: "442" is less than or equal to "30000". @27-03-2023 14:58:43.0808 PM
+[ReportManager] Assertion Passed: Check that content object contains : {"title":"Not Acceptable","status":406,"detail":"Missing or invalid data. Please check the error logs for more details!","errors":null} @27-03-2023 14:58:43.0808 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "Schemas/NotAcceptable_Response_schema.json"". @27-03-2023 14:58:43.0808 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/Schemas/NotAcceptable_Response_schema.json"". @27-03-2023 14:58:43.0809 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "src/test/resources/testDataFiles/Schemas/NotAcceptable_Response_schema.json"". @27-03-2023 14:58:43.0809 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\NotAcceptable_Response_schema.json"". @27-03-2023 14:58:43.0811 PM
+[ReportManager] File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\NotAcceptable_Response_schema.json"". @27-03-2023 14:58:43.0811 PM
+[ReportManager] File Action "ReadFile" successfully performed. With the following test data "File Path: "C:\eclipse-workspace\MyProjects\TASystemsAPIs\src\test\resources\testDataFiles\Schemas\NotAcceptable_Response_schema.json"". @27-03-2023 14:58:43.0811 PM
+[ReportManager] Assertion Passed: The API response schema matches that in this file "src/test/resources/testDataFiles/Schemas/NotAcceptable_Response_schema.json". @27-03-2023 14:58:43.0811 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Expected JSON Value" @27-03-2023 14:58:43.0812 PM
+[ReportManager] Successfully created attachment "Validation Test Data - Actual JSON Value" @27-03-2023 14:58:43.0812 PM

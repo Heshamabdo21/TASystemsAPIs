@@ -1,0 +1,12 @@
+{
+  "periodMaxQuotaPerPeriod": 100,
+  "minimumModelYear": 2009,
+  "policies": [],
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200,
+  "creationPeriodId": 67,
+  "templateId": 2.22222222222222E32,
+  "isActive": true,
+  "maximumSeat": 11
+}

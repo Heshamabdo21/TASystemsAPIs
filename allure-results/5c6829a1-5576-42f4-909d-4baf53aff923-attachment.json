@@ -1,0 +1,5 @@
+{
+  "detail": "Missing or invalid data. Please check the error logs for more details!",
+  "title": "Not Acceptable",
+  "status": 406
+}

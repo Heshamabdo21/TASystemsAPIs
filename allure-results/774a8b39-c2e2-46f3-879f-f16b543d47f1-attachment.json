@@ -1,0 +1,15 @@
+{
+  "detail": "Operational setting package template not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Operational setting package template.Bus maximum seat",
+      "detail": "Must not be empty"
+    },
+    {
+      "field": "Operational setting package template.Bus minimum seat",
+      "detail": "Must not be empty"
+    }
+  ],
+  "status": 422
+}

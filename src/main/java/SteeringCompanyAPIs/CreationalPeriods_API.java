@@ -45,6 +45,7 @@ public class CreationalPeriods_API {
         DateTimeZone zonetime = org.joda.time.DateTimeZone.forID("Asia/Riyadh");
         Chronology GJChronologydate = GJChronology.getInstance(zonetime);
         LocalDateTime TodayDateTime = new LocalDateTime(GJChronologydate);
+
         JSONObject ResponseJsonObject = new JSONObject (CreationalPeriods_Response.getBody().asString());
         JSONArray ContentArray =ResponseJsonObject.getJSONArray("content");
         ArrayList<Object> AllData = new ArrayList<>();

@@ -1,0 +1,31 @@
+
+################################################################################################################################################
+Starting Execution:	"52 out of 13" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_PeriodProgram_Cases.InValid_Add_PeriodProgram_With_NotAccepted_Data_TC"
+Test Description:	"TC005 -PeriodProgram- Perform Add PeriodProgram With NotAccepted data"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:59:05.0743 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:59:05.0764 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:59:05.0764 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @27-03-2023 14:59:06.0323 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @27-03-2023 14:59:06.0323 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-dev.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 556ms". @27-03-2023 14:59:06.0331 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @27-03-2023 14:59:06.0332 PM
+[ReportManager] Successfully created attachment "API Request - Body" @27-03-2023 14:59:06.0333 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @27-03-2023 14:59:06.0339 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @27-03-2023 14:59:06.0340 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:59:06.0348 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:59:06.0370 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:59:06.0370 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:59:06.0371 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:59:06.0393 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:59:06.0393 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @27-03-2023 14:59:06.0394 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @27-03-2023 14:59:06.0416 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @27-03-2023 14:59:06.0417 PM
+[ReportManager] Response status code: "201", status line: "HTTP/1.1 201 " @27-03-2023 14:59:07.0047 PM
+[ReportManager] Assertion Failed: Evaluating the actual response status code against the expected one... @27-03-2023 14:59:07.0048 PM
+[ReportManager] Perform request failed "POST | Target Status Code: 406 | Service URL: https://api-dev.np.transporticonline.com/steeringcompanies/v1/periodPrograms | Content Type: application/json | Response Time: 628ms". @27-03-2023 14:59:07.0056 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @27-03-2023 14:59:07.0057 PM
+[ReportManager] Successfully created attachment "API Request - JSON Body" @27-03-2023 14:59:07.0057 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @27-03-2023 14:59:07.0058 PM

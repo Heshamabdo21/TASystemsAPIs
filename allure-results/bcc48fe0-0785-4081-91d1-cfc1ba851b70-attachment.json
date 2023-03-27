@@ -1,0 +1,11 @@
+{
+  "detail": "Period Program Template not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Period Program Template.Bus minimum model year",
+      "detail": "Must not be empty"
+    }
+  ],
+  "status": 422
+}

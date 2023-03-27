@@ -1,0 +1,11 @@
+{
+  "detail": "Period Program Template not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Period Program Template.Bus minimum model year",
+      "detail": "2059 is greater than number of maximum model, the number should be less than or equal 2022"
+    }
+  ],
+  "status": 422
+}
