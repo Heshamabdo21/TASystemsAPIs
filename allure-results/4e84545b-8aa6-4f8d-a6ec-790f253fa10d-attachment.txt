@@ -1,0 +1,50 @@
+
+################################################################################################################################################
+Starting Execution:	"1 out of 2" test cases in the current suite
+Test Method:		"SteeringCompanyAPI_TestCases.Test_PeriodProgram_Cases.Get_Valid_Today_Creational_TC"
+Test Description:	"PeriodProgram- Get Valid Today Creational Period"
+################################################################################################################################################
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:29.0027 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-03-2023 17:10:29.0144 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-03-2023 17:10:29.0152 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 OK" @28-03-2023 17:10:31.0989 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-03-2023 17:10:31.0995 PM
+[ReportManager] Perform request "POST | Target Status Code: 200 | Service URL: https://auth-dev.np.transporticonline.com/auth/realms/tic/protocol/openid-connect/token | Content Type: application/x-www-form-urlencoded | Response Time: 1321ms". @28-03-2023 17:10:33.0091 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-03-2023 17:10:33.0093 PM
+[ReportManager] Successfully created attachment "API Request - Body" @28-03-2023 17:10:33.0094 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-03-2023 17:10:33.0367 PM
+[ReportManager] Assertion Passed: Check Response Status Code is 200 and it is valid. @28-03-2023 17:10:33.0371 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:33.0399 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-03-2023 17:10:33.0521 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-03-2023 17:10:33.0522 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @28-03-2023 17:10:34.0144 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-03-2023 17:10:34.0144 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-dev.np.transporticonline.com/steeringcompanies/v1/creationalPeriods | Content Type: */* | Response Time: 610ms". @28-03-2023 17:10:34.0174 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-03-2023 17:10:34.0175 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-03-2023 17:10:34.0177 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:34.0192 PM
+[ReportManager] Loaded Test Data: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx". @28-03-2023 17:10:34.0274 PM
+[ReportManager] Successfully created attachment "Test Data - Excel" @28-03-2023 17:10:34.0275 PM
+[ReportManager] Response status code: "200", status line: "HTTP/1.1 200 " @28-03-2023 17:10:34.0772 PM
+[ReportManager] Assertion Passed: Evaluating the actual response status code against the expected one... @28-03-2023 17:10:34.0773 PM
+[ReportManager] Perform request "GET | Target Status Code: 200 | Service URL: https://api-dev.np.transporticonline.com/steeringcompanies/v1/periodProgramTemplates/201 | Content Type: */* | Response Time: 486ms". @28-03-2023 17:10:34.0794 PM
+[ReportManager] Successfully created attachment "API Request - Specifications" @28-03-2023 17:10:34.0796 PM
+[ReportManager] Successfully created attachment "API Response - JSON Body" @28-03-2023 17:10:34.0797 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:34.0800 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:35.0346 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:35.0837 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:36.0432 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:36.0827 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:37.0229 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:37.0638 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:37.0969 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:38.0248 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:38.0526 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:38.0815 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:39.0087 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:39.0317 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:39.0575 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:39.0762 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:39.0918 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:40.0077 PM
+[ReportManager] File Action "DoesFileExist" successfully performed. With the following test data "File Path: "src/test/resources/testDataFiles/SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx"". @28-03-2023 17:10:40.0242 PM

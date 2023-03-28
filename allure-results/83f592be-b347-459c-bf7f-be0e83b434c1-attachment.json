@@ -1,0 +1,24 @@
+{
+  "size": 20,
+  "totalPages": 1,
+  "page": 0,
+  "content": [
+    {
+      "periodMaxQuotaPerPeriod": 100.0,
+      "endDate": "2023-03-30T00:00:00Z",
+      "periodProgramTemplates": [
+        201,
+        202,
+        203,
+        204,
+        206,
+        207,
+        209
+      ],
+      "id": 67,
+      "startDate": "2023-03-23T00:00:00Z",
+      "status": "Active"
+    }
+  ],
+  "totalElements": 1
+}
