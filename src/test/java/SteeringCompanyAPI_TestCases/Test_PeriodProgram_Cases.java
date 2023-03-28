@@ -582,6 +582,202 @@ public class Test_PeriodProgram_Cases {
         UpdatePeriodPrograms_TC.Check_PeriodProgram_Response_NotFound_Error_Schema();
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////// Test Case for Valid Get PeriodPrograms //////////////////////////////////////////
+    @DataProvider(name = "Valid_data_Get_PeriodProgram")
+    public Object[][] Valid_Get_PeriodProgram() {
+        testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("PeriodProgram_TestData", "Get_Valid_PeriodProgram_");
+        Object[][] data = new Object[dataRowsNumber][23];
+        for (int i = 0; i < dataRowsNumber; i++) {
+            data[i][0] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "TC_Type");
+            data[i][1] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "APIName");
+            data[i][2] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "creationPeriodId");
+            data[i][3] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "templateId");
+            data[i][4] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "periodMaxQuotaPerPeriod");
+            data[i][5] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "minimumModelYear");
+            data[i][6] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "maximumModelYear");
+            data[i][7] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "minimumSeat");
+            data[i][8] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "maximumSeat");
+            data[i][9] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "vehiclePricePer");
+            data[i][10] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "isActive");
+            data[i][11] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "TaxName");
+            data[i][12] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "TaxID");
+            data[i][13] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "PaymentName");
+            data[i][14] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "PaymentID");
+            data[i][15] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "CancellationName");
+            data[i][16] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "CancellationID");
+            data[i][17] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "GeneralName");
+            data[i][18] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "GeneralID");
+            data[i][19] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "UsageName");
+            data[i][20] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "UsageID");
+            data[i][21] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "ExpectedResult");
+            data[i][22] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_Valid_PeriodProgram_" + (i + 1), "PeriodProgramID");
+
+        }
+        return data;
+    }
+    @SuppressWarnings("TestDataSupplier")
+    @Test(dependsOnMethods = "Get_Valid_Today_Creational_TC", description = "TC001 -PeriodProgram- Perform Get Valid PeriodProgram", dataProvider = "Valid_data_Get_PeriodProgram")
+    @Story("Geting Valid PeriodProgram")
+    @Severity(SeverityLevel.CRITICAL)
+    public void Valid_Get_PeriodProgram_TC(Object[] data) {
+        // Token_API Token_TC=new Token_API();
+        //Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+        //  Token_TC.Check_Token_Valid_status_Code_Response();
+        // String Token =Token_TC.Get_Valid_Access_Token();
+        String Token = SharedSteps_GetToken();
+
+        PeriodPrograms_API GetPeriodPrograms_TC = new PeriodPrograms_API();
+        GetPeriodPrograms_TC.Get_PeriodProgram_Rq(Token, data);
+        GetPeriodPrograms_TC.Check_Valid_Get_PeriodPrograms_status_Code_Response();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Time();
+     //   testDataReader = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+    //    String ExpectedResult = testDataReader.getCellData("PeriodProgram_TestData", data[0].toString(), "ExpectedResult");
+        GetPeriodPrograms_TC.Check_PeriodProgram_Content(data[21].toString());
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Valid_Schema(data[1].toString());
+    }
+    /////////////////////////////////////Invalid token for Get Period Program///////////////////////////////////////////////////////////
+    @SuppressWarnings("TestDataSupplier")
+    @Test(dependsOnMethods = "Get_Valid_Today_Creational_TC", description = "TC002 -PeriodProgram- Perform Get PeriodProgram With Missing Token", dataProvider = "Valid_data_Get_PeriodProgram")
+    @Story("Geting InValid PeriodProgram")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_PeriodProgram_With_Missing_Token_TC(Object[] data) {
+//        Token_API Token_TC=new Token_API();
+//        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+//        Token_TC.Check_Token_Valid_status_Code_Response();
+//        String Token =Token_TC.Get_Valid_Access_Token();
+        String Token = SharedSteps_GetToken();
+
+        PeriodPrograms_API GetPeriodPrograms_TC = new PeriodPrograms_API();
+        GetPeriodPrograms_TC.Get_PeriodProgram_With_Missing_Token_Rq(data);
+        GetPeriodPrograms_TC.Check_Unauthorized_PeriodProgram_status_Code_Response();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Time();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Unauthorized_Schema();
+    }
+    @SuppressWarnings("TestDataSupplier")
+    @Test(dependsOnMethods = "Get_Valid_Today_Creational_TC", description = "TC003 -PeriodProgram- Perform Get PeriodProgram With Invalid/Expired Token", dataProvider = "Valid_data_Get_PeriodProgram")
+    @Story("Geting InValid PeriodProgram")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_PeriodProgram_With_Invalid_Token_TC(Object[] data) {
+//        Token_API Token_TC=new Token_API();
+//        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+//        Token_TC.Check_Token_Valid_status_Code_Response();
+//        String Token =Token_TC.Get_Valid_Access_Token();
+        String Token = SharedSteps_GetToken();
+
+        PeriodPrograms_API GetPeriodPrograms_TC = new PeriodPrograms_API();
+        GetPeriodPrograms_TC.Get_PeriodProgram_With_InValid_Token_Rq("123", data);
+        GetPeriodPrograms_TC.Check_Unauthorized_PeriodProgram_status_Code_Response();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Time();
+//        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Unauthorized_Schema();
+    }
+    /////////////////////////////////////BadRequest data for Get Period Program///////////////////////////////////////////////////////////
+    @DataProvider(name = "BadRequest_data_Get_PeriodProgram")
+    public Object[][] BadRequest_Get_PeriodProgram() {
+        ExtraExcelFun testDataReader2;
+        testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_");
+        Object[][] data = new Object[dataRowsNumber][23];
+        for (int i = 0; i < dataRowsNumber; i++) {
+            data[i][0] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "TC_Type");
+            data[i][1] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "APIName");
+            data[i][2] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "creationPeriodId");
+            data[i][3] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "templateId");
+            data[i][4] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "periodMaxQuotaPerPeriod");
+            data[i][5] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "minimumModelYear");
+            data[i][6] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "maximumModelYear");
+            data[i][7] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "minimumSeat");
+            data[i][8] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "maximumSeat");
+            data[i][9] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "vehiclePricePer");
+            data[i][10] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "isActive");
+            data[i][11] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "TaxName");
+            data[i][12] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "TaxID");
+            data[i][13] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "PaymentName");
+            data[i][14] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "PaymentID");
+            data[i][15] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "CancellationName");
+            data[i][16] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "CancellationID");
+            data[i][17] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "GeneralName");
+            data[i][18] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "GeneralID");
+            data[i][19] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "UsageName");
+            data[i][20] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "UsageID");
+            data[i][21] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "ExpectedResult");
+            data[i][22] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_BadRequest_PeriodProgram_" + (i + 1), "PeriodProgramID");
+
+        }
+        return data;
+    }
+    @SuppressWarnings("TestDataSupplier")
+    @Test(dependsOnMethods = "Get_Valid_Today_Creational_TC", description = "TC004 -PeriodProgram- Perform Get PeriodProgram With BadRequest data", dataProvider = "BadRequest_data_Get_PeriodProgram")
+    @Story("Geting InValid PeriodProgram")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_PeriodProgram_With_BadRequest_Data_TC(Object[] data) {
+//        Token_API Token_TC=new Token_API();
+//        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+//        Token_TC.Check_Token_Valid_status_Code_Response();
+//        String Token =Token_TC.Get_Valid_Access_Token();
+        String Token = SharedSteps_GetToken();
+        PeriodPrograms_API GetPeriodPrograms_TC = new PeriodPrograms_API();
+        GetPeriodPrograms_TC.Get_PeriodProgram_With_BadRequest_Input_Rq(Token, data);
+        GetPeriodPrograms_TC.Check_Validation_BadRequest_PeriodProgram_status_Code_Response();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Time();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Content(data[21].toString());
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Validation_Error_Schema();
+    }
+
+    /////////////////////////////////////NotFound data for Get Period Program///////////////////////////////////////////////////////////
+    @DataProvider(name = "NotFound_data_Get_PeriodProgram")
+    public Object[][] NotFound_Get_PeriodProgram() {
+        ExtraExcelFun testDataReader2;
+        testDataReader2 = new ExtraExcelFun("SteeringCompanyAPI_TestData/SteeringCompanyAPI_TestData.xlsx");
+        int dataRowsNumber = testDataReader2.CountRowsHasSpecificText("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_");
+        Object[][] data = new Object[dataRowsNumber][23];
+        for (int i = 0; i < dataRowsNumber; i++) {
+            data[i][0] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "TC_Type");
+            data[i][1] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "APIName");
+            data[i][2] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "creationPeriodId");
+            data[i][3] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "templateId");
+            data[i][4] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "periodMaxQuotaPerPeriod");
+            data[i][5] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "minimumModelYear");
+            data[i][6] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "maximumModelYear");
+            data[i][7] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "minimumSeat");
+            data[i][8] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "maximumSeat");
+            data[i][9] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "vehiclePricePer");
+            data[i][10] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "isActive");
+            data[i][11] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "TaxName");
+            data[i][12] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "TaxID");
+            data[i][13] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "PaymentName");
+            data[i][14] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "PaymentID");
+            data[i][15] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "CancellationName");
+            data[i][16] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "CancellationID");
+            data[i][17] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "GeneralName");
+            data[i][18] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "GeneralID");
+            data[i][19] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "UsageName");
+            data[i][20] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "UsageID");
+            data[i][21] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "ExpectedResult");
+            data[i][22] = testDataReader2.getCellData("PeriodProgram_TestData", "Get_NotFound_PeriodProgram_" + (i + 1), "PeriodProgramID");
+
+        }
+        return data;
+    }
+    @SuppressWarnings("TestDataSupplier")
+    @Test(dependsOnMethods = "Get_Valid_Today_Creational_TC", description = "TC006 -PeriodProgram- Perform Get PeriodProgram With NotFound data", dataProvider = "NotFound_data_Get_PeriodProgram")
+    @Story("Geting InValid PeriodProgram")
+    @Severity(SeverityLevel.NORMAL)
+    public void InValid_Get_PeriodProgram_With_NotFound_Data_TC(Object[] data) {
+//        Token_API Token_TC=new Token_API();
+//        Token_TC.POST_Valid_TOKEN_Rq(UserName,Password);
+//        Token_TC.Check_Token_Valid_status_Code_Response();
+//        String Token =Token_TC.Get_Valid_Access_Token();
+        String Token = SharedSteps_GetToken();
+        PeriodPrograms_API GetPeriodPrograms_TC = new PeriodPrograms_API();
+        GetPeriodPrograms_TC.Get_PeriodProgram_With_NotFound_Input_Rq(Token, data);
+        GetPeriodPrograms_TC.Check_Validation_NotFound_PeriodProgram_status_Code_Response();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_Time();
+        GetPeriodPrograms_TC.Check_PeriodProgram_Content(data[21].toString());
+        GetPeriodPrograms_TC.Check_PeriodProgram_Response_NotFound_Error_Schema();
+    }
 
 }
 

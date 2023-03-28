@@ -18,11 +18,11 @@
   </parameter>
   <parameter>
     <key>sun.boot.library.path</key>
-    <value>C:\Program Files\Java\jdk-17.0.2\bin</value>
+    <value>C:\Users\HeshamAbdElhamedGhar\.jdks\openjdk-17.0.2\bin</value>
   </parameter>
   <parameter>
     <key>sun.java.command</key>
-    <value>com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -listener com.shaft.tools.listeners.AlterSuiteListener;com.shaft.tools.listeners.InvokedMethodListener;com.shaft.tools.listeners.SuiteListener -socket50422 @w@C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\idea_testng.tmp</value>
+    <value>com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -listener com.shaft.tools.listeners.AlterSuiteListener;com.shaft.tools.listeners.InvokedMethodListener;com.shaft.tools.listeners.SuiteListener -socket50662 @w@C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\HeshamAbdElhamedGhar\AppData\Local\Temp\idea_testng.tmp</value>
   </parameter>
   <parameter>
     <key>jdk.debug</key>
@@ -62,7 +62,7 @@
   </parameter>
   <parameter>
     <key>java.runtime.version</key>
-    <value>17.0.2+8-LTS-86</value>
+    <value>17.0.2+8-86</value>
   </parameter>
   <parameter>
     <key>appender.file.fileName</key>
@@ -110,7 +110,7 @@
   </parameter>
   <parameter>
     <key>java.library.path</key>
-    <value>C:\Program Files\Java\jdk-17.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-18.0.2\bin;C:\WebDriver;C:\Users\HeshamAbdElhamedGhar\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Liquid Technologies\Liquid Studio 2021\XmlDataBinder19\Redist19\cpp\win32\bin;C:\Program Files\Liquid Technologies\Liquid Studio 2021\XmlDataBinder19\Redist19\cpp\win64\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Programs\Python\Python311\;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Microsoft\WindowsApps;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HeshamAbdElhamedGhar\AppData\Roaming\npm;C:\Users\HeshamAbdElhamedGhar\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\bin;;C:\Users\HeshamAbdElhamedGhar\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.3.2\bin;C:\PHP;.</value>
+    <value>C:\Users\HeshamAbdElhamedGhar\.jdks\openjdk-17.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-18.0.2\bin;C:\WebDriver;C:\Users\HeshamAbdElhamedGhar\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Liquid Technologies\Liquid Studio 2021\XmlDataBinder19\Redist19\cpp\win32\bin;C:\Program Files\Liquid Technologies\Liquid Studio 2021\XmlDataBinder19\Redist19\cpp\win64\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Programs\Python\Python311\;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Microsoft\WindowsApps;C:\Users\HeshamAbdElhamedGhar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HeshamAbdElhamedGhar\AppData\Roaming\npm;C:\Users\HeshamAbdElhamedGhar\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\bin;;C:\Users\HeshamAbdElhamedGhar\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.3.2\bin;C:\PHP;.</value>
   </parameter>
   <parameter>
     <key>java.vendor</key>
@@ -194,7 +194,7 @@
   </parameter>
   <parameter>
     <key>java.vm.name</key>
-    <value>Java HotSpot(TM) 64-Bit Server VM</value>
+    <value>OpenJDK 64-Bit Server VM</value>
   </parameter>
   <parameter>
     <key>apiConnectionTimeout</key>
@@ -322,7 +322,7 @@
   </parameter>
   <parameter>
     <key>java.runtime.name</key>
-    <value>Java(TM) SE Runtime Environment</value>
+    <value>OpenJDK Runtime Environment</value>
   </parameter>
   <parameter>
     <key>generateExtentReports</key>
@@ -430,7 +430,7 @@
   </parameter>
   <parameter>
     <key>java.home</key>
-    <value>C:\Program Files\Java\jdk-17.0.2</value>
+    <value>C:\Users\HeshamAbdElhamedGhar\.jdks\openjdk-17.0.2</value>
   </parameter>
   <parameter>
     <key>testng.dtd.http</key>
@@ -678,7 +678,7 @@
   </parameter>
   <parameter>
     <key>java.vm.version</key>
-    <value>17.0.2+8-LTS-86</value>
+    <value>17.0.2+8-86</value>
   </parameter>
   <parameter>
     <key>cucumber.glue</key>

@@ -9,6 +9,8 @@ import com.shaft.tools.io.ReportManager;
 import com.shaft.tools.io.ReportManagerHelper;
 import com.shaft.tools.support.JavaHelper;
 import org.apache.poi.EmptyFileException;
+import org.apache.poi.ss.usermodel.CellValue;
+import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.xssf.usermodel.*;
 import org.testng.Assert;
 
@@ -51,6 +53,19 @@ public class ExtraExcelFun extends ExcelFileManager {
         try {
             fis = new FileInputStream(excelFilePath);
             workbook = new XSSFWorkbook(fis);
+            XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
+      //      XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
+
+            workbook.setForceFormulaRecalculation(true);
+            FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+            evaluator.evaluateAll();
+       //     evaluator.
+            evaluator.evaluateAll();
+            evaluator.evaluateAll();
+           // evaluator.evaluateAll();
+
+            // FormulaEvaluator evaluator = wb.getCreationHelper().createFormulaEvaluator();
+           // CellValue cellValue = evaluator.evaluate(cell);
             fis.close();
 //            ReportManager.logDiscrete("Reading test data from the following file [" + excelFilePath + "].");
         } catch (IOException e) {
@@ -223,8 +238,15 @@ public class ExtraExcelFun extends ExcelFileManager {
 
         XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
         workbook.setForceFormulaRecalculation(true);
-
-
+        XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
+        workbook.setForceFormulaRecalculation(true);
+        XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
+        workbook.setForceFormulaRecalculation(true);
+        FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+        evaluator.evaluateAll();
+        //     evaluator.
+        evaluator.evaluateAll();
+        evaluator.evaluateAll();
 
         try {
             ExcelFile.close();

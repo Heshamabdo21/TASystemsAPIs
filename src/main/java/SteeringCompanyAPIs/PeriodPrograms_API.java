@@ -659,7 +659,7 @@ public class PeriodPrograms_API {
     public void Get_PeriodProgram_Rq(@NotNull String TokenValue, @NotNull Object[] data) {
         PeriodProgram_api = new SHAFT.API(BaseURL);
 
-            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[22]).
                     //          setRequestBody(GET_Cancel_PeriodProgramBody).
                             setTargetStatusCode(200).
                     setContentType(ContentType.ANY).
@@ -687,7 +687,7 @@ public class PeriodPrograms_API {
                     "    \"chargeValue\": \""+data[9]+"\",\n" +
                     "    \"id\": \""+data[10]+"\"\n"+
                     "}";*/
-            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[22]).
                     //          setRequestBody(GET_Cancel_PeriodProgramBody).
                             setTargetStatusCode(401).
                     setContentType(ContentType.ANY).
@@ -708,7 +708,7 @@ public class PeriodPrograms_API {
                     "    \"chargeValue\": \""+data[9]+"\",\n" +
                     "    \"id\": \""+data[10]+"\"\n"+
                     "}";*/
-            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[22]).
                     //          setRequestBody(GET_Cancel_PeriodProgramBody).
                             setTargetStatusCode(401).
                     setContentType(ContentType.ANY).
@@ -729,7 +729,7 @@ public class PeriodPrograms_API {
                     "    \"chargeValue\": \""+data[9]+"\",\n" +
                     "    \"id\": \""+data[10]+"\"\n"+
                     "}";*/
-            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[10]).
+            PeriodProgram_api.get(PeriodProgram_Path+"/"+data[22]).
                     //          setRequestBody(GET_Cancel_PeriodProgramBody).
                             setTargetStatusCode(404).
                     setContentType(ContentType.ANY).
@@ -750,11 +750,11 @@ public class PeriodPrograms_API {
                     "    \"chargeValue\": \""+data[9]+"\",\n" +
                     "    \"id\": \""+data[10]+"\"\n"+
                     "}";*/
-            if(data[10].toString().contains(" ")) {
-                data[10]='\u2001';
+            if(data[22].toString().contains(" ")) {
+                data[22]='\u2001';
             }
 
-            PeriodProgram_api.get(PeriodProgram_Path+"/"+ data[10]).
+            PeriodProgram_api.get(PeriodProgram_Path+"/"+ data[22]).
         //          setRequestBody(GET_Cancel_PeriodProgramBody).
                     setTargetStatusCode(400).
                     setContentType(ContentType.ANY).
