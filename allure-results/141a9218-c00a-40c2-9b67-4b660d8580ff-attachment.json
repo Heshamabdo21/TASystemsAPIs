@@ -1,0 +1,11 @@
+{
+  "detail": "Operational setting specification not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Operational setting specification.Creation start date",
+      "detail": "2023-04-05T00:04 must be less than or equal 2023-04-03T14:44:53.083920"
+    }
+  ],
+  "status": 422
+}

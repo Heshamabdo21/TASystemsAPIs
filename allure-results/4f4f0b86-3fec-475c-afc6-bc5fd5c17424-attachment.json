@@ -1,0 +1,211 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome1",
+  "definitions": {
+    "Policy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Policy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "chargeType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "deadline": {
+          "type": "integer"
+        },
+        "chargeValue": {
+          "type": "number"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "chargeUnit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "GeneralPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "GeneralPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "nameArabic",
+        "nameEnglish"
+      ]
+    },
+    "Welcome1": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome1",
+      "properties": {
+        "periodMaxQuotaPerPeriod": {
+          "type": "integer"
+        },
+        "minimumModelYear": {
+          "type": "integer"
+        },
+        "policyInfo": {
+          "$ref": "#/definitions/PolicyInfo"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "maximumModelYear": {
+          "type": "integer"
+        },
+        "minimumSeat": {
+          "type": "integer"
+        },
+        "vehiclePricePer": {
+          "type": "number"
+        },
+        "templateId": {
+          "type": "integer"
+        },
+        "creationPeriodId": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "maximumSeat": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "creationPeriodId",
+        "id",
+        "isActive",
+        "maximumModelYear",
+        "maximumSeat",
+        "minimumModelYear",
+        "minimumSeat",
+        "periodMaxQuotaPerPeriod",
+        "policyInfo",
+        "templateId",
+        "vehiclePricePer"
+      ]
+    },
+    "PolicyInfo": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "PolicyInfo",
+      "properties": {
+        "usagePolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "generalPolicy": {
+          "$ref": "#/definitions/GeneralPolicy"
+        },
+        "taxesPolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "cancellationPolicy": {
+          "$ref": "#/definitions/Policy"
+        },
+        "paymentPolicy": {
+          "$ref": "#/definitions/PaymentPolicy"
+        }
+      },
+      "required": [
+        "cancellationPolicy",
+        "generalPolicy",
+        "paymentPolicy",
+        "taxesPolicy",
+        "usagePolicy"
+      ]
+    },
+    "PaymentPolicy": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "PaymentPolicy",
+      "properties": {
+        "descriptionArabic": {
+          "type": "string"
+        },
+        "refundType": {
+          "type": "string"
+        },
+        "nameArabic": {
+          "type": "string"
+        },
+        "nameEnglish": {
+          "type": "string"
+        },
+        "cancellationPolicyId": {
+          "type": "null"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "descriptionEnglish": {
+          "type": "string"
+        },
+        "isRefundable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cancellationPolicyId",
+        "descriptionArabic",
+        "descriptionEnglish",
+        "id",
+        "isActive",
+        "isRefundable",
+        "nameArabic",
+        "nameEnglish",
+        "refundType"
+      ]
+    }
+  }
+}

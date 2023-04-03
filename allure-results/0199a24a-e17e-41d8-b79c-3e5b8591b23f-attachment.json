@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome7",
+  "definitions": {
+    "PolicyInfo": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "PolicyInfo"
+    },
+    "Welcome7": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "Welcome7",
+      "properties": {
+        "periodMaxQuotaPerPeriod": {
+          "type": "integer"
+        },
+        "minimumModelYear": {
+          "type": "integer"
+        },
+        "policyInfo": {
+          "$ref": "#/definitions/PolicyInfo"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "maximumModelYear": {
+          "type": "integer"
+        },
+        "minimumSeat": {
+          "type": "integer"
+        },
+        "vehiclePricePer": {
+          "type": "number"
+        },
+        "templateId": {
+          "type": "integer"
+        },
+        "creationPeriodId": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "maximumSeat": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "creationPeriodId",
+        "id",
+        "isActive",
+        "maximumModelYear",
+        "maximumSeat",
+        "minimumModelYear",
+        "minimumSeat",
+        "periodMaxQuotaPerPeriod",
+        "policyInfo",
+        "templateId",
+        "vehiclePricePer"
+      ]
+    }
+  }
+}

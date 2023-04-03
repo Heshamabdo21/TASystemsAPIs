@@ -1,0 +1,21 @@
+{
+  "size": 1,
+  "totalPages": 138,
+  "page": 0,
+  "content": [
+    {
+      "periodMaxQuotaPerPeriod": 92,
+      "minimumModelYear": 2010,
+      "policyInfo": {},
+      "id": 1021,
+      "maximumModelYear": 2011,
+      "minimumSeat": 11,
+      "vehiclePricePer": 1.0,
+      "templateId": 252,
+      "creationPeriodId": 142,
+      "isActive": true,
+      "maximumSeat": 11
+    }
+  ],
+  "totalElements": 138
+}

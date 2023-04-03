@@ -1,0 +1,33 @@
+{
+  "periodMaxQuotaPerPeriod": 10,
+  "minimumModelYear": 0,
+  "policies": [
+    {
+      "id": 122,
+      "type": "tax"
+    },
+    {
+      "id": 129,
+      "type": "payment"
+    },
+    {
+      "id": 296,
+      "type": "cancellation"
+    },
+    {
+      "id": 120,
+      "type": "general"
+    },
+    {
+      "id": 121,
+      "type": "usage"
+    }
+  ],
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200,
+  "creationPeriodId": 234,
+  "templateId": 335,
+  "isActive": true,
+  "maximumSeat": 11
+}

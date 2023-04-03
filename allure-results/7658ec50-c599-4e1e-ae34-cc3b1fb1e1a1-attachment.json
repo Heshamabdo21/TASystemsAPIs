@@ -1,0 +1,11 @@
+{
+  "detail": "Operational setting specification not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Operational setting specification.Bus quota",
+      "detail": "11 must be less than or equal 10.00"
+    }
+  ],
+  "status": 422
+}

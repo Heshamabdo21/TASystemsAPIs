@@ -1,0 +1,62 @@
+{
+  "periodMaxQuotaPerPeriod": 10,
+  "minimumModelYear": 2010,
+  "policyInfo": {
+    "usagePolicy": {
+      "descriptionArabic": "تعديل من الريكويست",
+      "nameArabic": "ين",
+      "nameEnglish": "edit api",
+      "id": 121,
+      "isActive": true,
+      "descriptionEnglish": "edit api"
+    },
+    "generalPolicy": {
+      "descriptionArabic": "الشروط و الاحكام 11",
+      "nameArabic": "سياسة عامة 11",
+      "nameEnglish": "general policy 11",
+      "id": 120,
+      "isActive": true,
+      "descriptionEnglish": "terms and conditions"
+    },
+    "taxesPolicy": {
+      "descriptionArabic": "تعريف سياسية ضريبة عادية1069",
+      "nameArabic": "سياسية ضريبة عادية 21069",
+      "nameEnglish": "Normal Tax Policy 21069",
+      "chargeType": "percentage",
+      "id": 122,
+      "isActive": true,
+      "chargeValue": 2.0,
+      "descriptionEnglish": "Description Tax Policy1069"
+    },
+    "cancellationPolicy": {
+      "descriptionArabic": "تعريف سياسية الغاء عادية6418",
+      "nameArabic": "سياسية الغاء عادية 16418",
+      "nameEnglish": "Normal Cancel Policy 16418",
+      "chargeType": "percentage",
+      "id": 296,
+      "isActive": true,
+      "deadline": 10,
+      "chargeValue": 10.0,
+      "descriptionEnglish": "Description Cancel Policy6418",
+      "chargeUnit": "days"
+    },
+    "paymentPolicy": {
+      "descriptionArabic": "name",
+      "refundType": "full_refundable",
+      "nameArabic": "ست",
+      "nameEnglish": "TEST",
+      "id": 129,
+      "isActive": true,
+      "descriptionEnglish": "description English",
+      "isRefundable": true
+    }
+  },
+  "id": 1460,
+  "maximumModelYear": 2022,
+  "minimumSeat": 9,
+  "vehiclePricePer": 1200.0,
+  "templateId": 335,
+  "creationPeriodId": 234,
+  "isActive": true,
+  "maximumSeat": 11
+}

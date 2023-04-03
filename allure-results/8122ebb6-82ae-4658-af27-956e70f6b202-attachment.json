@@ -1,0 +1,11 @@
+{
+  "detail": "Operational setting specification not valid",
+  "title": "VALIDATION_ERROR",
+  "errors": [
+    {
+      "field": "Operational setting specification.Creation End date",
+      "detail": "Creational Period is ended because Creation End date is 2023-03-31T23:03 and it must be greater than or equal 2023-04-03T14:44:49.738081"
+    }
+  ],
+  "status": 422
+}
