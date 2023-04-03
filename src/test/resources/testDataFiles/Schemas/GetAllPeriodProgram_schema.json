@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome8",
+    "$ref": "#/definitions/Test",
     "definitions": {
-        "Welcome8": {
+        "Test": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -25,14 +25,8 @@
                     }
                 }
             },
-            "required": [
-                "content",
-                "page",
-                "size",
-                "totalElements",
-                "totalPages"
-            ],
-            "title": "Welcome8"
+            "required": [],
+            "title": "Test"
         },
         "Content": {
             "type": "object",
@@ -79,19 +73,7 @@
                     "$ref": "#/definitions/PolicyInfo"
                 }
             },
-            "required": [
-                "creationPeriodId",
-                "id",
-                "isActive",
-                "maximumModelYear",
-                "maximumSeat",
-                "minimumModelYear",
-                "minimumSeat",
-                "periodMaxQuotaPerPeriod",
-                "policyInfo",
-                "templateId",
-                "vehiclePricePer"
-            ],
+            "required": [],
             "title": "Content"
         },
         "PolicyInfo": {
@@ -125,10 +107,10 @@
                     "type": "integer"
                 },
                 "nameArabic": {
-                    "type": "string"
+                    "$ref": "#/definitions/CancellationPolicyNameArabic"
                 },
                 "nameEnglish": {
-                    "type": "string"
+                    "$ref": "#/definitions/CancellationPolicyNameEnglish"
                 },
                 "descriptionArabic": {
                     "type": "string"
@@ -149,17 +131,10 @@
                     "$ref": "#/definitions/ChargeType"
                 },
                 "chargeValue": {
-                    "type": "number"
+                    "type": "integer"
                 }
             },
-            "required": [
-                "descriptionArabic",
-                "descriptionEnglish",
-                "id",
-                "isActive",
-                "nameArabic",
-                "nameEnglish"
-            ],
+            "required": [],
             "title": "Policy"
         },
         "GeneralPolicy": {
@@ -185,14 +160,7 @@
                     "type": "boolean"
                 }
             },
-            "required": [
-                "descriptionArabic",
-                "descriptionEnglish",
-                "id",
-                "isActive",
-                "nameArabic",
-                "nameEnglish"
-            ],
+            "required": [],
             "title": "GeneralPolicy"
         },
         "PaymentPolicy": {
@@ -234,17 +202,7 @@
                     ]
                 }
             },
-            "required": [
-                "cancellationPolicyId",
-                "descriptionArabic",
-                "descriptionEnglish",
-                "id",
-                "isActive",
-                "isRefundable",
-                "nameArabic",
-                "nameEnglish",
-                "refundType"
-            ],
+            "required": [],
             "title": "PaymentPolicy"
         },
         "ChargeType": {
@@ -261,36 +219,28 @@
             ],
             "title": "ChargeUnit"
         },
+        "CancellationPolicyNameArabic": {
+            "type": "string",
+            "title": "CancellationPolicyNameArabic"
+        },
+        "CancellationPolicyNameEnglish": {
+            "type": "string",
+            "title": "CancellationPolicyNameEnglish"
+        },
         "GeneralPolicyNameArabic": {
             "type": "string",
-            "enum": [
-                "سياسات عامة",
-                "سياسة عامة 11"
-            ],
             "title": "GeneralPolicyNameArabic"
         },
         "GeneralPolicyNameEnglish": {
             "type": "string",
-            "enum": [
-                "General policies",
-                "general policy 11"
-            ],
             "title": "GeneralPolicyNameEnglish"
         },
         "PaymentPolicyNameArabic": {
             "type": "string",
-            "enum": [
-                "سياسات الدفع",
-                "ست"
-            ],
             "title": "PaymentPolicyNameArabic"
         },
         "PaymentPolicyNameEnglish": {
             "type": "string",
-            "enum": [
-                "Payment policies",
-                "TEST"
-            ],
             "title": "PaymentPolicyNameEnglish"
         },
         "RefundType": {

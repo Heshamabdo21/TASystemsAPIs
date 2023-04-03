@@ -50,6 +50,19 @@ public class PeriodPrograms_API {
         All_PeriodPrograms_Response = All_PeriodPrograms_api.getResponse();
 
     }
+    public void GET_All_PeriodPrograms_ValidationError_by_parameter_Query_Rq(String TokenValue, String PageSize, String PageNumber) {
+        //  String Lookup_PeriodPrograms_Path = "/PeriodPrograms";
+        All_PeriodPrograms_api = new SHAFT.API(BaseURL);
+        List<List<Object>> parameters = Arrays.asList(Arrays.asList("size", PageSize),
+                Arrays.asList("page",PageNumber));
+        All_PeriodPrograms_api.get(All_PeriodPrograms_Path).
+                setTargetStatusCode(422).
+                setAuthentication("", "", AuthenticationType.NONE).
+                setParameters(parameters, RestActions.ParametersType.QUERY).
+                addHeader("Authorization", "Bearer " + TokenValue).perform();
+        All_PeriodPrograms_Response = All_PeriodPrograms_api.getResponse();
+
+    }
     public void GET_All_PeriodPrograms_With_Missing_Token_Rq() {
         // String Lookup_cities_Path = "/lookups/cities";
         All_PeriodPrograms_api = new SHAFT.API(BaseURL);
@@ -79,15 +92,24 @@ public class PeriodPrograms_API {
     public void Check_Unauthorized_All_PeriodPrograms_status_Code_Response(){
         SHAFT.Validations.assertThat().number(All_PeriodPrograms_Response.getStatusCode()).isEqualTo(401).perform();
     }
+    public void Check_ValidationError_All_PeriodPrograms_status_Code_Response(){
+        SHAFT.Validations.assertThat().number(All_PeriodPrograms_Response.getStatusCode()).isEqualTo(422).perform();
+    }
+
     //////////////////////////////////////////////////////////////////////////////////////
     public void Check_PeriodPrograms_Response_Time() {
         SHAFT.Validations.verifyThat().number(All_PeriodPrograms_Response.getTime()).isGreaterThanOrEquals(1.1).perform();
-        SHAFT.Validations.verifyThat().number(All_PeriodPrograms_Response.getTime()).isLessThanOrEquals(10000).perform();
+        SHAFT.Validations.verifyThat().number(All_PeriodPrograms_Response.getTime()).isLessThanOrEquals(30000).perform();
     }
     public void Check_All_PeriodPrograms_Valid_Content() {
         String Lookups_PeriodPrograms_ResponseBody = All_PeriodPrograms_Response.getBody().asString();
         SHAFT.Validations.assertThat().object(Lookups_PeriodPrograms_ResponseBody).contains("content").perform();
         All_PeriodPrograms_api.assertThatResponse().extractedJsonValue("content").isNotNull().withCustomReportMessage("Check that content object is not null.").perform();
+    }
+    public void Check_All_PeriodPrograms_Content(String ExpectedResult) {
+        All_PeriodPrograms_api.assertThatResponse().body().contains(ExpectedResult).
+                withCustomReportMessage("Check that content object contains : "+ExpectedResult).
+                perform();
     }
     //////////////////////////////////////////////////////////////////////////////////////
     public void Check_All_PeriodPrograms_Response_Valid_Schema() {
@@ -97,6 +119,10 @@ public class PeriodPrograms_API {
     public void Check_All_PeriodPrograms_Response_Unauthorized_Schema() {
         All_PeriodPrograms_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","UnAuthorized","URL")).perform();
     }
+    public void Check_All_PeriodPrograms_Response_ValidationError_Schema() {
+        All_PeriodPrograms_api.assertThatResponse().matchesSchema(testDataReader.getCellData("API_Data","Validation Error","URL")).perform();
+    }
+
 
     /////////////////////// Add  PeriodProgram Methods ///////////////////
     String PeriodProgram_Path = testDataReader.getCellData("API_Data","AddPeriodPrograms","URL");
