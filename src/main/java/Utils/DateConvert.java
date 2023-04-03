@@ -21,8 +21,7 @@ public class DateConvert {
         Chronology GJChronologydate = GJChronology.getInstance(zone);
         Chronology hijri = IslamicChronology.getInstance(zone);
         LocalDate todayGJChronologydate = new LocalDate(year, month, day, GJChronologydate);
-        LocalDate todayHijri = new LocalDate(todayGJChronologydate.toDateTimeAtStartOfDay(),
-                hijri);
+        LocalDate todayHijri = new LocalDate(todayGJChronologydate.toDateTimeAtStartOfDay(),hijri);
         System.out.println("Hijri Data :::: " + todayHijri.toString("yyyy/MM/dd") + "\n" + "todayGJChronologydate ::: " + todayGJChronologydate.toString("yyyy/MM/dd")); // 1434-05-19
     return todayHijri;
 
@@ -48,11 +47,16 @@ public class DateConvert {
         int day = Integer.parseInt(values[0]);
         int month = Integer.parseInt(values[1]);
         int year = Integer.parseInt(values[2]);
-        DateTimeZone zone = DateTimeZone.forID("Asia/Riyadh");
-        Chronology hijri = IslamicChronology.getInstance(zone);
-        return new LocalDate(year, month, day, hijri);
-    }
 
+        DateTimeZone zone = DateTimeZone.forID("Asia/Riyadh");
+        Chronology GJChronologydate = GJChronology.getInstance(zone);
+        Chronology hijri = IslamicChronology.getInstance(zone);
+        ConvertedGJChronologydate = new LocalDate(year, month, day, GJChronologydate);
+        LocalDate ConvertedHijridate = new LocalDate(ConvertedGJChronologydate.toDateTimeAtStartOfDay(),hijri);
+
+        return  ConvertedHijridate;
+    }
+    LocalDate ConvertedGJChronologydate;
     public LocalDateTime GregorianDateTime(@NotNull String Date,String [] Separator) {
         //Convert from Gregorian Date string to Hijri Date Object
         String[] WholeString = Date.split(Separator[0]);

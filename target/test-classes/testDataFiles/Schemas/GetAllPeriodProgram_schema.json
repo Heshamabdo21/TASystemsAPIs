@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Test",
+    "$ref": "#/definitions/Welcome10",
     "definitions": {
-        "Test": {
+        "Welcome10": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -25,8 +25,14 @@
                     }
                 }
             },
-            "required": [],
-            "title": "Test"
+            "required": [
+                "content",
+                "page",
+                "size",
+                "totalElements",
+                "totalPages"
+            ],
+            "title": "Welcome10"
         },
         "Content": {
             "type": "object",
@@ -73,7 +79,19 @@
                     "$ref": "#/definitions/PolicyInfo"
                 }
             },
-            "required": [],
+            "required": [
+                "creationPeriodId",
+                "id",
+                "isActive",
+                "maximumModelYear",
+                "maximumSeat",
+                "minimumModelYear",
+                "minimumSeat",
+                "periodMaxQuotaPerPeriod",
+                "policyInfo",
+                "templateId",
+                "vehiclePricePer"
+            ],
             "title": "Content"
         },
         "PolicyInfo": {
@@ -96,7 +114,6 @@
                     "$ref": "#/definitions/GeneralPolicy"
                 }
             },
-            "required": [],
             "title": "PolicyInfo"
         },
         "Policy": {
@@ -131,10 +148,17 @@
                     "$ref": "#/definitions/ChargeType"
                 },
                 "chargeValue": {
-                    "type": "integer"
+                    "type": "number"
                 }
             },
-            "required": [],
+            "required": [
+                "descriptionArabic",
+                "descriptionEnglish",
+                "id",
+                "isActive",
+                "nameArabic",
+                "nameEnglish"
+            ],
             "title": "Policy"
         },
         "GeneralPolicy": {
@@ -160,7 +184,14 @@
                     "type": "boolean"
                 }
             },
-            "required": [],
+            "required": [
+                "descriptionArabic",
+                "descriptionEnglish",
+                "id",
+                "isActive",
+                "nameArabic",
+                "nameEnglish"
+            ],
             "title": "GeneralPolicy"
         },
         "PaymentPolicy": {
@@ -202,7 +233,17 @@
                     ]
                 }
             },
-            "required": [],
+            "required": [
+                "cancellationPolicyId",
+                "descriptionArabic",
+                "descriptionEnglish",
+                "id",
+                "isActive",
+                "isRefundable",
+                "nameArabic",
+                "nameEnglish",
+                "refundType"
+            ],
             "title": "PaymentPolicy"
         },
         "ChargeType": {

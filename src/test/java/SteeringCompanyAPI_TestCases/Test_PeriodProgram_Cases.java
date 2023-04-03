@@ -911,7 +911,7 @@ public class Test_PeriodProgram_Cases {
         return data;
     }
 
-    @Test(priority = 1, description = "TC005 -PeriodProgram- Perform Get InValid all PeriodProgram withPagenation", dataProvider = "InValid_all_PeriodProgram_Pagination")
+    @Test(priority = 3, description = "TC005 -PeriodProgram- Perform Get InValid all PeriodProgram withPagenation", dataProvider = "InValid_all_PeriodProgram_Pagination")
     @Story("Geting InValid all PeriodProgram")
     @Severity(SeverityLevel.CRITICAL)
     public void InValid_Get_All_PeriodProgram_Pagination_TC(Object[] data) {
