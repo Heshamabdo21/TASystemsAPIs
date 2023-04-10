@@ -1,0 +1,3 @@
+[ReportManager] Target URL: "https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml" @10-04-2023 17:42:07.0691 PM
+[ReportManager] Initial URL: "about:blank" @10-04-2023 17:42:07.0778 PM
+[ReportManager] Navigate to url "https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml". @10-04-2023 17:42:10.0746 PM

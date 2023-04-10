@@ -1,0 +1,71 @@
+
+################################################################################################################################################
+Starting Execution:    "1 out of 1" test cases in the current suite
+Test Method:        "SteeringCompanyPortal.AddNewCreationalPeriod.testAddNewCreationalPeriod"
+################################################################################################################################################
+[ReportManager] Click "By.xpath: //*[@id='uzaNav']/div[2]/div[3]/a". @10-04-2023 17:42:13.0374 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.id: loginForm:j_username", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:13.0387 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.id: loginForm:j_username)" against "By.id: loginForm:j_username". @10-04-2023 17:42:13.0550 PM
+[ReportManager] Type "1000000000" into "By.id: loginForm:j_username". @10-04-2023 17:42:14.0060 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.id: loginForm:j_password", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:14.0062 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.id: loginForm:j_password)" against "By.id: loginForm:j_password". @10-04-2023 17:42:14.0151 PM
+[ReportManager] Type "123" into "By.id: loginForm:j_password". @10-04-2023 17:42:14.0651 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //div[@id='loginForm:rememberme']/div[2]/span", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:14.0652 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //div[@id='loginForm:rememberme']/div[2]/span)" against "By.xpath: //div[@id='loginForm:rememberme']/div[2]/span". @10-04-2023 17:42:14.0738 PM
+[ReportManager] Click "By.xpath: //div[@id='loginForm:rememberme']/div[2]/span". @10-04-2023 17:42:15.0227 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //button[@id='loginForm:j_idt49']/span", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:15.0230 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //button[@id='loginForm:j_idt49']/span)" against "By.xpath: //button[@id='loginForm:j_idt49']/span". @10-04-2023 17:42:15.0306 PM
+[ReportManager] Click "By.xpath: //button[@id='loginForm:j_idt49']/span". @10-04-2023 17:42:15.0787 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.id: loginForm:j_idt36", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:15.0788 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.id: loginForm:j_idt36)" against "By.id: loginForm:j_idt36". @10-04-2023 17:42:16.0623 PM
+[ReportManager] Type "1" into "By.id: loginForm:j_idt36". @10-04-2023 17:42:17.0088 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //button[@id='loginForm:j_idt49']/span", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:17.0089 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //button[@id='loginForm:j_idt49']/span)" against "By.xpath: //button[@id='loginForm:j_idt49']/span". @10-04-2023 17:42:17.0170 PM
+[ReportManager] Click "By.xpath: //button[@id='loginForm:j_idt49']/span". @10-04-2023 17:42:17.0687 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.cssSelector: body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:17.0688 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.cssSelector: body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo)" against "By.cssSelector: body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo". @10-04-2023 17:42:20.0084 PM
+[ReportManager] Click and hold "By.cssSelector: body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo". @10-04-2023 17:42:20.0156 PM
+[ReportManager] Click "By.xpath: /html/body/div[1]/div[1]/div[1]/a[2]". @10-04-2023 17:42:20.0851 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //*[@id="j_idt27:subMenu-menuSayyar"]/a/span[1]", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:20.0854 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //*[@id="j_idt27:subMenu-menuSayyar"]/a/span[1])" against "By.xpath: //*[@id="j_idt27:subMenu-menuSayyar"]/a/span[1]". @10-04-2023 17:42:20.0960 PM
+[ReportManager] Click "By.xpath: //*[@id="j_idt27:subMenu-menuSayyar"]/a/span[1]". @10-04-2023 17:42:21.0452 PM
+[ReportManager] Scroll to element "By.xpath: //*[@id="j_idt27:subMenu-SettingSayyar"]/a/span[1]". @10-04-2023 17:42:21.0525 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //*[@id="j_idt27:subMenu-SettingSayyar"]/a/span[1]", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:21.0526 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //*[@id="j_idt27:subMenu-SettingSayyar"]/a/span[1])" against "By.xpath: //*[@id="j_idt27:subMenu-SettingSayyar"]/a/span[1]". @10-04-2023 17:42:21.0600 PM
+[ReportManager] Click "By.xpath: //*[@id="j_idt27:subMenu-SettingSayyar"]/a/span[1]". @10-04-2023 17:42:22.0129 PM
+[ReportManager] Click. @10-04-2023 17:42:22.0571 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //button[@id='primetable:3:j_idt834_button']/span[2]", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:22.0573 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //button[@id='primetable:3:j_idt834_button']/span[2])" against "By.xpath: //button[@id='primetable:3:j_idt834_button']/span[2]". @10-04-2023 17:42:24.0071 PM
+[ReportManager] Click "By.xpath: //button[@id='primetable:3:j_idt834_button']/span[2]". @10-04-2023 17:42:24.0596 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: //div[@id='primetable:3:j_idt834_menu']/ul/li[2]/a/span", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:24.0598 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: //div[@id='primetable:3:j_idt834_menu']/ul/li[2]/a/span)" against "By.xpath: //div[@id='primetable:3:j_idt834_menu']/ul/li[2]/a/span". @10-04-2023 17:42:24.0668 PM
+[ReportManager] Click "By.xpath: //div[@id='primetable:3:j_idt834_menu']/ul/li[2]/a/span". @10-04-2023 17:42:27.0615 PM
+[ReportManager] Click. @10-04-2023 17:42:28.0141 PM
+[ReportManager] Click. @10-04-2023 17:42:29.0970 PM
+[ReportManager] Click "By.id: invStartDate". @10-04-2023 17:42:30.0658 PM
+[ReportManager] Click "By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='>'])[1]/following::select[1]". @10-04-2023 17:42:31.0202 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1]", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:31.0203 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1])" against "By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1]". @10-04-2023 17:42:31.0271 PM
+[ReportManager] Select "9/1444" from "By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1]". @10-04-2023 17:42:31.0485 PM
+[ReportManager] Click "By.linkText: 19". @10-04-2023 17:42:33.0645 PM
+[ReportManager] Click "By.id: invEndDate". @10-04-2023 17:42:34.0162 PM
+[ReportManager] Click "By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='>'])[1]/following::select[1]". @10-04-2023 17:42:34.0693 PM
+[ReportManager] Waiting for element to be present; elementLocator "By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1]", numberOfTries"1", stateOfPresence"true"... @10-04-2023 17:42:34.0694 PM
+[ReportManager] Wait for element to be present "waited for the element's state of presence to be (true). Element locator (By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1])" against "By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1]". @10-04-2023 17:42:34.0787 PM
+[ReportManager] Select "9/1444" from "By.xpath: /html/body/div[7]/div/div[2]/div/div/select[1]". @10-04-2023 17:42:34.0976 PM
+[ReportManager] Click "By.linkText: 20". @10-04-2023 17:42:36.0931 PM
+[ReportManager] Type "00:00" into "By.id: timeFrom". @10-04-2023 17:42:37.0300 PM
+[ReportManager] Click "By.xpath: //div[@id='period-form-grid_content']/div[2]/div[2]/span". @10-04-2023 17:42:37.0745 PM
+[ReportManager] Type "23:00" into "By.id: timeTo". @10-04-2023 17:42:38.0082 PM
+[ReportManager] Type "10". @10-04-2023 17:42:38.0175 PM
+[ReportManager] Click. @10-04-2023 17:42:38.0533 PM
+[ReportManager] Is enabled action failed. @10-04-2023 17:42:39.0123 PM
+[ReportManager] Successfully created attachment "Screenshot - 1681141359263_testAddNewCreationalPeriod_isEnabled_failed" @10-04-2023 17:42:40.0155 PM
+[ReportManager] An Exception Occured @10-04-2023 17:42:40.0160 PM
+[ReportManager] Successfully created attachment "Exception Stack Trace - java.lang.reflect.InvocationTargetException" @10-04-2023 17:42:40.0163 PM
+[ReportManager] Click. @10-04-2023 17:42:40.0460 PM
+[ReportManager] Is enabled action failed. @10-04-2023 17:42:41.0039 PM
+[ReportManager] Successfully created attachment "Screenshot - 1681141361147_testAddNewCreationalPeriod_isEnabled_failed" @10-04-2023 17:42:41.0432 PM
+[ReportManager] An Exception Occured @10-04-2023 17:42:41.0434 PM
+[ReportManager] Successfully created attachment "Exception Stack Trace - java.lang.reflect.InvocationTargetException" @10-04-2023 17:42:41.0438 PM
+[ReportManager] Click. @10-04-2023 17:42:41.0740 PM

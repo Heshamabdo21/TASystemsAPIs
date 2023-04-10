@@ -4,6 +4,7 @@
 
 package SteeringCompanyPortal;
 
+import Utils.DateConvert;
 import com.shaft.driver.SHAFT;
 import org.joda.time.Chronology;
 import org.joda.time.DateTimeZone;
@@ -18,51 +19,53 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import Utils.DateConvert;
+
 import java.time.Duration;
 
 @SuppressWarnings("ALL")
 public class AddNewCreationalPeriod {
-    DateConvert DateConverter;
-    Actions actions;
-    By LoginBtn = By.xpath("//*[@id=\"nav\"]/li[7]/a");
+    ////////////////////////////Locators//////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
+    By LoginBtn = By.xpath("//*[@id='uzaNav']/div[2]/div[3]/a");
     By UserNameTxt = By.id("loginForm:j_username");
     By PasswordTxt = By.id("loginForm:j_password");
     By RememberMeChkBx = By.xpath("//div[@id='loginForm:rememberme']/div[2]/span");
     By SigninBtn = By.xpath("//button[@id='loginForm:j_idt49']/span");
     By OTPTxt = By.id("loginForm:j_idt36");
     // WebDriverWait wait;
-    By TICLogo = By.xpath("/html/body/div[1]/div[1]/div[1]");
+    By TICLogo = By.cssSelector("body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo");
     By SwithPanelBtn = By.xpath("/html/body/div[1]/div[1]/div[1]/a[2]");
     By SayyerMenu = By.xpath("//*[@id=\"j_idt27:subMenu-menuSayyar\"]/a/span[1]");
     By SayyerSubMenu = By.xpath("//*[@id=\"j_idt27:subMenu-SettingSayyar\"]/a/span[1]");
     By PeriodProgramSetting = By.xpath("//*[@id=\"j_idt27:j_idt71\"]/a/span[1]");
     By OTACommissionSetting = By.xpath("//*[@id=\"j_idt27:j_idt72\"]/a/span[1]");
-    By ActionsBtn = By.xpath("//button[@id='primetable:1:j_idt829_button']/span[2]");
-    By ActionsEditBtn = By.xpath("//div[@id='primetable:1:j_idt829_menu']/ul/li[2]/a/span");
-    By AddOperationalPeriodBtn = By.xpath("//button[@id='period-creation-table:j_idt846']/span[2]");
+    //*[@id="primetable:0:j_idt834_button"]/span[2]
+    By ActionsBtn = By.xpath("//button[@id='primetable:3:j_idt834_button']/span[2]");
+    By ActionsEditBtn = By.xpath("//div[@id='primetable:3:j_idt834_menu']/ul/li[2]/a/span");
+    By AddOperationalPeriodBtn = By.xpath("/html/body/div[1]/div[2]/div[3]/div/div/form/div[2]/div[2]/div[2]/div/div/table/thead/tr/th[10]/span/button");
+    By HeaderTable = By.xpath("/html/body/div[1]/div[2]/div[3]/div/div/form/div[2]/div[2]/div[1]");
     By OperationalPeriodNameTxt = By.id("iospDesc");
     By invStartDate = By.id("invStartDate");
     By Calender = By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='>'])[1]/following::select[1]");
     By SelectMonth = By.xpath("/html/body/div[7]/div/div[2]/div/div/select[1]");
     By invEndDate = By.id("invEndDate");
     By minValueRange_input = By.id("minValueRange_input");
-    By j_idt775Btn = By.xpath("//button[@id='j_idt775']/span");
-    By rmmId_label = By.id("rmmId_label");
-    By rmmId_1 = By.id("rmmId_1");
+    By Add_PeriodTemplateBtn = By.xpath("//div[2]/div[2]/div[2]/button");
+    By RouteList_label = By.id("rmmId_label");
+    By FirstRouteLabel = By.id("rmmId_1");
     By busType_label = By.id("busType_label");
     By busType_3 = By.id("busType_3");
-    By category1 = By.xpath("//div[@id='category']/div/div/div/div[2]");
-    By category2 = By.xpath("//div[@id='category']/div/div[2]/div/div[2]");
-    By category3 = By.xpath("//div[@id='category']/div[2]/div[2]/div/div[2]");
+    By category1 = By.xpath("//*[@id='category']/div[1]/div[1]/div/div[2]");
+    By category2 = By.xpath("//*[@id='category']/div[1]/div[2]/div/div[2]");
+    By category3 = By.xpath("//*[@id='category']/div[2]/div[2]/div/div[2]");
     By minVehiclePrice = By.id("minVehiclePrice");
     By packMinValuePerc = By.id("packMinValuePerc");
     By maxValueRange = By.id("maxValueRange");
-    By AddOperationalBtn = By.xpath("//*[@id=\"j_idt846\"]");
-    By AddTemplatesBtn = By.xpath("//*[@id=\"j_idt816\"]");
+    By AddOperationalBtn = By.xpath("//form/div[2]/div[2]/button[1]");
+    By AddTemplatesBtn = By.xpath("//div[3]/button[1]");
     By LastOperationPeriodRow = By.xpath("//*[@id=\"period-creation-table_data\"]/tr[last()-1]");
     By LastOperationPeriodActionBtn = By.xpath("//*[@id=\"period-creation-table_data\"]/tr[last()-1]/td[last()-1]/span/button");
-    By AddCreationalPeriodLastRow = By.xpath("//*[@class=\"ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow\" ][last()]/ul/li[2]/a/span");
+    By AddCreationalPeriodLastRow = By.xpath("//*[@class=\"ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow\" ][last()-1]/ul/li[2]/a/span");
     By CreationalinvStartDate = By.id("invStartDate");
     By CreationalinvEndDate = By.id("invEndDate");
     By CreationalDayFrom = By.linkText("24");
@@ -72,15 +75,21 @@ public class AddNewCreationalPeriod {
     By period_form_grid2 = By.xpath("//div[@id='period-form-grid_content']/div[2]/div[2]/span");
     By period_form_grid3 = By.xpath("//div[@id='period-form-grid_content']/div[3]/div");
     By CreationalminValueRange_input = By.id("minValueRange_input");
-    By AddCreationalBtn = By.xpath("//*[@id=\"j_idt770_data\"]/tr[1]/td[last()]/button/span");
-    By AddCreationalBtn2 = By.xpath("//*[@id=\"j_idt770_data\"]/tr[2]/td[last()]/button/span");
-    By AddCreationalBtn3 = By.xpath("//*[@id=\"j_idt770_data\"]/tr[3]/td[last()]/button/span");
-    By AddCreationalBtn4 = By.xpath("//*[@id=\"j_idt797\"]/span[1]");
+    By SelectTemplate1Btn = By.xpath("//table/tbody/tr[1]/td[last()]/button/span[1]");
+    By SelectTemplate2Btn = By.xpath("//table/tbody/tr[2]/td[last()]/button/span[1]");
+    By SelectTemplate3Btn = By.xpath("//table/tbody/tr[3]/td[last()]/button/span[1]");
+    By AddCreationalBtn4 = By.xpath("//form/div[2]/div[2]/button[1]");
     By LastDateOperationalPeriod = By.xpath("//*[@id=\"period-creation-table_data\"]/tr[last()-1]/td[3]");
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
     LocalDate Today;
-    private SHAFT.GUI.WebDriver driver;
-    private JavascriptExecutor js;
-    private WebDriverWait wait;
+    DateConvert DateConverter = new DateConvert();
+    DateTimeZone zone = DateTimeZone.forID("Asia/Riyadh");
+    Chronology hijri = IslamicChronology.getInstance(zone);
+    private SHAFT.GUI.WebDriver driver = new SHAFT.GUI.WebDriver();
+    Actions actions = new Actions(driver.getDriver());
+    private JavascriptExecutor js = (JavascriptExecutor) driver.getDriver();
+    private WebDriverWait wait = new WebDriverWait(driver.getDriver(), Duration.ofSeconds(30));
 
     public void LogintoPortal() throws Exception {
         driver.element().click(LoginBtn);
@@ -117,11 +126,20 @@ public class AddNewCreationalPeriod {
         String NewToDateOperationPeriodSting = DateConverter.AddDayToHijriDate(NewFromDateOperationPeriodSting);
         LocalDate NewFromDateOperationPeriod = DateConverter.HijriDate(NewFromDateOperationPeriodSting);
         LocalDate NewToDateOperationPeriod = DateConverter.HijriDate(NewToDateOperationPeriodSting);
-
-        driver.element().waitToBeReady(AddOperationalPeriodBtn);
+        //  driver.element().waitToBeReady(AddOperationalPeriodBtn);
         WebElement AddOperationalPeriod = driver.getDriver().findElement(AddOperationalPeriodBtn);
-        js.executeScript("arguments[0].scrollIntoView();", AddOperationalPeriod);
-        driver.element().click(AddOperationalPeriodBtn);
+        js.executeScript("arguments[0].scrollIntoView();", driver.getDriver().findElement(AddOperationalPeriodBtn));
+        // Thread.sleep(5000);
+        js.executeScript("arguments[0].scrollIntoView();", driver.getDriver().findElement(HeaderTable));
+        //Thread.sleep(5000);
+
+        //  WebElement ActionsBtnUnderAddOperationPeriod = driver.getDriver().findElement(ActionsBtnUnderAddOperationPeriodBtn);
+        // js.executeScript("arguments[0].scrollIntoView();",ActionsBtnUnderAddOperationPeriod );
+        //   js.executeScript("window.scrollTo(0,300);" );
+
+        //  actions.moveToElement(ActionsBtnUnderAddOperationPeriod).perform();
+        // driver.element().waitToBeReady(AddOperationalPeriodBtn).click(AddOperationalPeriodBtn);
+        AddOperationalPeriod.click();
         driver.element().type(OperationalPeriodNameTxt, "فترة تشغيل جديدة");
         driver.element().click(invStartDate);
         driver.element().click(Calender);
@@ -132,9 +150,9 @@ public class AddNewCreationalPeriod {
         driver.element().select(SelectMonth, NewToDateOperationPeriod.toString("M/yyyy"));
         driver.element().click(By.linkText(NewToDateOperationPeriod.toString("d")));
         driver.element().type(minValueRange_input, "10");
-        driver.element().click(j_idt775Btn);
-        driver.element().click(rmmId_label);
-        driver.element().click(rmmId_1);
+        driver.element().click(Add_PeriodTemplateBtn);
+        driver.element().click(RouteList_label);
+        driver.element().click(FirstRouteLabel);
         driver.element().click(busType_label);
         driver.element().click(busType_3);
         WebElement minVehiclePriceTxt = driver.getDriver().findElement(minVehiclePrice);
@@ -169,19 +187,21 @@ public class AddNewCreationalPeriod {
         driver.element().type(TimeFrom, "00:00");
         driver.element().click(period_form_grid2);
         driver.element().type(TimeTo, "23:00");
-        WebElement period_form_grid3Btn33 = driver.getDriver().findElement(period_form_grid3);
-        js.executeScript("arguments[0].scrollIntoView();", period_form_grid3Btn33);
-        driver.getDriver().findElement(period_form_grid3).click();
+
+        // WebElement period_form_grid3Btn33 = driver.getDriver().findElement(period_form_grid3);
+        //js.executeScript("arguments[0].scrollIntoView();", period_form_grid3Btn33);
+        //driver.getDriver().findElement(period_form_grid3).click();
+
         WebElement CreationalminValueRange_input1 = driver.getDriver().findElement(CreationalminValueRange_input);
         js.executeScript("arguments[0].scrollIntoView();", CreationalminValueRange_input1);
         CreationalminValueRange_input1.sendKeys("10");
         WebElement AddCreationalBtn44 = driver.getDriver().findElement(AddCreationalBtn4);
         js.executeScript("arguments[0].scrollIntoView();", AddCreationalBtn44);
-        driver.getDriver().findElement(AddCreationalBtn).click();
-        wait.until(ExpectedConditions.stalenessOf(driver.getDriver().findElement(AddCreationalBtn2)));
-        driver.getDriver().findElement(AddCreationalBtn2).click();
-        wait.until(ExpectedConditions.stalenessOf(driver.getDriver().findElement(AddCreationalBtn3)));
-        driver.getDriver().findElement(AddCreationalBtn3).click();
+        driver.getDriver().findElement(SelectTemplate1Btn).click();
+        wait.until(ExpectedConditions.stalenessOf(driver.getDriver().findElement(SelectTemplate2Btn)));
+        driver.getDriver().findElement(SelectTemplate2Btn).click();
+        wait.until(ExpectedConditions.stalenessOf(driver.getDriver().findElement(SelectTemplate3Btn)));
+        driver.getDriver().findElement(SelectTemplate3Btn).click();
         js.executeScript("arguments[0].scrollIntoView();", AddCreationalBtn44);
         //   driver.getDriver().findElement(AddCreationalBtn4).click(); // for test
 
@@ -194,21 +214,20 @@ public class AddNewCreationalPeriod {
         LogintoPortal();
         GotoPeriodProgramSetting();
         GotoSteeringPeriodProgramSetting();
-        AddSteeringOperationalPeriodProgramSetting();
+        // AddSteeringOperationalPeriodProgramSetting();
         AddSteeringCreationalPeriodProgramSetting();
     }
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
-        driver = new SHAFT.GUI.WebDriver();
-        js = (JavascriptExecutor) driver.getDriver();
+        //   driver = new SHAFT.GUI.WebDriver();
+
+        //js = (JavascriptExecutor) driver.getDriver();
         driver.browser().navigateToURL("https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml");
-        wait = new WebDriverWait(driver.getDriver(), Duration.ofSeconds(30));
-        actions = new Actions(driver.getDriver());
-        DateTimeZone zone = DateTimeZone.forID("Asia/Riyadh");
-        Chronology hijri = IslamicChronology.getInstance(zone);
+        // wait = new WebDriverWait(driver.getDriver(), Duration.ofSeconds(30));
+        //  actions = new Actions(driver.getDriver());
         Today = new LocalDate(hijri);
-        DateConverter=new DateConvert();
+        //   DateConverter=new DateConvert();
     }
 
     @AfterMethod(alwaysRun = true)
