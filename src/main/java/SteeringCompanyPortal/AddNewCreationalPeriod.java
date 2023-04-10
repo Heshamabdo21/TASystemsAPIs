@@ -32,7 +32,6 @@ public class AddNewCreationalPeriod {
     By RememberMeChkBx = By.xpath("//div[@id='loginForm:rememberme']/div[2]/span");
     By SigninBtn = By.xpath("//button[@id='loginForm:j_idt49']/span");
     By OTPTxt = By.id("loginForm:j_idt36");
-    // WebDriverWait wait;
     By TICLogo = By.cssSelector("body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo");
     By SwithPanelBtn = By.xpath("/html/body/div[1]/div[1]/div[1]/a[2]");
     By SayyerMenu = By.xpath("//*[@id=\"j_idt27:subMenu-menuSayyar\"]/a/span[1]");
