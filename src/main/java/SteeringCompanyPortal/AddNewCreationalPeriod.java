@@ -13,7 +13,6 @@ import org.joda.time.chrono.IslamicChronology;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -30,23 +29,23 @@ public class AddNewCreationalPeriod {
     By UserNameTxt = By.id("loginForm:j_username");
     By PasswordTxt = By.id("loginForm:j_password");
     By RememberMeChkBx = By.xpath("//div[@id='loginForm:rememberme']/div[2]/span");
-    By SigninBtn = By.xpath("//button[@id='loginForm:j_idt49']/span");
-    By OTPTxt = By.id("loginForm:j_idt36");
-    By TICLogo = By.cssSelector("body > div.layout-wrapper.layout-rtl > div.layout-sidebar > div.sidebar-logo");
-    By SwithPanelBtn = By.xpath("/html/body/div[1]/div[1]/div[1]/a[2]");
-    By SayyerMenu = By.xpath("//*[@id=\"j_idt27:subMenu-menuSayyar\"]/a/span[1]");
-    By SayyerSubMenu = By.xpath("//*[@id=\"j_idt27:subMenu-SettingSayyar\"]/a/span[1]");
-    By PeriodProgramSetting = By.xpath("//*[@id=\"j_idt27:j_idt71\"]/a/span[1]");
-    By OTACommissionSetting = By.xpath("//*[@id=\"j_idt27:j_idt72\"]/a/span[1]");
+    By SigninBtn = By.xpath("//*[@id='loginForm']//button[1]");
+    By OTPTxt = By.xpath("//div[@id='loginForm:auth-panel']//input");
+    By TICLogo = By.xpath("//body/div[1]/div[1]/div[1]");
+    By SwithPanelBtn = By.xpath("//body/div[1]/div[1]/div[1]/a[2]");
+    By SayyerMenu = By.xpath("//*[@class='layout-menu']/li[5]/a/span[1]");
+    By SayyerSubMenu = By.xpath("//*[@class='layout-menu']/li[5]/ul[@role='menu']/li[1]/a/span[1]");
+    By PeriodProgramSetting = By.xpath("//ul/li[5]/ul/li[1]/ul/li[8]//span[1]");
+    By OTACommissionSetting = By.xpath("//ul/li[5]/ul/li[1]/ul/li[9]//span[1]");
     //*[@id="primetable:0:j_idt834_button"]/span[2]
-    By ActionsBtn = By.xpath("//button[@id='primetable:3:j_idt834_button']/span[2]");
-    By ActionsEditBtn = By.xpath("//div[@id='primetable:3:j_idt834_menu']/ul/li[2]/a/span");
-    By AddOperationalPeriodBtn = By.xpath("/html/body/div[1]/div[2]/div[3]/div/div/form/div[2]/div[2]/div[2]/div/div/table/thead/tr/th[10]/span/button");
-    By HeaderTable = By.xpath("/html/body/div[1]/div[2]/div[3]/div/div/form/div[2]/div[2]/div[1]");
+    By ActionsBtn = By.xpath("//*[@id='primetable_data']/tr[last()]/td[last()]//span[2]");
+    By ActionsEditBtn = By.xpath("//div[20]/ul/li[2]/a/span");
+    By AddOperationalPeriodBtn = By.xpath("//tr/th[last()]//button");
+    By HeaderTable = By.xpath("//*[@id='period-creation-table_head']/tr");
     By OperationalPeriodNameTxt = By.id("iospDesc");
     By invStartDate = By.id("invStartDate");
     By Calender = By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='>'])[1]/following::select[1]");
-    By SelectMonth = By.xpath("/html/body/div[7]/div/div[2]/div/div/select[1]");
+    By SelectMonth = By.xpath("//body/div[7]/div/div[2]/div/div/select[1]");
     By invEndDate = By.id("invEndDate");
     By minValueRange_input = By.id("minValueRange_input");
     By Add_PeriodTemplateBtn = By.xpath("//div[2]/div[2]/div[2]/button");
@@ -56,19 +55,20 @@ public class AddNewCreationalPeriod {
     By busType_3 = By.id("busType_3");
     By category1 = By.xpath("//*[@id='category']/div[1]/div[1]/div/div[2]");
     By category2 = By.xpath("//*[@id='category']/div[1]/div[2]/div/div[2]");
-    By category3 = By.xpath("//*[@id='category']/div[2]/div[2]/div/div[2]");
+    By category3 = By.xpath("//*[@id='category']/div[2]/div/div/div[2]");
     By minVehiclePrice = By.id("minVehiclePrice");
     By packMinValuePerc = By.id("packMinValuePerc");
     By maxValueRange = By.id("maxValueRange");
     By AddOperationalBtn = By.xpath("//form/div[2]/div[2]/button[1]");
     By AddTemplatesBtn = By.xpath("//div[3]/button[1]");
-    By LastOperationPeriodRow = By.xpath("//*[@id=\"period-creation-table_data\"]/tr[last()-1]");
-    By LastOperationPeriodActionBtn = By.xpath("//*[@id=\"period-creation-table_data\"]/tr[last()-1]/td[last()-1]/span/button");
-    By AddCreationalPeriodLastRow = By.xpath("//*[@class=\"ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow\" ][last()-1]/ul/li[2]/a/span");
+    By LastOperationPeriodRow = By.xpath("//*[@id='period-creation-table_data']/tr[last()-1]");
+    ////////////////////////////////////////////////////////////////////////////////
+    By LastOperationPeriodActionBtn = By.xpath("//*[@id='period-creation-table_data']/tr[last()-1]/td[last()-1]/span/button");
+    By AddCreationalPeriodLastRow = By.xpath("//*[@class='ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow'][last()]/ul/li[2]/a/span");
     By CreationalinvStartDate = By.id("invStartDate");
     By CreationalinvEndDate = By.id("invEndDate");
-    By CreationalDayFrom = By.linkText("24");
-    By CreationalDayTo = By.linkText("25");
+  //  By CreationalDayFrom = By.linkText("24");
+   // By CreationalDayTo = By.linkText("25");
     By TimeFrom = By.id("timeFrom");
     By TimeTo = By.id("timeTo");
     By period_form_grid2 = By.xpath("//div[@id='period-form-grid_content']/div[2]/div[2]/span");
@@ -78,7 +78,7 @@ public class AddNewCreationalPeriod {
     By SelectTemplate2Btn = By.xpath("//table/tbody/tr[2]/td[last()]/button/span[1]");
     By SelectTemplate3Btn = By.xpath("//table/tbody/tr[3]/td[last()]/button/span[1]");
     By AddCreationalBtn4 = By.xpath("//form/div[2]/div[2]/button[1]");
-    By LastDateOperationalPeriod = By.xpath("//*[@id=\"period-creation-table_data\"]/tr[last()-1]/td[3]");
+    By LastDateOperationalPeriod = By.xpath("//*[@id='period-creation-table_data']/tr[last()-1]/td[3]");
     ////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
     LocalDate Today;
@@ -86,13 +86,13 @@ public class AddNewCreationalPeriod {
     DateTimeZone zone = DateTimeZone.forID("Asia/Riyadh");
     Chronology hijri = IslamicChronology.getInstance(zone);
     private SHAFT.GUI.WebDriver driver = new SHAFT.GUI.WebDriver();
-    Actions actions = new Actions(driver.getDriver());
+  //  Actions actions = new Actions(driver.getDriver());
     private JavascriptExecutor js = (JavascriptExecutor) driver.getDriver();
     private WebDriverWait wait = new WebDriverWait(driver.getDriver(), Duration.ofSeconds(30));
 
     public void LogintoPortal() throws Exception {
         driver.element().click(LoginBtn);
-        driver.element().waitToBeReady(UserNameTxt).type(UserNameTxt, "1000000000");
+        driver.element().waitToBeReady(UserNameTxt).type(UserNameTxt, "1199900000");
         driver.element().waitToBeReady(PasswordTxt).type(PasswordTxt, "123");
         driver.element().waitToBeReady(RememberMeChkBx).click(RememberMeChkBx);
         driver.element().waitToBeReady(SigninBtn).click(SigninBtn);
@@ -166,7 +166,7 @@ public class AddNewCreationalPeriod {
         WebElement AddButton = driver.getDriver().findElement(AddOperationalBtn);
         js.executeScript("arguments[0].scrollIntoView();", AddButton);
         driver.getDriver().findElement(AddTemplatesBtn).click();
-        //driver.getDriver().findElement(AddOperationalBtn).click(); // for test
+        driver.getDriver().findElement(AddOperationalBtn).click(); // for test
 
     }
 
@@ -197,23 +197,26 @@ public class AddNewCreationalPeriod {
         WebElement AddCreationalBtn44 = driver.getDriver().findElement(AddCreationalBtn4);
         js.executeScript("arguments[0].scrollIntoView();", AddCreationalBtn44);
         driver.getDriver().findElement(SelectTemplate1Btn).click();
-        wait.until(ExpectedConditions.stalenessOf(driver.getDriver().findElement(SelectTemplate2Btn)));
+
+        wait.until(ExpectedConditions.elementToBeClickable(driver.getDriver().findElement(SelectTemplate2Btn)));
         driver.getDriver().findElement(SelectTemplate2Btn).click();
-        wait.until(ExpectedConditions.stalenessOf(driver.getDriver().findElement(SelectTemplate3Btn)));
+
+        wait.until(ExpectedConditions.elementToBeClickable(driver.getDriver().findElement(SelectTemplate3Btn)));
         driver.getDriver().findElement(SelectTemplate3Btn).click();
+
         js.executeScript("arguments[0].scrollIntoView();", AddCreationalBtn44);
-        //   driver.getDriver().findElement(AddCreationalBtn4).click(); // for test
+        driver.getDriver().findElement(AddCreationalBtn4).click(); // for test
 
     }
 
     @Test
-    public void testAddNewCreationalPeriod() throws Exception {
+    public void TestAddNewCreationalPeriod() throws Exception {
         //  ConvertToHijri("2-2-2023");
         //AddDayToHijriDate("10/08/1444");
         LogintoPortal();
         GotoPeriodProgramSetting();
         GotoSteeringPeriodProgramSetting();
-        // AddSteeringOperationalPeriodProgramSetting();
+        AddSteeringOperationalPeriodProgramSetting();
         AddSteeringCreationalPeriodProgramSetting();
     }
 
@@ -225,7 +228,7 @@ public class AddNewCreationalPeriod {
         driver.browser().navigateToURL("https://portal-demo.np.transporticonline.com/Naqaba/index.xhtml");
         // wait = new WebDriverWait(driver.getDriver(), Duration.ofSeconds(30));
         //  actions = new Actions(driver.getDriver());
-        Today = new LocalDate(hijri);
+        Today = new LocalDate(hijri).plusDays(1);
         //   DateConverter=new DateConvert();
     }
 
